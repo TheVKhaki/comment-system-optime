@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+
+  webserver:
+    ports:
+      - "80:80"
+    volumes:
+      - ./webserver/src:/usr/share/nginx/html
+
+networks:
+  traefik-public:
+    external: false
+

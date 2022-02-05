@@ -1,0 +1,32 @@
+image: registry.qpoker.io/sam.mosleh/docker-with-compose
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+
+stages:
+  - build
+  - deploy
+
+build-main:
+  stage: build
+  script:
+    - docker-compose -f docker-compose.yml build
+    - docker-compose -f docker-compose.yml push
+  only:
+    - main
+  tags:
+    - build
+
+deploy-main:
+  stage: deploy
+  script:
+    - docker-compose -f docker-compose.yml config > docker-stack.yml
+    - docker stack deploy -c docker-stack.yml --with-registry-auth qpoker-io
+  environment:
+    name: production
+    url: https://qpoker.io
+  only:
+    - main
+  tags:
+    - swarm
+
