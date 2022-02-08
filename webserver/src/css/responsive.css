@@ -60,10 +60,6 @@
              -o-transform: none;
                 transform: none;
     }
-    html,
-	body {
-        height: auto;
-    }
     h1 {
         font-size: 30px;
     }
