@@ -1,0 +1,19 @@
+exclude: |
+  (?x)^(
+      frontend/src/assets/|
+      frontend/node_modules/|
+      frontend/package-lock.json|
+      frontend/yarn.lock
+  )
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier

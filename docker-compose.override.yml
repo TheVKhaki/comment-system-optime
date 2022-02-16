@@ -1,6 +1,5 @@
 version: "3.5"
 services:
-
   proxy:
     ports:
       - "80:80"
@@ -42,4 +41,3 @@ services:
 networks:
   traefik-public:
     external: false
-
