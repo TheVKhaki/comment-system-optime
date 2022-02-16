@@ -7,26 +7,64 @@ stages:
   - build
   - deploy
 
-build-main:
+build-stag:
   stage: build
   script:
-    - docker-compose -f docker-compose.yml build
-    - docker-compose -f docker-compose.yml push
+    - >
+      TAG=stag
+      FRONTEND_ENV=staging
+      sh ./scripts/build-push.sh
   only:
     - main
   tags:
     - build
+    - stag
 
-deploy-main:
+build-prod:
+  stage: build
+  script:
+    - >
+      TAG=prod
+      FRONTEND_ENV=production
+      sh ./scripts/build-push.sh
+  only:
+    - production
+  tags:
+    - build
+    - prod
+
+deploy-stag:
   stage: deploy
   script:
-    - docker-compose -f docker-compose.yml config > docker-stack.yml
-    - docker stack deploy -c docker-stack.yml --with-registry-auth qpoker-io
+    - >
+      DOMAIN=stag.qpoker.io
+      TRAEFIK_TAG=stag.qpoker.io
+      STACK_NAME=stag-qpoker-io
+      TAG=stag
+      sh ./scripts/deploy.sh
   environment:
-    name: production
-    url: https://qpoker.io
+    name: staging
+    url: https://stag.qpoker.io
   only:
     - main
   tags:
     - swarm
+    - stag
 
+deploy-prod:
+  stage: deploy
+  script:
+    - >
+      DOMAIN=qpoker.io
+      TRAEFIK_TAG=qpoker.io
+      STACK_NAME=qpoker-io
+      TAG=prod
+      sh ./scripts/deploy.sh
+  environment:
+    name: production
+    url: https://qpoker.io
+  only:
+    - production
+  tags:
+    - swarm
+    - prod
