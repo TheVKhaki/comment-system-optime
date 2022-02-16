@@ -51,7 +51,7 @@ deploy-stag:
     - swarm
     - stag
 
-deploy-production:
+deploy-prod:
   stage: deploy
   script:
     - >
@@ -64,7 +64,7 @@ deploy-production:
     name: production
     url: https://qpoker.io
   only:
-    - main
+    - production
   tags:
     - swarm
     - prod
