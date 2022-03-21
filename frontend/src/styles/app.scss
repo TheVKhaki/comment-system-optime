@@ -9,11 +9,9 @@
 }
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
-ol,
-ul {
-  list-style: none;
-}
+
 body {
   line-height: 1.5;
 }
@@ -25,88 +23,32 @@ svg {
   display: block;
   max-width: 100%;
 }
-a {
-  text-decoration: none;
+body {
+ a {
+    text-decoration: none;
+    color: #000;
+    &:hover{
+      color: #000;
+    }
+  }
+  ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: gold;
+  color: #fff;
 }
 p {
   color: burlywood;
 }
 
-body {
-  background-color: black;
-}
-video {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-}
-.header-our-team {
-  text-align: center;
-  margin-top: 4rem;
-}
-.our-team {
-  padding: 3rem 0rem;
-
-  .team-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-    }
-    p {
-      width: 300px;
-      text-align: center;
-    }
-    .social-media-profile {
-      display: flex;
-      width: 200px;
-      justify-content: space-around;
-      align-items: center;
-      a {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-          background-color: red;
-        }
-        &.social-team-telegram {
-          &:hover {
-            svg {
-              color: #0088cc !important;
-            }
-          }
-        }
-        &.social-team-twitter {
-          &:hover {
-            svg {
-              color: #1da1f2 !important;
-            }
-          }
-        }
-        &.social-team-email {
-          &:hover {
-            svg {
-              color: #fff !important;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@import './hero'
