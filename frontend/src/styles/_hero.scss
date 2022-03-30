@@ -1,99 +1,16 @@
-header{
-    min-height: 13vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    .logo{
-        display: flex;
-        align-items: center;
-        img{
-            width: 90px;
-            height: 90px;
-        }
-        h1{
-            font-size: 2.4rem;
-            font-weight: bold;
-            margin-left: 1rem;
-        }
-    }
-    nav{
-        position: relative;
-        right: 25px;
-        ul{
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            li{
-                font-size: 1.5rem;
-                position: relative;
-                a{
-                    color: #fff;
-                    transition: all 0.2s;
-                    &:hover{
-                        color: #e17f02;
-                    }
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                    right: -38px;
-                    background-color: #ffffff4f;
-                    width: 2px;
-                    height: 23px;
-                    top: 1px;
-
-                }
-                &:last-child{
-                    &::after{
-                        content: '';
-                        width: 0;
-                    }
-                }
-
-            }
-        }
-    }
-    .social-media-header{
-        ul{
-            display: flex;
-            justify-content: space-between;
-            li{
-
-                border-radius: 5px;
-            }
-            a{
-                width: 52px;
-                height: 52px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 2px solid #ffffff69;
-                border-radius: 5px;
-                transition: all 0.2s;
-                &:hover{
-                    background-color: #e17f02;
-                    border: 2px solid #e17f02;
-                }
-            }
-        }
-    }
-    .btn-header{
-        display: flex;
-        justify-content: center;
-        a{
-            width: 170px;
-            height: 52px;
-            background-color: #e17f02;
-            letter-spacing: 1px;
-            font-weight: bold;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 19px;
-        }
-    }
+.hero-bg {
+  background: url(../images/BKG.png) no-repeat;
+  background-size: cover;
 }
 
+.hero {
+  height: 100vh;
+  .hero-img-elephant {
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 760px;
+    }
+  }
+}

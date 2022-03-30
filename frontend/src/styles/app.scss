@@ -1,3 +1,111 @@
+// variable
+$mainColor: #e28001;
+$colorWhite: #fff;
+$colorBlack: #000;
+
+//Fonts
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-SemiBold.woff2") format("woff2"),
+    url("../font/MavenPro-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Black.woff2") format("woff2"),
+    url("../font/MavenPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-ExtraBold.woff2") format("woff2"),
+    url("../font/MavenPro-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Regular.woff2") format("woff2"),
+    url("../font/MavenPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Medium.woff2") format("woff2"),
+    url("../font/MavenPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Bold.woff2") format("woff2"),
+    url("../font/MavenPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Bold.woff2") format("woff2"),
+    url("../font/Rota-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Regular.woff2") format("woff2"),
+    url("../font/Rota-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Medium.woff2") format("woff2"),
+    url("../font/Rota-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-SemiBold.woff2") format("woff2"),
+    url("../font/Rota-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Black.woff2") format("woff2"),
+    url("../font/Rota-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+//global style
+
 * {
   margin: 0;
   padding: 0;
@@ -24,19 +132,25 @@ svg {
   max-width: 100%;
 }
 body {
- a {
+  a {
     text-decoration: none;
-    color: #000;
-    &:hover{
-      color: #000;
+    color: $colorBlack;
+    font-family: "Rota", sans-serif;
+    letter-spacing: 1px;
+    &:hover {
+      color: $colorBlack;
     }
   }
   ol,
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-family: "Rota", sans-serif;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 h1,
@@ -45,10 +159,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: #fff;
+  color: $colorWhite;
+  font-family: "Maven Pro", sans-serif;
 }
-p {
-  color: burlywood;
-}
+// p {
+//   color: burlywood;
+// }
 
-@import './hero'
+@import "./nav";
+@import "./hero";
