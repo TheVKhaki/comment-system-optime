@@ -1,17 +1,16 @@
-.hero-bg{
-    background: url(../images/BKG.png) no-repeat;
-    background-size: cover;
-
+.hero-bg {
+  background: url(../images/BKG.png) no-repeat;
+  background-size: cover;
 }
 
-.hero{
-    height: 100vh;
-        .hero-img-elephant{
-            img{
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                height: 760px;
-            }
-        }
+.hero {
+  height: 100vh;
+  .hero-img-elephant {
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 760px;
+    }
+  }
 }

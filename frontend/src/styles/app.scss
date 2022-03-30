@@ -1,10 +1,9 @@
 // variable
-$mainColor:#E28001;
-$colorWhite:#fff;
-$colorBlack:#000;
+$mainColor: #e28001;
+$colorWhite: #fff;
+$colorBlack: #000;
 
 //Fonts
-
 
 @font-face {
   font-family: "Maven Pro";
@@ -105,7 +104,6 @@ $colorBlack:#000;
   font-display: fallback;
 }
 
-
 //global style
 
 * {
@@ -120,12 +118,10 @@ $colorBlack:#000;
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-
 }
 
 body {
   line-height: 1.5;
-
 }
 img,
 picture,
@@ -136,25 +132,25 @@ svg {
   max-width: 100%;
 }
 body {
- a {
+  a {
     text-decoration: none;
     color: $colorBlack;
-    font-family: 'Rota',sans-serif;
+    font-family: "Rota", sans-serif;
     letter-spacing: 1px;
-    &:hover{
+    &:hover {
       color: $colorBlack;
     }
   }
   ol,
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  li{
-    font-family: 'Rota',sans-serif;
-    letter-spacing: 1px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-family: "Rota", sans-serif;
+      letter-spacing: 1px;
+    }
   }
-}
 }
 
 h1,
@@ -164,15 +160,11 @@ h4,
 h5,
 h6 {
   color: $colorWhite;
-  font-family:"Maven Pro",sans-serif; 
+  font-family: "Maven Pro", sans-serif;
 }
 // p {
 //   color: burlywood;
 // }
 
-
-
-
-
-@import './nav';
-@import './hero';
+@import "./nav";
+@import "./hero";
