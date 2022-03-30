@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import logoImage from "../images/01 LOGO SVG-03.svg";
+import logoImage from "../images/03-03 2.png";
 import { IconContext } from "react-icons";
 import { FaTelegramPlane, FaTwitter, FaInstagram } from "react-icons/fa";
 const Nav = () => {
@@ -7,7 +7,7 @@ const Nav = () => {
     <>
       <header>
         <Container>
-          <Row>
+          <Row className="justify-content-between">
             <Col lg={3}>
               <div className="logo ">
                 <img src={logoImage} alt="" />
@@ -35,49 +35,7 @@ const Nav = () => {
                 </ul>
               </nav>
             </Col>
-            <Col lg={2} className="align-self-center">
-              <div className="social-media-header">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <IconContext.Provider
-                        value={{
-                          size: "20px",
-                          color: "#fff",
-                        }}
-                      >
-                        <div>
-                          <FaTelegramPlane />
-                        </div>
-                      </IconContext.Provider>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <IconContext.Provider
-                        value={{ size: "20px", color: "#fff" }}
-                      >
-                        <div>
-                          <FaTwitter />
-                        </div>
-                      </IconContext.Provider>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <IconContext.Provider
-                        value={{ size: "20px", color: "#fff" }}
-                      >
-                        <div>
-                          <FaInstagram />
-                        </div>
-                      </IconContext.Provider>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </Col>
-            <Col lg={2} className="align-self-center">
+            <Col lg={3} className="align-self-center">
               <div className="btn-header">
                 <a href="#">BUTTON</a>
               </div>
