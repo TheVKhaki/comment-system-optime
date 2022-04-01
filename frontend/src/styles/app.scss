@@ -118,6 +118,7 @@ $colorBlack: #000;
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -151,20 +152,40 @@ body {
       letter-spacing: 1px;
     }
   }
+  p {
+    font-family: 'Rota';
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $colorWhite;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: bold;
+  }
+  button{
+    border: none;
+    outline: none;
+    font-family: "Maven Pro", sans-serif;
+  }
+}
+.btn-main{
+      background-color: #e17f02;
+      letter-spacing: 1px;
+      font-weight: bold;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      padding-top: 0.4rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $colorWhite;
-  font-family: "Maven Pro", sans-serif;
-}
-// p {
-//   color: burlywood;
-// }
+
 
 @import "./nav";
 @import "./hero";
+@import './footer'

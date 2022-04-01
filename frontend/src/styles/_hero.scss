@@ -13,4 +13,68 @@
       height: 760px;
     }
   }
+  .hero-text{
+    height: 100vh;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    .box{
+      opacity: 0;
+      position: relative;
+      top: 100px;
+    }
+    h2{
+      font-size: 6.5rem;
+      width: 700px;
+      margin-bottom: 4rem;
+    }
+    p{
+      font-size: 2.8rem;
+      color: rgba($color: #fff, $alpha: 0.8);
+    }
+  }
+  .btns-hero{
+    display: flex;
+    margin-top: 3rem;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    .btn-hero{
+      width: 200px;
+      height: 60px;
+      cursor: pointer;
+      font-size: 22px;
+    }
+    .btn-watch{
+      height: 60px;
+      width: 60px;
+      border: 5px solid $mainColor;
+      border-radius: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 9rem;
+      position: relative;
+      &::after{
+        content: 'Watch Trailer';
+        position: absolute;
+        right: -138px;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 2rem;
+        top: 13px;
+      }
+    }
+    // .btn-text-watch{
+    //   color: #fff;
+    //   font-size: 2rem;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin-left: 1rem;
+    // }
+  }
 }
