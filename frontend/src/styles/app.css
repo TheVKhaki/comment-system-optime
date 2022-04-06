@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-SemiBold.woff2") format("woff2"), url("../font/MavenPro-SemiBold.woff") format("woff");
+  src: url("../font/MavenPro-SemiBold.woff2") format("woff2"),
+    url("../font/MavenPro-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
@@ -8,7 +9,8 @@
 
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-Black.woff2") format("woff2"), url("../font/MavenPro-Black.woff") format("woff");
+  src: url("../font/MavenPro-Black.woff2") format("woff2"),
+    url("../font/MavenPro-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: fallback;
@@ -16,7 +18,8 @@
 
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-ExtraBold.woff2") format("woff2"), url("../font/MavenPro-ExtraBold.woff") format("woff");
+  src: url("../font/MavenPro-ExtraBold.woff2") format("woff2"),
+    url("../font/MavenPro-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
@@ -24,7 +27,8 @@
 
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-Regular.woff2") format("woff2"), url("../font/MavenPro-Regular.woff") format("woff");
+  src: url("../font/MavenPro-Regular.woff2") format("woff2"),
+    url("../font/MavenPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
@@ -32,7 +36,8 @@
 
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-Medium.woff2") format("woff2"), url("../font/MavenPro-Medium.woff") format("woff");
+  src: url("../font/MavenPro-Medium.woff2") format("woff2"),
+    url("../font/MavenPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: fallback;
@@ -40,7 +45,8 @@
 
 @font-face {
   font-family: "Maven Pro";
-  src: url("../font/MavenPro-Bold.woff2") format("woff2"), url("../font/MavenPro-Bold.woff") format("woff");
+  src: url("../font/MavenPro-Bold.woff2") format("woff2"),
+    url("../font/MavenPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
@@ -48,7 +54,8 @@
 
 @font-face {
   font-family: "Rota";
-  src: url("../font/Rota-Bold.woff2") format("woff2"), url("../font/Rota-Bold.woff") format("woff");
+  src: url("../font/Rota-Bold.woff2") format("woff2"),
+    url("../font/Rota-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
@@ -56,7 +63,8 @@
 
 @font-face {
   font-family: "Rota";
-  src: url("../font/Rota-Regular.woff2") format("woff2"), url("../font/Rota-Regular.woff") format("woff");
+  src: url("../font/Rota-Regular.woff2") format("woff2"),
+    url("../font/Rota-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
@@ -64,7 +72,8 @@
 
 @font-face {
   font-family: "Rota";
-  src: url("../font/Rota-Medium.woff2") format("woff2"), url("../font/Rota-Medium.woff") format("woff");
+  src: url("../font/Rota-Medium.woff2") format("woff2"),
+    url("../font/Rota-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: fallback;
@@ -72,7 +81,8 @@
 
 @font-face {
   font-family: "Rota";
-  src: url("../font/Rota-SemiBold.woff2") format("woff2"), url("../font/Rota-SemiBold.woff") format("woff");
+  src: url("../font/Rota-SemiBold.woff2") format("woff2"),
+    url("../font/Rota-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
@@ -80,7 +90,8 @@
 
 @font-face {
   font-family: "Rota";
-  src: url("../font/Rota-Black.woff2") format("woff2"), url("../font/Rota-Black.woff") format("woff");
+  src: url("../font/Rota-Black.woff2") format("woff2"),
+    url("../font/Rota-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: fallback;
@@ -95,13 +106,14 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   overflow-x: hidden;
+  background-color: #000;
 }
 
 body {
@@ -142,8 +154,9 @@ body ul li {
 }
 
 body p {
-  font-family: 'Rota';
+  font-family: "Rota";
   color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
 }
 
 body h1,
@@ -172,11 +185,11 @@ body button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 19px;
   padding-top: 0.4rem;
 }
@@ -187,11 +200,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -202,8 +215,8 @@ header .logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header .logo img {
@@ -229,10 +242,10 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 header nav ul li {
@@ -255,8 +268,8 @@ header .btn-header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 header .btn-header a {
@@ -270,11 +283,11 @@ header .btn-header a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 19px;
   padding-top: 0.4rem;
 }
@@ -303,11 +316,11 @@ header .btn-header a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   z-index: 2;
 }
@@ -355,23 +368,168 @@ header .btn-header a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 9rem;
   position: relative;
 }
 
 .hero .btns-hero .btn-watch::after {
-  content: 'Watch Trailer';
+  content: "Watch Trailer";
   position: absolute;
   right: -138px;
   color: #fff;
   white-space: nowrap;
   font-size: 2rem;
   top: 13px;
+}
+
+.social-section {
+  padding-top: 30px;
+  height: 100vh;
+  position: relative;
+  background-color: #000;
+}
+
+.social-section .matrix-laod {
+  position: absolute;
+  top: 0;
+}
+
+.social-section .header-social {
+  text-align: center;
+}
+
+.social-section .header-social h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+.social-section .header-social p {
+  color: #fff;
+  font-size: 25px;
+}
+
+.social-section .circle-socials {
+  width: 100%;
+  height: 640px;
+  position: relative;
+}
+
+.social-section .circle-socials .all-circle-social {
+  width: 100%;
+  height: 90%;
+}
+
+.social-section .circle-socials .right-circle-social .socials-in-circle {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.social-section .circle-socials .right-circle-social .socials-in-circle span {
+  color: #fff;
+  font-size: 21px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.social-section .circle-socials .right-circle-social .socials-in-circle p {
+  font-size: 18px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.social-section .circle-socials .right-circle-social .circle-icon-social {
+  width: 20px;
+  margin-right: 4rem;
+}
+
+.social-section .circle-socials .right-circle-social .telegram-social {
+  left: 286px;
+  position: relative;
+  bottom: 500px;
+}
+
+.social-section .circle-socials .right-circle-social .twitter-social {
+  position: relative;
+  bottom: 449px;
+  left: 319px;
+}
+
+.social-section .circle-socials .right-circle-social .youtube-social {
+  bottom: 352px;
+  position: relative;
+  left: 319px;
+}
+
+.social-section .circle-socials .right-circle-social .github-social {
+  bottom: 304px;
+  position: relative;
+  left: 287px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-circle {
+  text-align: center;
+  line-height: 23px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-circle span {
+  color: #fff;
+  font-size: 30px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-circle p {
+  font-size: 20px;
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-1 {
+  right: 275px;
+  position: relative;
+  bottom: 729px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-2 {
+  bottom: 674px;
+  position: relative;
+  right: 305px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-3 {
+  bottom: 571px;
+  position: relative;
+  right: 314px;
+}
+
+.social-section .circle-socials .left-circle-social .team-info-4 {
+  bottom: 513px;
+  position: relative;
+  right: 283px;
+}
+
+.social-section .circle-socials img {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
 }
 
 footer {
@@ -395,8 +553,8 @@ footer .footer-left form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 footer .footer-left form input {
@@ -453,11 +611,11 @@ footer .footer-logo .footer-social-media a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 footer .footer-logo .footer-social-media a:nth-child(2) {
@@ -474,7 +632,7 @@ footer .footer-right {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 footer .footer-right ul li {

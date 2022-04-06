@@ -13,7 +13,7 @@
       height: 760px;
     }
   }
-  .hero-text{
+  .hero-text {
     height: 100vh;
     width: 700px;
     display: flex;
@@ -21,34 +21,34 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    .box{
+    .box {
       opacity: 0;
       position: relative;
       top: 100px;
     }
-    h2{
+    h2 {
       font-size: 6.5rem;
       width: 700px;
       margin-bottom: 4rem;
     }
-    p{
+    p {
       font-size: 2.8rem;
       color: rgba($color: #fff, $alpha: 0.8);
     }
   }
-  .btns-hero{
+  .btns-hero {
     display: flex;
     margin-top: 3rem;
     opacity: 0;
     position: relative;
     top: 100px;
-    .btn-hero{
+    .btn-hero {
       width: 200px;
       height: 60px;
       cursor: pointer;
       font-size: 22px;
     }
-    .btn-watch{
+    .btn-watch {
       height: 60px;
       width: 60px;
       border: 5px solid $mainColor;
@@ -58,8 +58,8 @@
       align-items: center;
       margin-left: 9rem;
       position: relative;
-      &::after{
-        content: 'Watch Trailer';
+      &::after {
+        content: "Watch Trailer";
         position: absolute;
         right: -138px;
         color: #fff;
