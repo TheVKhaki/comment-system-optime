@@ -213,7 +213,7 @@ const SocialSection = () => {
 
   return (
     <>
-      <section className="social-section" ref={element}>
+      <section className="social-section" id="social" ref={element}>
         <div className="matrix-load">
           <canvas></canvas>
         </div>

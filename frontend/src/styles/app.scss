@@ -122,6 +122,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   background-color: $colorBlack;
+  // scrollbar-width: none;
 }
 
 body {
@@ -200,4 +201,5 @@ body {
 @import "./nav";
 @import "./hero";
 @import "./social";
+@import "./roadmap";
 @import "./footer";
