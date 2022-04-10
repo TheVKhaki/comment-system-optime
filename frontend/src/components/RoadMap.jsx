@@ -478,10 +478,10 @@ const RoadMap = () => {
               <div className="roadmap-line-3-2">
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="621"
+                  width="661"
                   height="91"
                   fill="none"
-                  viewBox="0 0 621 91"
+                  viewBox="0 0 661 91"
                   variants={svg32}
                   initial="hidden"
                   animate={controls2}
@@ -502,7 +502,7 @@ const RoadMap = () => {
                     variants={item32}
                     stroke="#E28225"
                     strokeWidth="2"
-                    d="M111 90h510"
+                    d="M111 90h580"
                   ></motion.path>
                 </motion.svg>
               </div>
