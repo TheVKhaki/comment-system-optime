@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import SocialSection from "../components/Social";
 import RoadMap from "../components/RoadMap";
 import { useNavigate } from "react-router-dom";
+import OurTeam from "../components/OurTeam";
 const Home = () => {
   // let navigate = useNavigate();
   // console.log(navigate());
@@ -47,6 +48,7 @@ const Home = () => {
         <Hero />
         <SocialSection />
         <RoadMap />
+        <OurTeam />
       </main>
     </>
   );

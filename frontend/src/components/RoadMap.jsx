@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 // Import Swiper React components
 import { Pagination, Mousewheel } from "swiper";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,17 +24,17 @@ const RoadMap = () => {
   const controls3 = useAnimation();
   useEffect(() => {
     if (inView) {
-      controls3.start("visible");
+      controls1.start("visible");
     }
-  }, [[controls3, inView]]);
+  }, [[controls1, inView]]);
 
   //Swiper
   function SlideChangeRoadMap(params) {
     if (params === 1) {
-      controls1.start("visible");
+      controls2.start("visible");
     }
     if (params === 2) {
-      controls2.start("visible");
+      controls3.start("visible");
     }
   }
   //Variants
@@ -227,7 +227,7 @@ const RoadMap = () => {
                     viewBox="0 0 411 102"
                     variants={svg1}
                     initial="hidden"
-                    animate={controls3}
+                    animate={controls1}
                   >
                     <motion.path
                       stroke="#E28225"
@@ -235,7 +235,7 @@ const RoadMap = () => {
                       d="M1.25 4.003L1.25 101.003"
                       variants={item1}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     ></motion.path>
                     <motion.path
                       stroke="#E28225"
@@ -243,7 +243,7 @@ const RoadMap = () => {
                       d="M0 99.752L280 99.752"
                       variants={item1}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     ></motion.path>
                     <motion.path
                       stroke="#E28225"
@@ -251,7 +251,7 @@ const RoadMap = () => {
                       d="M278.252 101.005L278.252 1"
                       variants={item1}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     ></motion.path>
                     <motion.path
                       stroke="#E28225"
@@ -259,7 +259,7 @@ const RoadMap = () => {
                       d="M278 1.752L411 1.752"
                       variants={item1}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     ></motion.path>
                   </motion.svg>
                 </div>
@@ -290,7 +290,7 @@ const RoadMap = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     variants={svg12}
                     initial="hidden"
-                    animate={controls3}
+                    animate={controls1}
                   >
                     <motion.line
                       y1="1.75"
@@ -300,7 +300,7 @@ const RoadMap = () => {
                       strokeWidth="2.5"
                       variants={item12}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     />
                     <motion.line
                       x1="326.25"
@@ -311,7 +311,7 @@ const RoadMap = () => {
                       strokeWidth="2.5"
                       variants={item12}
                       initial="hidden"
-                      animate={controls3}
+                      animate={controls1}
                     />
                   </motion.svg>
                 </div>
@@ -350,7 +350,7 @@ const RoadMap = () => {
                     viewBox="0 0 312 246"
                     variants={svg2}
                     initial="hidden"
-                    animate={controls1}
+                    animate={controls2}
                   >
                     <motion.path
                       stroke="#E28225"
@@ -382,7 +382,7 @@ const RoadMap = () => {
                     viewBox="0 0 1152 362"
                     variants={svg22}
                     initial="hidden"
-                    animate={controls1}
+                    animate={controls2}
                   >
                     <motion.path
                       stroke="#E28225"
@@ -440,7 +440,7 @@ const RoadMap = () => {
                   viewBox="0 0 640 425"
                   variants={svg2}
                   initial="hidden"
-                  animate={controls2}
+                  animate={controls3}
                 >
                   <motion.path
                     stroke="#E28225"
@@ -484,7 +484,7 @@ const RoadMap = () => {
                   viewBox="0 0 661 91"
                   variants={svg32}
                   initial="hidden"
-                  animate={controls2}
+                  animate={controls3}
                 >
                   <motion.path
                     variants={item32}
@@ -550,6 +550,21 @@ const RoadMap = () => {
                   Step4 <br />
                   IGOs and ICOs
                 </p>
+              </div>
+              <div className="roadmap-line-4">
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="620"
+                  height="616"
+                  fill="none"
+                  viewBox="0 0 620 616"
+                >
+                  <motion.path
+                    stroke="#E28225"
+                    strokeWidth="2"
+                    d="M-.001 614.69h170M170 .5v615M170 1.5h450"
+                  ></motion.path>
+                </motion.svg>
               </div>
               <div className="countdown">
                 <div className="countdown-number">

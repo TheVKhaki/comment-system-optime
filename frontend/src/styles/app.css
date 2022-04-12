@@ -777,6 +777,192 @@ header .btn-header a {
   margin-top: 2rem;
 }
 
+.ourteam {
+  min-height: 100vh;
+  background-color: #000;
+  position: relative;
+}
+
+.ourteam hr {
+  color: #e28001;
+}
+
+.ourteam .ourteam-header {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ourteam .ourteam-header h2 {
+  font-size: 40px;
+}
+
+.ourteam .ourteam-header p {
+  font-size: 25px;
+}
+
+.ourteam .ourteam-characters {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.ourteam .ourteam-characters.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ourteam .ourteam-characters div {
+  width: 250px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ourteam .ourteam-characters .character-1 {
+  left: 135px;
+}
+
+.ourteam .ourteam-characters .character-2 {
+  left: 43px;
+}
+
+.ourteam .ourteam-characters .character-3 {
+  position: relative;
+  z-index: 3;
+}
+
+.ourteam .ourteam-characters .character-4 {
+  right: 50px;
+  z-index: 0;
+}
+
+.ourteam .ourteam-characters .character-5 {
+  left: -129px;
+  position: relative;
+  z-index: -2;
+}
+
+.ourteam .ourteam-characters .character-6 {
+  top: -214px;
+  right: 1126px;
+  z-index: -1;
+}
+
+.ourteam .ourteam-characters .character-6 img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ourteam .ourteam-characters .character-7 {
+  z-index: -1;
+  top: -214px;
+  right: 1192px;
+}
+
+.ourteam .ourteam-characters .character-7 img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ourteam .ourteam-characters .character-8 {
+  z-index: -1;
+  top: -204px;
+  right: 1264px;
+  width: 264px;
+}
+
+.ourteam .ourteam-characters .character-8 img {
+  height: 367px;
+}
+
+.ourteam .ourteam-characters .character-9 {
+  z-index: -2;
+  top: -214px;
+  right: 1334px;
+}
+
+.ourteam .ourteam-characters .character-9 img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ourteam .ourteam-characters .character-10 {
+  z-index: -3;
+  top: -214px;
+  right: 1408px;
+}
+
+.ourteam .ourteam-characters .character-10 img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ourteam .ourteam-characters img {
+  width: 100%;
+  -webkit-filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(3px);
+  cursor: pointer;
+  -o-object-fit: fill;
+  object-fit: fill;
+  height: 350px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.ourteam .ourteam-characters img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.ourteam .loading-nft {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.ourteam .model3d-characters {
+  width: 100%;
+  height: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ourteam .model3d-characters .close-model3d {
+  background-color: #e28001;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
 footer {
   background-color: #000;
   padding-top: 50px;

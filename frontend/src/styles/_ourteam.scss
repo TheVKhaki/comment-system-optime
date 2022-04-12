@@ -1,0 +1,131 @@
+.ourteam {
+  min-height: 100vh;
+  background-color: #000;
+  position: relative;
+  hr {
+    color: $mainColor;
+  }
+  .ourteam-header {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  .ourteam-characters {
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s;
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    div {
+      width: 250px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .character-1 {
+      left: 135px;
+    }
+    .character-2 {
+      left: 43px;
+    }
+    .character-3 {
+      position: relative;
+      z-index: 3;
+    }
+    .character-4 {
+      right: 50px;
+      z-index: 0;
+    }
+    .character-5 {
+      left: -129px;
+      position: relative;
+      z-index: -2;
+    }
+    .character-6 {
+      top: -214px;
+      right: 1126px;
+      z-index: -1;
+      img {
+        object-fit: contain;
+      }
+    }
+    .character-7 {
+      z-index: -1;
+      top: -214px;
+      right: 1192px;
+      img {
+        object-fit: contain;
+      }
+    }
+    .character-8 {
+      z-index: -1;
+      top: -204px;
+      right: 1264px;
+      width: 264px;
+      img {
+        height: 367px;
+      }
+    }
+    .character-9 {
+      z-index: -2;
+      top: -214px;
+      right: 1334px;
+      img {
+        object-fit: contain;
+      }
+    }
+    .character-10 {
+      z-index: -3;
+      top: -214px;
+      right: 1408px;
+      img {
+        object-fit: contain;
+      }
+    }
+
+    img {
+      width: 100%;
+      filter: grayscale(100%) blur(3px);
+      cursor: pointer;
+      object-fit: fill;
+      height: 350px;
+      transition: all 0.3s;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+  .loading-nft {
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .model3d-characters {
+    width: 100%;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    .close-model3d {
+      background-color: $mainColor;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+}
