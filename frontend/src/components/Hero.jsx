@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="hero hero-bg">
+      <section className="hero hero-bg" id="#hero">
         <Container fluid>
           <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />

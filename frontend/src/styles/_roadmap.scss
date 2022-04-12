@@ -1,0 +1,179 @@
+.roadmap {
+  height: 100vh;
+  background-color: #313032;
+  position: relative;
+  .swiper {
+    height: 100%;
+    .swiper-slide {
+      &:nth-child(1) {
+        background: url(../images/timeline-grad-01.svg) no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(2) {
+        background: url(../images/timeline-grad-02.svg) no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(3) {
+        background: url(../images/timeline-grad-03.svg) no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(4) {
+        background: url(../images/timeline-grad-04.svg) no-repeat;
+        background-size: cover;
+      }
+      padding-top: 30px;
+
+      .roadmap-date {
+        &.roadmap-date-1 {
+          position: absolute;
+          top: 61%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &.roadmap-date-2 {
+          margin-top: 4.5rem;
+          margin-right: 4rem;
+        }
+        &.roadmap-date-3 {
+          position: relative;
+          top: 90px;
+        }
+        p {
+          font-size: 28px;
+          text-align: center;
+        }
+      }
+
+      .btn-slide {
+        display: flex;
+        justify-content: center;
+        &.btn-slide-3 {
+          position: relative;
+          top: 20px;
+          display: flex;
+          justify-content: end;
+          margin-right: 6rem;
+        }
+        a {
+          width: 400px;
+          height: 84px;
+          background-color: #e28001;
+          font-size: 30px;
+          display: block;
+          text-align: center;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      p {
+        font-size: 23px;
+        letter-spacing: 1px;
+      }
+      .content-slide-1-1 {
+        margin-top: 6rem;
+        position: relative;
+        min-height: 34vh;
+        .roadmap-line-1-1 {
+          position: absolute;
+          bottom: -64px;
+          left: 145px;
+        }
+      }
+      .content-slide-1-2 {
+        align-items: center;
+        position: relative;
+        height: 32vh;
+
+        .roadmap-line-1-2 {
+          position: absolute;
+          top: -46px;
+          width: 700px;
+          right: -142px;
+        }
+      }
+      .content-slide-2-1 {
+        align-items: center;
+        position: relative;
+
+        p {
+          margin-top: 4rem;
+        }
+        .roadmap-line-2-1 {
+          position: absolute;
+          left: -188px;
+          bottom: -83px;
+        }
+        .roadmap-line-2-2 {
+          position: absolute;
+          right: -262px;
+          top: 132px;
+        }
+      }
+      .content-slide-3 {
+        align-items: center;
+      }
+      .roadmap-line-3-1 {
+        position: absolute;
+        left: 0;
+        top: 268px;
+      }
+      .roadmap-line-3-2 {
+        position: absolute;
+        bottom: 47px;
+        right: 2px;
+      }
+      .header-roadmap {
+        text-align: center;
+        min-height: 17vh;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 25px;
+        }
+      }
+      .img-slide-roadmap-1 {
+        width: 250px;
+      }
+      .countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        .countdown-number {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 300px;
+          color: $mainColor;
+          font-size: 39px;
+          font-weight: bold;
+          .time-number {
+            background-color: $colorWhite;
+            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+      .coming-soon {
+        text-align: center;
+        margin-top: 6rem;
+        span {
+          font-size: 90px;
+          color: $colorWhite;
+          font-family: "Maven Pro", sans-serif;
+          font-weight: bold;
+        }
+        p {
+          font-size: 25px;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
