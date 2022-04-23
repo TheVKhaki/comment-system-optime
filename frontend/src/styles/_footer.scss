@@ -87,3 +87,24 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 991.98px) {
+  footer {
+    .footer-logo {
+      width: 100%;
+      margin: 3rem 0 2rem 0;
+      .footer-social-media {
+        position: static;
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+          position: static;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}

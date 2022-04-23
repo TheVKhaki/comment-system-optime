@@ -1,0 +1,115 @@
+.social-responsive {
+  padding: 4rem 0;
+  .header-social {
+    text-align: center;
+
+    h2 {
+      color: $colorWhite;
+      font-size: 40px;
+    }
+
+    p {
+      color: $colorWhite;
+      font-size: 25px;
+    }
+  }
+  .image-social-responsive {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    .text-image-responsive {
+      position: absolute;
+      text-align: center;
+      span {
+        font-family: "Maven Pro", sans-serif;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    .text-image-responsive-2 {
+      position: absolute;
+      text-align: center;
+      span {
+        font-family: "Maven Pro", sans-serif;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+    .text-option-1 {
+      bottom: 88px;
+      right: -58px;
+    }
+    .text-option-2 {
+      bottom: 88px;
+      left: -58px;
+    }
+    .text-option-3 {
+      bottom: 0;
+      right: -58px;
+    }
+    .text-option-4 {
+      bottom: 0;
+      left: -58px;
+    }
+    .text-telegram {
+      top: 210px;
+      right: -43px;
+      padding-top: 4rem;
+    }
+    .text-twitter {
+      top: 230px;
+      left: -38px;
+      padding-top: 4rem;
+    }
+    .text-youtube {
+      top: 333px;
+      right: -43px;
+      padding-top: 4rem;
+    }
+    .text-github {
+      top: 356px;
+      left: -38px;
+      padding-top: 4rem;
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .social-responsive {
+    .header-social {
+      text-align: center;
+      h2 {
+        font-size: 3.2rem;
+      }
+
+      p {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .social-responsive {
+    .header-social {
+      text-align: center;
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

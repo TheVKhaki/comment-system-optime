@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <footer>
         <Container>
-          <Row>
+          <Row className="flex-sm-column flex-lg-row">
             <Col>
               <div className="footer-left">
                 <h4>Subscribe</h4>

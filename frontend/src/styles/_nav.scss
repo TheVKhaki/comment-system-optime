@@ -20,9 +20,30 @@ header {
       margin-bottom: 0;
     }
   }
+  .navbar {
+    width: 100%;
+    background-color: transparent !important;
+    .navbar-nav {
+      a {
+        font-size: 1.75rem;
+        color: $colorWhite;
+        transition: all 0.2s;
+      }
+      .nav-link {
+        color: #fff;
+        margin-right: 4rem;
+        &:focus {
+          color: #fff;
+        }
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
   nav {
     position: relative;
-    right: 25px;
+
     ul {
       padding: 0;
       display: flex;
@@ -84,7 +105,7 @@ header {
     display: flex;
     justify-content: center;
     a {
-      width: 170px;
+      width: 200px;
       height: 52px;
       background-color: #e17f02;
       letter-spacing: 1px;
@@ -95,6 +116,87 @@ header {
       align-items: center;
       font-size: 19px;
       padding-top: 0.4rem;
+    }
+  }
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+}
+.offcanvas {
+  background-color: #000 !important;
+  .offcanvas-header {
+    .btn-close {
+      background: url(../images/close-menu-icon.png) no-repeat;
+      padding: 1.5rem 1.5rem;
+      opacity: 1;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .offcanvas-body {
+    .nav-link {
+      color: $colorWhite;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+    .btn-header {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      a {
+        width: 200px;
+        height: 52px;
+        background-color: #e17f02;
+        letter-spacing: 1px;
+        font-weight: bold;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+        padding-top: 0.4rem;
+      }
+    }
+  }
+}
+
+//responsive
+@media screen and (max-width: 1199.98px) {
+  header {
+    .navbar {
+      .navbar-nav {
+        .nav-link {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  header {
+    .navbar {
+      .navbar-toggler {
+        font-size: 2.2rem;
+        border-color: transparent;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .navbar-toggler-icon {
+        background-image: url(../images/hamburger-menu-icon.png);
+      }
+      .navbar-nav {
+        display: none;
+      }
+      .btn-header {
+        display: none;
+      }
     }
   }
 }

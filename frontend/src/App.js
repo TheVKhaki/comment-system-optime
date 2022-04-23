@@ -1,7 +1,9 @@
 import "./styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "swiper/css";
+import "swiper/css/pagination";
 import Home from "./page/Home";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import SocialSection from "./components/Social";
@@ -9,12 +11,9 @@ import SocialSection from "./components/Social";
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/social" element={<SocialSection />} />
-      </Routes>
-      <Footer />
+      <Header />
+      <Home />
+      {/* <Footer /> */}
     </div>
   );
 }

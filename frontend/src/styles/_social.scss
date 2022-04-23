@@ -3,7 +3,10 @@
   height: 100vh;
   position: relative;
   background-color: #000;
-  .matrix-laod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .matrix-load {
     position: absolute;
     top: 0;
   }

@@ -1,7 +1,13 @@
 .ourteam {
-  min-height: 100vh;
+  min-height: 110vh;
   background-color: #000;
   position: relative;
+  .center {
+    color: gold;
+  }
+  .wrapperClass {
+    color: gold;
+  }
   hr {
     color: $mainColor;
   }
@@ -19,80 +25,119 @@
     }
   }
   .ourteam-characters {
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: flex-end;
-    position: relative;
+    position: absolute;
     z-index: 0;
     transition: all 0.3s;
+    left: 50%;
+    transform: translate(-50%);
     &.hidden {
       opacity: 0;
       visibility: hidden;
     }
+    .swiper-ourteam-1initialized {
+      overflow: initial;
+      width: 1320px !important;
+      .swiper-slide {
+        &:nth-child(1) {
+          left: 135px;
+        }
+        &:nth-child(2) {
+          left: 43px;
+        }
+        &:nth-child(3) {
+          position: relative;
+          z-index: 3;
+        }
+        &:nth-child(4) {
+          right: 50px;
+          z-index: 0;
+        }
+        &:nth-child(5) {
+          left: -129px;
+          position: relative;
+          z-index: -2;
+        }
+        &:nth-child(6) {
+          top: -214px;
+          right: 1126px;
+          z-index: -1;
+          img {
+            object-fit: contain;
+          }
+        }
+        &:nth-child(7) {
+          z-index: -1;
+          top: -214px;
+          right: 1192px;
+          img {
+            object-fit: contain;
+          }
+        }
+        &:nth-child(8) {
+          z-index: -1;
+          top: -204px;
+          right: 1264px;
+          width: 264px;
+          img {
+            height: 367px;
+          }
+        }
+        &:nth-child(9) {
+          z-index: -2;
+          top: -214px;
+          right: 1334px;
+          img {
+            object-fit: contain;
+          }
+        }
+        &:nth-child(10) {
+          z-index: -3;
+          top: -214px;
+          right: 1408px;
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .swiper-ourteam-2initialized {
+      width: 400px !important;
+      display: none;
+      .swiper-button-next {
+        position: absolute;
+        right: -113px;
+      }
+      .swiper-button-prev {
+        position: absolute;
+
+        left: -113px;
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: $mainColor;
+      }
+      .swiper-slide {
+        width: 400px !important;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 250px;
+        }
+        &.swiper-slide-active {
+          img {
+            filter: grayscale(0) blur(0);
+          }
+        }
+      }
+    }
+
     div {
-      width: 250px;
+      width: 250px !important;
       flex-shrink: 0;
       position: relative;
-    }
-    .character-1 {
-      left: 135px;
-    }
-    .character-2 {
-      left: 43px;
-    }
-    .character-3 {
-      position: relative;
-      z-index: 3;
-    }
-    .character-4 {
-      right: 50px;
-      z-index: 0;
-    }
-    .character-5 {
-      left: -129px;
-      position: relative;
-      z-index: -2;
-    }
-    .character-6 {
-      top: -214px;
-      right: 1126px;
-      z-index: -1;
-      img {
-        object-fit: contain;
-      }
-    }
-    .character-7 {
-      z-index: -1;
-      top: -214px;
-      right: 1192px;
-      img {
-        object-fit: contain;
-      }
-    }
-    .character-8 {
-      z-index: -1;
-      top: -204px;
-      right: 1264px;
-      width: 264px;
-      img {
-        height: 367px;
-      }
-    }
-    .character-9 {
-      z-index: -2;
-      top: -214px;
-      right: 1334px;
-      img {
-        object-fit: contain;
-      }
-    }
-    .character-10 {
-      z-index: -3;
-      top: -214px;
-      right: 1408px;
-      img {
-        object-fit: contain;
-      }
     }
 
     img {
@@ -120,12 +165,37 @@
     height: 470px;
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .close-model3d {
       background-color: $mainColor;
       height: 50px;
       width: 50px;
       border-radius: 50px;
       cursor: pointer;
+    }
+  }
+}
+
+//Responsive
+
+@media screen and (max-width: 991.98px) {
+  .ourteam {
+    .ourteam-characters {
+      .character-1,
+      .character-2,
+      .character-3,
+      .character-4,
+      .character-5,
+      .character-6,
+      .character-7,
+      .character-8,
+      .character-9,
+      .character-10 {
+        inset: 0;
+      }
     }
   }
 }

@@ -127,6 +127,7 @@ html {
 
 body {
   line-height: 1.5;
+  background-color: $colorBlack !important;
 }
 
 img,
@@ -197,10 +198,19 @@ body {
   font-size: 19px;
   padding-top: 0.4rem;
 }
-
+.home-swiper {
+  height: 100vh;
+}
+@media screen and (min-width: 992px) {
+  main {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 @import "./nav";
 @import "./hero";
 @import "./social";
+@import "./socialresponsive";
 @import "./roadmap";
 @import "./ourteam";
 @import "./footer";
