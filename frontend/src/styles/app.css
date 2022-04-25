@@ -171,6 +171,10 @@ body h6 {
   font-weight: bold;
 }
 
+body span {
+  font-family: "Maven Pro", sans-serif;
+}
+
 body button {
   border: none;
   outline: none;
@@ -1723,6 +1727,166 @@ body.modal-open {
   .ourteam .ourteam-characters .character-9,
   .ourteam .ourteam-characters .character-10 {
     inset: 0;
+  }
+}
+
+.login-wallet .qpoker-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.login-wallet .qpoker-logo img {
+  width: 170px;
+}
+
+.login-wallet .login-box {
+  margin-top: 3rem;
+  width: 477px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #0a0500, #000);
+  border: 1px solid #e28001;
+  -webkit-box-shadow: 9px 9px 18px #392b18, -9px -9px 18px #2d2214;
+  box-shadow: 9px 9px 18px #392b18, -9px -9px 18px #2d2214;
+}
+
+.login-wallet .login-box .header-login-box {
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.login-wallet .login-box .login-wallets {
+  padding: 2rem 2rem;
+  border: 1px solid #e28001;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.login-wallet .login-box .login-wallets.no-border-radius {
+  border-radius: 0;
+}
+
+.login-wallet .login-box .login-wallets .logo-wallet-metamask {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.login-wallet .login-box .login-wallets .describe-wallet {
+  padding-left: 2.5rem;
+}
+
+.login-wallet .login-box .login-wallets .describe-wallet span {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.login-wallet .login-box .login-wallets .describe-wallet p {
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 0.7px;
+}
+
+.login-wallet .login-box .wallet-download-info {
+  padding: 32px 10px;
+  border-top: 1px solid #e28001;
+  margin-left: -45px;
+  margin-right: -45px;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+.login-wallet .login-box .wallet-download-info span {
+  color: #b8c1d2;
+}
+
+.login-wallet .login-box .wallet-download-info a {
+  font-weight: bold;
+  color: #e28001;
+  margin-left: 0.5rem;
+}
+
+.footer-dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.footer-dashboard .copyright-qpoker {
+  color: #b8c1d2;
+  font-size: 1.8rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
+}
+
+.footer-dashboard .menu-footer-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
+}
+
+.footer-dashboard .menu-footer-login ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-dashboard .menu-footer-login ul li:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.footer-dashboard .menu-footer-login ul a {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.footer-dashboard .menu-footer-login ul a:hover {
+  color: #e28001;
+}
+
+@media screen and (max-width: 430px) {
+  .login-wallet .login-box .login-wallets {
+    padding: 2rem 1rem;
+  }
+  .login-wallet .login-box .login-wallets .describe-wallet {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .login-wallet .login-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-dashboard .menu-footer-login {
+    margin-top: 1.5rem;
   }
 }
 
