@@ -6,6 +6,7 @@ import RoadMapStep3 from "../components/RoadMapStep3";
 import RoadMapStep4 from "../components/RoadMapStep4";
 import OurTeam from "../components/OurTeam";
 import SocialResponsive from "../components/SocialResponsive";
+import Footer from "../components/Footer";
 import { useEffect } from "react";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
@@ -42,33 +43,37 @@ const Home = () => {
         }
       }
     });
-    document.addEventListener("wheel", function (e) {
-      console.log("keydown wheel");
-      const delta = e.wheelDelta;
-      const currentTime = new Date().getTime();
-      if (currentTime - lastTime < animationDuration) {
-        e.preventDefault();
-        return;
-      }
-      if (delta < 0) {
-        if (index > 5) return;
-        index++;
-        sections.forEach((section, i) => {
-          if (i === index) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      } else {
-        if (index < 1) return;
-        index--;
-        sections.forEach((section, i) => {
-          if (i === index) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
-      lastTime = currentTime;
-    });
+    document.addEventListener(
+      "wheel",
+      function (e) {
+        console.log("keydown wheel");
+        const delta = e.wheelDelta;
+        const currentTime = new Date().getTime();
+        if (currentTime - lastTime < animationDuration) {
+          e.preventDefault();
+          return;
+        }
+        if (delta < 0) {
+          if (index > 6) return;
+          index++;
+          sections.forEach((section, i) => {
+            if (i === index) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        } else {
+          if (index < 1) return;
+          index--;
+          sections.forEach((section, i) => {
+            if (i === index) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        }
+        lastTime = currentTime;
+      },
+      { passive: false }
+    );
   }, [width]);
 
   return (
@@ -76,12 +81,12 @@ const Home = () => {
       <main>
         <Hero />
         {width > 992 ? <SocialSection /> : <SocialResponsive />}
-
         <RoadMapStep1 />
         <RoadMapStep2 />
         <RoadMapStep3 />
         <RoadMapStep4 />
         <OurTeam />
+        <Footer />
       </main>
     </>
   );

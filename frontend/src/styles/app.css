@@ -586,7 +586,7 @@ body.modal-open {
 }
 
 .social-section {
-  padding-top: 30px;
+  padding-top: 25vh;
   height: 100vh;
   position: relative;
   background-color: #000;
@@ -661,6 +661,10 @@ body.modal-open {
 .social-section .circle-socials .right-circle-social .circle-icon-social {
   width: 20px;
   margin-right: 4rem;
+}
+
+.social-section .circle-socials .right-circle-social .circle-icon-social a {
+  display: block;
 }
 
 .social-section .circle-socials .right-circle-social .telegram-social {
@@ -878,7 +882,7 @@ body.modal-open {
   min-height: 100vh;
   background-color: #313032;
   position: relative;
-  padding-top: 30px;
+  padding-top: 11vh;
 }
 
 .roadmap .roadmap-date p {
@@ -1442,6 +1446,8 @@ body.modal-open {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  top: 6vh;
 }
 
 .ourteam .ourteam-header h2 {
@@ -1890,22 +1896,27 @@ body.modal-open {
   }
 }
 
-footer {
+.footer-home {
+  position: relative;
+  min-height: 50vh;
+}
+
+.footer-home footer {
   background-color: #000;
   padding-top: 50px;
 }
 
-footer .footer-left h4 {
+.footer-home footer .footer-left h4 {
   font-size: 2.4rem;
 }
 
-footer .footer-left p {
+.footer-home footer .footer-left p {
   font-size: 17px;
   letter-spacing: 1px;
   margin: 2rem 0;
 }
 
-footer .footer-left form {
+.footer-home footer .footer-left form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1915,7 +1926,7 @@ footer .footer-left form {
   flex-direction: column;
 }
 
-footer .footer-left form input {
+.footer-home footer .footer-left form input {
   height: 50px;
   border-radius: 7px;
   background-color: transparent;
@@ -1926,27 +1937,27 @@ footer .footer-left form input {
   font-size: 17px;
 }
 
-footer .footer-left form input::-webkit-input-placeholder {
+.footer-home footer .footer-left form input::-webkit-input-placeholder {
   color: #fff;
   font-size: 17px;
 }
 
-footer .footer-left form input:-ms-input-placeholder {
+.footer-home footer .footer-left form input:-ms-input-placeholder {
   color: #fff;
   font-size: 17px;
 }
 
-footer .footer-left form input::-ms-input-placeholder {
+.footer-home footer .footer-left form input::-ms-input-placeholder {
   color: #fff;
   font-size: 17px;
 }
 
-footer .footer-left form input::placeholder {
+.footer-home footer .footer-left form input::placeholder {
   color: #fff;
   font-size: 17px;
 }
 
-footer .footer-left form button {
+.footer-home footer .footer-left form button {
   margin-top: 1rem;
   height: 50px;
   background-color: #e28001;
@@ -1955,11 +1966,11 @@ footer .footer-left form button {
   border-radius: 7px;
 }
 
-footer .footer-logo .footer-social-media {
+.footer-home footer .footer-logo .footer-social-media {
   position: absolute;
 }
 
-footer .footer-logo .footer-social-media a {
+.footer-home footer .footer-logo .footer-social-media a {
   position: absolute;
   width: 55px;
   height: 55px;
@@ -1976,16 +1987,16 @@ footer .footer-logo .footer-social-media a {
   align-items: center;
 }
 
-footer .footer-logo .footer-social-media a:nth-child(2) {
+.footer-home footer .footer-logo .footer-social-media a:nth-child(2) {
   left: 112px;
   bottom: -21px;
 }
 
-footer .footer-logo .footer-social-media a:nth-child(3) {
+.footer-home footer .footer-logo .footer-social-media a:nth-child(3) {
   left: 220px;
 }
 
-footer .footer-right {
+.footer-home footer .footer-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1993,21 +2004,21 @@ footer .footer-right {
   justify-content: space-around;
 }
 
-footer .footer-right ul li {
+.footer-home footer .footer-right ul li {
   font-size: 19px;
   color: rgba(255, 255, 255, 0.8);
   margin: 1.5rem 0;
   letter-spacing: 1px;
 }
 
-footer .footer-right ul li:first-child {
+.footer-home footer .footer-right ul li:first-child {
   color: #fff;
   font-size: 20px;
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
 }
 
-footer .footer-copy-right p {
+.footer-home footer .footer-copy-right p {
   text-align: center;
   font-size: 2rem;
   padding: 2rem 0;
@@ -2016,11 +2027,11 @@ footer .footer-copy-right p {
 }
 
 @media screen and (max-width: 991.98px) {
-  footer .footer-logo {
+  .footer-home footer .footer-logo {
     width: 100%;
     margin: 3rem 0 2rem 0;
   }
-  footer .footer-logo .footer-social-media {
+  .footer-home footer .footer-logo .footer-social-media {
     position: static;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2029,10 +2040,10 @@ footer .footer-copy-right p {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
-  footer .footer-logo .footer-social-media a {
+  .footer-home footer .footer-logo .footer-social-media a {
     position: static;
   }
-  footer .footer-logo img {
+  .footer-home footer .footer-logo img {
     display: none;
   }
 }

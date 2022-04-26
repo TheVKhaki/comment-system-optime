@@ -1,5 +1,5 @@
 .social-section {
-  padding-top: 30px;
+  padding-top: 25vh;
   height: 100vh;
   position: relative;
   background-color: #000;
@@ -71,6 +71,9 @@
       .circle-icon-social {
         width: 20px;
         margin-right: 4rem;
+        a {
+          display: block;
+        }
       }
 
       .telegram-social {
