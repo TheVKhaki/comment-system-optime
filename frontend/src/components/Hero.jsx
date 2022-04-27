@@ -92,11 +92,7 @@ const Hero = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <section className="hero hero-bg" id="#hero">
-=======
       <section className="hero hero-bg" id="#hero" ref={sections}>
->>>>>>> comeing-soon-deploy-1
         <Container fluid>
           <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
