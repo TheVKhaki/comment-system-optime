@@ -5,12 +5,14 @@
 
 .hero {
   height: 100vh;
+  position: relative;
   .hero-img-elephant {
     img {
       position: absolute;
       bottom: 0;
       right: 0;
       height: 760px;
+      object-fit: cover;
     }
   }
   .hero-text {
@@ -28,7 +30,6 @@
     }
     h2 {
       font-size: 6.5rem;
-      width: 700px;
       margin-bottom: 4rem;
     }
     p {
@@ -76,5 +77,99 @@
     //   align-items: center;
     //   margin-left: 1rem;
     // }
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .hero {
+    .hero-img-elephant {
+      img {
+        height: 85%;
+      }
+    }
+    .hero-text {
+      width: 540px;
+      h2 {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero {
+    .bullet-section {
+      position: fixed;
+      right: 30px;
+      top: 50%;
+      transform: translate(0, -50%);
+      z-index: 10;
+      span {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+        transition: 0.2s all;
+        cursor: pointer;
+        &:hover {
+          background-color: #e28001;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .hero {
+    .hero-img-elephant {
+      display: none;
+    }
+    .hero-text {
+      width: 100%;
+      text-align: center;
+    }
+    .btns-hero {
+      justify-content: center;
+      .btn-hero {
+        position: relative;
+        right: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .hero {
+    .btns-hero {
+      justify-content: center;
+      .btn-watch {
+        margin-left: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .hero {
+    .hero-text {
+      h2 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+    }
+    .btns-hero {
+      margin-top: 5rem;
+      flex-direction: column-reverse;
+      align-items: center;
+      .btn-hero {
+        right: 0;
+      }
+      .btn-watch {
+        margin-left: 0;
+        margin-bottom: 2rem;
+        margin-right: 13rem;
+      }
+    }
   }
 }

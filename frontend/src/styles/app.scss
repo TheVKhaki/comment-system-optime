@@ -127,6 +127,7 @@ html {
 
 body {
   line-height: 1.5;
+  background-color: $colorBlack !important;
 }
 
 img,
@@ -178,7 +179,13 @@ body {
     font-family: "Maven Pro", sans-serif;
     font-weight: bold;
   }
+<<<<<<< HEAD
 
+=======
+  span {
+    font-family: "Maven Pro", sans-serif;
+  }
+>>>>>>> comeing-soon-deploy-1
   button {
     border: none;
     outline: none;
@@ -197,10 +204,33 @@ body {
   font-size: 19px;
   padding-top: 0.4rem;
 }
+<<<<<<< HEAD
 
+=======
+.home-swiper {
+  height: 100vh;
+}
+@media screen and (min-width: 992px) {
+  main {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+//Nav
+>>>>>>> comeing-soon-deploy-1
 @import "./nav";
+//Page Home
 @import "./hero";
 @import "./social";
+<<<<<<< HEAD
 @import "./roadmap";
 @import "./ourteam";
+=======
+@import "./socialresponsive";
+@import "./roadmap";
+@import "./ourteam";
+//Page Login
+@import "./login";
+//Footer
+>>>>>>> comeing-soon-deploy-1
 @import "./footer";

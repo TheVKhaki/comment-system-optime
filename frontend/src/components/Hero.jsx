@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 //Bootstrap
 import { Col, Container, Row } from "react-bootstrap";
 //media
@@ -7,7 +8,10 @@ import { IconContext } from "react-icons";
 import { FaPlay } from "react-icons/fa";
 //Gsap
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+//custom hook
+import useWindowSize from "../custom hook/ResizeEvent";
 
 function TextHero({ children }) {
   return <div className="box">{children}</div>;
@@ -17,11 +21,14 @@ function Btnn({ children }) {
 }
 
 const Hero = () => {
+  const [width, height] = useWindowSize();
   const imgElephant = useRef();
   const homeText = useRef();
   const q = gsap.utils.selector(homeText);
   const tl = useRef();
+  const sections = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
       imgElephant.current,
       { x: "100", scale: 0.95, y: "30" },
@@ -46,11 +53,50 @@ const Hero = () => {
         },
         "-=0.6"
       );
-  }, []);
+    // if (width > 992) {
+    //   ScrollTrigger.enable();
+    //   gsap.fromTo(
+    //     sections.current,
+    //     { scale: 1, opacity: 1 },
+    //     {
+    //       opacity: 0,
+    //       scale: 0.5,
+    //       scrollTrigger: {
+    //         trigger: sections.current,
+    //         start: "top top",
+    //         end: "bottom center",
+    //         scrub: true,
+    //         markers: false,
+    //       },
+    //     }
+    //   );
+    // } else {
+    //   ScrollTrigger.disable();
+    //   gsap.fromTo(
+    //     sections.current,
+    //     { scale: 1, opacity: 1 },
+    //     {
+    //       opacity: 1,
+    //       scale: 1,
+    //       scrollTrigger: {
+    //         trigger: sections.current,
+    //         start: "top top",
+    //         end: "bottom center",
+    //         scrub: true,
+    //         markers: false,
+    //       },
+    //     }
+    //   );
+    // }
+  }, [width]);
 
   return (
     <>
+<<<<<<< HEAD
       <section className="hero hero-bg" id="#hero">
+=======
+      <section className="hero hero-bg" id="#hero" ref={sections}>
+>>>>>>> comeing-soon-deploy-1
         <Container fluid>
           <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
@@ -66,7 +112,7 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#" className="btn-hero btn-main">
+                <a href="#social" className="btn-hero btn-main">
                   Button
                 </a>
                 <IconContext.Provider
@@ -83,6 +129,15 @@ const Hero = () => {
             </div>
           </Container>
         </Container>
+        <div className="bullet-section">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </section>
     </>
   );

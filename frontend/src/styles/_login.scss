@@ -1,0 +1,129 @@
+.login-wallet {
+  .qpoker-logo {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 170px;
+    }
+  }
+  .login-box {
+    margin-top: 3rem;
+    width: 477px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #0a0500, #000);
+    border: 1px solid #e28001;
+    box-shadow: 9px 9px 18px #392b18, -9px -9px 18px #2d2214;
+    .header-login-box {
+      display: block;
+      text-align: center;
+      padding: 3rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: $colorWhite;
+    }
+    .login-wallets {
+      padding: 2rem 2rem;
+      border: 1px solid #e28001;
+      align-items: center;
+      &.no-border-radius {
+        border-radius: 0;
+      }
+      border-radius: 8px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      .logo-wallet-metamask {
+        flex-shrink: 0;
+      }
+      .describe-wallet {
+        padding-left: 2.5rem;
+        span {
+          font-size: 1.7rem;
+          font-weight: bold;
+          color: $colorWhite;
+        }
+        p {
+          color: $colorWhite;
+          font-size: 1.4rem;
+          letter-spacing: 0.7px;
+        }
+      }
+    }
+    .wallet-download-info {
+      padding: 32px 10px;
+      border-top: 1px solid #e28001;
+      margin-left: -45px;
+      margin-right: -45px;
+      text-align: center;
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      span {
+        color: #b8c1d2;
+      }
+      a {
+        font-weight: bold;
+        color: #e28001;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+.footer-dashboard {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  .copyright-qpoker {
+    color: #b8c1d2;
+    font-size: 1.8rem;
+    text-align: center;
+    flex: 1 1 30rem;
+  }
+  .menu-footer-login {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 30rem;
+    ul {
+      display: flex;
+      li {
+        &:nth-child(2) {
+          margin-left: 2rem;
+        }
+      }
+      a {
+        color: $colorWhite;
+        font-size: 1.8rem;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+//Responsive
+@media screen and (max-width: 430px) {
+  .login-wallet {
+    .login-box {
+      .login-wallets {
+        padding: 2rem 1rem;
+        .describe-wallet {
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .login-wallet {
+    .login-box {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-dashboard {
+    .menu-footer-login {
+      margin-top: 1.5rem;
+    }
+  }
+}
