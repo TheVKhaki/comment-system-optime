@@ -527,6 +527,31 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .hero .bullet-section {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 10;
+  }
+  .hero .bullet-section span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    cursor: pointer;
+  }
+  .hero .bullet-section span:hover {
+    background-color: #e28001;
+  }
+}
+
 @media screen and (max-width: 991.98px) {
   .hero .hero-img-elephant {
     display: none;
@@ -1713,12 +1738,30 @@ body.modal-open {
   transform: translate(-50%, -50%);
 }
 
+.ourteam .model3d-characters canvas + div {
+  color: #fff;
+  font-size: 3rem;
+  left: 50% !important;
+  top: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+}
+
 .ourteam .model3d-characters .close-model3d {
   background-color: #e28001;
   height: 50px;
   width: 50px;
   border-radius: 50px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 991.98px) {

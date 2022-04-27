@@ -27,7 +27,7 @@ const Header = () => {
             <Nav className="justify-content-center flex-grow-1 pe-3">
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Casino</Nav.Link>
-              <Nav.Link href="#action3">About Coin</Nav.Link>
+              <Nav.Link href="#social">About Coin</Nav.Link>
               <Nav.Link href="#action4">Learn</Nav.Link>
               <Nav.Link href="#action5">News</Nav.Link>
             </Nav>

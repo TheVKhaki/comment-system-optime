@@ -5,6 +5,9 @@ import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css/navigation";
+//icon
+import { IconContext } from "react-icons";
+import { IoCloseSharp } from "react-icons/io5";
 //Framermotion
 import { motion } from "framer-motion";
 //Characters 3dmodel
@@ -61,7 +64,7 @@ const OurTeam = () => {
   // handle click close 3dmodel
   const handleClickClose = () => {
     setShow(false);
-    setShowLoad(null);
+    setShowLoad(false);
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters";
     refModel3d.current.className = "model3d-characters d-none";
@@ -83,11 +86,7 @@ const OurTeam = () => {
   //   console.log("Y: " + Y + " X: " + X);
   function Loader() {
     const { progress } = useProgress();
-    return (
-      <Html center wrapperClass>
-        {progress} % loaded
-      </Html>
-    );
+    return <Html center>Loading...</Html>;
   }
 
   useEffect(() => {
@@ -104,7 +103,7 @@ const OurTeam = () => {
 
   return (
     <>
-      <section className="ourteam">
+      <section className="ourteam" index="6">
         <Container>
           <div className="ourteam-header">
             <h2>OurTeam</h2>
@@ -158,13 +157,21 @@ const OurTeam = () => {
               })}
             </Swiper>
           </motion.div>
-          {showLoad && <div className="loading-nft">Loading...</div>}
+          {/* {showLoad && <div className="loading-nft">Loading...</div>} */}
           {/* {show === true && ( */}
           <div className="model3d-characters d-none" ref={refModel3d}>
-            <div className="close-model3d" onClick={handleClickClose}></div>
+            <Container>
+              <div className="close-model3d" onClick={handleClickClose}>
+                <IconContext.Provider
+                  value={{ color: "black", size: "3.1rem" }}
+                >
+                  <IoCloseSharp />
+                </IconContext.Provider>
+              </div>
+            </Container>
             <Canvas camera={{ position: [0, 0, 10] }}>
               <Center position={position}>
-                <Suspense fallback={null}>
+                <Suspense fallback={<Loader />}>
                   <Model3d
                     setShowLoad={setShowLoad}
                     currentModel={currentModel}

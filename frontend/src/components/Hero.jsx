@@ -125,6 +125,15 @@ const Hero = () => {
             </div>
           </Container>
         </Container>
+        <div className="bullet-section">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </section>
     </>
   );

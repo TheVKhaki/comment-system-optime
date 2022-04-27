@@ -16,9 +16,21 @@ const Home = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
+    const bullets = document.querySelectorAll(".bullet-section span");
     let index = 0;
     let animationDuration = 1000;
     let lastTime = 0;
+    bullets.forEach((bullet, indexbullet) => {
+      bullet.addEventListener("click", function (params) {
+        sections.forEach((section, i) => {
+          if (indexbullet === i) {
+            section.scrollIntoView({ behavior: "smooth" });
+            index = indexbullet;
+          }
+        });
+      });
+    });
+
     document.addEventListener("keydown", function keys(e) {
       if (width > 992) {
         if (e.keyCode === 38) {
