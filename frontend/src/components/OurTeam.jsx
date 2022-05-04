@@ -8,8 +8,12 @@ import "swiper/css/navigation";
 //icon
 import { IconContext } from "react-icons";
 import { IoCloseSharp } from "react-icons/io5";
+//RandomReveal
+import { RandomReveal } from "react-random-reveal";
+//observer
+import { useInView } from "react-intersection-observer";
 //Framermotion
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 //Characters 3dmodel
 import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
@@ -43,6 +47,15 @@ const OurTeam = () => {
   const [showLoad, setShowLoad] = useState(null);
   const [currentModel, setCurrentModel] = useState(null);
   const [position, setPosition] = useState([0, -3, 0]);
+  //animation
+  const controls = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   //click on characters
   const ourteam = useRef();
   const refModel3d = useRef();
@@ -101,13 +114,41 @@ const OurTeam = () => {
     }
   }, [width]);
 
+  //variant animation
+  // const imgOurTeam = {
+  //   hidden: {
+  //     filter: blur(3),
+  //   },
+  //   visible: {
+  //     blur: 4,
+  //     transition: {
+  //       duration: 1,
+  //       delay: 0.5,
+  //     },
+  //   },
+  // };
+
   return (
     <>
-      <section className="ourteam" index="6">
+      <section className="ourteam" index="6" ref={element}>
         <Container>
           <div className="ourteam-header">
-            <h2>OurTeam</h2>
-            <p>Step4 IGOs and ICOs</p>
+            <h2>
+              <RandomReveal
+                isPlaying={inView}
+                duration={0.5}
+                revealDuration={0.5}
+                characters="OurTeam"
+              />
+            </h2>
+            <p>
+              <RandomReveal
+                isPlaying={inView}
+                duration={0.5}
+                revealDuration={0.5}
+                characters="Step4 IGOs and ICOs"
+              />
+            </p>
           </div>
 
           <motion.div
@@ -129,7 +170,11 @@ const OurTeam = () => {
                       key={characters.id}
                       onClick={handleClickNFT}
                     >
-                      <img src={characters.image} alt="" />
+                      <motion.img
+                        className={`${inView ? "show" : "hidden"} `}
+                        src={characters.image}
+                        alt=""
+                      />
                     </div>
                   </SwiperSlide>
                 );

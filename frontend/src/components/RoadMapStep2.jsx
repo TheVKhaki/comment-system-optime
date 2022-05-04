@@ -5,11 +5,15 @@ import { Col, Container, Row, Modal, Button } from "react-bootstrap";
 import imageRoadMap2 from "../images/AIR.png";
 import logoModalRoadMap from "../images/03-03 13.png";
 import roadMapParticipate from "../images/roadmapparticipate.png";
+//RandomReveal
+import { RandomReveal } from "react-random-reveal";
+//observer
+import { useInView } from "react-intersection-observer";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 //Framer motion
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
 function MyVerticallyCenteredModal(props) {
@@ -73,74 +77,72 @@ function MyVerticallyCenteredModal(props) {
         </div>
         <div className="roadmap-participate">
           <img src={roadMapParticipate} alt="" />
-          <motion.svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="149"
-            height="1915"
-            fill="none"
+            data-name="Layer 1"
             viewBox="0 0 149 1915"
           >
-            <motion.path
-              fill="#E28001"
-              d="M89 81H1779V110H89z"
-              transform="rotate(90 89 81)"
-              variants={item}
-              initial="hidden"
-              animate="visible"
-            ></motion.path>
+            <path
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="28"
+              d="M74.5 24.5L74.5 1839.98"
+            ></path>
             <circle
-              cx="76"
-              cy="42"
-              r="30"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
-            ></circle>
-            <circle
-              cx="76"
-              cy="340"
-              r="30"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
-            ></circle>
-            <circle
-              cx="76"
-              cy="663"
-              r="30"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
-            ></circle>
-            <circle
-              cx="76"
-              cy="1019"
-              r="30"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
-            ></circle>
-            <circle
-              cx="76"
-              cy="1357"
-              r="30"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
+              cx="74.5"
+              cy="42.85"
+              r="28.73"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="23"
             ></circle>
             <circle
               cx="74.5"
-              cy="1840.5"
-              r="62.5"
-              fill="#000"
-              stroke="#E28001"
-              strokeWidth="24"
+              cy="340.5"
+              r="28.73"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="23"
             ></circle>
-            <path
-              fill="#fff"
-              d="M66.958 1803.44c-2.094 4.47-3.295 10.45-3.295 16.4v38.83c-.892.67-1.629 1.44-2.175 2.27v-28.05C57.374 1852.85 43 1854.17 43 1870.95h17.4v2.18H43c0 3.6 3.895 6.52 8.7 6.52h8.7c0 3.15 1.364 4.35 3.263 4.35H69.1c1.9 0 3.263-1.2 3.263-4.35h2.174c0 3.15 1.364 4.35 3.263 4.35h5.438c1.9 0 3.262-1.2 3.262-4.35h8.7c4.805 0 8.7-2.92 8.7-6.52H86.5v-2.18h17.4c0-16.78-14.375-18.1-18.488-38.06v28.05c-.546-.83-1.283-1.6-2.175-2.27v-38.83c0-5.95-1.2-11.93-3.295-16.4-1.891-4.03-4.318-6.44-6.492-6.44-2.174 0-4.6 2.41-6.492 6.44zm11.93 14.22c0 .29-.115.57-.319.77-.204.21-.48.32-.769.32h-8.7c-.288 0-.565-.11-.769-.32a1.08 1.08 0 01-.319-.77c0-4.34 10.876-4.34 10.876 0z"
-            ></path>
-          </motion.svg>
+            <circle
+              cx="74.5"
+              cy="1019.81"
+              r="28.73"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="23"
+            ></circle>
+            <circle
+              cx="74.5"
+              cy="1356.33"
+              r="28.73"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="23"
+            ></circle>
+            <circle
+              cx="74.5"
+              cy="1839.98"
+              r="64.13"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="19"
+            ></circle>
+            <circle
+              cx="74.5"
+              cy="663.77"
+              r="28.73"
+              fill="#050708"
+              stroke="#e06f1f"
+              strokeMiterlimit="10"
+              strokeWidth="23"
+            ></circle>
+          </svg>
           <div className="box-twitter box-roadmap">
             <h3>Twitter Give Away</h3>
             <p>
@@ -197,78 +199,131 @@ const RoadMapStep2 = () => {
   const [width, height] = useWindowSize();
   const [modalShow, setModalShow] = useState(false);
   const roadMapStep2 = useRef(null);
+  const controls = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger);
-    // if (width > 992) {
-    //   ScrollTrigger.enable();
-    //   gsap.fromTo(
-    //     roadMapStep2.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 0,
-    //       scale: 0.5,
-    //       scrollTrigger: {
-    //         trigger: roadMapStep2.current,
-    //         start: "center center",
-    //         end: "bottom center",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // } else {
-    //   ScrollTrigger.disable();
-    //   gsap.fromTo(
-    //     roadMapStep2.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 1,
-    //       scale: 1,
-    //     }
-    //   );
-    // }
-  }, [width]);
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  //variant animation
+  const imgRoadMap1 = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
+  const textRoadMap = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
     <>
-      <section className="roadmap-step2 roadmap">
+      <section className="roadmap-step2 roadmap" ref={element}>
         <div ref={roadMapStep2}>
           <Container>
             <div className="header-roadmap">
-              <h2>RoadMap</h2>
+              <h2>
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="RoadMap"
+                />
+              </h2>
               <p>
-                Step2 <br />
-                Air Drops and Bounty Campagins
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="Step2"
+                />
+                <br />
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="Air Drops and Bounty Campagins"
+                />
               </p>
             </div>
             <Row className="content-slide-2-1">
               <Col lg={4}>
-                <img src={imageRoadMap2} alt="" />
+                <motion.img
+                  variants={imgRoadMap1}
+                  initial="hidden"
+                  animate={controls}
+                  src={imageRoadMap2}
+                  alt=""
+                />
               </Col>
               <Col lg={8}>
-                <p>
+                <motion.p
+                  variants={textRoadMap}
+                  initial="hidden"
+                  animate={controls}
+                >
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Impedit aliquid id laborum maiores temporibus harum, ea
                   corrupti deserunt voluptatum exercitationem. Quis maiores
                   reprehenderit, unde voluptatum, at molestiae sapiente aut
                   dignissimos perspiciatis tempora incidunt aspernatur eligendi
                   debitis quos recusandae itaque veritatis!
-                </p>
+                </motion.p>
               </Col>
             </Row>
             <Row className="content-slide-2-2">
               <Col lg={4}>
                 <div className="roadmap-date roadmap-date-2">
                   <p>
-                    2022 <br />
-                    feb-mar
+                    <RandomReveal
+                      isPlaying={inView}
+                      duration={0.5}
+                      revealDuration={0.5}
+                      characters="2022"
+                    />
+                    <br />
+                    <RandomReveal
+                      isPlaying={inView}
+                      duration={0.5}
+                      revealDuration={0.5}
+                      characters="feb-mar"
+                    />
                   </p>
                 </div>
               </Col>
               <Col lg={8}>
-                <div className="btn-slide">
+                <motion.div
+                  variants={textRoadMap}
+                  initial="hidden"
+                  animate={controls}
+                  className="btn-slide"
+                >
                   <a onClick={() => setModalShow(true)}>
                     How to be Participate
                   </a>
-                </div>
+                </motion.div>
               </Col>
             </Row>
           </Container>

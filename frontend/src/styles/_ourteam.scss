@@ -161,7 +161,7 @@
 
         &.swiper-slide-active {
           img {
-            filter: grayscale(0) blur(0);
+            filter: grayscale(0) blur(0) !important;
           }
         }
       }
@@ -175,12 +175,17 @@
 
     img {
       width: 100%;
-      filter: grayscale(100%) blur(3px);
       cursor: pointer;
       object-fit: fill;
       height: 350px;
-      transition: all 0.3s;
-
+      transition: all 1s;
+      transition-delay: 0.5s;
+      &.hidden {
+        filter: grayscale(100%) blur(100px);
+      }
+      &.show {
+        filter: grayscale(100%) blur(3px);
+      }
       &:hover {
         filter: grayscale(0);
       }
@@ -206,7 +211,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    canvas+div {
+    canvas + div {
       color: #fff;
       font-size: 3rem;
       left: 50% !important;
@@ -232,7 +237,6 @@
 @media screen and (max-width: 991.98px) {
   .ourteam {
     .ourteam-characters {
-
       .character-1,
       .character-2,
       .character-3,
@@ -244,6 +248,23 @@
       .character-9,
       .character-10 {
         inset: 0;
+      }
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .ourteam {
+    .ourteam-characters {
+      .swiper-ourteam-2initialized {
+        .swiper-button-next {
+          right: -90px;
+        }
+        .swiper-button-prev {
+          left: -90px;
+        }
       }
     }
   }
