@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRef } from "react";
 import { Col, Container, Row, Modal, Button } from "react-bootstrap";
 //Media
 import imageRoadMap2 from "../images/AIR.png";
 import logoModalRoadMap from "../images/03-03 13.png";
-import roadMapParticipate from "../images/roadmapparticipate.png";
+import roadMapParticipate from "../images/RMMBS2.svg";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
@@ -17,17 +17,59 @@ import { motion, useAnimation } from "framer-motion";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
 function MyVerticallyCenteredModal(props) {
-  const item = {
+  const controls = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+  const controls5 = useAnimation();
+  const controls6 = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element2, inView2] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element3, inView3] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (inView2) {
+      controls2.start("visible");
+    }
+    if (inView3) {
+      controls3.start("visible");
+    }
+    if (inView4) {
+      controls4.start("visible");
+    }
+    if (inView5) {
+      controls5.start("visible");
+    }
+    if (inView6) {
+      controls6.start("visible");
+    }
+  }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
+
+  const itemPath = {
     hidden: {
       pathLength: 0,
+    },
+    visible: {
+      pathLength: 1,
+      transition: {
+        duration: 1,
+        delay: 0.3,
+      },
+    },
+  };
+  const itemOpacity = {
+    hidden: {
       opacity: 0,
     },
     visible: {
       opacity: 1,
-      pathLength: 1,
       transition: {
-        duration: 2,
-        delay: 2.5,
+        duration: 1,
       },
     },
   };
@@ -80,105 +122,155 @@ function MyVerticallyCenteredModal(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
-            viewBox="0 0 149 1915"
+            viewBox="0 0 144.26 1901.99"
           >
-            <path
+            <g
+              fill="none"
               stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="28"
-              d="M74.5 24.5L74.5 1839.98"
-            ></path>
-            <circle
-              cx="74.5"
-              cy="42.85"
-              r="28.73"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="23"
-            ></circle>
-            <circle
-              cx="74.5"
-              cy="340.5"
-              r="28.73"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="23"
-            ></circle>
-            <circle
-              cx="74.5"
-              cy="1019.81"
-              r="28.73"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="23"
-            ></circle>
-            <circle
-              cx="74.5"
-              cy="1356.33"
-              r="28.73"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="23"
-            ></circle>
-            <circle
-              cx="74.5"
-              cy="1839.98"
-              r="64.13"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="19"
-            ></circle>
-            <circle
-              cx="74.5"
-              cy="663.77"
-              r="28.73"
-              fill="#050708"
-              stroke="#e06f1f"
-              strokeMiterlimit="10"
-              strokeWidth="23"
-            ></circle>
+              data-name="bc59edd1-101a-4510-b44a-68a4d33fcac1"
+            >
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls5}
+                strokeLinejoin="round"
+                strokeWidth="20"
+                d="M72.13 1342L72.13 1712"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls4}
+                strokeLinejoin="round"
+                strokeWidth="20"
+                d="M72.13 1018L72.13 1282.48"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls3}
+                strokeLinejoin="round"
+                strokeWidth="20"
+                d="M72.13 673L72.13 957"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls2}
+                strokeLinejoin="round"
+                strokeWidth="20"
+                d="M72.13 359.11L72.13 614"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls}
+                strokeLinejoin="round"
+                strokeWidth="20"
+                d="M72.13 70.46L72.13 297"
+              ></motion.path>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls}
+                r="28.73"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+                cy="40"
+                cx="72.13"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls2}
+                r="28.73"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+                transform="rotate(-88.09 68.096 336.673)"
+                cy="340"
+                cx="77"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls4}
+                r="28.73"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+                transform="rotate(-89.08 68.137 1015.924)"
+                cy="1019.81"
+                cx="96"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls5}
+                r="28.73"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+                transform="rotate(-1.68 -271.741 1434.755)"
+                cx="75.5"
+                cy="1323"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls6}
+                cx="72.13"
+                r="64.13"
+                strokeMiterlimit="10"
+                strokeWidth="16"
+                cy="1783"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls3}
+                r="28.73"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+                transform="rotate(-1.68 -271.802 740.967)"
+                cx="74.5"
+                cy="653"
+              ></motion.circle>
+            </g>
           </svg>
-          <div className="box-twitter box-roadmap">
+          <div className="box-twitter box-roadmap" ref={element}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               commodo ligula in
             </p>
           </div>
-          <div className="box-twitter-1 box-roadmap">
+          <div className="box-twitter-1 box-roadmap" ref={element2}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               commodo ligula in
             </p>
           </div>
-          <div className="box-telegram box-roadmap">
+          <div className="box-telegram box-roadmap" ref={element3}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               commodo ligula in
             </p>
           </div>
-          <div className="box-qpoker box-roadmap">
+          <div className="box-qpoker box-roadmap" ref={element4}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               commodo ligula in
             </p>
           </div>
-          <div className="box-youtube box-roadmap">
+          <div className="box-youtube box-roadmap" ref={element5}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               commodo ligula in
             </p>
           </div>
-          <div className="box-roadmap-2">
+          <div className="box-roadmap-2" ref={element6}>
             <h3>Twitter Give Away</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
@@ -201,6 +293,7 @@ const RoadMapStep2 = () => {
   const roadMapStep2 = useRef(null);
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");

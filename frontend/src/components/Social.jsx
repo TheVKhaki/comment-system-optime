@@ -22,61 +22,61 @@ const SocialSection = () => {
       controls.start("visible");
       //Canvas
       // Initialising the canvas
-      var canvas = document.querySelector(".matrix-load canvas"),
-        ctx = canvas.getContext("2d");
+      // var canvas = document.querySelector(".matrix-load canvas"),
+      //   ctx = canvas.getContext("2d");
 
-      // Setting the width and height of the canvas
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      // // Setting the width and height of the canvas
+      // canvas.width = window.innerWidth;
+      // canvas.height = window.innerHeight;
 
-      // Setting up the letters
-      var letters =
-        "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
-      letters = letters.split("");
+      // // Setting up the letters
+      // var letters =
+      //   "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
+      // letters = letters.split("");
 
-      // Setting up the columns
-      var fontSize = 10,
-        columns = canvas.width / fontSize;
+      // // Setting up the columns
+      // var fontSize = 10,
+      //   columns = canvas.width / fontSize;
 
-      // Setting up the drops
-      var drops = [];
-      for (var i = 0; i < columns; i++) {
-        drops[i] = 1;
-      }
+      // // Setting up the drops
+      // var drops = [];
+      // for (var i = 0; i < columns; i++) {
+      //   drops[i] = 1;
+      // }
 
-      // Setting up the draw function
-      function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, .1)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        for (var i = 0; i < drops.length; i++) {
-          var text = letters[Math.floor(Math.random() * letters.length)];
-          ctx.fillStyle = "#e28001";
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-          drops[i]++;
-          // if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-          //   drops[i] = 0;
-          // }
-        }
-      }
+      // // Setting up the draw function
+      // function draw() {
+      //   ctx.fillStyle = "rgba(0, 0, 0, .1)";
+      //   ctx.fillRect(0, 0, canvas.width, canvas.height);
+      //   for (var i = 0; i < drops.length; i++) {
+      //     var text = letters[Math.floor(Math.random() * letters.length)];
+      //     ctx.fillStyle = "#e28001";
+      //     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      //     drops[i]++;
+      //     // if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+      //     //   drops[i] = 0;
+      //     // }
+      //   }
+      // }
 
-      // Loop the animation
-      setInterval(draw, 16);
-      setTimeout(() => {
-        canvas.style.display = "none";
-      }, 2000);
+      // // Loop the animation
+      // setInterval(draw, 16);
+      // setTimeout(() => {
+      //   canvas.style.display = "none";
+      // }, 2000);
     } else {
       controls.start("hidden");
     }
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
-  const arrayTimeAnimtion = [1.5, 2, 2.5, 3.5, 4.5, 5.5, 6];
-  const shift = (arg) => {
-    for (let index = 0; index < arrayTimeAnimtion.length; index++) {
-      arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
-    }
-  };
-  shift(0);
+  const arrayTimeAnimtion = [0, 0.5, 1, 2, 3, 4, 4.5];
+  // const shift = (arg) => {
+  //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
+  //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
+  //   }
+  // };
+  // shift(0);
   const headerFadeIn = {
     hidden: {
       opacity: 0,
@@ -240,9 +240,9 @@ const SocialSection = () => {
       <section className="social-section" id="social" ref={element}>
         <div ref={sections2}>
           <div ref={sections2Fade}>
-            <div className="matrix-load">
+            {/* <div className="matrix-load">
               <canvas></canvas>
-            </div>
+            </div> */}
             <motion.div
               variants={headerFadeIn}
               initial="hidden"

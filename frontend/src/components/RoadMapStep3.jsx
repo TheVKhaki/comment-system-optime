@@ -5,7 +5,7 @@ import { Col, Container, Row, Modal } from "react-bootstrap";
 import imageRoadMap3 from "../images/ICO.png";
 import logoModalMore from "../images/logoModalMore.png";
 import modalCMC from "../images/modalCMC.png";
-import roadMapCMC from "../images/roadMapCMC.png";
+import roadMapCMC from "../images/RMMBS3.svg";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
 //RandomReveal

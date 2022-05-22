@@ -926,6 +926,42 @@ body.modal-open {
   padding-top: 11vh;
 }
 
+.roadmap.roadmap-step1 {
+  background: url(../images/BKGR1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.roadmap.roadmap-step2 {
+  background: url(../images/BKGR2.jpg) no-repeat;
+  background-size: cover;
+}
+
+.roadmap.roadmap-step3 {
+  background: url(../images/BKGR3.jpg) no-repeat;
+  background-size: cover;
+}
+
+.roadmap.roadmap-step4 {
+  background: url(../images/BKGR4-02.png) no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.roadmap.roadmap-step4 .img-elephant-comingsoon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .roadmap .roadmap-date p {
   font-size: 28px;
   text-align: center;
@@ -1072,11 +1108,18 @@ body.modal-open {
   font-size: 25px;
 }
 
-.roadmap .img-slide-roadmap-1 {
-  width: 250px;
+.roadmap .header-comingsoon {
+  text-align: center;
+  display: inline-block;
 }
 
-.roadmap .countdown {
+.roadmap .header-comingsoon h2 {
+  font-size: 8rem;
+}
+
+.roadmap .coming-soon {
+  width: 400px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1086,7 +1129,20 @@ body.modal-open {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.roadmap .img-slide-roadmap-1 {
+  width: 250px;
+}
+
+.roadmap .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 10vh;
 }
 
@@ -1126,21 +1182,20 @@ body.modal-open {
   rotate: -60deg;
 }
 
-.roadmap .coming-soon {
+.roadmap .coming-soon-text {
   text-align: center;
-  margin-top: 6rem;
 }
 
-.roadmap .coming-soon span {
-  font-size: 90px;
+.roadmap .coming-soon-text span {
+  font-size: 5.5rem;
   color: #fff;
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
 }
 
-.roadmap .coming-soon p {
-  font-size: 25px;
-  margin-top: 2rem;
+.roadmap .coming-soon-text p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
 }
 
 .roadmap2-modal .modal-body {
@@ -1194,8 +1249,13 @@ body.modal-open {
   position: relative;
 }
 
+.roadmap2-modal .roadmap-participate img {
+  width: 149px;
+}
+
 .roadmap2-modal .roadmap-participate svg {
   position: absolute;
+  width: 149px;
 }
 
 .roadmap2-modal .roadmap-participate .box-roadmap {
@@ -1413,7 +1473,7 @@ body.modal-open {
     -webkit-transform: translate(-24%, 15%);
     transform: translate(-24%, 15%);
   }
-  .roadmap .coming-soon span {
+  .roadmap .coming-soon-text span {
     font-size: 80px;
   }
 }
@@ -1436,11 +1496,11 @@ body.modal-open {
   .roadmap.roadmap-step2 .roadmap-date-2 {
     position: absolute;
     margin-right: 0;
-    top: 22%;
+    top: 25%;
     right: 10%;
   }
   .roadmap.roadmap-step3 .roadmap-date-3 {
-    top: 18%;
+    top: 22%;
     right: 4%;
     -webkit-transform: translate(-18%, 4%);
     transform: translate(-18%, 4%);
@@ -1448,11 +1508,17 @@ body.modal-open {
   .roadmap .content-slide-2-1 p {
     font-size: 2rem;
   }
-  .roadmap .coming-soon span {
+  .roadmap .coming-soon-text span {
     font-size: 57px;
   }
-  .roadmap .coming-soon p {
+  .roadmap .coming-soon-text p {
     font-size: 20px;
+  }
+  .roadmap .btn-slide a {
+    width: 100%;
+  }
+  .roadmap .btn-slide.btn-slide-3 {
+    width: 100%;
   }
   .roadmap2-modal .content-text p {
     font-size: 18px;
@@ -1461,7 +1527,7 @@ body.modal-open {
 }
 
 .ourteam {
-  min-height: 110vh;
+  min-height: 100vh;
   background-color: #000;
   position: relative;
 }
@@ -1506,7 +1572,7 @@ body.modal-open {
 }
 
 .ourteam .ourteam-characters {
-  min-height: 90vh;
+  min-height: 87vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1517,7 +1583,7 @@ body.modal-open {
   z-index: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  left: 50%;
+  left: 52%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
@@ -1530,6 +1596,17 @@ body.modal-open {
 .ourteam .ourteam-characters .swiper-ourteam-1initialized {
   overflow: initial;
   width: 1320px !important;
+}
+
+.ourteam .ourteam-characters .swiper-ourteam-1initialized .swiper-slide {
+  width: 250px !important;
+}
+
+.ourteam .ourteam-characters .swiper-ourteam-1initialized .swiper-slide img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .ourteam
@@ -1662,18 +1739,18 @@ body.modal-open {
 }
 
 .ourteam .ourteam-characters .swiper-ourteam-2initialized {
-  width: 400px !important;
+  width: 400px;
   display: none;
 }
 
 .ourteam .ourteam-characters .swiper-ourteam-2initialized .swiper-button-next {
   position: absolute;
-  right: -113px;
+  right: 0;
 }
 
 .ourteam .ourteam-characters .swiper-ourteam-2initialized .swiper-button-prev {
   position: absolute;
-  left: -113px;
+  left: 0;
 }
 
 .ourteam
@@ -1711,7 +1788,6 @@ body.modal-open {
 }
 
 .ourteam .ourteam-characters div {
-  width: 250px !important;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
@@ -1725,8 +1801,6 @@ body.modal-open {
   height: 350px;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
 }
 
 .ourteam .ourteam-characters img.hidden {
@@ -1816,17 +1890,23 @@ body.modal-open {
 }
 
 @media screen and (max-width: 575.98px) {
+  .ourteam .ourteam-characters .swiper-ourteam-2initialized {
+    width: 350px;
+  }
+  .ourteam .ourteam-characters .swiper-ourteam-2initialized .swiper-slide {
+    width: 350px !important;
+  }
   .ourteam
     .ourteam-characters
     .swiper-ourteam-2initialized
     .swiper-button-next {
-    right: -90px;
+    right: 22px;
   }
   .ourteam
     .ourteam-characters
     .swiper-ourteam-2initialized
     .swiper-button-prev {
-    left: -90px;
+    left: 12px;
   }
 }
 

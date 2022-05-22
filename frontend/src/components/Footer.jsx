@@ -9,7 +9,7 @@ const Footer = () => {
       <section className="footer-home">
         <footer>
           <Container>
-            <Row className="flex-sm-column flex-lg-row">
+            <Row className="flex-column flex-lg-row">
               <Col>
                 <div className="footer-left">
                   <h4>Subscribe</h4>

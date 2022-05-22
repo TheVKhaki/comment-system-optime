@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState, useRef } from "react";
+//media
+import elephantComingsoon from "../images/BKGR4-03.png";
 //motion
 import { motion, useAnimation } from "framer-motion";
 //Gsap
@@ -67,73 +69,58 @@ const RoadMapStep4 = () => {
     <>
       <section className="roadmap-step4 roadmap" ref={element}>
         <Container>
-          <div className="header-roadmap">
-            <h2>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="RoadMap"
-              />
-            </h2>
-            <p>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="Step4"
-              />
-              <br />
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="IGOs and ICOs"
-              />
-            </p>
+          <div className="img-elephant-comingsoon">
+            <img src={elephantComingsoon} alt="" />
           </div>
-          <motion.div
-            variants={textRoadMap}
-            initial="hidden"
-            animate={controls}
-            className="countdown"
-          >
-            <div className="countdown-number">
-              <div className="time-number">
-                <div className="time-couneter">D</div>
-                {timeLeft.days}
-              </div>
-              <div className="time-number">
-                <div className="time-couneter">H</div>
-                {timeLeft.hours}
-              </div>
-              <div className="time-number">
-                <div className="time-couneter">M</div>
-                {timeLeft.minutes}
-              </div>
-              <div className="time-number">
-                <div className="time-couneter">S</div>
-                {timeLeft.seconds}
-              </div>
-            </div>
-          </motion.div>
           <div className="coming-soon">
-            <span>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="Coming Soon"
-              />
-            </span>
-            <motion.p
+            <motion.div className="header-comingsoon">
+              <h2>QPoker</h2>
+              <p>The trendsetter of iGaming</p>
+            </motion.div>
+            <motion.div
               variants={textRoadMap}
               initial="hidden"
               animate={controls}
+              className="countdown"
             >
-              In gravida elit lorem, id efficitur arcu vehicula eget. Fusce id
-              nunc suscipit, iaculis ipsum tincidunt,{" "}
-            </motion.p>
+              <div className="countdown-number">
+                <div className="time-number">
+                  {/* <div className="time-couneter">D</div> */}
+                  {timeLeft.days}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">H</div> */}
+                  {timeLeft.hours}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">M</div> */}
+                  {timeLeft.minutes}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">S</div> */}
+                  {timeLeft.seconds}
+                </div>
+              </div>
+            </motion.div>
+            <div className="coming-soon-text">
+              <span>
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="COMING SOON"
+                />
+              </span>
+              <motion.p
+                variants={textRoadMap}
+                initial="hidden"
+                animate={controls}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                libero quis velit possimus sequi dicta sapiente reprehenderit
+                accusantium alias reiciendis ipsa porro, eligendi in? Quidem!
+              </motion.p>
+            </div>
           </div>
         </Container>
       </section>

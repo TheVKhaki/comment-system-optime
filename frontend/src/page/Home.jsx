@@ -13,6 +13,10 @@ import useWindowSize from "../custom hook/ResizeEvent";
 
 const Home = () => {
   const [width, height] = useWindowSize();
+  useEffect(() => {
+    const sectionHero = document.querySelector(".hero");
+    sectionHero.scrollIntoView();
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
