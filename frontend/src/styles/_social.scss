@@ -25,24 +25,27 @@
       font-size: 25px;
     }
   }
-
+  .pulse-social-animation {
+    position: absolute;
+    top: 37%;
+    left: 48.9%;
+    // background: rgba(226, 128, 1,1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 0;
+    border: 2px solid #e28001;
+  }
   .circle-socials {
     width: 100%;
     height: 640px;
     position: relative;
 
-    // .dimonds-puls{
-    //     animation: puls 2s infinite;
-    //     @keyframes puls {
-    //         0%{
-    //             box-shadow: red;
-
-    //         }
-    //     }
-    // }
     .all-circle-social {
       width: 100%;
       height: 90%;
+      position: relative;
+      z-index: 1;
     }
 
     .right-circle-social {

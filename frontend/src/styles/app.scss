@@ -213,7 +213,6 @@ body {
     overflow: hidden;
   }
 }
-
 //Nav
 @import "./nav";
 //Page Home
@@ -222,7 +221,7 @@ body {
 @import "./socialresponsive";
 @import "./roadmap";
 @import "./ourteam";
+//Footer Home
+@import "./footer";
 //Page Login
 @import "./login";
-//Footer
-@import "./footer";
