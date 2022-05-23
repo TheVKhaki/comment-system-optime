@@ -200,3 +200,10 @@ body.modal-open {
     }
   }
 }
+@media screen and (min-width: 992px) {
+  header {
+    .navbar-expand-lg .offcanvas {
+      display: none;
+    }
+  }
+}

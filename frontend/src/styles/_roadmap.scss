@@ -226,8 +226,21 @@
   }
 }
 
-//Modal 1-roadmap
+//Modal 2-roadmap
 .roadmap2-modal {
+  .modal-header {
+    background-color: #313032;
+    border-bottom: 0;
+    .btn-close {
+      background-size: 16px;
+      opacity: 1;
+      width: 3em;
+      height: 3em;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
   .modal-body {
     background-color: #313032;
   }
@@ -338,8 +351,21 @@
   }
 }
 
-//Modal 2-roadmap
+//Modal 3-roadmap
 .roadmap3-modal {
+  .modal-header {
+    background-color: #313032;
+    border-bottom: 0;
+    .btn-close {
+      background-size: 16px;
+      opacity: 1;
+      width: 3em;
+      height: 3em;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
   .modal-body {
     background-color: #313032;
   }

@@ -27,11 +27,7 @@ function MyVerticallyCenteredModal(props) {
       centered
       contentClassName="roadmap3-modal"
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
+      <Modal.Header closeButton closeVariant="white"></Modal.Header>
       <Modal.Body>
         <div className="logo-header">
           <img src={logoModalMore} alt="" />
@@ -78,6 +74,68 @@ function MyVerticallyCenteredModal(props) {
             </div>
           </div>
           <div className="image-roadmap-CMC">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 932">
+              <g data-name="Layer 4">
+                <path
+                  fill="none"
+                  stroke="#e06f1f"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="17"
+                  d="M45.47 41.93L815.24 41.93 815.24 356.54 45.47 356.54 45.47 890.67 815.24 890.67"
+                ></path>
+                <path
+                  fill="#050708"
+                  d="M45.47 75.2a33.28 33.28 0 1133.27-33.27A33.31 33.31 0 0145.47 75.2z"
+                ></path>
+                <path
+                  fill="#e06f1f"
+                  d="M45.47 16.65a25.28 25.28 0 11-25.28 25.28 25.3 25.3 0 0125.28-25.28m0-16a41.28 41.28 0 1041.27 41.28A41.28 41.28 0 0045.47.65z"
+                ></path>
+                <path
+                  fill="#050708"
+                  d="M815.53 75.2a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
+                ></path>
+                <path
+                  fill="#e06f1f"
+                  d="M815.53 16.65a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28A41.28 41.28 0 00815.53.65z"
+                ></path>
+                <path
+                  fill="#050708"
+                  d="M815.53 389.81a33.28 33.28 0 1133.28-33.27 33.31 33.31 0 01-33.28 33.27z"
+                ></path>
+                <path
+                  fill="#e06f1f"
+                  d="M815.53 331.26a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
+                ></path>
+                <circle
+                  cx="45.77"
+                  cy="356.54"
+                  r="33.27"
+                  fill="#050708"
+                ></circle>
+                <path
+                  fill="#e06f1f"
+                  d="M45.77 331.26a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
+                ></path>
+                <path
+                  fill="#050708"
+                  d="M45.77 923.94a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
+                ></path>
+                <path
+                  fill="#e06f1f"
+                  d="M45.77 865.39a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
+                ></path>
+                <path
+                  fill="#050708"
+                  d="M814.24 923.94a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
+                ></path>
+                <path
+                  fill="#e06f1f"
+                  d="M814.24 865.39A25.28 25.28 0 11789 890.67a25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
+                ></path>
+              </g>
+            </svg>
             <img src={roadMapCMC} alt="" />
             <div className="box-detail-2">
               <div className="box-detail">

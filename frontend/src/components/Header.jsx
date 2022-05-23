@@ -40,7 +40,7 @@ const Header = () => {
               aria-labelledby="offcanvasNavbarLabel"
               placement="end"
             >
-              <Offcanvas.Header closeButton closeVariant="">
+              <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
