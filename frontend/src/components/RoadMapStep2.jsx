@@ -81,11 +81,7 @@ function MyVerticallyCenteredModal(props) {
       centered
       contentClassName="roadmap2-modal"
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
+      <Modal.Header closeButton closeVariant="white"></Modal.Header>
       <Modal.Body>
         <div className="logo-header">
           <img src={logoModalRoadMap} alt="" />

@@ -418,6 +418,12 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 992px) {
+  header .navbar-expand-lg .offcanvas {
+    display: none;
+  }
+}
+
 .hero-bg {
   background: url(../images/BKG.png) no-repeat;
   background-size: cover;
@@ -1198,6 +1204,23 @@ body.modal-open {
   letter-spacing: 0.5px;
 }
 
+.roadmap2-modal .modal-header {
+  background-color: #313032;
+  border-bottom: 0;
+}
+
+.roadmap2-modal .modal-header .btn-close {
+  background-size: 16px;
+  opacity: 1;
+  width: 3em;
+  height: 3em;
+}
+
+.roadmap2-modal .modal-header .btn-close:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .roadmap2-modal .modal-body {
   background-color: #313032;
 }
@@ -1321,6 +1344,23 @@ body.modal-open {
 .roadmap2-modal .roadmap-participate .box-youtube {
   top: 1316px;
   right: 31px;
+}
+
+.roadmap3-modal .modal-header {
+  background-color: #313032;
+  border-bottom: 0;
+}
+
+.roadmap3-modal .modal-header .btn-close {
+  background-size: 16px;
+  opacity: 1;
+  width: 3em;
+  height: 3em;
+}
+
+.roadmap3-modal .modal-header .btn-close:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .roadmap3-modal .modal-body {
