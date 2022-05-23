@@ -18,92 +18,65 @@ const SocialSection = () => {
   const sections2 = useRef(null);
   const sections2Fade = useRef(null);
   useEffect(() => {
-    // const sectionHeight =
-    //   document.querySelector(".social-section").clientHeight / 1.5;
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.fromTo(
-    //   sections2.current,
-    //   { top: 0 },
-    //   {
-    //     top: -sectionHeight,
-    //     scrollTrigger: {
-    //       trigger: sections2.current,
-    //       start: `${-sectionHeight + "px"} top`,
-    //       end: "center bottom",
-    //       scrub: true,
-    //       markers: true,
-    //     },
-    //   }
-    // );
-    // gsap.fromTo(
-    //   sections2Fade.current,
-    //   { opacity: 1, scale: 1 },
-    //   {
-    //     opacity: 0,
-    //     scale: 0.5,
-    //     scrollTrigger: {
-    //       trigger: sections2Fade.current,
-    //       start: "center center",
-    //       end: "bottom center",
-    //       scrub: true,
-    //     },
-    //   }
-    // );
-  }, []);
-
-  useEffect(() => {
     if (inView) {
       controls.start("visible");
       //Canvas
       // Initialising the canvas
-      var canvas = document.querySelector(".matrix-load canvas"),
-        ctx = canvas.getContext("2d");
+      // var canvas = document.querySelector(".matrix-load canvas"),
+      //   ctx = canvas.getContext("2d");
 
-      // Setting the width and height of the canvas
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      // // Setting the width and height of the canvas
+      // canvas.width = window.innerWidth;
+      // canvas.height = window.innerHeight;
 
-      // Setting up the letters
-      var letters =
-        "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
-      letters = letters.split("");
+      // // Setting up the letters
+      // var letters =
+      //   "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
+      // letters = letters.split("");
 
-      // Setting up the columns
-      var fontSize = 10,
-        columns = canvas.width / fontSize;
+      // // Setting up the columns
+      // var fontSize = 10,
+      //   columns = canvas.width / fontSize;
 
-      // Setting up the drops
-      var drops = [];
-      for (var i = 0; i < columns; i++) {
-        drops[i] = 1;
-      }
+      // // Setting up the drops
+      // var drops = [];
+      // for (var i = 0; i < columns; i++) {
+      //   drops[i] = 1;
+      // }
 
-      // Setting up the draw function
-      function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, .1)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        for (var i = 0; i < drops.length; i++) {
-          var text = letters[Math.floor(Math.random() * letters.length)];
-          ctx.fillStyle = "#e28001";
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-          drops[i]++;
-          // if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-          //   drops[i] = 0;
-          // }
-        }
-      }
+      // // Setting up the draw function
+      // function draw() {
+      //   ctx.fillStyle = "rgba(0, 0, 0, .1)";
+      //   ctx.fillRect(0, 0, canvas.width, canvas.height);
+      //   for (var i = 0; i < drops.length; i++) {
+      //     var text = letters[Math.floor(Math.random() * letters.length)];
+      //     ctx.fillStyle = "#e28001";
+      //     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      //     drops[i]++;
+      //     // if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+      //     //   drops[i] = 0;
+      //     // }
+      //   }
+      // }
 
-      // Loop the animation
-      setInterval(draw, 16);
-      setTimeout(() => {
-        canvas.style.display = "none";
-      }, 2000);
+      // // Loop the animation
+      // setInterval(draw, 16);
+      // setTimeout(() => {
+      //   canvas.style.display = "none";
+      // }, 2000);
     } else {
       controls.start("hidden");
     }
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
+  const arrayTimeAnimtion = [0, 0.5, 1, 2, 3, 4, 4.5];
+  // const shift = (arg) => {
+  //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
+  //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
+  //   }
+  // };
+  // shift(0);
   const headerFadeIn = {
     hidden: {
       opacity: 0,
@@ -112,7 +85,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 6,
+        delay: arrayTimeAnimtion[6],
       },
     },
   };
@@ -126,7 +99,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        delay: 5.5,
+        delay: arrayTimeAnimtion[5],
       },
     },
   };
@@ -140,7 +113,7 @@ const SocialSection = () => {
       pathLength: 1,
       transition: {
         duration: 2,
-        delay: 2.5,
+        delay: arrayTimeAnimtion[3],
       },
     },
   };
@@ -154,7 +127,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 4.5,
+        delay: arrayTimeAnimtion[4],
       },
     },
   };
@@ -168,7 +141,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 4.5,
+        delay: arrayTimeAnimtion[4],
       },
     },
   };
@@ -182,7 +155,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 4.5,
+        delay: arrayTimeAnimtion[4],
       },
     },
   };
@@ -194,7 +167,7 @@ const SocialSection = () => {
       opacity: 0,
       transition: {
         duration: 1,
-        delay: 5.5,
+        delay: arrayTimeAnimtion[5],
       },
     },
   };
@@ -206,7 +179,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 2,
+        delay: arrayTimeAnimtion[1],
       },
     },
   };
@@ -218,7 +191,7 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 3.5,
+        delay: arrayTimeAnimtion[3],
       },
     },
   };
@@ -230,7 +203,21 @@ const SocialSection = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 5.5,
+        delay: arrayTimeAnimtion[5],
+      },
+    },
+  };
+  const pulseAnimation = {
+    hidden: {
+      opacity: 1,
+      scale: 0,
+    },
+    visible: {
+      opacity: 0,
+      scale: 100,
+      transition: {
+        duration: 3,
+        delay: arrayTimeAnimtion[1],
       },
     },
   };
@@ -253,9 +240,9 @@ const SocialSection = () => {
       <section className="social-section" id="social" ref={element}>
         <div ref={sections2}>
           <div ref={sections2Fade}>
-            <div className="matrix-load">
+            {/* <div className="matrix-load">
               <canvas></canvas>
-            </div>
+            </div> */}
             <motion.div
               variants={headerFadeIn}
               initial="hidden"
@@ -572,6 +559,12 @@ const SocialSection = () => {
                   xlinkHref="data:image/png;base64,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"
                 ></motion.image>
               </motion.svg>
+              <motion.div
+                variants={pulseAnimation}
+                initial="hidden"
+                animate={controls}
+                className="pulse-social-animation"
+              ></motion.div>
               <div className="right-circle-social">
                 <div className="telegram-social socials-in-circle">
                   <div className="circle-icon-social">

@@ -13,15 +13,24 @@ import useWindowSize from "../custom hook/ResizeEvent";
 
 const Home = () => {
   const [width, height] = useWindowSize();
+  useEffect(() => {
+    const sectionHero = document.querySelector(".hero");
+    sectionHero.scrollIntoView();
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const bullets = document.querySelectorAll(".bullet-section span");
+    const root = document.querySelector("#root");
     let index = 0;
     let animationDuration = 1000;
     let lastTime = 0;
     bullets.forEach((bullet, indexbullet) => {
       bullet.addEventListener("click", function (params) {
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullet.style.backgroundColor = "#e28001";
         sections.forEach((section, i) => {
           if (indexbullet === i) {
             section.scrollIntoView({ behavior: "smooth" });
@@ -34,31 +43,36 @@ const Home = () => {
     document.addEventListener("keydown", function keys(e) {
       if (width > 992) {
         if (e.keyCode === 38) {
-          console.log("keydown 38");
           if (index < 1) return;
           index--;
           sections.forEach((section, i) => {
             if (i === index) {
+              bullets.forEach((bulletColor) => {
+                bulletColor.style.backgroundColor = "white";
+              });
+              bullets[i].style.backgroundColor = "#e28001";
               section.scrollIntoView({ behavior: "smooth" });
             }
           });
         }
         if (e.keyCode === 40) {
-          console.log("keydown 40");
-          if (index > 5) return;
+          if (index > 6) return;
           index++;
           sections.forEach((section, i) => {
             if (i === index) {
+              bullets.forEach((bulletColor) => {
+                bulletColor.style.backgroundColor = "white";
+              });
+              bullets[i].style.backgroundColor = "#e28001";
               section.scrollIntoView({ behavior: "smooth" });
             }
           });
         }
       }
     });
-    document.addEventListener(
+    root.addEventListener(
       "wheel",
       function (e) {
-        console.log("keydown wheel");
         const delta = e.wheelDelta;
         const currentTime = new Date().getTime();
         if (currentTime - lastTime < animationDuration) {
@@ -70,6 +84,10 @@ const Home = () => {
           index++;
           sections.forEach((section, i) => {
             if (i === index) {
+              bullets.forEach((bulletColor) => {
+                bulletColor.style.backgroundColor = "white";
+              });
+              bullets[i].style.backgroundColor = "#e28001";
               section.scrollIntoView({ behavior: "smooth" });
             }
           });
@@ -78,6 +96,10 @@ const Home = () => {
           index--;
           sections.forEach((section, i) => {
             if (i === index) {
+              bullets.forEach((bulletColor) => {
+                bulletColor.style.backgroundColor = "white";
+              });
+              bullets[i].style.backgroundColor = "#e28001";
               section.scrollIntoView({ behavior: "smooth" });
             }
           });
@@ -99,7 +121,7 @@ const Home = () => {
         <RoadMapStep4 />
         <OurTeam />
         <Footer />
-      </main >
+      </main>
     </>
   );
 };

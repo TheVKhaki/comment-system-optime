@@ -5,9 +5,13 @@ import { Col, Container, Row, Modal } from "react-bootstrap";
 import imageRoadMap3 from "../images/ICO.png";
 import logoModalMore from "../images/logoModalMore.png";
 import modalCMC from "../images/modalCMC.png";
-import roadMapCMC from "../images/roadMapCMC.png";
+import roadMapCMC from "../images/RMMBS3.svg";
 //Framer motion
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+//RandomReveal
+import { RandomReveal } from "react-random-reveal";
+//observer
+import { useInView } from "react-intersection-observer";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -110,60 +114,91 @@ const RoadMapStep3 = () => {
   const [width, height] = useWindowSize();
   const [modalShow, setModalShow] = useState(false);
   const roadMapStep3 = useRef(null);
+  const controls = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // if (width > 992) {
-    //   ScrollTrigger.enable();
-    //   gsap.fromTo(
-    //     roadMapStep3.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 0,
-    //       scale: 0.5,
-    //       scrollTrigger: {
-    //         trigger: roadMapStep3.current,
-    //         start: "center center",
-    //         end: "bottom center",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // } else {
-    //   ScrollTrigger.disable();
-    //   gsap.fromTo(
-    //     roadMapStep3.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 1,
-    //       scale: 1,
-    //       scrollTrigger: {
-    //         trigger: roadMapStep3.current,
-    //         start: "center center",
-    //         end: "bottom center",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // }
-  }, [width]);
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  //variant animation
+  const imgRoadMap1 = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
+  const textRoadMap = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
     <>
-      <section className="roadmap-step3 roadmap">
+      <section className="roadmap-step3 roadmap" ref={element}>
         <div ref={roadMapStep3}>
           <Container>
             <div className="header-roadmap">
-              <h2>RoadMap</h2>
+              <h2>
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="RoadMap"
+                />
+              </h2>
               <p>
-                Step3 <br />
-                IGOs and ICOs
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="Step3"
+                />
+                <br />
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="IGOs and ICOs"
+                />
               </p>
             </div>
             <Row className="content-slide-3">
               <Col lg={4}>
-                <img src={imageRoadMap3} alt="" />
+                <motion.img
+                  variants={imgRoadMap1}
+                  initial="hidden"
+                  animate={controls}
+                  src={imageRoadMap3}
+                  alt=""
+                />
               </Col>
               <Col lg={8}>
-                <p>
+                <motion.p
+                  variants={textRoadMap}
+                  initial="hidden"
+                  animate={controls}
+                >
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Totam culpa autem, minus explicabo blanditiis ex modi
                   architecto commodi consequatur. Quia earum architecto ipsum
@@ -174,20 +209,36 @@ const RoadMapStep3 = () => {
                   assumenda libero, voluptatum excepturi, veritatis dignissimos
                   et sit commodi illum minus soluta, esse consectetur numquam
                   nobis eaque deleniti?
-                </p>
+                </motion.p>
                 <Row>
                   <Col lg={6} xs={12}>
                     <div className="roadmap-date roadmap-date-3">
                       <p>
-                        2022 <br />
-                        feb-mar
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={0.5}
+                          revealDuration={0.5}
+                          characters="2022"
+                        />
+                        <br />
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={0.5}
+                          revealDuration={0.5}
+                          characters="feb-mar"
+                        />
                       </p>
                     </div>
                   </Col>
                   <Col lg={6} xs={12} className="d-flex justify-content-center">
-                    <div className="btn-slide btn-slide-3">
+                    <motion.div
+                      variants={textRoadMap}
+                      initial="hidden"
+                      animate={controls}
+                      className="btn-slide btn-slide-3"
+                    >
                       <a onClick={() => setModalShow(true)}>More InforMation</a>
-                    </div>
+                    </motion.div>
                   </Col>
                 </Row>
               </Col>

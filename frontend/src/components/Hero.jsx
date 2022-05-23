@@ -126,6 +126,7 @@ const Hero = () => {
           </Container>
         </Container>
         <div className="bullet-section">
+          <span style={{ backgroundColor: "#e28001" }}></span>
           <span></span>
           <span></span>
           <span></span>

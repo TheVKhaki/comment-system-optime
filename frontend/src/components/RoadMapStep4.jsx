@@ -1,16 +1,48 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState, useRef } from "react";
+//media
+import elephantComingsoon from "../images/BKGR4-03.png";
+//motion
+import { motion, useAnimation } from "framer-motion";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+//RandomReveal
+import { RandomReveal } from "react-random-reveal";
+//observer
+import { useInView } from "react-intersection-observer";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
 const RoadMapStep4 = () => {
   const [width, height] = useWindowSize();
+  const controls = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  //variant animation
+  const textRoadMap = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`05/01/${year}`) - +new Date();
+    let difference = +new Date(`07/01/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -33,73 +65,64 @@ const RoadMapStep4 = () => {
     return () => clearTimeout(timer);
   });
 
-  //Animation
-  const roadMapStep4 = useRef(null);
-  useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger);
-    // if (width > 992) {
-    //   ScrollTrigger.enable();
-    //   gsap.fromTo(
-    //     roadMapStep4.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 0,
-    //       scale: 0.5,
-    //       scrollTrigger: {
-    //         trigger: roadMapStep4.current,
-    //         start: "center center",
-    //         end: "bottom center",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // } else {
-    //   ScrollTrigger.disable();
-    //   gsap.fromTo(
-    //     roadMapStep4.current,
-    //     { opacity: 1, scale: 1 },
-    //     {
-    //       opacity: 1,
-    //       scale: 1,
-    //       scrollTrigger: {
-    //         trigger: roadMapStep4.current,
-    //         start: "center center",
-    //         end: "bottom center",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // }
-  }, [width]);
   return (
     <>
-      <section className="roadmap-step4 roadmap">
-        <div ref={roadMapStep4}>
-          <Container>
-            <div className="header-roadmap">
-              <h2>RoadMap</h2>
-              <p>
-                Step4 <br />
-                IGOs and ICOs
-              </p>
-            </div>
-            <div className="countdown">
+      <section className="roadmap-step4 roadmap" ref={element}>
+        <Container>
+          <div className="img-elephant-comingsoon">
+            <img src={elephantComingsoon} alt="" />
+          </div>
+          <div className="coming-soon">
+            <motion.div className="header-comingsoon">
+              <h2>QPoker</h2>
+              <p>The trendsetter of iGaming</p>
+            </motion.div>
+            <motion.div
+              variants={textRoadMap}
+              initial="hidden"
+              animate={controls}
+              className="countdown"
+            >
               <div className="countdown-number">
-                <div className="time-number">{timeLeft.days}</div>
-                <div className="time-number">{timeLeft.hours}</div>
-                <div className="time-number">{timeLeft.minutes}</div>
-                <div className="time-number">{timeLeft.seconds}</div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">D</div> */}
+                  {timeLeft.days}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">H</div> */}
+                  {timeLeft.hours}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">M</div> */}
+                  {timeLeft.minutes}
+                </div>
+                <div className="time-number">
+                  {/* <div className="time-couneter">S</div> */}
+                  {timeLeft.seconds}
+                </div>
               </div>
+            </motion.div>
+            <div className="coming-soon-text">
+              <span>
+                <RandomReveal
+                  isPlaying={inView}
+                  duration={0.5}
+                  revealDuration={0.5}
+                  characters="COMING SOON"
+                />
+              </span>
+              <motion.p
+                variants={textRoadMap}
+                initial="hidden"
+                animate={controls}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                libero quis velit possimus sequi dicta sapiente reprehenderit
+                accusantium alias reiciendis ipsa porro, eligendi in? Quidem!
+              </motion.p>
             </div>
-            <div className="coming-soon">
-              <span>Coming Soon</span>
-              <p>
-                In gravida elit lorem, id efficitur arcu vehicula eget. Fusce id
-                nunc suscipit, iaculis ipsum tincidunt,{" "}
-              </p>
-            </div>
-          </Container>
-        </div>
+          </div>
+        </Container>
       </section>
     </>
   );

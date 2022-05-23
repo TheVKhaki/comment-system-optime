@@ -1,5 +1,5 @@
 .ourteam {
-  min-height: 110vh;
+  min-height: 100vh;
   background-color: #000;
   position: relative;
 
@@ -34,15 +34,14 @@
   }
 
   .ourteam-characters {
-    min-height: 90vh;
+    min-height: 87vh;
     display: flex;
     align-items: flex-end;
     position: absolute;
     z-index: 0;
     transition: all 0.3s;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%);
-
     &.hidden {
       opacity: 0;
       visibility: hidden;
@@ -53,6 +52,10 @@
       width: 1320px !important;
 
       .swiper-slide {
+        width: 250px !important;
+        img {
+          user-select: none;
+        }
         &:nth-child(1) {
           left: 135px;
         }
@@ -131,18 +134,18 @@
     }
 
     .swiper-ourteam-2initialized {
-      width: 400px !important;
+      width: 400px;
       display: none;
 
       .swiper-button-next {
         position: absolute;
-        right: -113px;
+        right: 0;
       }
 
       .swiper-button-prev {
         position: absolute;
 
-        left: -113px;
+        left: 0;
       }
 
       .swiper-button-next::after,
@@ -161,26 +164,29 @@
 
         &.swiper-slide-active {
           img {
-            filter: grayscale(0) blur(0);
+            filter: grayscale(0) blur(0) !important;
           }
         }
       }
     }
 
     div {
-      width: 250px !important;
       flex-shrink: 0;
       position: relative;
     }
 
     img {
       width: 100%;
-      filter: grayscale(100%) blur(3px);
       cursor: pointer;
       object-fit: fill;
       height: 350px;
-      transition: all 0.3s;
-
+      transition: all 1s;
+      &.hidden {
+        filter: grayscale(100%) blur(100px);
+      }
+      &.show {
+        filter: grayscale(100%) blur(3px);
+      }
       &:hover {
         filter: grayscale(0);
       }
@@ -206,7 +212,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    canvas+div {
+    canvas + div {
       color: #fff;
       font-size: 3rem;
       left: 50% !important;
@@ -232,7 +238,6 @@
 @media screen and (max-width: 991.98px) {
   .ourteam {
     .ourteam-characters {
-
       .character-1,
       .character-2,
       .character-3,
@@ -244,6 +249,27 @@
       .character-9,
       .character-10 {
         inset: 0;
+      }
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .ourteam {
+    .ourteam-characters {
+      .swiper-ourteam-2initialized {
+        width: 350px;
+        .swiper-slide {
+          width: 350px !important;
+        }
+        .swiper-button-next {
+          right: 22px;
+        }
+        .swiper-button-prev {
+          left: 12px;
+        }
       }
     }
   }
