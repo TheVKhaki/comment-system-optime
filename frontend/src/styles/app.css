@@ -1394,6 +1394,10 @@ body.modal-open {
   position: relative;
 }
 
+.roadmap3-modal .roadmap-CMC .image-roadmap-CMC svg {
+  position: absolute;
+}
+
 .roadmap3-modal .roadmap-CMC .box-detail {
   width: 600px;
   padding: 15px 10px 15px 10px;

@@ -398,6 +398,9 @@
   .roadmap-CMC {
     .image-roadmap-CMC {
       position: relative;
+      svg {
+        position: absolute;
+      }
     }
 
     .box-detail {

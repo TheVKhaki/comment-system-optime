@@ -19,6 +19,97 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useWindowSize from "../custom hook/ResizeEvent";
 //Modal Component
 function MyVerticallyCenteredModal(props) {
+  const controls = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+  const controls5 = useAnimation();
+  const controls6 = useAnimation();
+  const [element, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [element2, inView2] = useInView({
+    threshold: 0.9,
+    triggerOnce: true,
+    rootMargin: "-180px",
+  });
+  const [element3, inView3] = useInView({
+    threshold: 0.9,
+    triggerOnce: true,
+    rootMargin: "-120px",
+  });
+  const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    console.log(inView3);
+    if (inView) {
+      controls.start("visible");
+    }
+    if (inView2) {
+      controls2.start("visible");
+    }
+    if (inView3) {
+      controls3.start("visible");
+    }
+    if (inView4) {
+      controls4.start("visible");
+    }
+    if (inView5) {
+      controls5.start("visible");
+    }
+    if (inView6) {
+      controls6.start("visible");
+    }
+  }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
+
+  const itemPath = {
+    hidden: {
+      pathLength: 0,
+    },
+    visible: {
+      pathLength: 1,
+      transition: {
+        duration: 1,
+        delay: 0.3,
+      },
+    },
+  };
+  const itemPath2 = {
+    hidden: {
+      pathLength: 0,
+    },
+    visible: {
+      pathLength: 1,
+      transition: {
+        duration: 1,
+        delay: 1.3,
+      },
+    },
+  };
+  const itemOpacity = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const itemOpacity2 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1,
+      },
+    },
+  };
+
   return (
     <Modal
       {...props}
@@ -74,71 +165,137 @@ function MyVerticallyCenteredModal(props) {
             </div>
           </div>
           <div className="image-roadmap-CMC">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 932">
-              <g data-name="Layer 4">
-                <path
-                  fill="none"
-                  stroke="#e06f1f"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="17"
-                  d="M45.47 41.93L815.24 41.93 815.24 356.54 45.47 356.54 45.47 890.67 815.24 890.67"
-                ></path>
-                <path
-                  fill="#050708"
-                  d="M45.47 75.2a33.28 33.28 0 1133.27-33.27A33.31 33.31 0 0145.47 75.2z"
-                ></path>
-                <path
-                  fill="#e06f1f"
-                  d="M45.47 16.65a25.28 25.28 0 11-25.28 25.28 25.3 25.3 0 0125.28-25.28m0-16a41.28 41.28 0 1041.27 41.28A41.28 41.28 0 0045.47.65z"
-                ></path>
-                <path
-                  fill="#050708"
-                  d="M815.53 75.2a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
-                ></path>
-                <path
-                  fill="#e06f1f"
-                  d="M815.53 16.65a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28A41.28 41.28 0 00815.53.65z"
-                ></path>
-                <path
-                  fill="#050708"
-                  d="M815.53 389.81a33.28 33.28 0 1133.28-33.27 33.31 33.31 0 01-33.28 33.27z"
-                ></path>
-                <path
-                  fill="#e06f1f"
-                  d="M815.53 331.26a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
-                ></path>
-                <circle
-                  cx="45.77"
-                  cy="356.54"
-                  r="33.27"
-                  fill="#050708"
-                ></circle>
-                <path
-                  fill="#e06f1f"
-                  d="M45.77 331.26a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
-                ></path>
-                <path
-                  fill="#050708"
-                  d="M45.77 923.94a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
-                ></path>
-                <path
-                  fill="#e06f1f"
-                  d="M45.77 865.39a25.28 25.28 0 11-25.27 25.28 25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
-                ></path>
-                <path
-                  fill="#050708"
-                  d="M814.24 923.94a33.28 33.28 0 1133.28-33.27 33.3 33.3 0 01-33.28 33.27z"
-                ></path>
-                <path
-                  fill="#e06f1f"
-                  d="M814.24 865.39A25.28 25.28 0 11789 890.67a25.31 25.31 0 0125.27-25.28m0-16a41.28 41.28 0 1041.28 41.28 41.28 41.28 0 00-41.28-41.28z"
-                ></path>
-              </g>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 861 932"
+            >
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls3}
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="30"
+                d="M85.23 890.67L782.9 890.67"
+              ></motion.path>
+              <motion.path
+                variants={itemPath2}
+                initial="hidden"
+                animate={controls2}
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="30"
+                d="M49.17 392.59L49.17 854.62"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls2}
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="30"
+                d="M782.9 356.54L85.23 356.54"
+              ></motion.path>
+              <motion.path
+                variants={itemPath2}
+                initial="hidden"
+                animate={controls}
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="30"
+                d="M818.95 77.98L818.95 320.49"
+              ></motion.path>
+              <motion.path
+                variants={itemPath}
+                initial="hidden"
+                animate={controls}
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="30"
+                d="M85.23 41.93L782.9 41.93"
+              ></motion.path>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls3}
+                cx="49.17"
+                cy="890.67"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity2}
+                initial="hidden"
+                animate={controls3}
+                cx="818.95"
+                cy="890.67"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity2}
+                initial="hidden"
+                animate={controls2}
+                cx="49.17"
+                cy="356.54"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls2}
+                cx="818.95"
+                cy="356.54"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity}
+                initial="hidden"
+                animate={controls}
+                cx="49.17"
+                cy="41.93"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
+              <motion.circle
+                variants={itemOpacity2}
+                initial="hidden"
+                animate={controls}
+                cx="818.95"
+                cy="41.93"
+                r="36.05"
+                fill="none"
+                stroke="#e06f1f"
+                strokeMiterlimit="10"
+                strokeWidth="8"
+              ></motion.circle>
             </svg>
             <img src={roadMapCMC} alt="" />
-            <div className="box-detail-2">
-              <div className="box-detail">
+            <div className="box-detail-2" ref={element}>
+              <div className="box-detail" ref={element2}>
                 <p>
                   In gravida elit lorem, id efficitur arcu vehicula eget. Fusce
                   id nunc suscipit, iaculis ipsum tincidunt, molestie nisl. Sed
@@ -147,7 +304,7 @@ function MyVerticallyCenteredModal(props) {
                 </p>
               </div>
             </div>
-            <div className="box-detail-3">
+            <div className="box-detail-3" ref={element3}>
               <div className="box-detail">
                 <p>
                   In gravida elit lorem, id efficitur arcu vehicula eget. Fusce
