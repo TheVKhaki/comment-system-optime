@@ -1,4 +1,6 @@
-FROM registry.qpoker.io/sam.mosleh/base-images/node-frontend:14 as build-stage
+FROM node:16 as build-stage
+
+WORKDIR /app
 
 COPY package.json /app/
 
