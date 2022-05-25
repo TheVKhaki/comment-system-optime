@@ -100,11 +100,16 @@ const Hero = () => {
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>
-                <h2>Qpoker is Poker Game Na Baba!!!</h2>
+                <h2>
+                  <span>Q</span>Poker
+                  <br />
+                  <span>Metaverse Quess'em Poker</span>
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                  error nobis expedita provident incidunt, minima fugiat quam
-                  possimus obcaecati esse?
+                  For the first time in iGaming platform and based on
+                  proof-of-stake smart contract on the blockchain technology:
+                  experience a non-stop, perfect and exciting game with the
+                  newly created Hold'em version.
                 </p>
               </TextHero>
               <Btnn>

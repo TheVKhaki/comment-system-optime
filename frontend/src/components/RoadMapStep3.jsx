@@ -36,11 +36,10 @@ function MyVerticallyCenteredModal(props) {
     triggerOnce: true,
     rootMargin: "-120px",
   });
-  const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
+  const [element4, inView4] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [element5, inView5] = useInView({ threshold: 0.2, triggerOnce: true });
   const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
-    console.log(inView3);
     if (inView) {
       controls.start("visible");
     }
@@ -110,6 +109,20 @@ function MyVerticallyCenteredModal(props) {
     },
   };
 
+  const boxAnim = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <Modal
       {...props}
@@ -154,7 +167,13 @@ function MyVerticallyCenteredModal(props) {
           <img src={modalCMC} alt="" />
         </div>
         <div className="roadmap-CMC">
-          <div className="box-detail-1">
+          <motion.div
+            variants={boxAnim}
+            initial="hidden"
+            animate={controls4}
+            className="box-detail-1"
+            ref={element4}
+          >
             <div className="box-detail">
               <p>
                 In gravida elit lorem, id efficitur arcu vehicula eget. Fusce id
@@ -163,7 +182,7 @@ function MyVerticallyCenteredModal(props) {
                 ac auctor nibh ligula sed nisl. Curabitur rutrum .
               </p>
             </div>
-          </div>
+          </motion.div>
           <div className="image-roadmap-CMC">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -294,18 +313,30 @@ function MyVerticallyCenteredModal(props) {
               ></motion.circle>
             </svg>
             <img src={roadMapCMC} alt="" />
-            <div className="box-detail-2" ref={element}>
+            <motion.div
+              variants={boxAnim}
+              initial="hidden"
+              animate={controls5}
+              className="box-detail-2"
+              ref={element}
+            >
               <div className="box-detail" ref={element2}>
-                <p>
+                <p ref={element5}>
                   In gravida elit lorem, id efficitur arcu vehicula eget. Fusce
                   id nunc suscipit, iaculis ipsum tincidunt, molestie nisl. Sed
                   tempor, est ut bibendum ultricies, enim libero finibus mauris,
                   ac auctor nibh ligula sed nisl. Curabitur rutrum .
                 </p>
               </div>
-            </div>
-            <div className="box-detail-3" ref={element3}>
-              <div className="box-detail">
+            </motion.div>
+            <motion.div
+              variants={boxAnim}
+              initial="hidden"
+              animate={controls6}
+              className="box-detail-3"
+              ref={element3}
+            >
+              <div className="box-detail" ref={element6}>
                 <p>
                   In gravida elit lorem, id efficitur arcu vehicula eget. Fusce
                   id nunc suscipit, iaculis ipsum tincidunt, molestie nisl. Sed
@@ -317,7 +348,7 @@ function MyVerticallyCenteredModal(props) {
                   auctor nibh ligula sed nisl. Curabitur rutrum .
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Modal.Body>

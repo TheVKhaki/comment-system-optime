@@ -445,7 +445,7 @@ body.modal-open {
 
 .hero .hero-text {
   height: 100vh;
-  width: 700px;
+  width: 716px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,13 +467,22 @@ body.modal-open {
 }
 
 .hero .hero-text h2 {
-  font-size: 6.5rem;
+  font-size: 6rem;
   margin-bottom: 4rem;
+}
+
+.hero .hero-text h2 span:first-child {
+  color: #e28001;
+}
+
+.hero .hero-text h2 span:last-child {
+  font-size: 5.5rem;
 }
 
 .hero .hero-text p {
   font-size: 2.8rem;
   color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.6px;
 }
 
 .hero .btns-hero {
@@ -526,10 +535,16 @@ body.modal-open {
     height: 85%;
   }
   .hero .hero-text {
-    width: 540px;
+    width: 585px;
   }
   .hero .hero-text h2 {
     font-size: 4.5rem;
+  }
+  .hero .hero-text h2 span:last-child {
+    font-size: 4.5rem;
+  }
+  .hero .hero-text p {
+    font-size: 2.5rem;
   }
 }
 
@@ -593,6 +608,9 @@ body.modal-open {
     margin-top: 5rem;
   }
   .hero .hero-text h2 {
+    font-size: 4rem;
+  }
+  .hero .hero-text h2 span:last-child {
     font-size: 3rem;
   }
   .hero .hero-text p {
@@ -822,6 +840,10 @@ body.modal-open {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.social-responsive .image-social-responsive svg {
+  position: absolute;
 }
 
 .social-responsive .image-social-responsive .text-image-responsive {
@@ -1440,12 +1462,42 @@ body.modal-open {
   transform: translate(-50%);
 }
 
+@media screen and (max-width: 1399.98px) {
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    position: absolute;
+    top: 29px;
+    right: -131px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .roadmap.roadmap-step4 {
+    background-position: 12%;
+  }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    top: 69px;
+    right: -220px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .roadmap.roadmap-step4 .img-elephant-comingsoon img:last-child {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 991.98px) {
+  .roadmap.roadmap-step1 {
+    background-position: center;
+  }
   .roadmap.roadmap-step1 .roadmap-date-1 {
     top: 38%;
     left: 66%;
     -webkit-transform: translate(-38%, -66%);
     transform: translate(-38%, -66%);
+  }
+  .roadmap.roadmap-step2 {
+    background-position: top;
   }
   .roadmap.roadmap-step2 .content-slide-2-1 img {
     width: 380px;
@@ -1457,6 +1509,9 @@ body.modal-open {
     top: 30%;
     right: 21%;
   }
+  .roadmap.roadmap-step3 {
+    background-position: top;
+  }
   .roadmap.roadmap-step3 img {
     width: 60%;
   }
@@ -1466,6 +1521,30 @@ body.modal-open {
     right: 15%;
     -webkit-transform: translate(-30%, 15%);
     transform: translate(-30%, 15%);
+  }
+  .roadmap .coming-soon {
+    margin: 54rem auto 0 auto;
+  }
+  .roadmap.roadmap-step4 {
+    background: url(../images/BKGR4-02-Res.jpg) no-repeat;
+    background-position: top;
+    background-size: 600px;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+  }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    top: 0;
+    width: 595px;
+    position: relative;
+    right: -53px;
+  }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon img {
+    width: 100%;
+    position: absolute;
+  }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon img:first-child {
+    display: none;
   }
   .roadmap .img-slide-roadmap-1-2 {
     margin: 0 auto;
@@ -1477,6 +1556,25 @@ body.modal-open {
   .roadmap .btn-slide.btn-slide-3 {
     top: 0;
     margin-right: 0;
+  }
+  .roadmap3-modal .roadmap-CMC .box-detail-2 {
+    position: static;
+    -webkit-transform: none;
+    transform: none;
+    margin-top: 2rem;
+  }
+  .roadmap3-modal .roadmap-CMC .box-detail-3 {
+    position: static;
+    -webkit-transform: none;
+    transform: none;
+    margin-top: 2rem;
+  }
+  .roadmap3-modal .roadmap-CMC .box-detail-3 .box-detail {
+    width: 100%;
+  }
+  .roadmap3-modal .roadmap-CMC .image-roadmap-CMC svg,
+  .roadmap3-modal .roadmap-CMC .image-roadmap-CMC img {
+    display: none;
   }
   .roadmap2-modal .roadmap-participate .box-twitter {
     top: 104px;
@@ -1517,8 +1615,8 @@ body.modal-open {
     -webkit-transform: translate(-24%, 15%);
     transform: translate(-24%, 15%);
   }
-  .roadmap .coming-soon-text span {
-    font-size: 80px;
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    right: 25px;
   }
 }
 
@@ -1549,11 +1647,22 @@ body.modal-open {
     -webkit-transform: translate(-18%, 4%);
     transform: translate(-18%, 4%);
   }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    right: 86px;
+    top: 47px;
+    width: 535px;
+    position: relative;
+  }
   .roadmap .content-slide-2-1 p {
     font-size: 2rem;
   }
+  .roadmap .coming-soon {
+    width: 100%;
+  }
   .roadmap .coming-soon-text span {
-    font-size: 57px;
+    font-size: 45px;
+    margin: 1rem 0 1rem 0;
+    display: block;
   }
   .roadmap .coming-soon-text p {
     font-size: 20px;
@@ -1564,9 +1673,18 @@ body.modal-open {
   .roadmap .btn-slide.btn-slide-3 {
     width: 100%;
   }
+  .roadmap3-modal .content-text {
+    padding: 0 7px;
+  }
   .roadmap2-modal .content-text p {
     font-size: 18px;
     letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    right: 120px;
   }
 }
 

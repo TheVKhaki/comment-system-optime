@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState, useRef } from "react";
 //media
 import elephantComingsoon from "../images/BKGR4-03.png";
+import elephantComingsoonRes from "../images/BKGR4-03-Res.png";
 //motion
 import { motion, useAnimation } from "framer-motion";
 //Gsap
@@ -71,6 +72,7 @@ const RoadMapStep4 = () => {
         <Container>
           <div className="img-elephant-comingsoon">
             <img src={elephantComingsoon} alt="" />
+            <img src={elephantComingsoonRes} alt="" />
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
@@ -116,9 +118,13 @@ const RoadMapStep4 = () => {
                 initial="hidden"
                 animate={controls}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                libero quis velit possimus sequi dicta sapiente reprehenderit
-                accusantium alias reiciendis ipsa porro, eligendi in? Quidem!
+                our new and young engineering team has brought trust and
+                entertainment to the Hold'em poker version. It has worth trying
+                as it is a multiple challenges version. Do you know, in this
+                version, there is no room for scam robots? We have its free
+                version as well. Come in and try so that you can taste the
+                authentic flavor of an online sports game. Indeed, it is a new
+                window to Poker, full of trust and thrill.
               </motion.p>
             </div>
           </div>

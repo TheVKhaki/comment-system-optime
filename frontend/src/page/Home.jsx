@@ -70,41 +70,44 @@ const Home = () => {
         }
       }
     });
+
     root.addEventListener(
       "wheel",
       function (e) {
-        const delta = e.wheelDelta;
-        const currentTime = new Date().getTime();
-        if (currentTime - lastTime < animationDuration) {
-          e.preventDefault();
-          return;
+        if (width !== 0 && width > 992) {
+          const delta = e.wheelDelta;
+          const currentTime = new Date().getTime();
+          if (currentTime - lastTime < animationDuration) {
+            e.preventDefault();
+            return;
+          }
+          if (delta < 0) {
+            if (index > 6) return;
+            index++;
+            sections.forEach((section, i) => {
+              if (i === index) {
+                bullets.forEach((bulletColor) => {
+                  bulletColor.style.backgroundColor = "white";
+                });
+                bullets[i].style.backgroundColor = "#e28001";
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            });
+          } else {
+            if (index < 1) return;
+            index--;
+            sections.forEach((section, i) => {
+              if (i === index) {
+                bullets.forEach((bulletColor) => {
+                  bulletColor.style.backgroundColor = "white";
+                });
+                bullets[i].style.backgroundColor = "#e28001";
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            });
+          }
+          lastTime = currentTime;
         }
-        if (delta < 0) {
-          if (index > 6) return;
-          index++;
-          sections.forEach((section, i) => {
-            if (i === index) {
-              bullets.forEach((bulletColor) => {
-                bulletColor.style.backgroundColor = "white";
-              });
-              bullets[i].style.backgroundColor = "#e28001";
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          });
-        } else {
-          if (index < 1) return;
-          index--;
-          sections.forEach((section, i) => {
-            if (i === index) {
-              bullets.forEach((bulletColor) => {
-                bulletColor.style.backgroundColor = "white";
-              });
-              bullets[i].style.backgroundColor = "#e28001";
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          });
-        }
-        lastTime = currentTime;
       },
       { passive: false }
     );
@@ -114,7 +117,7 @@ const Home = () => {
     <>
       <main>
         <Hero />
-        {width > 992 ? <SocialSection /> : <SocialResponsive />}
+        {width > 991 ? <SocialSection /> : <SocialResponsive />}
         <RoadMapStep1 />
         <RoadMapStep2 />
         <RoadMapStep3 />

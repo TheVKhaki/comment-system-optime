@@ -17,7 +17,7 @@
   }
   .hero-text {
     height: 100vh;
-    width: 700px;
+    width: 716px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,12 +29,21 @@
       top: 100px;
     }
     h2 {
-      font-size: 6.5rem;
+      font-size: 6rem;
       margin-bottom: 4rem;
+      span {
+        &:first-child {
+          color: #e28001;
+        }
+        &:last-child {
+          font-size: 5.5rem;
+        }
+      }
     }
     p {
       font-size: 2.8rem;
       color: rgba($color: #fff, $alpha: 0.8);
+      letter-spacing: 0.6px;
     }
   }
   .btns-hero {
@@ -88,9 +97,17 @@
       }
     }
     .hero-text {
-      width: 540px;
+      width: 585px;
       h2 {
         font-size: 4.5rem;
+        span {
+          &:last-child {
+            font-size: 4.5rem;
+          }
+        }
+      }
+      p {
+        font-size: 2.5rem;
       }
     }
   }
@@ -154,7 +171,12 @@
         margin-top: 5rem;
       }
       h2 {
-        font-size: 3rem;
+        font-size: 4rem;
+        span {
+          &:last-child {
+            font-size: 3rem;
+          }
+        }
       }
       p {
         font-size: 2rem;

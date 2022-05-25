@@ -31,7 +31,6 @@ function MyVerticallyCenteredModal(props) {
   const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
     if (inView) {
-      console.log(inView);
       controls.start("visible");
     }
     if (inView2) {
