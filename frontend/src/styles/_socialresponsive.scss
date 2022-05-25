@@ -20,6 +20,9 @@
     position: relative;
     margin: 0 auto;
     width: fit-content;
+    svg {
+      position: absolute;
+    }
     .text-image-responsive {
       position: absolute;
       text-align: center;

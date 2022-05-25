@@ -101,7 +101,6 @@ const OurTeam = () => {
   //   // }
   //   X = paddingright + OrderCalc;
   //   Y = window.innerHeight / 2 - (imageObject.layer - 1) * 150;
-  //   console.log("Y: " + Y + " X: " + X);
   function Loader() {
     const { progress } = useProgress();
     return <Html center>Loading...</Html>;
