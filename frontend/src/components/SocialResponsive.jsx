@@ -21,16 +21,18 @@ const SocialResponsive = () => {
   const [element6, inView6] = useInView({
     threshold: 0,
     triggerOnce: true,
-    rootMargin: "-150px",
+    rootMargin: "-40%",
   });
   const [element7, inView7] = useInView({
     threshold: 0,
     triggerOnce: true,
-    rootMargin: "-50px",
+    rootMargin: "-43.5%",
   });
 
   useEffect(() => {
     console.log(inView6);
+    console.log(inView7);
+
     if (inView) {
       controls.start("visible");
     }
@@ -152,7 +154,6 @@ const SocialResponsive = () => {
               d="M102.98 484.11L24.11 484.11"
             ></motion.path>
             <motion.path
-              ref={element7}
               variants={itemPath}
               initial="hidden"
               animate={controls7}
@@ -235,7 +236,7 @@ const SocialResponsive = () => {
             ref={element4}
           >
             <span>Youtube</span>
-            <p>Under Gathering</p>
+            <p ref={element6}>Under Gathering</p>
           </a>
           <a
             href="#"
@@ -243,7 +244,7 @@ const SocialResponsive = () => {
             ref={element5}
           >
             <span>Github</span>
-            <p>Under Gathering</p>
+            <p ref={element7}>Under Gathering</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>145</span>
