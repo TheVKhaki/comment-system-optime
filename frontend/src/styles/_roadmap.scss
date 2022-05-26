@@ -425,15 +425,18 @@
       justify-content: center;
       position: absolute;
       top: 107px;
-      left: 50%;
-      transform: translate(-50%);
+      left: 0;
+      right: 0;
     }
 
     .box-detail-3 {
       position: absolute;
       top: 450px;
-      left: 50%;
-      transform: translate(-50%);
+      left: 0;
+      width: 100%;
+      right: 0;
+      display: flex;
+      justify-content: center;
     }
   }
 }

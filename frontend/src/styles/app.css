@@ -1461,17 +1461,22 @@ body.modal-open {
   justify-content: center;
   position: absolute;
   top: 107px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
 }
 
 .roadmap3-modal .roadmap-CMC .box-detail-3 {
   position: absolute;
   top: 450px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  left: 0;
+  width: 100%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1399.98px) {
@@ -1917,6 +1922,28 @@ body.modal-open {
   display: none;
 }
 
+.ourteam .ourteam-characters .swiper-ourteam-2initialized .characters-detail {
+  color: #fff;
+  margin-bottom: 10%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ourteam .ourteam-characters .swiper-ourteam-2initialized .characters-detail p {
+  color: #fff;
+  font-size: 40px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.ourteam
+  .ourteam-characters
+  .swiper-ourteam-2initialized
+  .characters-detail
+  span {
+  font-size: 35px;
+}
+
 .ourteam .ourteam-characters .swiper-ourteam-2initialized .swiper-button-next {
   position: absolute;
   right: 0;
@@ -2045,6 +2072,10 @@ body.modal-open {
 }
 
 @media screen and (max-width: 991.98px) {
+  .ourteam .ourteam-header {
+    top: 0;
+    margin-top: 4rem;
+  }
   .ourteam .ourteam-characters .character-1,
   .ourteam .ourteam-characters .character-2,
   .ourteam .ourteam-characters .character-3,
