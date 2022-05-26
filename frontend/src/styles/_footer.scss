@@ -5,7 +5,21 @@
   footer {
     background-color: $colorBlack;
     padding-top: 50px;
-
+    .go-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #e28001;
+    }
     .footer-left {
       h4 {
         font-size: 2.4rem;
@@ -102,6 +116,15 @@
         padding: 2rem 0;
         letter-spacing: 1px;
         margin-bottom: 0rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer-home {
+    footer {
+      .go-to-top {
+        display: none;
       }
     }
   }

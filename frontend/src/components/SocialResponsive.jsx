@@ -21,12 +21,12 @@ const SocialResponsive = () => {
   const [element6, inView6] = useInView({
     threshold: 0,
     triggerOnce: true,
-    rootMargin: "-40%",
+    rootMargin: "-145px",
   });
   const [element7, inView7] = useInView({
     threshold: 0,
     triggerOnce: true,
-    rootMargin: "-43.5%",
+    rootMargin: "-161px",
   });
 
   useEffect(() => {
