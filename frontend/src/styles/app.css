@@ -119,6 +119,7 @@ html {
 body {
   line-height: 1.5;
   background-color: #000 !important;
+  overflow-x: hidden;
 }
 
 img,
@@ -430,7 +431,7 @@ body.modal-open {
 }
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -601,20 +602,24 @@ body.modal-open {
   .hero .btns-hero .btn-watch {
     margin-left: 0;
   }
+  .hero .hero-text h2 span:last-child {
+    font-size: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
   .hero .hero-text .box {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   .hero .hero-text h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
   }
   .hero .hero-text h2 span:last-child {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .hero .hero-text p {
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: 1px;
   }
   .hero .btns-hero {
@@ -634,6 +639,12 @@ body.modal-open {
     margin-left: 0;
     margin-bottom: 2rem;
     margin-right: 13rem;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .hero .hero-text {
+    height: 127vh;
   }
 }
 
@@ -993,6 +1004,7 @@ body.modal-open {
 .roadmap .roadmap-date p {
   font-size: 28px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .roadmap.roadmap-step1 .roadmap-date-1 {
@@ -1449,17 +1461,22 @@ body.modal-open {
   justify-content: center;
   position: absolute;
   top: 107px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
 }
 
 .roadmap3-modal .roadmap-CMC .box-detail-3 {
   position: absolute;
   top: 450px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  left: 0;
+  width: 100%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1399.98px) {
@@ -1905,6 +1922,28 @@ body.modal-open {
   display: none;
 }
 
+.ourteam .ourteam-characters .swiper-ourteam-2initialized .characters-detail {
+  color: #fff;
+  margin-bottom: 10%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ourteam .ourteam-characters .swiper-ourteam-2initialized .characters-detail p {
+  color: #fff;
+  font-size: 40px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.ourteam
+  .ourteam-characters
+  .swiper-ourteam-2initialized
+  .characters-detail
+  span {
+  font-size: 35px;
+}
+
 .ourteam .ourteam-characters .swiper-ourteam-2initialized .swiper-button-next {
   position: absolute;
   right: 0;
@@ -2033,6 +2072,10 @@ body.modal-open {
 }
 
 @media screen and (max-width: 991.98px) {
+  .ourteam .ourteam-header {
+    top: 0;
+    margin-top: 4rem;
+  }
   .ourteam .ourteam-characters .character-1,
   .ourteam .ourteam-characters .character-2,
   .ourteam .ourteam-characters .character-3,
@@ -2080,6 +2123,29 @@ body.modal-open {
 .footer-home footer {
   background-color: #000;
   padding-top: 50px;
+}
+
+.footer-home footer .go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 3px solid #e28001;
 }
 
 .footer-home footer .footer-left h4 {
@@ -2200,6 +2266,12 @@ body.modal-open {
   padding: 2rem 0;
   letter-spacing: 1px;
   margin-bottom: 0rem;
+}
+
+@media screen and (min-width: 992px) {
+  .footer-home footer .go-to-top {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991.98px) {

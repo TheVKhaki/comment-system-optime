@@ -199,6 +199,10 @@ const OurTeam = () => {
                       key={characters.id}
                       onClick={handleClickNFT}
                     >
+                      <div className="characters-detail">
+                        <p>{characters.name}</p>
+                        <span>{characters.job}</span>
+                      </div>
                       <img src={characters.image} alt="" />
                     </div>
                   </SwiperSlide>

@@ -31,6 +31,8 @@ const Characters = () => {
       model3d: model3dSam,
       position: [0, -3, 0],
       env: "venice_sunset_1k_sam.hdr",
+      name: "Sam",
+      job: "Developer",
     },
     {
       id: 2,
@@ -41,6 +43,8 @@ const Characters = () => {
       model3d: model3dSina,
       position: [0, -3, 0],
       env: "venice_sunset_1k_sina.hdr",
+      name: "Sina",
+      job: "Designer",
     },
     {
       id: 3,
@@ -51,6 +55,8 @@ const Characters = () => {
       model3d: model3dHenrik,
       position: [0, -3, 0],
       env: "venice_sunset_1k_henrik.hdr",
+      name: "Henrik",
+      job: "CEO",
     },
     {
       id: 4,
@@ -61,6 +67,8 @@ const Characters = () => {
       model3d: model3dMohammad,
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammad.hdr",
+      name: "Mohammad",
+      job: "CO-Founder",
     },
     {
       id: 5,
@@ -71,6 +79,8 @@ const Characters = () => {
       model3d: model3dMohammadreza,
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammadreza.hdr",
+      name: "Mohammadreza",
+      job: "Developer",
     },
     {
       id: 6,
@@ -81,6 +91,8 @@ const Characters = () => {
       model3d: model3dGirl1,
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl1.hdr",
+      name: "Chi?",
+      job: "Chikar?",
     },
     {
       id: 7,
@@ -91,6 +103,8 @@ const Characters = () => {
       model3d: model3dMan2,
       position: [0, -3, 0],
       env: "venice_sunset_1k_man1.hdr",
+      name: "Chi?",
+      job: "Chikar?",
     },
 
     {
@@ -102,6 +116,8 @@ const Characters = () => {
       model3d: model3dAmir,
       position: [0, -3, 0],
       env: "venice_sunset_1k_amir.hdr",
+      name: "Amir",
+      job: "Developer",
     },
     {
       id: 9,
@@ -112,6 +128,8 @@ const Characters = () => {
       model3d: model3dMan1,
       position: [0, -3, 0],
       env: "venice_sunset_1k_man2.hdr",
+      name: "Chi?",
+      job: "Chikar?",
     },
     {
       id: 10,
@@ -122,6 +140,8 @@ const Characters = () => {
       model3d: model3dGirl2,
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl2.hdr",
+      name: "Chi?",
+      job: "Chikar?",
     },
   ];
 };
