@@ -136,7 +136,21 @@
     .swiper-ourteam-2initialized {
       width: 400px;
       display: none;
-
+      .characters-detail {
+        color: #fff;
+        margin-bottom: 10%;
+        text-align: center;
+        margin-bottom: 4rem;
+        p {
+          color: #fff;
+          font-size: 40px;
+          font-family: "Maven Pro", sans-serif;
+          font-weight: bold;
+        }
+        span {
+          font-size: 35px;
+        }
+      }
       .swiper-button-next {
         position: absolute;
         right: 0;
@@ -237,6 +251,10 @@
 
 @media screen and (max-width: 991.98px) {
   .ourteam {
+    .ourteam-header {
+      top: 0;
+      margin-top: 4rem;
+    }
     .ourteam-characters {
       .character-1,
       .character-2,
