@@ -12,13 +12,12 @@ import { motion, useAnimation } from "framer-motion";
 import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
-//Gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-//custom hook
-import useWindowSize from "../custom hook/ResizeEvent";
 //Modal Component
 function MyVerticallyCenteredModal(props) {
+  const [animationComplete, setAnimationComplete] = useState({
+    animation1: "hidden",
+    animation2: "hidden",
+  });
   const controls = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
@@ -43,10 +42,10 @@ function MyVerticallyCenteredModal(props) {
     if (inView) {
       controls.start("visible");
     }
-    if (inView2) {
+    if (inView2 && animationComplete.animation1 === "visible") {
       controls2.start("visible");
     }
-    if (inView3) {
+    if (inView3 && animationComplete.animation2 === "visible") {
       controls3.start("visible");
     }
     if (inView4) {
@@ -58,7 +57,16 @@ function MyVerticallyCenteredModal(props) {
     if (inView6) {
       controls6.start("visible");
     }
-  }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
+  }, [
+    controls,
+    inView,
+    inView2,
+    inView3,
+    inView4,
+    inView5,
+    inView6,
+    animationComplete,
+  ]);
 
   const itemPath = {
     hidden: {
@@ -203,6 +211,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath2}
                 initial="hidden"
                 animate={controls2}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation2: definition,
+                  });
+                }}
                 fill="none"
                 stroke="#e06f1f"
                 strokeMiterlimit="10"
@@ -223,6 +237,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath2}
                 initial="hidden"
                 animate={controls}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation1: definition,
+                  });
+                }}
                 fill="none"
                 stroke="#e06f1f"
                 strokeMiterlimit="10"
@@ -357,7 +377,6 @@ function MyVerticallyCenteredModal(props) {
 }
 
 const RoadMapStep3 = () => {
-  const [width, height] = useWindowSize();
   const [modalShow, setModalShow] = useState(false);
   const roadMapStep3 = useRef(null);
   const controls = useAnimation();

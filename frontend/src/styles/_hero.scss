@@ -60,32 +60,12 @@
     }
     .btn-watch {
       height: 60px;
-      width: 60px;
-      border: 5px solid $mainColor;
-      border-radius: 65px;
+      width: 92px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 9rem;
-      position: relative;
-      &::after {
-        content: "Watch Trailer";
-        position: absolute;
-        right: -138px;
-        color: #fff;
-        white-space: nowrap;
-        font-size: 2rem;
-        top: 13px;
-      }
+      margin-left: 3rem;
     }
-    // .btn-text-watch{
-    //   color: #fff;
-    //   font-size: 2rem;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   margin-left: 1rem;
-    // }
   }
 }
 
@@ -146,18 +126,13 @@
       text-align: center;
     }
     .btns-hero {
-      justify-content: center;
-      .btn-hero {
-        position: relative;
-        right: 100px;
-      }
+      justify-content: space-around;
     }
   }
 }
 @media screen and (max-width: 767.98px) {
   .hero {
     .btns-hero {
-      justify-content: center;
       .btn-watch {
         margin-left: 0;
       }
@@ -195,15 +170,14 @@
     }
     .btns-hero {
       margin-top: 5rem;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       .btn-hero {
         right: 0;
       }
       .btn-watch {
         margin-left: 0;
-        margin-bottom: 2rem;
-        margin-right: 13rem;
+        margin-top: 3rem;
       }
     }
   }
