@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 //Bootstrap
 import { Col, Container, Row } from "react-bootstrap";
 //framer motion
@@ -10,14 +10,8 @@ import imageRoadMap11 from "../images/PRO.png";
 import imageRoadMap12 from "../images/ART.png";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
-//Gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-//custom hook
-import useWindowSize from "../custom hook/ResizeEvent";
 
 const RoadMap = () => {
-  const [width, height] = useWindowSize();
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {

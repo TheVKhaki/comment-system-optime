@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { Col, Container, Row, Modal, Button } from "react-bootstrap";
+import { Col, Container, Row, Modal } from "react-bootstrap";
 //Media
 import imageRoadMap2 from "../images/AIR.png";
 import logoModalRoadMap from "../images/03-03 13.png";
@@ -9,14 +9,16 @@ import roadMapParticipate from "../images/RMMBS2.svg";
 import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
-//Gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
-//custom hook
-import useWindowSize from "../custom hook/ResizeEvent";
 function MyVerticallyCenteredModal(props) {
+  const [animationComplete, setAnimationComplete] = useState({
+    animation1: "hidden",
+    animation2: "hidden",
+    animation3: "hidden",
+    animation4: "hidden",
+    animation5: "hidden",
+  });
   const controls = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
@@ -33,22 +35,31 @@ function MyVerticallyCenteredModal(props) {
     if (inView) {
       controls.start("visible");
     }
-    if (inView2) {
+    if (inView2 && animationComplete.animation1 === "visible") {
       controls2.start("visible");
     }
-    if (inView3) {
+    if (inView3 && animationComplete.animation2 === "visible") {
       controls3.start("visible");
     }
-    if (inView4) {
+    if (inView4 && animationComplete.animation3 === "visible") {
       controls4.start("visible");
     }
-    if (inView5) {
+    if (inView5 && animationComplete.animation4 === "visible") {
       controls5.start("visible");
     }
-    if (inView6) {
+    if (inView6 && animationComplete.animation5 === "visible") {
       controls6.start("visible");
     }
-  }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
+  }, [
+    controls,
+    inView,
+    inView2,
+    inView3,
+    inView4,
+    inView5,
+    inView6,
+    animationComplete,
+  ]);
 
   const itemPath = {
     hidden: {
@@ -129,6 +140,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath}
                 initial="hidden"
                 animate={controls5}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation5: definition,
+                  });
+                }}
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 1342L72.13 1712"
@@ -137,6 +154,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath}
                 initial="hidden"
                 animate={controls4}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation4: definition,
+                  });
+                }}
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 1018L72.13 1282.48"
@@ -145,6 +168,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath}
                 initial="hidden"
                 animate={controls3}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation3: definition,
+                  });
+                }}
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 673L72.13 957"
@@ -153,6 +182,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath}
                 initial="hidden"
                 animate={controls2}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation2: definition,
+                  });
+                }}
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 359.11L72.13 614"
@@ -161,6 +196,12 @@ function MyVerticallyCenteredModal(props) {
                 variants={itemPath}
                 initial="hidden"
                 animate={controls}
+                onAnimationComplete={(definition) => {
+                  setAnimationComplete({
+                    ...animationComplete,
+                    animation1: definition,
+                  });
+                }}
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 70.46L72.13 297"
@@ -284,7 +325,6 @@ function MyVerticallyCenteredModal(props) {
 }
 
 const RoadMapStep2 = () => {
-  const [width, height] = useWindowSize();
   const [modalShow, setModalShow] = useState(false);
   const roadMapStep2 = useRef(null);
   const controls = useAnimation();

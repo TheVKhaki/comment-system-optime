@@ -1,21 +1,16 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { useEffect, useState, useRef } from "react";
+import { Container } from "react-bootstrap";
+import { useEffect, useState } from "react";
 //media
 import elephantComingsoon from "../images/BKGR4-03.png";
 import elephantComingsoonRes from "../images/BKGR4-03-Res.png";
 //motion
 import { motion, useAnimation } from "framer-motion";
-//Gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
-//custom hook
-import useWindowSize from "../custom hook/ResizeEvent";
+
 const RoadMapStep4 = () => {
-  const [width, height] = useWindowSize();
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
@@ -118,14 +113,15 @@ const RoadMapStep4 = () => {
                 initial="hidden"
                 animate={controls}
               >
-                our new and young engineering team has brought trust and
-                entertainment to the Hold'em poker version. It has worth trying
-                as it is a multiple challenges version. Do you know, in this
-                version, there is no room for scam robots? We have its free
-                version as well. Come in and try so that you can taste the
-                authentic flavor of an online sports game. Indeed, it is a new
-                window to Poker, full of trust and thrill.
+                Evolution of real money skill games has leaped forward. We are
+                launching a trailblazing poker variant innovated by a group of
+                poker enthusiasts in 2019-2022. QPoker is the first
+                decentralized iGaming platform run by proof-of-stake smart
+                contracts. Take control over your funds, in every stage.
               </motion.p>
+              <a href="#" className="btn-coming-soon">
+                Button
+              </a>
             </div>
           </div>
         </Container>
