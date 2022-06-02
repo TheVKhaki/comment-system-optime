@@ -32,7 +32,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_sam.hdr",
       name: "Sam",
-      job: "Developer",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 2,
@@ -44,7 +47,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_sina.hdr",
       name: "Sina",
-      job: "Designer",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 3,
@@ -56,7 +62,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_henrik.hdr",
       name: "Henrik",
-      job: "CEO",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 4,
@@ -68,7 +77,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammad.hdr",
       name: "Mohammad",
-      job: "CO-Founder",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 5,
@@ -80,7 +92,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammadreza.hdr",
       name: "Mohammadreza",
-      job: "Developer",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 6,
@@ -92,7 +107,10 @@ const Characters = () => {
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl1.hdr",
       name: "Chi?",
-      job: "Chikar?",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 7,
@@ -104,7 +122,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_man1.hdr",
       name: "Chi?",
-      job: "Chikar?",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
 
     {
@@ -117,7 +138,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_amir.hdr",
       name: "Amir",
-      job: "Developer",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 9,
@@ -129,7 +153,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_man2.hdr",
       name: "Chi?",
-      job: "Chikar?",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
     {
       id: 10,
@@ -141,7 +168,10 @@ const Characters = () => {
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl2.hdr",
       name: "Chi?",
-      job: "Chikar?",
+      job: "chief content officer",
+      abbrPosition: "CCO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
     },
   ];
 };

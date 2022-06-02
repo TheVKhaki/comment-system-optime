@@ -1,4 +1,4 @@
-import { Col, Container, Row, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logoImage from "../images/03-03 2.png";

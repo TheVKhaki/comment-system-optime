@@ -26,7 +26,7 @@ const RoadMap = () => {
     if (inView) {
       controls1.start("visible");
     }
-  }, [[controls1, inView]]);
+  }, [controls1, inView]);
 
   //Swiper
   function SlideChangeRoadMap(params) {

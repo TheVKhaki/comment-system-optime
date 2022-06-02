@@ -30,9 +30,6 @@ const SocialResponsive = () => {
   });
 
   useEffect(() => {
-    console.log(inView6);
-    console.log(inView7);
-
     if (inView) {
       controls.start("visible");
     }

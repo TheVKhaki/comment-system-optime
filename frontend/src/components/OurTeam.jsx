@@ -26,8 +26,6 @@ import {
 } from "@react-three/drei";
 import Model3d from "./Model3d";
 
-import BKG11 from "../images/BKG.png";
-
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
@@ -42,11 +40,12 @@ function useWindowSize() {
 }
 
 const OurTeam = () => {
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
+
   //state characters
   const [characters, setCharacters] = useState(Characters);
   const [show, setShow] = useState(false);
-  const [showLoad, setShowLoad] = useState(null);
+  const [showLoad, setShowLoad] = useState(0);
   const [currentModel, setCurrentModel] = useState(null);
   const [position, setPosition] = useState([0, -3, 0]);
   //animation
@@ -80,7 +79,6 @@ const OurTeam = () => {
   // handle click close 3dmodel
   const handleClickClose = () => {
     setShow(false);
-    setShowLoad(false);
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters";
     const hiddenModel3d = [...model3dCharacters].map(
@@ -102,7 +100,6 @@ const OurTeam = () => {
   //   X = paddingright + OrderCalc;
   //   Y = window.innerHeight / 2 - (imageObject.layer - 1) * 150;
   function Loader() {
-    const { progress } = useProgress();
     return <Html center>Loading...</Html>;
   }
 
@@ -199,9 +196,14 @@ const OurTeam = () => {
                       key={characters.id}
                       onClick={handleClickNFT}
                     >
-                      <div className="characters-detail">
-                        <p>{characters.name}</p>
-                        <span>{characters.job}</span>
+                      <div className="characters-information-mobile">
+                        <div className="wrapper-characters-information-mobile">
+                          <span>{characters.name.toUpperCase()}</span>
+                          <p>
+                            <span>{characters.abbrPosition}</span>
+                            {characters.job}
+                          </p>
+                        </div>
                       </div>
                       <img src={characters.image} alt="" />
                     </div>
@@ -212,317 +214,59 @@ const OurTeam = () => {
           </motion.div>
           {/* {showLoad && <div className="loading-nft">Loading...</div>} */}
           {/* {show === true && ( */}
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="1"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[0].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[0].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="2"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[1].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[1].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="3"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[2].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[2].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="4"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[3].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[3].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="5"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[4].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[4].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="6"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[5].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[5].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="7"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[6].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[6].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="8"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[7].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[7].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="9"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[8].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[8].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          <div
-            className="model3d-characters d-none"
-            ref={refModel3d}
-            data-index="10"
-          >
-            <Container>
-              <div className="close-model3d" onClick={handleClickClose}>
-                <IconContext.Provider
-                  value={{ color: "black", size: "3.1rem" }}
-                >
-                  <IoCloseSharp />
-                </IconContext.Provider>
-              </div>
-            </Container>
-            <Canvas camera={{ position: [0, 0, 10] }}>
-              <Center position={position}>
-                <Suspense fallback={<Loader />}>
-                  <Model3d
-                    // setShowLoad={setShowLoad}
-                    currentModel={characters[9].model3d}
-                  />
-                  <OrbitControls
-                    enablePan={false}
-                    reverseOrbit={false}
-                    enableZoom={false}
-                  />
-                  <Environment path={"/"} files={characters[9].env} />
-                </Suspense>
-              </Center>
-            </Canvas>
-          </div>
-          {/* )} */}
+          {characters.map((characters) => (
+            <div
+              className="model3d-characters d-none"
+              ref={refModel3d}
+              data-index={characters.id}
+            >
+              <Container>
+                <div className="close-model3d" onClick={handleClickClose}>
+                  <IconContext.Provider
+                    value={{ color: "black", size: "3.1rem" }}
+                  >
+                    <IoCloseSharp />
+                  </IconContext.Provider>
+                </div>
+              </Container>
+              <Canvas camera={{ position: [0, 0, 10] }}>
+                <Center position={characters.position}>
+                  <Suspense fallback={<Loader />}>
+                    <Model3d
+                      setShowLoad={setShowLoad}
+                      currentModel={characters.model3d}
+                    />
+                    <OrbitControls
+                      enablePan={false}
+                      reverseOrbit={false}
+                      enableZoom={false}
+                    />
+                    <Environment
+                      path={"/model3d-env/"}
+                      files={characters.env}
+                    />
+                  </Suspense>
+                </Center>
+              </Canvas>
+              {showLoad === 100 && (
+                <Container className="characters-information">
+                  <div className="characters-information-left">
+                    <p>{characters.description}</p>
+                  </div>
+
+                  <div className="characters-information-right">
+                    <div className="wrapper-characters-information-right">
+                      <span>{characters.name.toUpperCase()}</span>
+                      <p>
+                        <span>{characters.abbrPosition}</span>
+                        {characters.job}
+                      </p>
+                    </div>
+                  </div>
+                </Container>
+              )}
+            </div>
+          ))}
         </Container>
       </section>
     </>
