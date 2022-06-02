@@ -566,7 +566,7 @@ const SocialSection = () => {
                 className="pulse-social-animation"
               ></motion.div>
               <div className="right-circle-social">
-                <div className="telegram-social socials-in-circle">
+                <a href="#" className="telegram-social socials-in-circle">
                   <div className="circle-icon-social">
                     <IconContext.Provider
                       value={{ color: "white", size: "2.5rem" }}
@@ -604,8 +604,8 @@ const SocialSection = () => {
                       />
                     </p>
                   </motion.div>
-                </div>
-                <div className="twitter-social socials-in-circle">
+                </a>
+                <a href="#" className="twitter-social socials-in-circle">
                   <div className="circle-icon-social">
                     <IconContext.Provider
                       value={{ color: "white", size: "2.5rem" }}
@@ -644,8 +644,8 @@ const SocialSection = () => {
                       />
                     </p>
                   </motion.div>
-                </div>
-                <div className="youtube-social socials-in-circle">
+                </a>
+                <a href="#" className="youtube-social socials-in-circle">
                   <div className="circle-icon-social">
                     <IconContext.Provider
                       value={{ color: "white", size: "2.5rem" }}
@@ -684,8 +684,8 @@ const SocialSection = () => {
                       />
                     </p>
                   </motion.div>
-                </div>
-                <div className="github-social socials-in-circle">
+                </a>
+                <a href="#" className="github-social socials-in-circle">
                   <div className="circle-icon-social">
                     <IconContext.Provider
                       value={{ color: "white", size: "2.5rem" }}
@@ -724,7 +724,7 @@ const SocialSection = () => {
                       />
                     </p>
                   </motion.div>
-                </div>
+                </a>
               </div>
               <div className="left-circle-social">
                 <motion.div

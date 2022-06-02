@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 //media
 import imageElephant from "../images/FKG.png";
 import youtubeIcon from "../images/youtube.png";
+import videoElephant from "../video/FV 10.mp4";
 // Icon
 import { IconContext } from "react-icons";
 import { FaPlay } from "react-icons/fa";
@@ -51,14 +52,40 @@ const Hero = () => {
         "-=0.6"
       );
   }, []);
+  const videoElephantRef = useRef();
+  const endedHandler = () => {
+    videoElephantRef.current.currentTime = 10;
+    videoElephantRef.current.play();
+  };
+  useEffect(() => {
+    // const videoElephant = document.querySelector(".video-elephant");
+    // videoElephant.addEventListener("ended");
+    // videoElephantRef.current
+    // videoElephantRef.current.onclick = function () {
+    //   console.log("object");
+    // };
+    // videoElephant.onended = function () {
+    //   console.log("object");
+    //   alert("The audio has ended");
+    // };
+  }, []);
 
   return (
     <>
       <section className="hero hero-bg" id="#hero" ref={sections}>
         <Container fluid>
-          <div className="hero-img-elephant">
+          {/* <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
-          </div>
+          </div> */}
+          <video
+            className="video-elephant"
+            ref={videoElephantRef}
+            muted
+            controls
+            onEnded={endedHandler}
+          >
+            <source src={videoElephant} type="video/mp4" />
+          </video>
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>

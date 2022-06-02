@@ -119,6 +119,9 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
+              <a href="#" className="btn-coming-soon">
+                Button
+              </a>
             </div>
           </div>
         </Container>

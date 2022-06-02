@@ -1,19 +1,18 @@
-.hero-bg {
-  background: url(../images/BKG.png) no-repeat;
-  background-size: cover;
-}
+// .hero-bg {
+//   background: url(../images/BKG.png) no-repeat;
+//   background-size: cover;
+// }
 
 .hero {
   min-height: 100vh;
   position: relative;
-  .hero-img-elephant {
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 760px;
-      object-fit: cover;
-    }
+
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
   }
   .hero-text {
     height: 100vh;
@@ -60,7 +59,7 @@
     }
     .btn-watch {
       height: 60px;
-      width: 92px;
+      width: 90px;
       display: flex;
       justify-content: center;
       align-items: center;

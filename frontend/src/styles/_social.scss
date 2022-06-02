@@ -49,10 +49,8 @@
     }
 
     .right-circle-social {
-      // position: absolute;
-      // right: 100px;
-      // top: 0;
-
+      position: relative;
+      z-index: 3;
       .socials-in-circle {
         text-align: center;
         display: flex;
@@ -83,38 +81,41 @@
       }
 
       .telegram-social {
-        left: 286px;
+        width: fit-content;
+        left: 1139px;
+        padding-left: 2rem;
         position: relative;
         bottom: 500px;
       }
 
       .twitter-social {
         position: relative;
-        bottom: 449px;
-        left: 319px;
-        // top: 183px;
-        // position: absolute;
-        // right: 251px;
+        bottom: 450px;
+        left: 1171px;
+        width: fit-content;
+        padding-left: 2rem;
       }
 
       .youtube-social {
         bottom: 352px;
         position: relative;
-        left: 319px;
+        left: 1170px;
+        width: fit-content;
+        padding-left: 2rem;
       }
 
       .github-social {
         bottom: 304px;
         position: relative;
-        left: 287px;
+        left: 1139px;
+        width: fit-content;
+        padding-left: 2rem;
       }
     }
 
     .left-circle-social {
-      // position: absolute;
-      // left: 100px;
-      // top: 0;
-
+      position: relative;
+      z-index: 2;
       .team-info-circle {
         text-align: center;
         line-height: 23px;
