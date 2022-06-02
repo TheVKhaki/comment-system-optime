@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 //media
 import imageElephant from "../images/FKG.png";
 import youtubeIcon from "../images/youtube.png";
-import videoElephant from "../video/FV 10.mp4";
+import videoElephant from "../video/FV 14.mp4";
 // Icon
 import { IconContext } from "react-icons";
 import { FaPlay } from "react-icons/fa";
@@ -57,18 +57,6 @@ const Hero = () => {
     videoElephantRef.current.currentTime = 10;
     videoElephantRef.current.play();
   };
-  useEffect(() => {
-    // const videoElephant = document.querySelector(".video-elephant");
-    // videoElephant.addEventListener("ended");
-    // videoElephantRef.current
-    // videoElephantRef.current.onclick = function () {
-    //   console.log("object");
-    // };
-    // videoElephant.onended = function () {
-    //   console.log("object");
-    //   alert("The audio has ended");
-    // };
-  }, []);
 
   return (
     <>
@@ -81,7 +69,7 @@ const Hero = () => {
             className="video-elephant"
             ref={videoElephantRef}
             muted
-            controls
+            autoPlay
             onEnded={endedHandler}
           >
             <source src={videoElephant} type="video/mp4" />

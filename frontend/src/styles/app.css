@@ -436,6 +436,9 @@ body.modal-open {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  pointer-events: none;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .hero .hero-text {
@@ -556,6 +559,13 @@ body.modal-open {
 }
 
 @media screen and (max-width: 991.98px) {
+  .hero-bg {
+    background: url(../images/BKG.png) no-repeat;
+    background-size: cover;
+  }
+  .hero video {
+    display: none;
+  }
   .hero .hero-img-elephant {
     display: none;
   }
