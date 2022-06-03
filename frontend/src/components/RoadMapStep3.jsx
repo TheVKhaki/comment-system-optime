@@ -12,6 +12,7 @@ import { motion, useAnimation } from "framer-motion";
 import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
+import Lazyload from "../HOC/Lazyload";
 //Modal Component
 function MyVerticallyCenteredModal(props) {
   const [animationComplete, setAnimationComplete] = useState({
@@ -450,13 +451,15 @@ const RoadMapStep3 = () => {
             </div>
             <Row className="content-slide-3">
               <Col lg={4}>
-                <motion.img
-                  variants={imgRoadMap1}
-                  initial="hidden"
-                  animate={controls}
-                  src={imageRoadMap3}
-                  alt=""
-                />
+                <Lazyload>
+                  <motion.img
+                    variants={imgRoadMap1}
+                    initial="hidden"
+                    animate={controls}
+                    src={imageRoadMap3}
+                    alt=""
+                  />
+                </Lazyload>
               </Col>
               <Col lg={8}>
                 <motion.p
