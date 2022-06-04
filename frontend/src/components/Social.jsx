@@ -566,165 +566,173 @@ const SocialSection = () => {
                 className="pulse-social-animation"
               ></motion.div>
               <div className="right-circle-social">
-                <a href="#" className="telegram-social socials-in-circle">
-                  <div className="circle-icon-social">
-                    <IconContext.Provider
-                      value={{ color: "white", size: "2.5rem" }}
-                    >
-                      <motion.a
-                        variants={iconFadeIn}
-                        initial="hidden"
-                        animate={controls}
-                        href="#"
+                <div className="telegram-social socials-in-circle">
+                  <a href="#" className="link-social-in-circle">
+                    <div className="circle-icon-social">
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
                       >
-                        <FaTelegramPlane />
-                      </motion.a>
-                    </IconContext.Provider>
-                  </div>
-                  <motion.div
-                    variants={textFadeIn}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <span>
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="Telegram"
-                      />
-                    </span>
-                    <p>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="under gathering"
-                      />
-                    </p>
-                  </motion.div>
-                </a>
-                <a href="#" className="twitter-social socials-in-circle">
-                  <div className="circle-icon-social">
-                    <IconContext.Provider
-                      value={{ color: "white", size: "2.5rem" }}
+                        <motion.a
+                          variants={iconFadeIn}
+                          initial="hidden"
+                          animate={controls}
+                          href="#"
+                        >
+                          <FaTelegramPlane />
+                        </motion.a>
+                      </IconContext.Provider>
+                    </div>
+                    <motion.div
+                      variants={textFadeIn}
+                      initial="hidden"
+                      animate={controls}
                     >
-                      <motion.a
-                        variants={iconFadeIn}
-                        initial="hidden"
-                        animate={controls}
-                        href="#"
+                      <span>
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="Telegram"
+                        />
+                      </span>
+                      <p>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="under gathering"
+                        />
+                      </p>
+                    </motion.div>
+                  </a>
+                </div>
+                <div className="twitter-social socials-in-circle">
+                  <a href="#" className="link-social-in-circle">
+                    <div className="circle-icon-social">
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
                       >
-                        <FaTwitter />
-                      </motion.a>
-                    </IconContext.Provider>
-                  </div>
-                  <motion.div
-                    variants={textFadeIn}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <span>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="Twitter"
-                      />
-                    </span>
-                    <p>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="under gathering"
-                      />
-                    </p>
-                  </motion.div>
-                </a>
-                <a href="#" className="youtube-social socials-in-circle">
-                  <div className="circle-icon-social">
-                    <IconContext.Provider
-                      value={{ color: "white", size: "2.5rem" }}
+                        <motion.a
+                          variants={iconFadeIn}
+                          initial="hidden"
+                          animate={controls}
+                          href="#"
+                        >
+                          <FaTwitter />
+                        </motion.a>
+                      </IconContext.Provider>
+                    </div>
+                    <motion.div
+                      variants={textFadeIn}
+                      initial="hidden"
+                      animate={controls}
                     >
-                      <motion.a
-                        variants={iconFadeIn}
-                        initial="hidden"
-                        animate={controls}
-                        href="#"
+                      <span>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="Twitter"
+                        />
+                      </span>
+                      <p>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="under gathering"
+                        />
+                      </p>
+                    </motion.div>
+                  </a>
+                </div>
+                <div className="youtube-social socials-in-circle">
+                  <a href="#" className="link-social-in-circle">
+                    <div className="circle-icon-social">
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
                       >
-                        <FaYoutube />
-                      </motion.a>
-                    </IconContext.Provider>
-                  </div>
-                  <motion.div
-                    variants={textFadeIn}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <span>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="Youtube"
-                      />
-                    </span>
-                    <p>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="under gathering"
-                      />
-                    </p>
-                  </motion.div>
-                </a>
-                <a href="#" className="github-social socials-in-circle">
-                  <div className="circle-icon-social">
-                    <IconContext.Provider
-                      value={{ color: "white", size: "2.5rem" }}
+                        <motion.a
+                          variants={iconFadeIn}
+                          initial="hidden"
+                          animate={controls}
+                          href="#"
+                        >
+                          <FaYoutube />
+                        </motion.a>
+                      </IconContext.Provider>
+                    </div>
+                    <motion.div
+                      variants={textFadeIn}
+                      initial="hidden"
+                      animate={controls}
                     >
-                      <motion.a
-                        variants={iconFadeIn}
-                        initial="hidden"
-                        animate={controls}
-                        href="#"
+                      <span>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="Youtube"
+                        />
+                      </span>
+                      <p>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="under gathering"
+                        />
+                      </p>
+                    </motion.div>
+                  </a>
+                </div>
+                <div className="github-social socials-in-circle">
+                  <a href="#" className="link-social-in-circle">
+                    <div className="circle-icon-social">
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
                       >
-                        <FaGithub />
-                      </motion.a>
-                    </IconContext.Provider>
-                  </div>
-                  <motion.div
-                    variants={textFadeIn}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <span>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="Github"
-                      />
-                    </span>
-                    <p>
-                      {" "}
-                      <RandomReveal
-                        isPlaying={inView}
-                        duration={4.6}
-                        revealDuration={0.5}
-                        characters="under gathering"
-                      />
-                    </p>
-                  </motion.div>
-                </a>
+                        <motion.a
+                          variants={iconFadeIn}
+                          initial="hidden"
+                          animate={controls}
+                          href="#"
+                        >
+                          <FaGithub />
+                        </motion.a>
+                      </IconContext.Provider>
+                    </div>
+                    <motion.div
+                      variants={textFadeIn}
+                      initial="hidden"
+                      animate={controls}
+                    >
+                      <span>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="Github"
+                        />
+                      </span>
+                      <p>
+                        {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="under gathering"
+                        />
+                      </p>
+                    </motion.div>
+                  </a>
+                </div>
               </div>
               <div className="left-circle-social">
                 <motion.div

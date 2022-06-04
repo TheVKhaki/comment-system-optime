@@ -10,7 +10,11 @@ import imageRoadMap11 from "../images/PRO.png";
 import imageRoadMap12 from "../images/ART.png";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
-
+//Icon
+import { IconContext } from "react-icons";
+import { FaCheck, FaHourglassHalf } from "react-icons/fa";
+//lazyload
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const RoadMap = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -132,7 +136,7 @@ const RoadMap = () => {
                 animate={controls}
                 className="img-slide-roadmap-1"
               >
-                <img src={imageRoadMap11} alt="" />
+                <LazyLoadImage src={imageRoadMap11} />
               </motion.div>
             </Col>
             <Col lg={9}>
@@ -143,12 +147,95 @@ const RoadMap = () => {
                 className="text-roadmap-1"
               >
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,
-                  unde sequi! Est voluptatum nam aspernatur minus expedita ipsum
-                  laudantium saepe, fuga iste officiis eaque velit atque
-                  distinctio nihil quidem consequuntur vel quas nostrum,
-                  reiciendis necessitatibus?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque repellat amet quis quidem? Provident quasi minus
+                  suscipit temporibus hic saepe rem nemo adipisci, dolorem
+                  officiis quos doloremque unde numquam alias?
                 </p>
+                {/* <ul>
+                  <Row>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Build the Alpha version of the Game Structure</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Build the Alpha version of the Game Content</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Build the Alpha version of the Game Rule Book </li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Develop the Website (front-end & back-end)</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Social medias Robots for campaigns propose </li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaHourglassHalf />
+                        </span>
+                      </IconContext.Provider>
+                      <li>
+                        Build the Alpha version of the Game(still in progress)
+                      </li>
+                    </Col>
+                  </Row>
+                </ul> */}
               </motion.div>
             </Col>
           </Row>
@@ -182,7 +269,7 @@ const RoadMap = () => {
                 animate={controls}
                 className="img-slide-roadmap-1 img-slide-roadmap-1-2"
               >
-                <img src={imageRoadMap12} alt="" />
+                <LazyLoadImage src={imageRoadMap12} />
               </motion.div>
             </Col>
           </Row>
