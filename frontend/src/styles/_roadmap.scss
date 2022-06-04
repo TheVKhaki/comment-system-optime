@@ -18,6 +18,7 @@
   }
   &.roadmap-step4 {
     background: url(../images/BKGR4-02.png) no-repeat;
+    background-color: #000;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -91,11 +92,20 @@
     margin-top: 6rem;
     position: relative;
     min-height: 34vh;
-
-    .roadmap-line-1-1 {
-      position: absolute;
-      bottom: -64px;
-      left: 145px;
+    .text-roadmap-1 {
+      ul {
+        .col-lg-6 {
+          display: flex;
+        }
+        span {
+          margin-right: 1.5rem;
+        }
+        li {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: #fff;
+        }
+      }
     }
   }
 
@@ -103,13 +113,6 @@
     align-items: center;
     position: relative;
     min-height: 32vh;
-
-    .roadmap-line-1-2 {
-      position: absolute;
-      top: -46px;
-      width: 700px;
-      right: -142px;
-    }
   }
 
   .content-slide-2-1 {
@@ -119,34 +122,10 @@
     p {
       margin-top: 4rem;
     }
-
-    .roadmap-line-2-1 {
-      position: absolute;
-      left: -188px;
-      bottom: -83px;
-    }
-
-    .roadmap-line-2-2 {
-      position: absolute;
-      right: -262px;
-      top: 132px;
-    }
   }
 
   .content-slide-3 {
     align-items: center;
-  }
-
-  .roadmap-line-3-1 {
-    position: absolute;
-    left: 0;
-    top: 268px;
-  }
-
-  .roadmap-line-3-2 {
-    position: absolute;
-    bottom: 47px;
-    right: 2px;
   }
 
   .header-roadmap {

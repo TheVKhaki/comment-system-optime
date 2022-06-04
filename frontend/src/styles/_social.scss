@@ -50,13 +50,19 @@
 
     .right-circle-social {
       position: relative;
-      z-index: 3;
+      z-index: 1;
       .socials-in-circle {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        .link-social-in-circle {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 2rem;
+        }
         span {
           color: $colorWhite;
           font-size: 21px;
@@ -81,8 +87,7 @@
       }
 
       .telegram-social {
-        width: fit-content;
-        left: 1139px;
+        left: 274px;
         padding-left: 2rem;
         position: relative;
         bottom: 500px;
@@ -91,31 +96,25 @@
       .twitter-social {
         position: relative;
         bottom: 450px;
-        left: 1171px;
-        width: fit-content;
-        padding-left: 2rem;
+        left: 318px;
       }
 
       .youtube-social {
         bottom: 352px;
         position: relative;
-        left: 1170px;
-        width: fit-content;
-        padding-left: 2rem;
+        left: 316px;
       }
 
       .github-social {
         bottom: 304px;
         position: relative;
-        left: 1139px;
-        width: fit-content;
-        padding-left: 2rem;
+        left: 286px;
       }
     }
 
     .left-circle-social {
       position: relative;
-      z-index: 2;
+      z-index: 0;
       .team-info-circle {
         text-align: center;
         line-height: 23px;

@@ -696,7 +696,7 @@ body.modal-open {
 
 .social-section .circle-socials .right-circle-social {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .social-section .circle-socials .right-circle-social .socials-in-circle {
@@ -710,6 +710,24 @@ body.modal-open {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.social-section
+  .circle-socials
+  .right-circle-social
+  .socials-in-circle
+  .link-social-in-circle {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 2rem;
 }
 
 .social-section .circle-socials .right-circle-social .socials-in-circle span {
@@ -735,10 +753,7 @@ body.modal-open {
 }
 
 .social-section .circle-socials .right-circle-social .telegram-social {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  left: 1139px;
+  left: 274px;
   padding-left: 2rem;
   position: relative;
   bottom: 500px;
@@ -747,36 +762,24 @@ body.modal-open {
 .social-section .circle-socials .right-circle-social .twitter-social {
   position: relative;
   bottom: 450px;
-  left: 1171px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 2rem;
+  left: 318px;
 }
 
 .social-section .circle-socials .right-circle-social .youtube-social {
   bottom: 352px;
   position: relative;
-  left: 1170px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 2rem;
+  left: 316px;
 }
 
 .social-section .circle-socials .right-circle-social .github-social {
   bottom: 304px;
   position: relative;
-  left: 1139px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 2rem;
+  left: 286px;
 }
 
 .social-section .circle-socials .left-circle-social {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 .social-section .circle-socials .left-circle-social .team-info-circle {
@@ -994,6 +997,7 @@ body.modal-open {
 
 .roadmap.roadmap-step4 {
   background: url(../images/BKGR4-02.png) no-repeat;
+  background-color: #000;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1087,10 +1091,20 @@ body.modal-open {
   min-height: 34vh;
 }
 
-.roadmap .content-slide-1-1 .roadmap-line-1-1 {
-  position: absolute;
-  bottom: -64px;
-  left: 145px;
+.roadmap .content-slide-1-1 .text-roadmap-1 ul .col-lg-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.roadmap .content-slide-1-1 .text-roadmap-1 ul span {
+  margin-right: 1.5rem;
+}
+
+.roadmap .content-slide-1-1 .text-roadmap-1 ul li {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
 .roadmap .content-slide-1-2 {
@@ -1099,13 +1113,6 @@ body.modal-open {
   align-items: center;
   position: relative;
   min-height: 32vh;
-}
-
-.roadmap .content-slide-1-2 .roadmap-line-1-2 {
-  position: absolute;
-  top: -46px;
-  width: 700px;
-  right: -142px;
 }
 
 .roadmap .content-slide-2-1 {
@@ -1119,34 +1126,10 @@ body.modal-open {
   margin-top: 4rem;
 }
 
-.roadmap .content-slide-2-1 .roadmap-line-2-1 {
-  position: absolute;
-  left: -188px;
-  bottom: -83px;
-}
-
-.roadmap .content-slide-2-1 .roadmap-line-2-2 {
-  position: absolute;
-  right: -262px;
-  top: 132px;
-}
-
 .roadmap .content-slide-3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.roadmap .roadmap-line-3-1 {
-  position: absolute;
-  left: 0;
-  top: 268px;
-}
-
-.roadmap .roadmap-line-3-2 {
-  position: absolute;
-  bottom: 47px;
-  right: 2px;
 }
 
 .roadmap .header-roadmap {
@@ -2382,7 +2365,6 @@ body.modal-open {
 
 .footer-home {
   position: relative;
-  min-height: 50vh;
 }
 
 .footer-home footer {

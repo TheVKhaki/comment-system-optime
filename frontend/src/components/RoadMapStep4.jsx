@@ -9,7 +9,8 @@ import { motion, useAnimation } from "framer-motion";
 import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
-
+//lazyload
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const RoadMapStep4 = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -66,8 +67,8 @@ const RoadMapStep4 = () => {
       <section className="roadmap-step4 roadmap" ref={element}>
         <Container>
           <div className="img-elephant-comingsoon">
-            <img src={elephantComingsoon} alt="" />
-            <img src={elephantComingsoonRes} alt="" />
+            <LazyLoadImage src={elephantComingsoon} />
+            <LazyLoadImage src={elephantComingsoonRes} />
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">

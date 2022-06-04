@@ -10,7 +10,6 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
-
 const Home = () => {
   const [width, height] = useWindowSize();
   useEffect(() => {
