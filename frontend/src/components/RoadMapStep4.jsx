@@ -121,7 +121,7 @@ const RoadMapStep4 = () => {
                 contracts. Take control over your funds, in every stage.
               </motion.p>
               <a href="#" className="btn-coming-soon">
-                Button
+                Lightpaper
               </a>
             </div>
           </div>

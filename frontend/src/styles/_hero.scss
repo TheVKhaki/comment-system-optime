@@ -1,9 +1,9 @@
 .hero {
   min-height: 100vh;
   position: relative;
-
+  z-index: 3;
   video {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;

@@ -8,6 +8,7 @@ import {
   FaYoutube,
   FaArrowUp,
 } from "react-icons/fa";
+import OurPartner from "./OurPartner";
 
 const Footer = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const Footer = () => {
   return (
     <>
       <section className="footer-home">
+        <OurPartner />
         <footer>
           <Container>
             <Row className="flex-column flex-lg-row">
@@ -35,9 +37,8 @@ const Footer = () => {
                 <div className="footer-left">
                   <h4>Subscribe</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis quasi laborum, ratione officia et nisi nostrum fuga
-                    assumenda a veniam.
+                    Do you want to have our latest news, meanwhile, our newest
+                    information? So, do subscribe us and push on the button.
                   </p>
                   <form action="">
                     <input type="text" placeholder="Email Address" />
@@ -95,7 +96,7 @@ const Footer = () => {
             </Row>
             <Col>
               <div className="footer-copy-right">
-                <p>© 2022 qpoker. All Rights Reserved</p>
+                <p>© 2019-2022 qpoker. All Rights Reserved</p>
               </div>
             </Col>
           </Container>

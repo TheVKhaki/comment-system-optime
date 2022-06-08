@@ -219,6 +219,7 @@ const OurTeam = () => {
               className="model3d-characters d-none"
               ref={refModel3d}
               data-index={characters.id}
+              key={characters.id}
             >
               <Container>
                 <div className="close-model3d" onClick={handleClickClose}>

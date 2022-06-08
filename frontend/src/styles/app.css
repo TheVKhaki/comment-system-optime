@@ -428,10 +428,11 @@ body.modal-open {
 .hero {
   min-height: 100vh;
   position: relative;
+  z-index: 3;
 }
 
 .hero video {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -643,6 +644,7 @@ body.modal-open {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .social-section .matrix-load {
@@ -977,6 +979,7 @@ body.modal-open {
 .roadmap.roadmap-step1 {
   background: url(../images/BKGR1.jpg) no-repeat;
   background-size: cover;
+  z-index: 2;
 }
 
 .roadmap.roadmap-step2 {
@@ -1020,10 +1023,10 @@ body.modal-open {
 
 .roadmap.roadmap-step1 .roadmap-date-1 {
   position: absolute;
-  top: 61%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-47%, 11%);
+  transform: translate(-47%, 11%);
+  bottom: 11%;
 }
 
 .roadmap.roadmap-step3 .roadmap-date-3 {
@@ -1097,7 +1100,7 @@ body.modal-open {
 
 .roadmap .content-slide-1-1 .text-roadmap-1 ul li {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #fff;
 }
 
@@ -1166,10 +1169,6 @@ body.modal-open {
   flex-direction: column;
   position: relative;
   z-index: 2;
-}
-
-.roadmap .img-slide-roadmap-1 {
-  width: 250px;
 }
 
 .roadmap .countdown {
@@ -1534,6 +1533,7 @@ body.modal-open {
     left: 66%;
     -webkit-transform: translate(-38%, -66%);
     transform: translate(-38%, -66%);
+    bottom: auto;
   }
   .roadmap.roadmap-step2 {
     background-position: top;
@@ -1664,7 +1664,7 @@ body.modal-open {
     font-size: 20px;
   }
   .roadmap.roadmap-step1 .roadmap-date-1 {
-    top: 27%;
+    top: 33%;
     left: 71%;
     -webkit-transform: translate(-38%, -66%);
     transform: translate(-38%, -66%);
@@ -2359,11 +2359,96 @@ body.modal-open {
 
 .footer-home {
   position: relative;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.footer-home .our-partner {
+  min-height: 50vh;
+  background-color: #000;
+}
+
+.footer-home .our-partner .container {
+  overflow: hidden;
+}
+
+.footer-home .our-partner .header-our-partner {
+  text-align: center;
+  position: relative;
+  top: 11vh;
+}
+
+.footer-home .our-partner .header-our-partner span {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.footer-home .our-partner .our-partner-news-tricker {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 18vh;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-home .our-partner .our-partner-news-tricker .slide-news-tricker {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  -webkit-animation: news-tricker 15s linear infinite;
+  animation: news-tricker 15s linear infinite;
+}
+
+@-webkit-keyframes news-tricker {
+  0% {
+    -webkit-transform: translate(0%, 0);
+    transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes news-tricker {
+  0% {
+    -webkit-transform: translate(0%, 0);
+    transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+.footer-home .our-partner .our-partner-news-tricker .item-news-tricker {
+  margin-bottom: 4rem;
+  margin-right: 3rem;
 }
 
 .footer-home footer {
   background-color: #000;
-  padding-top: 50px;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .footer-home footer .go-to-top {
@@ -2470,13 +2555,30 @@ body.modal-open {
   align-items: center;
 }
 
+.footer-home footer .footer-logo .footer-social-media a svg {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.footer-home footer .footer-logo .footer-social-media a:nth-child(1):hover svg {
+  color: #0088cc !important;
+}
+
 .footer-home footer .footer-logo .footer-social-media a:nth-child(2) {
   left: 112px;
   bottom: -21px;
 }
 
+.footer-home footer .footer-logo .footer-social-media a:nth-child(2):hover svg {
+  color: #1da1f2 !important;
+}
+
 .footer-home footer .footer-logo .footer-social-media a:nth-child(3) {
   left: 220px;
+}
+
+.footer-home footer .footer-logo .footer-social-media a:nth-child(3):hover svg {
+  color: #ff0000 !important;
 }
 
 .footer-home footer .footer-right {

@@ -7,6 +7,7 @@
   &.roadmap-step1 {
     background: url(../images/BKGR1.jpg) no-repeat;
     background-size: cover;
+    z-index: 2;
   }
   &.roadmap-step2 {
     background: url(../images/BKGR2.jpg) no-repeat;
@@ -42,9 +43,9 @@
   &.roadmap-step1 {
     .roadmap-date-1 {
       position: absolute;
-      top: 61%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-47%, 11%);
+      bottom: 11%;
     }
   }
 
@@ -102,7 +103,7 @@
         }
         li {
           font-size: 2rem;
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
           color: #fff;
         }
       }
@@ -157,9 +158,9 @@
     position: relative;
     z-index: 2;
   }
-  .img-slide-roadmap-1 {
-    width: 250px;
-  }
+  // .img-slide-roadmap-1 {
+  //   width: 250px;
+  // }
 
   .countdown {
     display: flex;
@@ -482,6 +483,7 @@
         top: 38%;
         left: 66%;
         transform: translate(-38%, -66%);
+        bottom: auto;
       }
     }
 
@@ -646,7 +648,7 @@
 
     &.roadmap-step1 {
       .roadmap-date-1 {
-        top: 27%;
+        top: 33%;
         left: 71%;
         transform: translate(-38%, -66%);
       }
