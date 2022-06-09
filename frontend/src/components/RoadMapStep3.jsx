@@ -505,7 +505,13 @@ const RoadMapStep3 = () => {
                       animate={controls}
                       className="btn-slide btn-slide-3"
                     >
-                      <a onClick={() => setModalShow(true)}>More InforMation</a>
+                      <a
+                        className="btn-main"
+                        onClick={() => setModalShow(true)}
+                      >
+                        More InforMation
+                        <span></span>
+                      </a>
                     </motion.div>
                   </Col>
                 </Row>

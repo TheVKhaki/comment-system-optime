@@ -42,7 +42,10 @@ const Footer = () => {
                   </p>
                   <form action="">
                     <input type="text" placeholder="Email Address" />
-                    <button>Subscribe</button>
+                    <button className="btn-main">
+                      Subscribe
+                      <span></span>
+                    </button>
                   </form>
                 </div>
               </Col>

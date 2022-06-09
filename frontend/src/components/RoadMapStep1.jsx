@@ -99,7 +99,7 @@ const RoadMap = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="Step1"
+                characters="2019-2022 Q12"
               />
             </p>
             <p>
@@ -107,7 +107,7 @@ const RoadMap = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="gathering social medias and developing requirment"
+                characters="Invention, development and introduction of QPoker"
               />
             </p>
           </motion.div>

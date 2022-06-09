@@ -249,8 +249,8 @@ const SocialSection = () => {
               animate={controls}
               className="header-social"
             >
-              <h2>New Generation of Hold’em Poker</h2>
-              <p>proudly introducing hold’em and quess’em</p>
+              <h2>NFT Giveaway Go Mammoth</h2>
+              <p>Ride on to the Rewards</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg

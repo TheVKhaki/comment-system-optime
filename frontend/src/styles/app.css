@@ -183,7 +183,7 @@ body button {
 }
 
 .btn-main {
-  background-color: #e17f02;
+  background-color: transparent;
   letter-spacing: 1px;
   font-weight: bold;
   border-radius: 5px;
@@ -198,6 +198,32 @@ body button {
   align-items: center;
   font-size: 19px;
   padding-top: 0.4rem;
+  color: #e28001;
+  border: 2px solid #e28001;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-main span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #e28001;
+  -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn-main:hover span {
+  width: 225%;
+  height: 450px;
 }
 
 .home-swiper {
@@ -1060,7 +1086,6 @@ body.modal-open {
 .roadmap .btn-slide a {
   width: 400px;
   height: 84px;
-  background-color: #e28001;
   font-size: 30px;
   display: block;
   text-align: center;
@@ -1075,6 +1100,10 @@ body.modal-open {
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+}
+
+.roadmap .btn-slide a:hover span {
+  height: 900px !important;
 }
 
 .roadmap p {
@@ -1242,7 +1271,6 @@ body.modal-open {
 
 .roadmap .coming-soon-text .btn-coming-soon {
   font-size: 2.5rem;
-  background-color: #e28001;
   width: 260px;
   height: 60px;
   display: -webkit-box;
@@ -2528,10 +2556,21 @@ body.modal-open {
 .footer-home footer .footer-left form button {
   margin-top: 1rem;
   height: 50px;
-  background-color: #e28001;
   font-size: 20px;
   font-weight: bold;
   border-radius: 7px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-top: 0;
+}
+
+.footer-home footer .footer-left form button:hover {
+  color: #000;
+}
+
+.footer-home footer .footer-left form button:hover span {
+  width: 225%;
+  height: 950px;
 }
 
 .footer-home footer .footer-logo .footer-social-media {

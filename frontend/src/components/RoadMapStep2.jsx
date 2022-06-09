@@ -454,8 +454,9 @@ const RoadMapStep2 = () => {
                   animate={controls}
                   className="btn-slide"
                 >
-                  <a onClick={() => setModalShow(true)}>
+                  <a className="btn-main" onClick={() => setModalShow(true)}>
                     How to be Participate
+                    <span></span>
                   </a>
                 </motion.div>
               </Col>

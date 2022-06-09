@@ -103,10 +103,18 @@
         button {
           margin-top: 1rem;
           height: 50px;
-          background-color: $mainColor;
           font-size: 20px;
           font-weight: bold;
           border-radius: 7px;
+          transition: all 0.3s;
+          padding-top: 0;
+          &:hover {
+            color: #000;
+            span {
+              width: 225%;
+              height: 950px;
+            }
+          }
         }
       }
     }

@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
+import { scrollIntoView } from "seamless-scroll-polyfill";
 const Home = () => {
   const [width, height] = useWindowSize();
   useEffect(() => {
@@ -22,7 +23,7 @@ const Home = () => {
     const bullets = document.querySelectorAll(".bullet-section span");
     const root = document.querySelector("#root");
     let index = 0;
-    let animationDuration = 1000;
+    let animationDuration = 50;
     let lastTime = 0;
     bullets.forEach((bullet, indexbullet) => {
       bullet.addEventListener("click", function (params) {
@@ -32,7 +33,11 @@ const Home = () => {
         bullet.style.backgroundColor = "#e28001";
         sections.forEach((section, i) => {
           if (indexbullet === i) {
-            section.scrollIntoView({ behavior: "smooth" });
+            scrollIntoView(section, {
+              behavior: "smooth",
+              block: "center",
+              inline: "center",
+            });
             index = indexbullet;
           }
         });
@@ -50,7 +55,11 @@ const Home = () => {
                 bulletColor.style.backgroundColor = "white";
               });
               bullets[i].style.backgroundColor = "#e28001";
-              section.scrollIntoView({ behavior: "smooth" });
+              scrollIntoView(section, {
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+              });
             }
           });
         }
@@ -63,7 +72,11 @@ const Home = () => {
                 bulletColor.style.backgroundColor = "white";
               });
               bullets[i].style.backgroundColor = "#e28001";
-              section.scrollIntoView({ behavior: "smooth" });
+              scrollIntoView(section, {
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+              });
             }
           });
         }
@@ -85,11 +98,18 @@ const Home = () => {
             index++;
             sections.forEach((section, i) => {
               if (i === index) {
+                console.log("object");
                 bullets.forEach((bulletColor) => {
                   bulletColor.style.backgroundColor = "white";
                 });
                 bullets[i].style.backgroundColor = "#e28001";
-                section.scrollIntoView({ behavior: "smooth" });
+                setTimeout(() => {
+                  scrollIntoView(section, {
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "center",
+                  });
+                }, 50);
               }
             });
           } else {
@@ -101,7 +121,13 @@ const Home = () => {
                   bulletColor.style.backgroundColor = "white";
                 });
                 bullets[i].style.backgroundColor = "#e28001";
-                section.scrollIntoView({ behavior: "smooth" });
+                setTimeout(() => {
+                  scrollIntoView(section, {
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "center",
+                  });
+                }, 50);
               }
             });
           }
