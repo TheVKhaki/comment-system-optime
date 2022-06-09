@@ -193,7 +193,7 @@ body {
 }
 
 .btn-main {
-  background-color: #e17f02;
+  background-color: transparent;
   letter-spacing: 1px;
   font-weight: bold;
   border-radius: 5px;
@@ -202,6 +202,29 @@ body {
   align-items: center;
   font-size: 19px;
   padding-top: 0.4rem;
+  color: #e28001;
+  border: 2px solid #e28001;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #e28001;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &:hover {
+    span {
+      width: 225%;
+      height: 450px;
+    }
+  }
 }
 
 .home-swiper {

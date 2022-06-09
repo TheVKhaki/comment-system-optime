@@ -91,7 +91,8 @@ const Hero = () => {
               </TextHero>
               <Btnn>
                 <a href="#social" className="btn-hero btn-main">
-                  Button
+                  Explore
+                  <span></span>
                 </a>
                 {/* <IconContext.Provider
                   value={{ color: "white", size: "1.5rem" }}

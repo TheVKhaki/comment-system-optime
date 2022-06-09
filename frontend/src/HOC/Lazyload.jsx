@@ -3,7 +3,6 @@ const Lazyload = (props) => {
   const [load, setLoad] = useState(false);
   useEffect(() => {
     setLoad(true);
-    console.log("first");
   }, []);
 
   return <>{load && props.children}</>;

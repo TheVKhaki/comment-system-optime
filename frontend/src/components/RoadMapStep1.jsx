@@ -99,7 +99,7 @@ const RoadMap = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="Step1"
+                characters="2019-2022 Q12"
               />
             </p>
             <p>
@@ -107,7 +107,7 @@ const RoadMap = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="gathering social medias and developing requirment"
+                characters="Invention, development and introduction of QPoker"
               />
             </p>
           </motion.div>
@@ -129,7 +129,7 @@ const RoadMap = () => {
             </p>
           </div>
           <Row className="content-slide-1-1">
-            <Col lg={3}>
+            <Col lg={4}>
               <motion.div
                 variants={imgRoadMap1}
                 initial="hidden"
@@ -139,20 +139,20 @@ const RoadMap = () => {
                 <LazyLoadImage src={imageRoadMap11} />
               </motion.div>
             </Col>
-            <Col lg={9}>
+            <Col lg={8} className="d-flex align-items-center">
               <motion.div
                 variants={textRoadMap1}
                 initial="hidden"
                 animate={controls}
                 className="text-roadmap-1"
               >
-                <p>
+                {/* <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Doloremque repellat amet quis quidem? Provident quasi minus
                   suscipit temporibus hic saepe rem nemo adipisci, dolorem
                   officiis quos doloremque unde numquam alias?
-                </p>
-                {/* <ul>
+                </p> */}
+                <ul>
                   <Row>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -235,11 +235,11 @@ const RoadMap = () => {
                       </li>
                     </Col>
                   </Row>
-                </ul> */}
+                </ul>
               </motion.div>
             </Col>
           </Row>
-          <Row className="content-slide-1-2">
+          {/* <Row className="content-slide-1-2">
             <Col
               lg={{ order: "first", span: 9 }}
               xs={{ order: "last", span: 12 }}
@@ -272,7 +272,7 @@ const RoadMap = () => {
                 <LazyLoadImage src={imageRoadMap12} />
               </motion.div>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </section>
     </>

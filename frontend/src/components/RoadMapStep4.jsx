@@ -68,7 +68,11 @@ const RoadMapStep4 = () => {
         <Container>
           <div className="img-elephant-comingsoon">
             <LazyLoadImage src={elephantComingsoon} />
-            <LazyLoadImage src={elephantComingsoonRes} />
+            <LazyLoadImage
+              src={elephantComingsoonRes}
+              // height={300}
+              width={"100%"}
+            />
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
@@ -120,8 +124,9 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
-              <a href="#" className="btn-coming-soon">
-                Button
+              <a href="#" className="btn-coming-soon btn-main">
+                Lightpaper
+                <span></span>
               </a>
             </div>
           </div>
