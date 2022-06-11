@@ -82,7 +82,7 @@ const Home = () => {
       });
     });
     let index = 0;
-    let animationDuration = 50;
+    let animationDuration = 400;
     let lastTime = 0;
     bullets.forEach((bullet, indexbullet) => {
       bullet.addEventListener("click", function (params) {
@@ -167,7 +167,7 @@ const Home = () => {
                     block: "center",
                     inline: "center",
                   });
-                }, 50);
+                }, 400);
               }
             });
           } else {
@@ -185,7 +185,7 @@ const Home = () => {
                     block: "center",
                     inline: "center",
                   });
-                }, 50);
+                }, 400);
               }
             });
           }

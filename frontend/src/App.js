@@ -15,6 +15,12 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
+    // window.addEventListener("load", function () {
+    //   const width = window.innerWidth;
+    //   const height = window.innerHeight;
+    //   alert(`width :${width}
+    //   height:${height}`);
+    // });
     const btnMain = document.querySelectorAll(".btn-main");
     const btnMainSpan = document.querySelectorAll(".btn-main span");
     btnMain.forEach((btnMain) => {

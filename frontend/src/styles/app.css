@@ -277,8 +277,8 @@ header .logo.nav-link img {
 }
 
 header .logo img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 
 header .logo h1 {
@@ -729,7 +729,7 @@ body.modal-open {
     letter-spacing: 1px;
   }
   .hero .btns-hero {
-    margin-top: 5rem;
+    margin-top: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -750,6 +750,15 @@ body.modal-open {
 @media screen and (max-height: 600px) {
   .hero .hero-text {
     height: 127vh;
+  }
+}
+
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero .hero-text {
+    height: 50vh;
   }
 }
 
@@ -1974,6 +1983,15 @@ body.modal-open {
   }
 }
 
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .roadmap {
+    min-height: auto;
+  }
+  .roadmap .header-roadmap {
+    min-height: auto;
+  }
+}
+
 .ourteam {
   min-height: 100vh;
   background-color: #000;
@@ -2604,6 +2622,21 @@ body.modal-open {
   }
 }
 
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .ourteam {
+    min-height: 50vh;
+  }
+  .ourteam .ourteam-characters {
+    min-height: auto;
+  }
+  .ourteam
+    .ourteam-characters
+    .swiper-ourteam-2initialized
+    .characters-information-mobile {
+    margin-bottom: 3vh;
+  }
+}
+
 .footer-home {
   position: relative;
   min-height: 100vh;
@@ -2900,6 +2933,24 @@ body.modal-open {
   }
   .footer-home footer .footer-logo img {
     display: none;
+  }
+}
+
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .footer-home {
+    min-height: auto;
+  }
+  .footer-home .our-partner {
+    min-height: auto;
+  }
+  .footer-home .our-partner .our-partner-news-tricker {
+    margin-top: 10vh;
+  }
+  .footer-home .our-partner .header-our-partner {
+    top: 3vh;
+  }
+  .footer-home footer {
+    min-height: auto;
   }
 }
 

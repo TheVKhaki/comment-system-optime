@@ -235,3 +235,22 @@
     }
   }
 }
+
+//desktop mode in mobile
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .footer-home {
+    min-height: auto;
+    .our-partner {
+      min-height: auto;
+      .our-partner-news-tricker {
+        margin-top: 10vh;
+      }
+      .header-our-partner {
+        top: 3vh;
+      }
+    }
+    footer {
+      min-height: auto;
+    }
+  }
+}
