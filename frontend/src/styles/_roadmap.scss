@@ -43,8 +43,8 @@
   &.roadmap-step1 {
     .roadmap-date-1 {
       position: absolute;
-      left: 50%;
-      transform: translate(-47%, 11%);
+      left: 26%;
+      transform: translate(-26%, 11%);
       bottom: 11%;
     }
   }
@@ -104,12 +104,17 @@
         }
         span {
           margin-right: 1.5rem;
+          flex-shrink: 0;
         }
         li {
           font-size: 2rem;
           margin-bottom: 2rem;
           color: #fff;
         }
+      }
+    }
+    .img-slide-roadmap-1 {
+      img {
       }
     }
   }
@@ -638,6 +643,13 @@
     &.roadmap-step4 {
       .img-elephant-comingsoon {
         right: 25px;
+      }
+    }
+    .content-slide-1-1 {
+      .img-slide-roadmap-1 {
+        img {
+          width: 67%;
+        }
       }
     }
   }

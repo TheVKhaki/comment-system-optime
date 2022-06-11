@@ -1,14 +1,23 @@
 header {
-  min-height: 13vh;
+  min-height: 11vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: 100%;
   z-index: 10;
+  transition: all 0.5s;
+  opacity: 0;
   .logo {
     display: flex;
     align-items: center;
+    &.nav-link {
+      padding-top: 0;
+      img {
+        width: 75px;
+        height: 75px;
+      }
+    }
     img {
       width: 90px;
       height: 90px;
@@ -23,7 +32,11 @@ header {
   .navbar {
     width: 100%;
     background-color: transparent !important;
+    padding-top: 0;
     .navbar-nav {
+      .nav-link.active {
+        color: #fff;
+      }
       a {
         font-size: 1.75rem;
         color: $colorWhite;
@@ -179,11 +192,34 @@ body.modal-open {
   }
 }
 @media screen and (max-width: 991.98px) {
+  .header-mobile {
+    &::before {
+      opacity: 1;
+    }
+  }
   header {
+    position: fixed;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 60%
+      );
+      z-index: -1;
+      transition: opacity 0.5s linear;
+      opacity: 0;
+    }
     .navbar {
       .navbar-toggler {
         font-size: 2.2rem;
         border-color: transparent;
+        margin-right: 0 !important;
         &:focus {
           box-shadow: none;
         }
@@ -202,6 +238,11 @@ body.modal-open {
 }
 @media screen and (min-width: 992px) {
   header {
+    .navbar {
+      .navbar-brand {
+        display: none;
+      }
+    }
     .navbar-expand-lg .offcanvas {
       display: none;
     }

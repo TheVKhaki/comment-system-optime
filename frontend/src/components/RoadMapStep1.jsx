@@ -83,7 +83,7 @@ const RoadMap = () => {
   };
   return (
     <>
-      <section className="roadmap-step1 roadmap" ref={element}>
+      <section className="roadmap-step1 roadmap" ref={element} id="roadmap">
         <Container>
           <motion.div className="header-roadmap">
             <h2>
@@ -111,7 +111,7 @@ const RoadMap = () => {
               />
             </p>
           </motion.div>
-          <div className="roadmap-date roadmap-date-1">
+          {/* <div className="roadmap-date roadmap-date-1">
             <p>
               <RandomReveal
                 isPlaying={inView}
@@ -127,7 +127,7 @@ const RoadMap = () => {
                 characters="feb-mar"
               />
             </p>
-          </div>
+          </div> */}
           <Row className="content-slide-1-1">
             <Col lg={4}>
               <motion.div
@@ -165,7 +165,20 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Structure</li>
+                      <li>Innovation and formation of the rulebook</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaHourglassHalf />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Writing of a white paper (in the final stages)</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -178,7 +191,9 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Content</li>
+                      <li>
+                        Designing of the game structure and visual outlook
+                      </li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -191,33 +206,9 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Rule Book </li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Develop the Website (front-end & back-end)</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Social medias Robots for campaigns propose </li>
+                      <li>
+                        Build of social media robots for bounty campaigns{" "}
+                      </li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -231,8 +222,61 @@ const RoadMap = () => {
                         </span>
                       </IconContext.Provider>
                       <li>
-                        Build the Alpha version of the Game(still in progress)
+                        Programming of the game software’s alpha version
+                        (debugging stage)
                       </li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Tutorized game demonstration video</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Development of the website (front-end & back-end)</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Manuscript and production of meme teaser</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Market research and creation of feasibility study</li>
                     </Col>
                   </Row>
                 </ul>

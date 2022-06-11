@@ -7,7 +7,7 @@ import youtubeIcon from "../images/youtube.png";
 import videoElephant from "../video/FV 16.mp4";
 // Icon
 import { IconContext } from "react-icons";
-import { FaPlay } from "react-icons/fa";
+import { ImPlay3 } from "react-icons/im";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -60,7 +60,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="hero hero-bg" id="#hero" ref={sections}>
+      <section className="hero hero-bg" id="hero" ref={sections}>
         <Container fluid>
           {/* <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
@@ -94,14 +94,16 @@ const Hero = () => {
                   Explore
                   <span></span>
                 </a>
-                {/* <IconContext.Provider
-                  value={{ color: "white", size: "1.5rem" }}
-                > */}
+                <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                  <a href="#" className="btn-watch btn-main">
+                    <ImPlay3 />
+                    <span></span>
+                    {/* <img src={youtubeIcon} alt="" /> */}
+                  </a>
+                </IconContext.Provider>
                 <a href="#" className="btn-watch">
-                  {/* <FaPlay /> */}
                   <img src={youtubeIcon} alt="" />
                 </a>
-                {/* </IconContext.Provider> */}
                 {/* <a href="#" className="btn-text-watch">
                   Watch Trailer
                 </a> */}
@@ -110,14 +112,17 @@ const Hero = () => {
           </Container>
         </Container>
         <div className="bullet-section">
-          <span style={{ backgroundColor: "#e28001" }}></span>
+          <span
+            data-section="#hero"
+            style={{ backgroundColor: "#e28001" }}
+          ></span>
+          <span data-section="#social"></span>
+          <span data-section="#roadmap"></span>
           <span></span>
           <span></span>
           <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-section="#our-team"></span>
+          <span data-section="#footer"></span>
         </div>
       </section>
     </>

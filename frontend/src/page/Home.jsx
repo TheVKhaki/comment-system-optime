@@ -11,8 +11,15 @@ import { useEffect } from "react";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
 import { scrollIntoView } from "seamless-scroll-polyfill";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  let navigate = useNavigate();
   const [width, height] = useWindowSize();
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+  });
   useEffect(() => {
     const sectionHero = document.querySelector(".hero");
     sectionHero.scrollIntoView();
@@ -22,6 +29,58 @@ const Home = () => {
     const sections = document.querySelectorAll("section");
     const bullets = document.querySelectorAll(".bullet-section span");
     const root = document.querySelector("#root");
+    const btnHero = document.querySelector(".btn-hero");
+    const navLink = document.querySelectorAll(".navbar-nav .nav-link");
+    btnHero.addEventListener("click", function (e) {
+      bullets.forEach((bulletColor) => {
+        bulletColor.style.backgroundColor = "white";
+      });
+      bullets[1].style.backgroundColor = "#e28001";
+      setTimeout(() => {
+        navigate("/");
+      }, 100);
+    });
+    navLink.forEach((navLink, indexbullet) => {
+      navLink.addEventListener("click", function (e) {
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        switch (e.target.hash) {
+          case "#hero":
+            bullets[0].style.backgroundColor = "#e28001";
+            setTimeout(() => {
+              navigate("/");
+            }, 100);
+            break;
+          case "#social":
+            bullets[1].style.backgroundColor = "#e28001";
+            setTimeout(() => {
+              navigate("/");
+            }, 100);
+            break;
+          case "#roadmap":
+            bullets[2].style.backgroundColor = "#e28001";
+            setTimeout(() => {
+              navigate("/");
+            }, 100);
+            break;
+          case "#our-team":
+            bullets[6].style.backgroundColor = "#e28001";
+            setTimeout(() => {
+              navigate("/");
+            }, 100);
+            break;
+          case "#footer":
+            bullets[7].style.backgroundColor = "#e28001";
+            setTimeout(() => {
+              navigate("/");
+            }, 100);
+            break;
+          default:
+            break;
+        }
+      });
+    });
     let index = 0;
     let animationDuration = 50;
     let lastTime = 0;
@@ -98,7 +157,6 @@ const Home = () => {
             index++;
             sections.forEach((section, i) => {
               if (i === index) {
-                console.log("object");
                 bullets.forEach((bulletColor) => {
                   bulletColor.style.backgroundColor = "white";
                 });

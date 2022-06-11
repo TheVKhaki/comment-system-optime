@@ -7,7 +7,7 @@
     right: 0;
     bottom: 0;
     min-width: 100%;
-    min-height: 100%;
+    height: 100%;
     pointer-events: none;
     object-fit: cover;
   }
@@ -55,12 +55,40 @@
       font-size: 22px;
     }
     .btn-watch {
-      height: 60px;
+      height: 62px;
       width: 90px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-left: 3rem;
+      border-radius: 15px;
+      &.btn-main {
+        border: 2px solid #ff0000;
+      }
+      img {
+        animation: pulse 3s linear infinite forwards;
+        @keyframes pulse {
+          0% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          50% {
+            -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+          }
+          100% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+      }
+      svg {
+        position: relative;
+        left: 2px;
+      }
+      span {
+        background-color: #ff0000;
+      }
     }
   }
 }

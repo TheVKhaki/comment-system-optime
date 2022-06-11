@@ -68,10 +68,10 @@ const SocialResponsive = () => {
 
   return (
     <>
-      <section className="social-responsive">
+      <section className="social-responsive" id="social-res">
         <div className="header-social">
-          <h2>New Generation of Hold’em Poker</h2>
-          <p>proudly introducing hold’em and quess’em</p>
+          <h2>NFT Giveaways Go Mammoth</h2>
+          <p>Ride on to the Rewards</p>
         </div>
         <div className="image-social-responsive">
           <svg
@@ -240,7 +240,7 @@ const SocialResponsive = () => {
             className="text-github text-image-responsive"
             ref={element5}
           >
-            <span>Github</span>
+            <span>Trello</span>
             <p ref={element7}>Under Gathering</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">

@@ -3,7 +3,7 @@ import {
   FaTelegramPlane,
   FaTwitter,
   FaYoutube,
-  FaGithub,
+  FaTrello,
 } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -70,13 +70,13 @@ const SocialSection = () => {
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
-  const arrayTimeAnimtion = [0, 0.5, 1, 2, 3, 4, 4.5];
+  const arrayTimeAnimtion = [0, 2, 2, 2.5, 4, 5, 5.5];
   // const shift = (arg) => {
   //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
   //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
   //   }
   // };
-  // shift(0);
+  // shift(1);
   const headerFadeIn = {
     hidden: {
       opacity: 0,
@@ -209,18 +209,44 @@ const SocialSection = () => {
   };
   const pulseAnimation = {
     hidden: {
-      opacity: 1,
-      scale: 0,
-    },
-    visible: {
       opacity: 0,
       scale: 100,
+    },
+    visible: {
+      opacity: 1,
+      scale: 0,
       transition: {
-        duration: 3,
-        delay: arrayTimeAnimtion[1],
+        duration: 2.5,
+        delay: arrayTimeAnimtion[0],
       },
     },
   };
+  // const lineInfinity1 = {
+  //   hidden: {
+  //     width: 0,
+  //   },
+  //   visible: {
+  //     width: 47,
+  //     transition: {
+  //       duration: 2.5,
+  //       delay: 0,
+  //       yoyo: Infinity,
+  //     },
+  //   },
+  // };
+  // const lineInfinity2 = {
+  //   hidden: {
+  //     width: 0,
+  //   },
+  //   visible: {
+  //     width: 102,
+  //     transition: {
+  //       duration: 2.5,
+  //       delay: 2.5,
+  //       yoyo: Infinity,
+  //     },
+  //   },
+  // };
   useEffect(() => {
     gsap.to(dimondsFade.current, { opacity: 1 });
     gsap.fromTo(
@@ -249,7 +275,7 @@ const SocialSection = () => {
               animate={controls}
               className="header-social"
             >
-              <h2>NFT Giveaway Go Mammoth</h2>
+              <h2>NFT Giveaways Go Mammoth</h2>
               <p>Ride on to the Rewards</p>
             </motion.div>
             <div className="circle-socials">
@@ -595,15 +621,17 @@ const SocialSection = () => {
                           characters="Telegram"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+285.02% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
@@ -637,15 +665,17 @@ const SocialSection = () => {
                           characters="Twitter"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+171.69% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
@@ -679,19 +709,21 @@ const SocialSection = () => {
                           characters="Youtube"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+121.10% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
-                <div className="github-social socials-in-circle">
+                <div className="trello-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -703,7 +735,7 @@ const SocialSection = () => {
                           animate={controls}
                           href="#"
                         >
-                          <FaGithub />
+                          <FaTrello />
                         </motion.a>
                       </IconContext.Provider>
                     </div>
@@ -718,23 +750,39 @@ const SocialSection = () => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Github"
+                          characters="Trello"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+1.12% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
               </div>
               <div className="left-circle-social">
+                {/* <motion.div
+                  variants={lineInfinity1}
+                  initial="hidden"
+                  animate="visible"
+                  className="line-action-social-1"
+                ></motion.div>
+                <div className="wrapper-line-action-social-2">
+                  <motion.div
+                    variants={lineInfinity2}
+                    initial="hidden"
+                    animate="visible"
+                    className="line-action-social-2"
+                  ></motion.div>
+                </div> */}
                 <motion.div
                   variants={textFadeIn}
                   initial="hidden"
@@ -747,7 +795,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="08+"
+                      characters="$50,000"
                     />
                   </span>
                   <p>
@@ -756,7 +804,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Years Experience"
+                      characters="Join Telegram"
                     />
                   </p>
                 </motion.div>
@@ -772,7 +820,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="08+"
+                      characters="$75,000"
                     />
                   </span>
                   <p>
@@ -780,7 +828,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Years Experience"
+                      characters="1st July 2022"
                     />
                   </p>
                 </motion.div>
@@ -796,7 +844,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="145"
+                      characters="$125,000"
                     />
                   </span>
                   <p>
@@ -804,7 +852,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Project Completed"
+                      characters="16th July 2022"
                     />
                   </p>
                 </motion.div>
@@ -820,7 +868,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="145"
+                      characters="$200,000"
                     />
                   </span>
                   <p>
@@ -829,7 +877,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Project Completed"
+                      characters="31st July 2022"
                     />
                   </p>
                 </motion.div>

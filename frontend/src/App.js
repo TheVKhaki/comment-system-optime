@@ -26,7 +26,6 @@ function App() {
         };
         const relX = e.pageX - parentOffset.left;
         const relY = e.pageY - parentOffset.top;
-        console.log(relY);
         btnMainSpan.forEach((btnMainSpan) => {
           btnMainSpan.style.top = relY + "px";
           btnMainSpan.style.left = relX + "px";
@@ -40,7 +39,6 @@ function App() {
         };
         const relX = e.pageX - parentOffset.left;
         const relY = e.pageY - parentOffset.top;
-        console.log(relY);
         btnMainSpan.forEach((btnMainSpan) => {
           btnMainSpan.style.top = relY + "px";
           btnMainSpan.style.left = relX + "px";
