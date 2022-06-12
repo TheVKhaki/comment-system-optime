@@ -178,7 +178,7 @@ const RoadMap = () => {
                           <FaHourglassHalf />
                         </span>
                       </IconContext.Provider>
-                      <li>Writing of a white paper (in the final stages)</li>
+                      <li>Writing of the white paper (at the final stage)</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -263,7 +263,7 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Manuscript and production of meme teaser</li>
+                      <li>Manuscript and production of a meme teaser</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -276,7 +276,9 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Market research and creation of feasibility study</li>
+                      <li>
+                        Market research and creation of a feasibility study
+                      </li>
                     </Col>
                   </Row>
                 </ul>

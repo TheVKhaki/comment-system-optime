@@ -1,5 +1,6 @@
 import "./styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "fullpage.js/dist/fullpage.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
 //Page
@@ -53,7 +54,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className="App fullscreen">
       {/* <Login />  */}
       <Header />
       <Home />

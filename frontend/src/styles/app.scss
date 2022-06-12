@@ -233,10 +233,25 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  main {
-    scroll-behavior: smooth;
+  .fullscreen {
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    main {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: transform 0.7s ease-out;
+    }
+    section {
+      height: 100vh;
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  main {
+    transform: translateY(0) !important;
   }
 }
 //Nav

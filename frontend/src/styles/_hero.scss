@@ -64,21 +64,27 @@
       border-radius: 15px;
       &.btn-main {
         border: 2px solid #ff0000;
+        &:hover {
+          border: 2px solid #000;
+        }
       }
       img {
-        animation: pulse 3s linear infinite forwards;
+        &:hover {
+          animation: pulse 2s linear infinite forwards;
+        }
+
         @keyframes pulse {
           0% {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
           }
           50% {
-            -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+            -webkit-transform: scale(1.15);
+            transform: scale(1.15);
           }
           100% {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
           }
         }
       }
@@ -117,25 +123,23 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .hero {
-    .bullet-section {
-      position: fixed;
-      right: 30px;
-      top: 50%;
-      transform: translate(0, -50%);
-      z-index: 10;
-      span {
-        display: block;
-        width: 15px;
-        height: 15px;
-        background-color: #fff;
-        border-radius: 50px;
-        margin-bottom: 1rem;
-        transition: 0.2s all;
-        cursor: pointer;
-        &:hover {
-          background-color: #e28001;
-        }
+  .bullet-section {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    span {
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      transition: 0.2s all;
+      cursor: pointer;
+      &:hover {
+        background-color: #e28001;
       }
     }
   }

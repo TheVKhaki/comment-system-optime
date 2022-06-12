@@ -90,17 +90,17 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#social" className="btn-hero btn-main">
+                <a href="#" className="btn-hero btn-main">
                   Explore
                   <span></span>
                 </a>
-                <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                {/* <IconContext.Provider value={{ color: "white", size: "3rem" }}>
                   <a href="#" className="btn-watch btn-main">
                     <ImPlay3 />
                     <span></span>
-                    {/* <img src={youtubeIcon} alt="" /> */}
+                    <img src={youtubeIcon} alt="" />
                   </a>
-                </IconContext.Provider>
+                </IconContext.Provider> */}
                 <a href="#" className="btn-watch">
                   <img src={youtubeIcon} alt="" />
                 </a>
@@ -111,19 +111,6 @@ const Hero = () => {
             </div>
           </Container>
         </Container>
-        <div className="bullet-section">
-          <span
-            data-section="#hero"
-            style={{ backgroundColor: "#e28001" }}
-          ></span>
-          <span data-section="#social"></span>
-          <span data-section="#roadmap"></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span data-section="#our-team"></span>
-          <span data-section="#footer"></span>
-        </div>
       </section>
     </>
   );

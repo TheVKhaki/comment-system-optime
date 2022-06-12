@@ -6,12 +6,12 @@ import logoImage from "../images/LOW_Logo-New-Color-C.png";
 //Gsap
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const header = useRef();
 
   useEffect(() => {
-    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 2 });
+    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
   useEffect(() => {
     const headerMobile = document.querySelector("header");
@@ -35,14 +35,20 @@ const Header = () => {
               </div>
             </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
-              <Nav.Link href="#hero">Home</Nav.Link>
-              <Nav.Link href="#social">Campaigns</Nav.Link>
-              <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+              <Nav.Link href="#heroo">Home</Nav.Link>
+              <Nav.Link href="#sociall">Campaigns</Nav.Link>
+              <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
               <Nav.Link className="logo ">
-                <img src={logoImage} alt="" />
+                <motion.img
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1 }}
+                  src={logoImage}
+                  alt=""
+                />
               </Nav.Link>
-              <Nav.Link href="#our-team">Team</Nav.Link>
-              <Nav.Link href="#footer">Partners</Nav.Link>
+              <Nav.Link href="#our-teamm">Team</Nav.Link>
+              <Nav.Link href="#footerr">Partners</Nav.Link>
               <Nav.Link href="https://blog.qpoker.io/" target="_blank">
                 Blog
               </Nav.Link>

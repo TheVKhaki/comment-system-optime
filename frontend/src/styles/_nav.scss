@@ -236,6 +236,20 @@ body.modal-open {
     }
   }
 }
+@media screen and (max-width: 575.98px) {
+  header {
+    .navbar {
+      .navbar-brand {
+        .logo {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: 992px) {
   header {
     .navbar {

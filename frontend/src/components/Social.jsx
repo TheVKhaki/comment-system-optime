@@ -221,32 +221,30 @@ const SocialSection = () => {
       },
     },
   };
-  // const lineInfinity1 = {
-  //   hidden: {
-  //     width: 0,
-  //   },
-  //   visible: {
-  //     width: 47,
-  //     transition: {
-  //       duration: 2.5,
-  //       delay: 0,
-  //       yoyo: Infinity,
-  //     },
-  //   },
-  // };
-  // const lineInfinity2 = {
-  //   hidden: {
-  //     width: 0,
-  //   },
-  //   visible: {
-  //     width: 102,
-  //     transition: {
-  //       duration: 2.5,
-  //       delay: 2.5,
-  //       yoyo: Infinity,
-  //     },
-  //   },
-  // };
+  const lineInfinity = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 4,
+      },
+    },
+  };
+  const lineInfinity2 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0,
+        delay: 3.5,
+      },
+    },
+  };
   useEffect(() => {
     gsap.to(dimondsFade.current, { opacity: 1 });
     gsap.fromTo(
@@ -586,6 +584,30 @@ const SocialSection = () => {
                 ></motion.image>
               </motion.svg>
               <motion.div
+                variants={lineInfinity2}
+                initial="hidden"
+                animate={controls}
+                className="cover-path"
+              ></motion.div>
+              <motion.svg
+                variants={lineInfinity}
+                initial="hidden"
+                animate={controls}
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 19"
+                viewBox="0 0 334.96 334.61"
+                className="line-gold-action"
+              >
+                <path
+                  fill="none"
+                  stroke="#efa51f"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.1"
+                  d="M64.69 60.49L91.08 60.49 130.65 100.15 204.44 100.04 243.85 60.49 270.6 60.49"
+                ></path>
+              </motion.svg>
+              <motion.div
                 variants={pulseAnimation}
                 initial="hidden"
                 animate={controls}
@@ -595,9 +617,7 @@ const SocialSection = () => {
                 <div className="telegram-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
-                      <IconContext.Provider
-                        value={{ color: "white", size: "2.5rem" }}
-                      >
+                      <IconContext.Provider value={{ size: "2.5rem" }}>
                         <motion.a
                           variants={iconFadeIn}
                           initial="hidden"
