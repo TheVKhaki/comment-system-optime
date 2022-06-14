@@ -439,3 +439,18 @@
     }
   }
 }
+
+//desktop mode in mobile
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .ourteam {
+    min-height: 50vh;
+    .ourteam-characters {
+      min-height: auto;
+      .swiper-ourteam-2initialized {
+        .characters-information-mobile {
+          margin-bottom: 3vh;
+        }
+      }
+    }
+  }
+}

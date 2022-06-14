@@ -68,10 +68,10 @@ const SocialResponsive = () => {
 
   return (
     <>
-      <section className="social-responsive">
+      <section className="social-responsive" id="social-res">
         <div className="header-social">
-          <h2>New Generation of Hold’em Poker</h2>
-          <p>proudly introducing hold’em and quess’em</p>
+          <h2>NFT Giveaways Go Mammoth</h2>
+          <p>Ride on to the Rewards</p>
         </div>
         <div className="image-social-responsive">
           <svg
@@ -217,7 +217,7 @@ const SocialResponsive = () => {
             ref={element2}
           >
             <span>Telegram</span>
-            <p>Under Gathering</p>
+            <p>+285.02% (7d %)</p>
           </a>
           <a
             href="#"
@@ -225,7 +225,7 @@ const SocialResponsive = () => {
             ref={element3}
           >
             <span>Twitter</span>
-            <p>Under Gathering</p>
+            <p>+171.69% (7d %)</p>
           </a>
           <a
             href="#"
@@ -233,31 +233,31 @@ const SocialResponsive = () => {
             ref={element4}
           >
             <span>Youtube</span>
-            <p ref={element6}>Under Gathering</p>
+            <p ref={element6}>+121.10% (7d %)</p>
           </a>
           <a
             href="#"
             className="text-github text-image-responsive"
             ref={element5}
           >
-            <span>Github</span>
-            <p ref={element7}>Under Gathering</p>
+            <span>Trello</span>
+            <p ref={element7}>+1.12% (7d %)</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
-            <span>145</span>
-            <p>Project Manager</p>
+            <span>$50,000</span>
+            <p>Join Telegram</p>
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
-            <span>145</span>
-            <p>Project Manager</p>
+            <span>$75,000</span>
+            <p>1st July 2022</p>
           </a>
           <a href="#" className="text-option-3 text-image-responsive-2">
-            <span>145</span>
-            <p>Project Manager</p>
+            <span>$125,000</span>
+            <p>16th July 2022</p>
           </a>
           <a href="#" className="text-option-4 text-image-responsive-2">
-            <span>145</span>
-            <p>Project Manager</p>
+            <span>$200,000</span>
+            <p>31st July 2022</p>
           </a>
         </div>
       </section>

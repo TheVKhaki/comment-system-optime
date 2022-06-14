@@ -129,6 +129,7 @@ body {
   line-height: 1.5;
   background-color: $colorBlack !important;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -204,7 +205,7 @@ body {
   padding-top: 0.4rem;
   color: #e28001;
   border: 2px solid #e28001;
-  transition: all 0.3s;
+  transition: all 0.45s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -215,7 +216,7 @@ body {
     height: 0;
     border-radius: 50%;
     background-color: #e28001;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition: width 0.45s ease-in-out, height 0.45s ease-in-out;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
@@ -232,9 +233,37 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  main {
+  .fullscreen {
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    main {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: transform 0.7s ease-out;
+    }
+    section {
+      height: 100vh;
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  main {
+    transform: none !important;
+  }
+  .btn-main {
+    span {
+      top: 20% !important;
+      left: 90% !important;
+    }
+    &:hover {
+      span {
+        top: 20% !important;
+        left: 90% !important;
+      }
+    }
   }
 }
 //Nav

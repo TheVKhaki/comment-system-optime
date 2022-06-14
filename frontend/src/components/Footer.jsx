@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="footer-home">
+      <section className="footer-home" id="footer">
         <OurPartner />
         <footer>
           <Container>
