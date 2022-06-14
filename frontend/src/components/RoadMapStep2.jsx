@@ -103,28 +103,22 @@ function MyVerticallyCenteredModal(props) {
         </div>
         <div className="content-text">
           <p>
-            In gravida elit lorem, id efficitur arcu vehicula eget. Fusce id
-            nunc suscipit, iaculis ipsum tincidunt, molestie nisl. Sed tempor,
-            est ut bibendum ultricies, enim libero finibus mauris, ac auctor
-            nibh ligula sed nisl. Curabitur rutrum in ex eget lobortis. Fusce
-            fringilla felis id interdum venenatis. Nullam eu nibh sit amet massa
-            molestie viverra sit amet dapibus augue. Phasellus ut ante eget ex
-            imperdiet finibus. Fusce eleifend mattis diam, nec tempus turpis
-            volutpat et. Aenean varius scelerisque nulla, a dictum purus aliquet
-            sit amet. Duis vestibulum mauris sed lorem fringilla, non tempus
-            magna vestibulum. Morbi ac dolor nec lorem sagittis consequat
-            aliquet vel augue. Quisque consequat magna quis fermentum feugiat.
-            Phasellus quis velit non mi tincidunt faucibus. Donec eu tortor eu
-            dui commodo placerat nec eget enim. Curabitur eget feugiat risus.
-            Nullam laoreet mauris ut rutrum pellentesque. In ac finibus velit.
-            Fusce pulvinar congue diam, a fringilla sapien. Aenean dolor felis,
-            rutrum eleifend neque id, lacinia blandit neque. Phasellus aliquet
-            sem tortor, sed ornare quam aliquet ac. Cras mattis volutpat dui,
-            non congue metus dignissim nec. Nam pellentesque nulla vel dignissim
-            tincidunt. In eu dolor finibus, facilisis massa ut, rhoncus leo.
-            Praesent convallis sem eu elit laoreet consectetur. Pellentesque
-            interdum laoreet arcu eu fermentum. Phasellus facilisis sapien a
-            dictum mattis.
+            The amount of prize money depends on the points earned by you.{" "}
+            <br />
+            According to the tools that our technical team and programming
+            department has built, we can monitor 100 percent of all the
+            activities of users who have been active in line with our social
+            networks.
+            <br /> There is a certain number of points for each behavior, so
+            users can finally get their issues at the specified times under the
+            smart contract, to convert cashable tokens. This process has been
+            implemented transparently by our smart contracts and notified on our
+            social networks and blogs.
+            <br /> Why are we doing this? <br /> Because by doing so, we will
+            always be honest with customers and keep promises to our audience.{" "}
+            <br /> Well, it seems we have a competitive campaign, so you'd
+            better get to work as soon as possible and increase your ultimate
+            participation in our campaigns; take a few simple steps.
           </p>
         </div>
         <div className="roadmap-participate">
@@ -276,49 +270,60 @@ function MyVerticallyCenteredModal(props) {
             </g>
           </svg>
           <div className="box-twitter box-roadmap" ref={element}>
-            <h3>Twitter Give Away</h3>
+            <h3>Telegram Bot</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              commodo ligula in
+              The first step to participate is to register in our telegram bot;
+              in the next step, your membership link in the telegram group will
+              be given to you by the telegram bot, and you will receive points
+              for any activity you have in our group. If your messages have good
+              feedback, you will get more points.
             </p>
           </div>
           <div className="box-twitter-1 box-roadmap" ref={element2}>
-            <h3>Twitter Give Away</h3>
+            <h3>Register Twitter</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              commodo ligula in
+              The next step is to subscribe to our Twitter account, and our
+              Telegram will give you a containing Register Key that is unique to
+              you.
+              <br /> First, Follow our Twitter account
             </p>
           </div>
           <div className="box-telegram box-roadmap" ref={element3}>
-            <h3>Twitter Give Away</h3>
+            <h3>Twitter</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              commodo ligula in
+              With Retweet and Cotweet our posts, You can score more points, and
+              it is also possible at uncertain times to introduce a seat on one
+              of the social networks to get impressive points by making it
+              vibrant.
             </p>
           </div>
           <div className="box-qpoker box-roadmap" ref={element4}>
-            <h3>Twitter Give Away</h3>
+            <h3>Twitter</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              commodo ligula in
+              With Retweet and Cotweet our posts, You can score more points, and
+              it is also possible at uncertain times to introduce a seat on one
+              of the social networks to get impressive points by making it
+              vibrant.
             </p>
           </div>
           <div className="box-youtube box-roadmap" ref={element5}>
-            <h3>Twitter Give Away</h3>
+            <h3>Youtube</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              commodo ligula in
+              Register your Youtube account and do activities such as comments,
+              like and share our videos, Score points, and verify your Ethereum
+              wallet via the process in the Telegram bot.
+              <br /> Now your registration is finished.
             </p>
           </div>
           <div className="box-roadmap-2" ref={element6}>
-            <h3>Twitter Give Away</h3>
+            <h3>QPoker Giveaways Prize</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-              perspiciatis perferendis laboriosam magni corporis facilis
-              voluptates quasi laborum quia suscipit corrupti reprehenderit
-              velit eius autem tempora, itaque, amet iure. Consequatur iusto
-              voluptates corporis ea atque perferendis qui eum reiciendis
-              nostrum?
+              After all the above steps, all participants can cash their points
+              at the specified times. Our smart contracts ultimately do this,
+              and in this way, all the people who trusted us and have worked to
+              grow our social networks and identify us will get the best of
+              them.
+              <br /> so, Let's start right now
             </p>
           </div>
         </div>
@@ -396,7 +401,7 @@ const RoadMapStep2 = () => {
                   isPlaying={inView}
                   duration={0.5}
                   revealDuration={0.5}
-                  characters="Air Drops and Bounty Campagins"
+                  characters="Airdrops and Bounty Campaigns"
                 />
               </p>
             </div>
@@ -418,12 +423,17 @@ const RoadMapStep2 = () => {
                   initial="hidden"
                   animate={controls}
                 >
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Impedit aliquid id laborum maiores temporibus harum, ea
-                  corrupti deserunt voluptatum exercitationem. Quis maiores
-                  reprehenderit, unde voluptatum, at molestiae sapiente aut
-                  dignissimos perspiciatis tempora incidunt aspernatur eligendi
-                  debitis quos recusandae itaque veritatis!
+                  Many projects follow nearly the same Airdrops and Bounty
+                  Campaigns, and most of them put their prizes to chance in
+                  return for the extraordinary efforts of their users.
+                  <br /> The question that remains is, Is luck enough? Is it
+                  possible to assign active users on social networks (who
+                  struggle to achieve the project's goals and have continuous
+                  activities) the chance to respond to their efforts? Not. We
+                  will reward users who trust us and have worked to introduce us
+                  to the international community beyond luck for every single
+                  one of their activities, even a dollar! You can learn more
+                  about this by clicking the button below
                 </motion.p>
               </Col>
             </Row>

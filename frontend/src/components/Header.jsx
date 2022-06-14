@@ -1,39 +1,57 @@
 import { Container, Nav } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import logoImage from "../images/03-03 2.png";
+// import logoImage from "../images/03-03 2.png";
+import logoImage from "../images/LOW_Logo-New-Color-C.png";
 //Gsap
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const header = useRef();
 
   useEffect(() => {
-    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 2 });
+    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
-
+  useEffect(() => {
+    const headerMobile = document.querySelector("header");
+    window.addEventListener("scroll", function (e) {
+      if (window.scrollY > 100) {
+        headerMobile.classList.add("header-mobile");
+      } else {
+        headerMobile.classList.remove("header-mobile");
+      }
+    });
+  }, []);
   return (
     <>
       <header ref={header}>
         <Navbar bg="light" expand="lg">
           <Container>
-            {/* <Navbar.Brand href="#">
+            <Navbar.Brand href="#">
               <div className="logo ">
                 <img src={logoImage} alt="" />
                 <h1>QPoker</h1>
               </div>
-            </Navbar.Brand> */}
+            </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Casino</Nav.Link>
-              <Nav.Link href="#social">About Coin</Nav.Link>
+              <Nav.Link href="#heroo">Home</Nav.Link>
+              <Nav.Link href="#sociall">Campaigns</Nav.Link>
+              <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
               <Nav.Link className="logo ">
-                <img src={logoImage} alt="" />
+                <motion.img
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1 }}
+                  src={logoImage}
+                  alt=""
+                />
               </Nav.Link>
-              <Nav.Link href="#action4">Learn</Nav.Link>
-              <Nav.Link href="#action5">News</Nav.Link>
-              <Nav.Link href="#action5">News</Nav.Link>
+              <Nav.Link href="#our-teamm">Team</Nav.Link>
+              <Nav.Link href="#footerr">Partners</Nav.Link>
+              <Nav.Link href="https://blog.qpoker.io/" target="_blank">
+                Blog
+              </Nav.Link>
             </Nav>
             {/* <div className="btn-header">
               <a href="#">Connect To Wallet</a>
@@ -49,11 +67,14 @@ const Header = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Casino</Nav.Link>
-                  <Nav.Link href="#action3">About Coin</Nav.Link>
-                  <Nav.Link href="#action4">Learn</Nav.Link>
-                  <Nav.Link href="#action5">News</Nav.Link>
+                  <Nav.Link href="#hero">Home</Nav.Link>
+                  <Nav.Link href="#social-res">Campaigns</Nav.Link>
+                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+                  <Nav.Link href="#our-team">Team</Nav.Link>
+                  <Nav.Link href="#footer">Partners</Nav.Link>
+                  <Nav.Link href="https://blog.qpoker.io/" target="_blank">
+                    Blog
+                  </Nav.Link>
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}

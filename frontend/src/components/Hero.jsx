@@ -7,11 +7,12 @@ import youtubeIcon from "../images/youtube.png";
 import videoElephant from "../video/FV 16.mp4";
 // Icon
 import { IconContext } from "react-icons";
-import { FaPlay } from "react-icons/fa";
+import { ImPlay3 } from "react-icons/im";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+//lozyload
+import Lazyload from "../HOC/Lazyload";
 function TextHero({ children }) {
   return <div className="box">{children}</div>;
 }
@@ -60,20 +61,22 @@ const Hero = () => {
 
   return (
     <>
-      <section className="hero hero-bg" id="#hero" ref={sections}>
+      <section className="hero hero-bg" id="hero" ref={sections}>
         <Container fluid>
           {/* <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
           </div> */}
-          <video
-            className="video-elephant"
-            ref={videoElephantRef}
-            muted
-            autoPlay
-            onEnded={endedHandler}
-          >
-            <source src={videoElephant} type="video/mp4" />
-          </video>
+          <Lazyload>
+            <video
+              className="video-elephant"
+              ref={videoElephantRef}
+              muted
+              autoPlay
+              onEnded={endedHandler}
+            >
+              <source src={videoElephant} type="video/mp4" />
+            </video>
+          </Lazyload>
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>
@@ -90,18 +93,20 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#social" className="btn-hero btn-main">
+                <a href="#social-res" className="btn-hero btn-main">
                   Explore
                   <span></span>
                 </a>
-                {/* <IconContext.Provider
-                  value={{ color: "white", size: "1.5rem" }}
-                > */}
+                {/* <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                  <a href="#" className="btn-watch btn-main">
+                    <ImPlay3 />
+                    <span></span>
+                    <img src={youtubeIcon} alt="" />
+                  </a>
+                </IconContext.Provider> */}
                 <a href="#" className="btn-watch">
-                  {/* <FaPlay /> */}
                   <img src={youtubeIcon} alt="" />
                 </a>
-                {/* </IconContext.Provider> */}
                 {/* <a href="#" className="btn-text-watch">
                   Watch Trailer
                 </a> */}
@@ -109,16 +114,6 @@ const Hero = () => {
             </div>
           </Container>
         </Container>
-        <div className="bullet-section">
-          <span style={{ backgroundColor: "#e28001" }}></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </section>
     </>
   );

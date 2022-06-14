@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
     "framer-motion": "^6.2.8",
+    "fullpage.js": "^4.0.9",
     "gsap": "^3.10.1",
     "python": "^0.0.4",
     "react": "^17.0.2",

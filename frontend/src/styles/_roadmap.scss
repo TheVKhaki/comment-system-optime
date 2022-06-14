@@ -5,8 +5,8 @@
   padding-top: 11vh;
 
   &.roadmap-step1 {
-    background: url(../images/BKGR1.jpg) no-repeat;
-    background-size: cover;
+    background: url(../images/BKGR1.png) no-repeat;
+    background-size: 100% 100%;
     z-index: 2;
   }
   &.roadmap-step2 {
@@ -43,8 +43,8 @@
   &.roadmap-step1 {
     .roadmap-date-1 {
       position: absolute;
-      left: 50%;
-      transform: translate(-47%, 11%);
+      left: 26%;
+      transform: translate(-26%, 11%);
       bottom: 11%;
     }
   }
@@ -60,7 +60,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 45px;
     &.btn-slide-3 {
       position: relative;
       top: 20px;
@@ -104,12 +103,24 @@
         }
         span {
           margin-right: 1.5rem;
+          flex-shrink: 0;
         }
         li {
           font-size: 2rem;
           margin-bottom: 2rem;
           color: #fff;
         }
+      }
+    }
+    .img-slide-roadmap-1 {
+      height: 400px;
+      width: 547px;
+      img {
+        position: absolute;
+        width: 547px;
+        height: 400px;
+        top: 0;
+        left: -100px;
       }
     }
   }
@@ -127,6 +138,9 @@
     p {
       margin-top: 4rem;
     }
+  }
+  .content-slide-2-2 {
+    margin-top: 2rem;
   }
 
   .content-slide-3 {
@@ -267,7 +281,7 @@
     padding: 0 20px;
 
     p {
-      font-size: 20px;
+      font-size: 21px;
       margin-top: 2rem;
     }
   }
@@ -463,6 +477,17 @@
         right: -220px;
       }
     }
+    .content-slide-1-1 {
+      .img-slide-roadmap-1 {
+        img {
+          position: absolute;
+          width: 474px;
+          height: 354px;
+          top: 0;
+          left: -105px;
+        }
+      }
+    }
   }
 }
 @media screen and (min-width: 992px) {
@@ -482,6 +507,7 @@
   .roadmap {
     &.roadmap-step1 {
       background-position: center;
+      background-size: cover;
       .roadmap-date-1 {
         top: 38%;
         left: 66%;
@@ -489,7 +515,17 @@
         bottom: auto;
       }
     }
-
+    .content-slide-1-1 {
+      .img-slide-roadmap-1 {
+        width: 67%;
+        height: auto;
+        img {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
     &.roadmap-step2 {
       background-position: top;
       .content-slide-2-1 {
@@ -640,6 +676,11 @@
         right: 25px;
       }
     }
+    .content-slide-1-1 {
+      .img-slide-roadmap-1 {
+        width: 84%;
+      }
+    }
   }
 }
 
@@ -656,7 +697,11 @@
         transform: translate(-38%, -66%);
       }
     }
-
+    .content-slide-1-1 {
+      .img-slide-roadmap-1 {
+        width: 95%;
+      }
+    }
     &.roadmap-step2 {
       .content-slide-2-1 {
         img {
@@ -739,6 +784,16 @@
       .img-elephant-comingsoon {
         right: 120px;
       }
+    }
+  }
+}
+
+//desktop mode in mobile
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .roadmap {
+    min-height: auto;
+    .header-roadmap {
+      min-height: auto;
     }
   }
 }

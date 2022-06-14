@@ -1,5 +1,6 @@
 import "./styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "fullpage.js/dist/fullpage.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
 //Page
@@ -14,7 +15,14 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 
 function App() {
+  //animation btn-main
   useEffect(() => {
+    // window.addEventListener("load", function () {
+    //   const width = window.innerWidth;
+    //   const height = window.innerHeight;
+    //   alert(`width :${width}
+    //   height:${height}`);
+    // });
     const btnMain = document.querySelectorAll(".btn-main");
     const btnMainSpan = document.querySelectorAll(".btn-main span");
     btnMain.forEach((btnMain) => {
@@ -26,7 +34,6 @@ function App() {
         };
         const relX = e.pageX - parentOffset.left;
         const relY = e.pageY - parentOffset.top;
-        console.log(relY);
         btnMainSpan.forEach((btnMainSpan) => {
           btnMainSpan.style.top = relY + "px";
           btnMainSpan.style.left = relX + "px";
@@ -38,9 +45,9 @@ function App() {
           top: rect.top + window.scrollY,
           left: rect.left + window.scrollX,
         };
+
         const relX = e.pageX - parentOffset.left;
         const relY = e.pageY - parentOffset.top;
-        console.log(relY);
         btnMainSpan.forEach((btnMainSpan) => {
           btnMainSpan.style.top = relY + "px";
           btnMainSpan.style.left = relX + "px";
@@ -49,7 +56,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className="App fullscreen">
       {/* <Login />  */}
       <Header />
       <Home />

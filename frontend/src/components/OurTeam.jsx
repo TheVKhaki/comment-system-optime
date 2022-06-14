@@ -131,7 +131,7 @@ const OurTeam = () => {
 
   return (
     <>
-      <section className="ourteam" index="6" ref={element}>
+      <section className="ourteam" ref={element} id="our-team">
         <Container>
           <div className="ourteam-header">
             <h2>

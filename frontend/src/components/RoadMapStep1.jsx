@@ -6,8 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 //observer
 import { useInView } from "react-intersection-observer";
 //Media
-import imageRoadMap11 from "../images/PRO.png";
-import imageRoadMap12 from "../images/ART.png";
+import imageRoadMap11 from "../images/Roadmap-step-1.png";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //Icon
@@ -32,7 +31,7 @@ const RoadMap = () => {
     },
     visible: {
       opacity: 1,
-      x: 0,
+      x: 1,
       transition: {
         duration: 1,
         delay: 0.5,
@@ -83,7 +82,7 @@ const RoadMap = () => {
   };
   return (
     <>
-      <section className="roadmap-step1 roadmap" ref={element}>
+      <section className="roadmap-step1 roadmap" ref={element} id="roadmap">
         <Container>
           <motion.div className="header-roadmap">
             <h2>
@@ -111,23 +110,6 @@ const RoadMap = () => {
               />
             </p>
           </motion.div>
-          <div className="roadmap-date roadmap-date-1">
-            <p>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="2022"
-              />
-              <br />
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="feb-mar"
-              />
-            </p>
-          </div>
           <Row className="content-slide-1-1">
             <Col lg={4}>
               <motion.div
@@ -165,7 +147,20 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Structure</li>
+                      <li>Innovation and formation of the rulebook</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaHourglassHalf />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Writing of the white paper (at the final stage)</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -178,7 +173,9 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Content</li>
+                      <li>
+                        Designing of the game structure and visual outlook
+                      </li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -191,33 +188,9 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Build the Alpha version of the Game Rule Book </li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Develop the Website (front-end & back-end)</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Social medias Robots for campaigns propose </li>
+                      <li>
+                        Build of social media robots for bounty campaigns{" "}
+                      </li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -231,7 +204,62 @@ const RoadMap = () => {
                         </span>
                       </IconContext.Provider>
                       <li>
-                        Build the Alpha version of the Game(still in progress)
+                        Programming of the game software’s alpha version
+                        (debugging stage)
+                      </li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Tutorized game demonstration video</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Development of the website (front-end & back-end)</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>Manuscript and production of a meme teaser</li>
+                    </Col>
+                    <Col lg={6}>
+                      <IconContext.Provider
+                        value={{
+                          color: "#e28001",
+                          size: "2rem",
+                        }}
+                      >
+                        <span>
+                          <FaCheck />
+                        </span>
+                      </IconContext.Provider>
+                      <li>
+                        Market research and creation of a feasibility study
                       </li>
                     </Col>
                   </Row>

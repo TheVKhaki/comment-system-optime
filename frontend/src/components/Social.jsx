@@ -3,7 +3,7 @@ import {
   FaTelegramPlane,
   FaTwitter,
   FaYoutube,
-  FaGithub,
+  FaTrello,
 } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -70,13 +70,13 @@ const SocialSection = () => {
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
-  const arrayTimeAnimtion = [0, 0.5, 1, 2, 3, 4, 4.5];
+  const arrayTimeAnimtion = [0, 2, 2, 2.5, 4, 5, 5.5];
   // const shift = (arg) => {
   //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
   //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
   //   }
   // };
-  // shift(0);
+  // shift(1);
   const headerFadeIn = {
     hidden: {
       opacity: 0,
@@ -209,15 +209,39 @@ const SocialSection = () => {
   };
   const pulseAnimation = {
     hidden: {
-      opacity: 1,
-      scale: 0,
-    },
-    visible: {
       opacity: 0,
       scale: 100,
+    },
+    visible: {
+      opacity: 1,
+      scale: 0,
       transition: {
-        duration: 3,
-        delay: arrayTimeAnimtion[1],
+        duration: 2.5,
+        delay: arrayTimeAnimtion[0],
+      },
+    },
+  };
+  const lineInfinity = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 4,
+      },
+    },
+  };
+  const lineInfinity2 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0,
+        delay: 3.5,
       },
     },
   };
@@ -249,7 +273,7 @@ const SocialSection = () => {
               animate={controls}
               className="header-social"
             >
-              <h2>NFT Giveaway Go Mammoth</h2>
+              <h2>NFT Giveaways Go Mammoth</h2>
               <p>Ride on to the Rewards</p>
             </motion.div>
             <div className="circle-socials">
@@ -560,6 +584,30 @@ const SocialSection = () => {
                 ></motion.image>
               </motion.svg>
               <motion.div
+                variants={lineInfinity2}
+                initial="hidden"
+                animate={controls}
+                className="cover-path"
+              ></motion.div>
+              <motion.svg
+                variants={lineInfinity}
+                initial="hidden"
+                animate={controls}
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 19"
+                viewBox="0 0 334.96 334.61"
+                className="line-gold-action"
+              >
+                <path
+                  fill="none"
+                  stroke="#efa51f"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.1"
+                  d="M64.69 60.49L91.08 60.49 130.65 100.15 204.44 100.04 243.85 60.49 270.6 60.49"
+                ></path>
+              </motion.svg>
+              <motion.div
                 variants={pulseAnimation}
                 initial="hidden"
                 animate={controls}
@@ -569,9 +617,7 @@ const SocialSection = () => {
                 <div className="telegram-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
-                      <IconContext.Provider
-                        value={{ color: "white", size: "2.5rem" }}
-                      >
+                      <IconContext.Provider value={{ size: "2.5rem" }}>
                         <motion.a
                           variants={iconFadeIn}
                           initial="hidden"
@@ -595,15 +641,17 @@ const SocialSection = () => {
                           characters="Telegram"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+285.02% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
@@ -637,15 +685,17 @@ const SocialSection = () => {
                           characters="Twitter"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+171.69% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
@@ -679,19 +729,21 @@ const SocialSection = () => {
                           characters="Youtube"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+121.10% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
-                <div className="github-social socials-in-circle">
+                <div className="trello-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -703,7 +755,7 @@ const SocialSection = () => {
                           animate={controls}
                           href="#"
                         >
-                          <FaGithub />
+                          <FaTrello />
                         </motion.a>
                       </IconContext.Provider>
                     </div>
@@ -718,23 +770,39 @@ const SocialSection = () => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Github"
+                          characters="Trello"
                         />
                       </span>
-                      <p>
-                        {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
-                          characters="under gathering"
-                        />
-                      </p>
+                      <div className="wrapper-detail">
+                        <p>
+                          {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters="+1.12% (7d %)"
+                          />
+                        </p>
+                      </div>
                     </motion.div>
                   </a>
                 </div>
               </div>
               <div className="left-circle-social">
+                {/* <motion.div
+                  variants={lineInfinity1}
+                  initial="hidden"
+                  animate="visible"
+                  className="line-action-social-1"
+                ></motion.div>
+                <div className="wrapper-line-action-social-2">
+                  <motion.div
+                    variants={lineInfinity2}
+                    initial="hidden"
+                    animate="visible"
+                    className="line-action-social-2"
+                  ></motion.div>
+                </div> */}
                 <motion.div
                   variants={textFadeIn}
                   initial="hidden"
@@ -747,7 +815,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="08+"
+                      characters="$50,000"
                     />
                   </span>
                   <p>
@@ -756,7 +824,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Years Experience"
+                      characters="Join Telegram"
                     />
                   </p>
                 </motion.div>
@@ -772,7 +840,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="08+"
+                      characters="$75,000"
                     />
                   </span>
                   <p>
@@ -780,7 +848,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Years Experience"
+                      characters="1st July 2022"
                     />
                   </p>
                 </motion.div>
@@ -796,7 +864,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="145"
+                      characters="$125,000"
                     />
                   </span>
                   <p>
@@ -804,7 +872,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Project Completed"
+                      characters="16th July 2022"
                     />
                   </p>
                 </motion.div>
@@ -820,7 +888,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="145"
+                      characters="$200,000"
                     />
                   </span>
                   <p>
@@ -829,7 +897,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Project Completed"
+                      characters="31st July 2022"
                     />
                   </p>
                 </motion.div>
