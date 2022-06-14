@@ -85,7 +85,7 @@
 
     .right-circle-social {
       position: relative;
-      z-index: 1;
+      z-index: 11;
       .socials-in-circle {
         text-align: center;
         display: flex;
@@ -137,8 +137,7 @@
         .link-social-in-circle {
           &:hover {
             svg,
-            span,
-            p {
+            span {
               color: #0088cc !important;
             }
           }
@@ -171,8 +170,7 @@
         .link-social-in-circle {
           &:hover {
             svg,
-            span,
-            p {
+            span {
               color: #1da1f2 !important;
             }
           }
@@ -186,8 +184,7 @@
         .link-social-in-circle {
           &:hover {
             svg,
-            span,
-            p {
+            span {
               color: #ff0000 !important;
             }
           }
@@ -201,8 +198,7 @@
         .link-social-in-circle {
           &:hover {
             svg,
-            span,
-            p {
+            span {
               color: #0079bf !important;
             }
           }

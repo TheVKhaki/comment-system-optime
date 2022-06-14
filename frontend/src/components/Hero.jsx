@@ -11,7 +11,8 @@ import { ImPlay3 } from "react-icons/im";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+//lozyload
+import Lazyload from "../HOC/Lazyload";
 function TextHero({ children }) {
   return <div className="box">{children}</div>;
 }
@@ -65,15 +66,17 @@ const Hero = () => {
           {/* <div className="hero-img-elephant">
             <img src={imageElephant} alt="" ref={imgElephant} />
           </div> */}
-          <video
-            className="video-elephant"
-            ref={videoElephantRef}
-            muted
-            autoPlay
-            onEnded={endedHandler}
-          >
-            <source src={videoElephant} type="video/mp4" />
-          </video>
+          <Lazyload>
+            <video
+              className="video-elephant"
+              ref={videoElephantRef}
+              muted
+              autoPlay
+              onEnded={endedHandler}
+            >
+              <source src={videoElephant} type="video/mp4" />
+            </video>
+          </Lazyload>
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>
@@ -90,7 +93,7 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#" className="btn-hero btn-main">
+                <a href="#social-res" className="btn-hero btn-main">
                   Explore
                   <span></span>
                 </a>

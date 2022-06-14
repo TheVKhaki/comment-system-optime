@@ -6,8 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 //observer
 import { useInView } from "react-intersection-observer";
 //Media
-import imageRoadMap11 from "../images/PRO.png";
-import imageRoadMap12 from "../images/ART.png";
+import imageRoadMap11 from "../images/Roadmap-step-1.png";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //Icon
@@ -32,7 +31,7 @@ const RoadMap = () => {
     },
     visible: {
       opacity: 1,
-      x: 0,
+      x: 1,
       transition: {
         duration: 1,
         delay: 0.5,
@@ -111,23 +110,6 @@ const RoadMap = () => {
               />
             </p>
           </motion.div>
-          {/* <div className="roadmap-date roadmap-date-1">
-            <p>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="2022"
-              />
-              <br />
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="feb-mar"
-              />
-            </p>
-          </div> */}
           <Row className="content-slide-1-1">
             <Col lg={4}>
               <motion.div

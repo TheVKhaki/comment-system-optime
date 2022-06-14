@@ -15,6 +15,7 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 
 function App() {
+  //animation btn-main
   useEffect(() => {
     // window.addEventListener("load", function () {
     //   const width = window.innerWidth;
@@ -44,6 +45,7 @@ function App() {
           top: rect.top + window.scrollY,
           left: rect.left + window.scrollX,
         };
+
         const relX = e.pageX - parentOffset.left;
         const relY = e.pageY - parentOffset.top;
         btnMainSpan.forEach((btnMainSpan) => {

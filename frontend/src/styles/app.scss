@@ -251,7 +251,19 @@ body {
 }
 @media screen and (max-width: 991.98px) {
   main {
-    transform: translateY(0) !important;
+    transform: none !important;
+  }
+  .btn-main {
+    span {
+      top: 20% !important;
+      left: 90% !important;
+    }
+    &:hover {
+      span {
+        top: 20% !important;
+        left: 90% !important;
+      }
+    }
   }
 }
 //Nav

@@ -15,15 +15,15 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   let navigate = useNavigate();
   const [width, height] = useWindowSize();
-  window.addEventListener("load", function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50);
-  });
-  useEffect(() => {
-    const sectionHero = document.querySelector(".hero");
-    sectionHero.scrollIntoView();
-  }, []);
+  // window.addEventListener("load", function () {
+  //   setTimeout(() => {
+  //     window.scrollTo(0, 0);
+  //   }, 50);
+  // });
+  // useEffect(() => {
+  //   const sectionHero = document.querySelector(".hero");
+  //   sectionHero.scrollIntoView();
+  // }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -97,11 +97,17 @@ const Home = () => {
         }
       });
     });
-
+    let animationDuration = 700;
+    var lastTime = new Date().getTime();
     if (app.classList.contains("fullscreen")) {
       root.addEventListener("wheel", function (e) {
+        var currentTime = new Date().getTime();
+        console.log(currentTime - lastTime < animationDuration);
+        if (currentTime - lastTime < animationDuration) {
+          e.preventDefault();
+          return;
+        }
         if (canScroll) {
-          canScroll = false;
           bullets.forEach((bulletColor) => {
             bulletColor.style.backgroundColor = "white";
           });
@@ -117,9 +123,10 @@ const Home = () => {
           bullets[spinValue].style.backgroundColor = "#e28001";
           scrollContent(spinValue);
         }
-        setTimeout(() => {
-          canScroll = true;
-        }, 700);
+        lastTime = currentTime;
+        // setTimeout(() => {
+        //   canScroll = true;
+        // }, 2000);
       });
 
       window.addEventListener("keydown", function keys(e) {
@@ -151,7 +158,7 @@ const Home = () => {
     };
 
     // let index = 0;
-    // let animationDuration = 200;
+
     // let lastTime = 0;
     bullets.forEach((bullet, indexbullet) => {
       bullet.addEventListener("click", function (params) {

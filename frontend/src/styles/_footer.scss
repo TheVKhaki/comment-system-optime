@@ -235,6 +235,28 @@
     }
   }
 }
+@media screen and (max-width: 767.98px) {
+  .footer-home {
+    .our-partner {
+      .our-partner-news-tricker {
+        .slide-news-tricker {
+          width: 170%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-home {
+    .our-partner {
+      .our-partner-news-tricker {
+        .slide-news-tricker {
+          width: 200%;
+        }
+      }
+    }
+  }
+}
 
 //desktop mode in mobile
 @media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
