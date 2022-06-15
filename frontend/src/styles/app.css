@@ -873,25 +873,44 @@ body.modal-open {
 
 @-webkit-keyframes animateLineGold {
   0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
     stroke-dashoffset: 250;
   }
+  40% {
+    stroke-dashoffset: 0;
+  }
   100% {
-    stroke-dashoffset: 500;
+    stroke-dashoffset: -250;
   }
 }
 
 @keyframes animateLineGold {
   0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
     stroke-dashoffset: 250;
   }
+  40% {
+    stroke-dashoffset: 0;
+  }
   100% {
-    stroke-dashoffset: 500;
+    stroke-dashoffset: -250;
+  }
+}
+
+.social-section .line-gold-action-1 path {
+  stroke-dasharray: 10, 10;
+  stroke-dashoffset: 250;
+  -webkit-animation: animateLineGold 7s linear infinite forwards;
+  animation: animateLineGold 7s linear infinite forwards;
+}
+
+@keyframes animateLineGold {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -250;
   }
 }
 
@@ -1022,38 +1041,50 @@ body.modal-open {
   .right-circle-social
   .telegram-social
   .link-social-in-circle
-  svg {
+  svg,
+.social-section
+  .circle-socials
+  .right-circle-social
+  .telegram-social
+  .link-social-in-circle
+  span {
   -webkit-animation: goldColorIcon 2s linear infinite forwards;
   animation: goldColorIcon 2s linear infinite forwards;
 }
 
 @-webkit-keyframes goldColorIcon {
   0% {
-    color: #e28001;
-  }
-  40% {
-    color: #e28001;
-  }
-  80% {
     color: #fff;
   }
+  35% {
+    color: #fff;
+  }
+  40% {
+    color: #0088cc;
+  }
+  90% {
+    color: #0088cc;
+  }
   100% {
-    color: #e28001;
+    color: #fff;
   }
 }
 
 @keyframes goldColorIcon {
   0% {
-    color: #e28001;
-  }
-  40% {
-    color: #e28001;
-  }
-  80% {
     color: #fff;
   }
+  35% {
+    color: #fff;
+  }
+  40% {
+    color: #0088cc;
+  }
+  90% {
+    color: #0088cc;
+  }
   100% {
-    color: #e28001;
+    color: #fff;
   }
 }
 
@@ -1436,6 +1467,8 @@ body.modal-open {
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  bottom: 22px;
 }
 
 .roadmap .btn-slide a:hover span {
@@ -1501,10 +1534,6 @@ body.modal-open {
 
 .roadmap .content-slide-2-1 p {
   margin-top: 4rem;
-}
-
-.roadmap .content-slide-2-2 {
-  margin-top: 2rem;
 }
 
 .roadmap .content-slide-3 {
@@ -1708,6 +1737,46 @@ body.modal-open {
   flex-direction: column;
   margin-top: 7rem;
   position: relative;
+}
+
+.roadmap2-modal .roadmap-participate .line-modal-1 {
+  position: absolute;
+  width: 26px;
+  height: 239px;
+  background-color: #e06f1f;
+  top: 70px;
+}
+
+.roadmap2-modal .roadmap-participate .line-modal-2 {
+  position: absolute;
+  width: 26px;
+  height: 264px;
+  background-color: #e06f1f;
+  top: 370px;
+}
+
+.roadmap2-modal .roadmap-participate .line-modal-3 {
+  position: absolute;
+  width: 26px;
+  height: 300px;
+  background-color: #e06f1f;
+  top: 695px;
+}
+
+.roadmap2-modal .roadmap-participate .line-modal-4 {
+  position: absolute;
+  width: 26px;
+  height: 277px;
+  background-color: #e06f1f;
+  top: 1049px;
+}
+
+.roadmap2-modal .roadmap-participate .line-modal-5 {
+  position: absolute;
+  width: 26px;
+  height: 350px;
+  background-color: #e06f1f;
+  top: 1382px;
 }
 
 .roadmap2-modal .roadmap-participate img {
