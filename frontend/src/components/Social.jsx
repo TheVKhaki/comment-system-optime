@@ -590,23 +590,42 @@ const SocialSection = () => {
                 className="cover-path"
               ></motion.div>
               <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="bdecf577-1f6a-4362-830d-59fa8c94bcfc"
+                viewBox="0 0 334.96 334.61"
+                className="line-gold-action "
                 variants={lineInfinity}
                 initial="hidden"
                 animate={controls}
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="Layer 19"
-                viewBox="0 0 334.96 334.61"
-                className="line-gold-action"
               >
                 <path
                   fill="none"
                   stroke="#efa51f"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="1.1"
-                  d="M64.69 60.49L91.08 60.49 130.65 100.15 204.44 100.04 243.85 60.49 270.6 60.49"
+                  strokeWidth="4"
+                  d="M64.69 60.49L91.44 60.49 130.85 100.04 204.64 100.15 244.21 60.49 270.6 60.49"
                 ></path>
               </motion.svg>
+              {/* <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="bdecf577-1f6a-4362-830d-59fa8c94bcfc"
+                viewBox="0 0 334.96 334.61"
+                className="line-gold-action line-gold-action-1"
+                variants={lineInfinity}
+                initial="hidden"
+                animate={controls}
+              >
+                <path
+                  fill="none"
+                  stroke="#efa51f"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4"
+                  d="M64.69 60.49L91.44 60.49 130.85 100.04 204.64 100.15 244.21 60.49 270.6 60.49"
+                ></path>
+              </motion.svg> */}
+
               <motion.div
                 variants={pulseAnimation}
                 initial="hidden"

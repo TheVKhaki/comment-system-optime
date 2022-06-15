@@ -14,79 +14,273 @@ import { motion, useAnimation } from "framer-motion";
 //lazyload
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Lazyload from "../HOC/Lazyload";
+//gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function MyVerticallyCenteredModal(props) {
-  const [animationComplete, setAnimationComplete] = useState({
-    animation1: "hidden",
-    animation2: "hidden",
-    animation3: "hidden",
-    animation4: "hidden",
-    animation5: "hidden",
-  });
-  const controls = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const controls4 = useAnimation();
-  const controls5 = useAnimation();
-  const controls6 = useAnimation();
+  gsap.registerPlugin(ScrollTrigger);
+  // const [animationComplete, setAnimationComplete] = useState({
+  //   animation1: "hidden",
+  //   animation2: "hidden",
+  //   animation3: "hidden",
+  //   animation4: "hidden",
+  //   animation5: "hidden",
+  // });
+  // const controls = useAnimation();
+  // const controls2 = useAnimation();
+  // const controls3 = useAnimation();
+  // const controls4 = useAnimation();
+  // const controls5 = useAnimation();
+  // const controls6 = useAnimation();
   const [element, inView] = useInView({ threshold: 0.9, triggerOnce: true });
   const [element2, inView2] = useInView({ threshold: 0.9, triggerOnce: true });
   const [element3, inView3] = useInView({ threshold: 0.9, triggerOnce: true });
   const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
   const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
   const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    if (inView2 && animationComplete.animation1 === "visible") {
-      controls2.start("visible");
-    }
-    if (inView3 && animationComplete.animation2 === "visible") {
-      controls3.start("visible");
-    }
-    if (inView4 && animationComplete.animation3 === "visible") {
-      controls4.start("visible");
-    }
-    if (inView5 && animationComplete.animation4 === "visible") {
-      controls5.start("visible");
-    }
-    if (inView6 && animationComplete.animation5 === "visible") {
-      controls6.start("visible");
-    }
-  }, [
-    controls,
-    inView,
-    inView2,
-    inView3,
-    inView4,
-    inView5,
-    inView6,
-    animationComplete,
-  ]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible");
+  //   }
+  //   if (inView2) {
+  //     controls2.start("visible");
+  //   }
+  //   if (inView3) {
+  //     controls3.start("visible");
+  //   }
+  //   if (inView4) {
+  //     controls4.start("visible");
+  //   }
+  //   if (inView5) {
+  //     controls5.start("visible");
+  //   }
+  //   if (inView6) {
+  //     controls6.start("visible");
+  //   }
+  // }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
 
-  const itemPath = {
-    hidden: {
-      pathLength: 0,
-    },
-    visible: {
-      pathLength: 1,
-      transition: {
-        duration: 1,
-        delay: 0.3,
-      },
-    },
-  };
-  const itemOpacity = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
+  // const itemPath = {
+  //   hidden: {
+  //     pathLength: 0,
+  //   },
+  //   visible: {
+  //     pathLength: 1,
+  //     transition: {
+  //       duration: 1,
+  //       delay: 0.3,
+  //     },
+  //   },
+  // };
+  // const itemOpacity = {
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 1,
+  //     },
+  //   },
+  // };
+  const lineModal1 = useRef();
+  const lineModal2 = useRef();
+  const lineModal3 = useRef();
+  const lineModal4 = useRef();
+  const lineModal5 = useRef();
+  useEffect(() => {
+    // const element = lineModal1.current;
+    if (props.show) {
+      gsap.fromTo(
+        lineModal1.current,
+        {
+          height: 0,
+        },
+        {
+          height: 239,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "20px center",
+            end: "300px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        lineModal2.current,
+        {
+          height: 0,
+        },
+        {
+          height: 264,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "320px center",
+            end: "600px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        lineModal3.current,
+        {
+          height: 0,
+        },
+        {
+          height: 300,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "620px center",
+            end: "900px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        lineModal4.current,
+        {
+          height: 0,
+        },
+        {
+          height: 277,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "920px center",
+            end: "1200px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        lineModal5.current,
+        {
+          height: 0,
+        },
+        {
+          height: 387,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "1220px center",
+            end: "1500px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-1"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "20px center",
+            end: "60px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-2"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "270px center",
+            end: "310px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-3"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "620px center",
+            end: "660px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-4"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "850px center",
+            end: "900px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-5"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "1180px center",
+            end: "1220px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate .circle-modal-svg-6"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "1490px center",
+            end: "1560px center",
+            scrub: true,
+          },
+        }
+      );
+    }
+  }, [props.show]);
+
   return (
     <Modal
       {...props}
@@ -122,6 +316,12 @@ function MyVerticallyCenteredModal(props) {
           </p>
         </div>
         <div className="roadmap-participate">
+          <div className="line-modal-1" ref={lineModal1}></div>
+          <div className="line-modal-2" ref={lineModal2}></div>
+          <div className="line-modal-3" ref={lineModal3}></div>
+          <div className="line-modal-4" ref={lineModal4}></div>
+          <div className="line-modal-5" ref={lineModal5}></div>
+
           <LazyLoadImage src={roadMapParticipate} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +333,7 @@ function MyVerticallyCenteredModal(props) {
               stroke="#e06f1f"
               data-name="bc59edd1-101a-4510-b44a-68a4d33fcac1"
             >
-              <motion.path
+              {/* <motion.path
                 variants={itemPath}
                 initial="hidden"
                 animate={controls5}
@@ -202,71 +402,77 @@ function MyVerticallyCenteredModal(props) {
                 strokeLinejoin="round"
                 strokeWidth="20"
                 d="M72.13 70.46L72.13 297"
-              ></motion.path>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls}
+              ></motion.path> */}
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls}
+                className="circle-modal-svg-1"
                 r="28.73"
                 strokeMiterlimit="10"
                 strokeWidth="8"
                 cy="40"
                 cx="72.13"
-              ></motion.circle>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls2}
+              ></circle>
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls2}
+                className="circle-modal-svg-2"
                 r="28.73"
                 strokeMiterlimit="10"
                 strokeWidth="8"
                 transform="rotate(-88.09 68.096 336.673)"
                 cy="340"
                 cx="77"
-              ></motion.circle>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls4}
+              ></circle>
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls4}
+                className="circle-modal-svg-4"
                 r="28.73"
                 strokeMiterlimit="10"
                 strokeWidth="8"
                 transform="rotate(-89.08 68.137 1015.924)"
                 cy="1019.81"
                 cx="96"
-              ></motion.circle>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls5}
+              ></circle>
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls5}
+                className="circle-modal-svg-5"
                 r="28.73"
                 strokeMiterlimit="10"
                 strokeWidth="8"
                 transform="rotate(-1.68 -271.741 1434.755)"
                 cx="75.5"
                 cy="1323"
-              ></motion.circle>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls6}
+              ></circle>
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls6}
+                className="circle-modal-svg-6"
                 cx="72.13"
                 r="64.13"
                 strokeMiterlimit="10"
                 strokeWidth="16"
                 cy="1783"
-              ></motion.circle>
-              <motion.circle
-                variants={itemOpacity}
-                initial="hidden"
-                animate={controls3}
+              ></circle>
+              <circle
+                // variants={itemOpacity}
+                // initial="hidden"
+                // animate={controls3}
+                className="circle-modal-svg-3"
                 r="28.73"
                 strokeMiterlimit="10"
                 strokeWidth="8"
                 transform="rotate(-1.68 -271.802 740.967)"
                 cx="74.5"
                 cy="653"
-              ></motion.circle>
+              ></circle>
             </g>
           </svg>
           <div className="box-twitter box-roadmap" ref={element}>
