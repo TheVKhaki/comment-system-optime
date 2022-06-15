@@ -2973,6 +2973,29 @@ body.modal-open {
   border: 3px solid #e28001;
 }
 
+.footer-home footer .go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 3px solid #e28001;
+}
+
 .footer-home footer .footer-left h4 {
   font-size: 2.4rem;
 }
