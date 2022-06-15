@@ -49,13 +49,31 @@
     }
     @keyframes animateLineGold {
       0% {
-        stroke-dashoffset: 0;
-      }
-      40% {
         stroke-dashoffset: 250;
       }
+      40% {
+        stroke-dashoffset: 0;
+      }
       100% {
-        stroke-dashoffset: 500;
+        stroke-dashoffset: -250;
+      }
+    }
+  }
+  .line-gold-action-1 {
+    path {
+      stroke-dasharray: 10, 10;
+      stroke-dashoffset: 250;
+      animation: animateLineGold 7s linear infinite forwards;
+    }
+    @keyframes animateLineGold {
+      0% {
+        stroke-dashoffset: 250;
+      }
+      40% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -250;
       }
     }
   }
@@ -141,22 +159,26 @@
               color: #0088cc !important;
             }
           }
-          svg {
+          svg,
+          span {
             animation: goldColorIcon 2s linear infinite forwards;
             @keyframes goldColorIcon {
               0% {
-                color: #e28001;
+                color: #fff;
+              }
+              35% {
+                color: #fff;
+              }
+              40% {
+                color: #0088cc;
               }
 
-              40% {
-                color: #e28001;
-              }
-              80% {
-                color: #fff;
+              90% {
+                color: #0088cc;
               }
 
               100% {
-                color: #e28001;
+                color: #fff;
               }
             }
           }
