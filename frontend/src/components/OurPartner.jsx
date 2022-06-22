@@ -113,9 +113,13 @@ const OurPartner = () => {
               {ourPartnerApi.map((ourpartner) => {
                 if (ourpartner.id <= 8) {
                   return (
-                    <div className="item-news-tricker" key={ourpartner.id}>
+                    <a
+                      href="#"
+                      className="item-news-tricker"
+                      key={ourpartner.id}
+                    >
                       <img src={ourpartner.imgSrc} alt="" />
-                    </div>
+                    </a>
                   );
                 }
               })}
@@ -124,9 +128,13 @@ const OurPartner = () => {
               {ourPartnerApi.map((ourpartner) => {
                 if (ourpartner.id >= 8) {
                   return (
-                    <div className="item-news-tricker" key={ourpartner.id}>
+                    <a
+                      href="#"
+                      className="item-news-tricker"
+                      key={ourpartner.id}
+                    >
                       <img src={ourpartner.imgSrc} alt="" />
-                    </div>
+                    </a>
                   );
                 }
               })}

@@ -81,18 +81,18 @@ const Footer = () => {
               <Col>
                 <div className="footer-right">
                   <ul>
-                    <li>Our Company</li>
-                    <li>lorem1</li>
-                    <li>lorem2</li>
-                    <li>lorem3</li>
-                    <li>lorem4</li>
+                    <li>Company Details</li>
+                    <li>QPoker Ltd</li>
+                    <li>Unit 114, Orion Mall</li>
+                    <li>Palm Street, Victoria</li>
+                    <li>Mahe Seychelles</li>
                   </ul>
                   <ul>
-                    <li>Our Company</li>
-                    <li>lorem1</li>
-                    <li>lorem2</li>
-                    <li>lorem3</li>
-                    <li>lorem4</li>
+                    <li>Links</li>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>About Us</li>
                   </ul>
                 </div>
               </Col>

@@ -32,10 +32,10 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_sam.hdr",
       name: "Sam",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      job: "Head of Technology",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Sam has 12 years of experience managing complex projects, a blockchain virtuoso using local and offshore development teams. Expert in developing products in diverse fields such as finance, health technology, gaming, and security platforms. Founder and co-founder of start-ups, leading the CTO, R&D, and operations activities.",
     },
     {
       id: 2,
@@ -46,11 +46,11 @@ const Characters = () => {
       model3d: model3dSina,
       position: [0, -3, 0],
       env: "venice_sunset_1k_sina.hdr",
-      name: "Sina",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Matthew",
+      job: "Lead Designer & Art Director",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Matthew is a gifted artist and a motion graphics designer. His expertise is best known for his team-leading skills with animation productions in commercials and short films. He has a unique expression style and can adapt fluently to the audience of choice. Matthew spent three years gaining expertise in one of the biggest advertising agencies in Osaka. Animations behind our provoking meme teaser are complete results of his handprints.",
     },
     {
       id: 3,
@@ -61,11 +61,11 @@ const Characters = () => {
       model3d: model3dHenrik,
       position: [0, -3, 0],
       env: "venice_sunset_1k_henrik.hdr",
-      name: "Henrik",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Fredrik",
+      job: "Co-Founder ",
+      abbrPosition: "CMO",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Fredrik is a social media and digital strategist with an agency and in-house background, including over nine years of digital and traditional PR and event marketing experience. His expertise includes digital strategy, branded channel development, community management, integrated campaigns, social media relations, training, SEO, website management, and online retail.",
     },
     {
       id: 4,
@@ -76,11 +76,11 @@ const Characters = () => {
       model3d: model3dMohammad,
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammad.hdr",
-      name: "Mohammad",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Michael",
+      job: "Co-Founder",
+      abbrPosition: "CPO",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Michael is an experienced IT entrepreneur. He has extensive experience in software development, team management, and business management. As an excellent strategist, Antonio’s wide-ranging expertise and a strong drive toward excellence make him a key team player. Antonio is the one who’s never afraid of bringing up critical points of view on the table.",
     },
     {
       id: 5,
@@ -91,11 +91,11 @@ const Characters = () => {
       model3d: model3dMohammadreza,
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammadreza.hdr",
-      name: "Mohammadreza",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Johnnie",
+      job: "Blockchain & Cryptography Expert",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Johnnie is a professional data analyst and blockchain enthusiast. He has a comprehensive understanding of systems security and significant database processing. Johnnie has managed dozens of challenging web projects in various fields such as finance, gaming, insurance, and more.",
     },
     {
       id: 6,
@@ -106,11 +106,11 @@ const Characters = () => {
       model3d: model3dGirl1,
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl1.hdr",
-      name: "Chi?",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Vanessa",
+      job: "Community Manager",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Vanessa is a social media and digital strategist with an agency and in-house background, including over nine years of digital and traditional PR and event marketing experience. Her expertise includes digital strategy, branded channel development, community management, integrated campaigns, social media relations, training, SEO, website management, and online retail.",
     },
     {
       id: 7,
@@ -121,11 +121,11 @@ const Characters = () => {
       model3d: model3dMan2,
       position: [0, -3, 0],
       env: "venice_sunset_1k_man1.hdr",
-      name: "Chi?",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Arnold",
+      job: "Investor & iGaming Specialist",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Arnold is a venture capitalist and iGaming veteran. He launched one of the first online poker rooms on iPoker Network in the early 2000s. He sold his share of the business in 2008 and has been financing several aspiring iGaming start-ups since then. ",
     },
 
     {
@@ -137,11 +137,11 @@ const Characters = () => {
       model3d: model3dAmir,
       position: [0, -3, 0],
       env: "venice_sunset_1k_amir.hdr",
-      name: "Amir",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Peter",
+      job: "Chief Executive Officer",
+      abbrPosition: "CEO",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Peter is an experienced IT entrepreneur and security expert. He has extensive experience in software development, team leadership, and business management. In the iGaming field, Peter made a long career in management positions in Betsson, the largest multi-national gambling company in Europe, employing over 1,800 people from 55 nationalities.",
     },
     {
       id: 9,
@@ -152,11 +152,11 @@ const Characters = () => {
       model3d: model3dMan1,
       position: [0, -3, 0],
       env: "venice_sunset_1k_man2.hdr",
-      name: "Chi?",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Hans",
+      job: "UI/UX Designer",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Hans has been a multifaceted designer from a young age. He’s been working with several crypto start-ups to create fresh and engaging DApps. He believes that a felicitous design engages you with a good spirit. With QPoker, he shares only one vision, to build a masterly user experience no other iGaming platform has ever reached out to. Hans is one of our earliest members as he has been participating in the QPoker’s design work from the very beginning.",
     },
     {
       id: 10,
@@ -167,11 +167,11 @@ const Characters = () => {
       model3d: model3dGirl2,
       position: [0, -10, 0],
       env: "venice_sunset_1k_girl2.hdr",
-      name: "Chi?",
-      job: "chief content officer",
-      abbrPosition: "CCO",
+      name: "Ashley",
+      job: "Creative Director",
+      abbrPosition: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Quod numquam consequuntur recusandae facere quisquam reprehenderit reiciendis fugit culpa harum hic?",
+        "Eccentric creative genius. Ashley is an uninhibited anarchist whose flow of life comes from breaking taboos. To put it briefly, it is Ashley’s way or the highway. She doesn’t make compromises on her artistic visions. Most likely, if you find NSFW content from our marketing approach, she’s the one to be blamed. For instance, QPoker’s meme teaser script was entirely in her handwriting. ",
     },
   ];
 };

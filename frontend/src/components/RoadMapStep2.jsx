@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { Col, Container, Row, Modal } from "react-bootstrap";
 //Media
-import imageRoadMap2 from "../images/AIR.png";
-import logoModalRoadMap from "../images/03-03 13.png";
+import imageRoadMap2 from "../images/2ND_FRG.png";
+import logoModalRoadMap from "../images/Logo_Newcode Color-16.png";
 import roadMapParticipate from "../images/RMMBS2.svg";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
@@ -33,12 +33,12 @@ function MyVerticallyCenteredModal(props) {
   // const controls4 = useAnimation();
   // const controls5 = useAnimation();
   // const controls6 = useAnimation();
-  const [element, inView] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element2, inView2] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element3, inView3] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
-  const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
+  // const [element, inView] = useInView({ threshold: 0.9, triggerOnce: true });
+  // const [element2, inView2] = useInView({ threshold: 0.9, triggerOnce: true });
+  // const [element3, inView3] = useInView({ threshold: 0.9, triggerOnce: true });
+  // const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
+  // const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
+  // const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
   // useEffect(() => {
   //   if (inView) {
   //     controls.start("visible");
@@ -88,9 +88,108 @@ function MyVerticallyCenteredModal(props) {
   const lineModal3 = useRef();
   const lineModal4 = useRef();
   const lineModal5 = useRef();
+  const boxModal1 = useRef();
+  const boxModal2 = useRef();
+  const boxModal3 = useRef();
+  const boxModal4 = useRef();
+  const boxModal5 = useRef();
   useEffect(() => {
-    // const element = lineModal1.current;
     if (props.show) {
+      gsap.fromTo(
+        boxModal1.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: boxModal1.current,
+            start: "-100px center",
+            end: "50px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        boxModal2.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: boxModal2.current,
+            start: "-100px center",
+            end: "50px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        boxModal3.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: boxModal3.current,
+            start: "-100px center",
+            end: "50px center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        boxModal4.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: boxModal4.current,
+            start: "-150px center",
+            end: "0 center",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        boxModal5.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: boxModal5.current,
+            start: "-200px center",
+            end: "0 center",
+            scrub: true,
+          },
+        }
+      );
       gsap.fromTo(
         lineModal1.current,
         {
@@ -293,7 +392,7 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Body>
         <div className="logo-header">
           <img src={logoModalRoadMap} alt="" />
-          <p>Air Drops and Give aways</p>
+          <p>Airdrops and Giveaways</p>
         </div>
         <div className="content-text">
           <p>
@@ -475,54 +574,43 @@ function MyVerticallyCenteredModal(props) {
               ></circle>
             </g>
           </svg>
-          <div className="box-twitter box-roadmap" ref={element}>
+          <div className="box-twitter box-roadmap" ref={boxModal1}>
             <h3>Telegram Bot</h3>
             <p>
-              The first step to participate is to register in our telegram bot;
-              in the next step, your membership link in the telegram group will
-              be given to you by the telegram bot, and you will receive points
-              for any activity you have in our group. If your messages have good
-              feedback, you will get more points.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              quidem.
             </p>
           </div>
-          <div className="box-twitter-1 box-roadmap" ref={element2}>
-            <h3>Register Twitter</h3>
+          <div className="box-twitter-1 box-roadmap" ref={boxModal2}>
+            <h3>Telegram Channel</h3>
             <p>
-              The next step is to subscribe to our Twitter account, and our
-              Telegram will give you a containing Register Key that is unique to
-              you.
-              <br /> First, Follow our Twitter account
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              quidem.
             </p>
           </div>
-          <div className="box-telegram box-roadmap" ref={element3}>
+          <div className="box-telegram box-roadmap" ref={boxModal3}>
             <h3>Twitter</h3>
             <p>
-              With Retweet and Cotweet our posts, You can score more points, and
-              it is also possible at uncertain times to introduce a seat on one
-              of the social networks to get impressive points by making it
-              vibrant.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              quidem.
             </p>
           </div>
-          <div className="box-qpoker box-roadmap" ref={element4}>
-            <h3>Twitter</h3>
-            <p>
-              With Retweet and Cotweet our posts, You can score more points, and
-              it is also possible at uncertain times to introduce a seat on one
-              of the social networks to get impressive points by making it
-              vibrant.
-            </p>
-          </div>
-          <div className="box-youtube box-roadmap" ref={element5}>
+          <div className="box-qpoker box-roadmap" ref={boxModal4}>
             <h3>Youtube</h3>
             <p>
-              Register your Youtube account and do activities such as comments,
-              like and share our videos, Score points, and verify your Ethereum
-              wallet via the process in the Telegram bot.
-              <br /> Now your registration is finished.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              quidem.
             </p>
           </div>
-          <div className="box-roadmap-2" ref={element6}>
-            <h3>QPoker Giveaways Prize</h3>
+          <div className="box-youtube box-roadmap" ref={boxModal5}>
+            <h3>Refer-a-Friend</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              quidem.
+            </p>
+          </div>
+          <div className="box-roadmap-2">
+            <h3>Airdrop Rewards</h3>
             <p>
               After all the above steps, all participants can cash their points
               at the specified times. Our smart contracts ultimately do this,
@@ -596,34 +684,39 @@ const RoadMapStep2 = () => {
                 />
               </h2>
               <p>
-                <RandomReveal
+                {/* <RandomReveal
                   isPlaying={inView}
                   duration={0.5}
                   revealDuration={0.5}
                   characters="Step2"
-                />
-                <br />
+                /> */}
+                {/* <br /> */}
                 <RandomReveal
                   isPlaying={inView}
                   duration={0.5}
                   revealDuration={0.5}
-                  characters="Airdrops and Bounty Campaigns"
+                  characters="AirDrops and Bounty Campaigns"
                 />
               </p>
             </div>
             <Row className="content-slide-2-1">
-              <Col lg={4}>
+              <Col lg={{ span: 4, order: 1 }} xs={{ span: 12, order: 2 }}>
                 <motion.div
                   variants={imgRoadMap1}
                   initial="hidden"
                   animate={controls}
+                  className="d-flex justify-content-center d-sm-block"
                 >
                   <Lazyload>
                     <img src={imageRoadMap2} alt="" />
                   </Lazyload>
                 </motion.div>
               </Col>
-              <Col lg={8}>
+              <Col
+                lg={{ span: 8, order: 2 }}
+                xs={{ span: 12, order: 1 }}
+                className="position-relative"
+              >
                 <motion.p
                   variants={textRoadMap}
                   initial="hidden"
@@ -641,29 +734,6 @@ const RoadMapStep2 = () => {
                   one of their activities, even a dollar! You can learn more
                   about this by clicking the button below
                 </motion.p>
-              </Col>
-            </Row>
-            <Row className="content-slide-2-2">
-              <Col lg={4}>
-                <div className="roadmap-date roadmap-date-2">
-                  <p>
-                    <RandomReveal
-                      isPlaying={inView}
-                      duration={0.5}
-                      revealDuration={0.5}
-                      characters="2022"
-                    />
-                    <br />
-                    <RandomReveal
-                      isPlaying={inView}
-                      duration={0.5}
-                      revealDuration={0.5}
-                      characters="feb-mar"
-                    />
-                  </p>
-                </div>
-              </Col>
-              <Col lg={8}>
                 <motion.div
                   variants={textRoadMap}
                   initial="hidden"
@@ -671,12 +741,15 @@ const RoadMapStep2 = () => {
                   className="btn-slide"
                 >
                   <a className="btn-main" onClick={() => setModalShow(true)}>
-                    How to be Participate
+                    Join the Winners
                     <span></span>
                   </a>
                 </motion.div>
               </Col>
             </Row>
+            {/* <Row className="content-slide-2-2">
+              <Col lg={8}></Col>
+            </Row> */}
           </Container>
         </div>
         <MyVerticallyCenteredModal

@@ -2,6 +2,17 @@
   min-height: 100vh;
   position: relative;
   z-index: 3;
+  .youtube-video {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0;
+    .close-btn-youtube {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
   video {
     position: absolute;
     right: 0;

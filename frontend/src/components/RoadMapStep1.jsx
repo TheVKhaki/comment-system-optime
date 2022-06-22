@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 //observer
 import { useInView } from "react-intersection-observer";
 //Media
-import imageRoadMap11 from "../images/Roadmap-step-1.png";
+import imageRoadMap11 from "../images/1ST_FRG.png";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //Icon
@@ -98,8 +98,9 @@ const RoadMap = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="2019-2022 Q12"
+                characters="2019-2022 Q"
               />
+              <sub>12</sub>
             </p>
             <p>
               <RandomReveal
@@ -111,7 +112,11 @@ const RoadMap = () => {
             </p>
           </motion.div>
           <Row className="content-slide-1-1">
-            <Col lg={4}>
+            <Col
+              lg={{ span: 4, order: 1 }}
+              xs={{ span: 12, order: 2 }}
+              className="d-flex justify-content-center"
+            >
               <motion.div
                 variants={imgRoadMap1}
                 initial="hidden"
@@ -121,7 +126,11 @@ const RoadMap = () => {
                 <LazyLoadImage src={imageRoadMap11} />
               </motion.div>
             </Col>
-            <Col lg={8} className="d-flex align-items-center">
+            <Col
+              lg={{ span: 8, order: 2 }}
+              xs={{ span: 12, order: 1 }}
+              className="d-flex align-items-center"
+            >
               <motion.div
                 variants={textRoadMap1}
                 initial="hidden"
@@ -157,11 +166,12 @@ const RoadMap = () => {
                         }}
                       >
                         <span>
-                          <FaHourglassHalf />
+                          <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Writing of the white paper (at the final stage)</li>
+                      <li>Manuscript and production of promotion videos</li>
                     </Col>
+
                     <Col lg={6}>
                       <IconContext.Provider
                         value={{
@@ -188,9 +198,7 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>
-                        Build of social media robots for bounty campaigns{" "}
-                      </li>
+                      <li>Tutorized game demonstration video</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -216,10 +224,10 @@ const RoadMap = () => {
                         }}
                       >
                         <span>
-                          <FaCheck />
+                          <FaHourglassHalf />
                         </span>
                       </IconContext.Provider>
-                      <li>Tutorized game demonstration video</li>
+                      <li>Publishing of the white paper</li>
                     </Col>
                     <Col lg={6}>
                       <IconContext.Provider
@@ -234,6 +242,7 @@ const RoadMap = () => {
                       </IconContext.Provider>
                       <li>Development of the website (front-end & back-end)</li>
                     </Col>
+
                     <Col lg={6}>
                       <IconContext.Provider
                         value={{
@@ -245,8 +254,11 @@ const RoadMap = () => {
                           <FaCheck />
                         </span>
                       </IconContext.Provider>
-                      <li>Manuscript and production of a meme teaser</li>
+                      <li>
+                        Build of the social media robots for bounty campaigns{" "}
+                      </li>
                     </Col>
+
                     <Col lg={6}>
                       <IconContext.Provider
                         value={{

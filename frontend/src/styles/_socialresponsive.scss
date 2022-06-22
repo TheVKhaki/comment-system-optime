@@ -20,12 +20,18 @@
     position: relative;
     margin: 0 auto;
     width: fit-content;
-    svg {
-      position: absolute;
+    .svg-responsive-social {
+      margin-top: 4rem;
+      width: 439px;
     }
     .text-image-responsive {
       position: absolute;
       text-align: center;
+      div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.1rem;
+      }
       span {
         font-family: "Maven Pro", sans-serif;
         color: #fff;
@@ -40,6 +46,7 @@
     .text-image-responsive-2 {
       position: absolute;
       text-align: center;
+
       span {
         font-family: "Maven Pro", sans-serif;
         color: #fff;
@@ -47,44 +54,40 @@
         font-weight: bold;
       }
       p {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
     }
     .text-option-1 {
-      bottom: 88px;
-      right: -58px;
+      top: 31px;
+      left: 7px;
     }
     .text-option-2 {
-      bottom: 88px;
-      left: -58px;
+      top: 124px;
+      left: 101px;
     }
     .text-option-3 {
-      bottom: 0;
-      right: -58px;
+      top: 124px;
+      right: 101px;
     }
     .text-option-4 {
-      bottom: 0;
-      left: -58px;
+      top: 31px;
+      right: 7px;
     }
     .text-telegram {
-      top: 210px;
-      right: -43px;
-      padding-top: 4rem;
+      bottom: 0;
+      left: 2px;
     }
     .text-twitter {
-      top: 230px;
-      left: -38px;
-      padding-top: 4rem;
+      bottom: 101px;
+      left: 100px;
     }
     .text-youtube {
-      top: 333px;
-      right: -43px;
-      padding-top: 4rem;
+      bottom: 101px;
+      right: 106px;
     }
-    .text-github {
-      top: 356px;
-      left: -38px;
-      padding-top: 4rem;
+    .text-trello {
+      bottom: 2px;
+      right: 19px;
     }
   }
 }

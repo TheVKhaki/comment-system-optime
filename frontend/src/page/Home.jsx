@@ -76,6 +76,14 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
+          case "#comingsoonn":
+            bullets[5].style.backgroundColor = "#e28001";
+            spinValue = 5;
+            scrollContent(spinValue);
+            // setTimeout(() => {
+            //   navigate("/");
+            // }, 100);
+            break;
           case "#our-teamm":
             bullets[6].style.backgroundColor = "#e28001";
             spinValue = 6;

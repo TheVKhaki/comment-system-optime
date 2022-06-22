@@ -37,7 +37,7 @@ const Header = () => {
             <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
               <Nav.Link href="#heroo">Home</Nav.Link>
               <Nav.Link href="#sociall">Campaigns</Nav.Link>
-              <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
+              <Nav.Link href="#roadmapp">RoadMap</Nav.Link>
               <Nav.Link className="logo ">
                 <motion.img
                   initial={{ scale: 0 }}
@@ -47,11 +47,9 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
+              <Nav.Link href="#comingsoonn">Litepaper</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
               <Nav.Link href="#footerr">Partners</Nav.Link>
-              <Nav.Link href="https://blog.qpoker.io/" target="_blank">
-                Blog
-              </Nav.Link>
             </Nav>
             {/* <div className="btn-header">
               <a href="#">Connect To Wallet</a>
@@ -69,12 +67,10 @@ const Header = () => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#social-res">Campaigns</Nav.Link>
-                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+                  <Nav.Link href="#roadmap">RoadMap</Nav.Link>
+                  <Nav.Link href="#comingsoon">Litepaper</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
-                  <Nav.Link href="#footer">Partners</Nav.Link>
-                  <Nav.Link href="https://blog.qpoker.io/" target="_blank">
-                    Blog
-                  </Nav.Link>
+                  <Nav.Link href="#footer">Partners </Nav.Link>
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}

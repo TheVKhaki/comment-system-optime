@@ -64,7 +64,7 @@ const RoadMapStep4 = () => {
 
   return (
     <>
-      <section className="roadmap-step4 roadmap" ref={element}>
+      <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
         <Container>
           <div className="img-elephant-comingsoon">
             <LazyLoadImage src={elephantComingsoon} />
@@ -77,7 +77,9 @@ const RoadMapStep4 = () => {
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
               <h2>QPoker</h2>
-              <p>The trendsetter of iGaming</p>
+              <p>
+                1<sup>st</sup> Airdrop’s Finishing Time
+              </p>
             </motion.div>
             <motion.div
               variants={textRoadMap}
@@ -125,7 +127,7 @@ const RoadMapStep4 = () => {
                 contracts. Take control over your funds, in every stage.
               </motion.p>
               <a href="#" className="btn-coming-soon btn-main">
-                Lightpaper
+                Join the Rewards
                 <span></span>
               </a>
             </div>

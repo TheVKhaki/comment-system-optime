@@ -200,7 +200,9 @@ const OurTeam = () => {
                         <div className="wrapper-characters-information-mobile">
                           <span>{characters.name.toUpperCase()}</span>
                           <p>
-                            <span>{characters.abbrPosition}</span>
+                            {characters.abbrPosition !== "" && (
+                              <span>{characters.abbrPosition}</span>
+                            )}
                             {characters.job}
                           </p>
                         </div>
@@ -259,7 +261,9 @@ const OurTeam = () => {
                     <div className="wrapper-characters-information-right">
                       <span>{characters.name.toUpperCase()}</span>
                       <p>
-                        <span>{characters.abbrPosition}</span>
+                        {characters.abbrPosition !== "" && (
+                          <span>{characters.abbrPosition}</span>
+                        )}
                         {characters.job}
                       </p>
                     </div>

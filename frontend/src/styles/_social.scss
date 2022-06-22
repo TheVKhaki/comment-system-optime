@@ -124,7 +124,7 @@
         }
         span {
           color: $colorWhite;
-          font-size: 21px;
+          font-size: 27px;
           font-family: "Maven Pro", sans-serif;
           font-weight: bold;
           transition: all 0.3s;
@@ -139,7 +139,7 @@
       }
 
       .circle-icon-social {
-        width: 20px;
+        width: 25px;
         margin-right: 4rem;
 
         a {
@@ -151,7 +151,7 @@
         left: 274px;
         padding-left: 2rem;
         position: relative;
-        bottom: 500px;
+        bottom: 505px;
         .link-social-in-circle {
           &:hover {
             svg,
@@ -159,35 +159,35 @@
               color: #0088cc !important;
             }
           }
-          svg,
-          span {
-            animation: goldColorIcon 2s linear infinite forwards;
-            @keyframes goldColorIcon {
-              0% {
-                color: #fff;
-              }
-              35% {
-                color: #fff;
-              }
-              40% {
-                color: #0088cc;
-              }
+          // svg,
+          // span {
+          //   animation: goldColorIcon 2s linear infinite forwards;
+          //   @keyframes goldColorIcon {
+          //     0% {
+          //       color: #fff;
+          //     }
+          //     35% {
+          //       color: #fff;
+          //     }
+          //     40% {
+          //       color: #0088cc;
+          //     }
 
-              90% {
-                color: #0088cc;
-              }
+          //     90% {
+          //       color: #0088cc;
+          //     }
 
-              100% {
-                color: #fff;
-              }
-            }
-          }
+          //     100% {
+          //       color: #fff;
+          //     }
+          //   }
+          // }
         }
       }
 
       .twitter-social {
         position: relative;
-        bottom: 450px;
+        bottom: 462px;
         left: 318px;
         .link-social-in-circle {
           &:hover {
@@ -200,7 +200,7 @@
       }
 
       .youtube-social {
-        bottom: 352px;
+        bottom: 374px;
         position: relative;
         left: 316px;
         .link-social-in-circle {
@@ -214,7 +214,7 @@
       }
 
       .trello-social {
-        bottom: 304px;
+        bottom: 334px;
         position: relative;
         left: 286px;
         .link-social-in-circle {
@@ -274,11 +274,11 @@
       .team-info-1 {
         right: 275px;
         position: relative;
-        bottom: 729px;
+        bottom: 764px;
       }
 
       .team-info-2 {
-        bottom: 674px;
+        bottom: 711px;
         position: relative;
         right: 305px;
         p,
@@ -288,7 +288,7 @@
       }
 
       .team-info-3 {
-        bottom: 571px;
+        bottom: 607px;
         position: relative;
         right: 314px;
         p,
@@ -298,7 +298,7 @@
       }
 
       .team-info-4 {
-        bottom: 513px;
+        bottom: 550px;
         position: relative;
         right: 283px;
         p,

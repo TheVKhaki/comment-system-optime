@@ -1,13 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 //Bootstrap
 import { Container } from "react-bootstrap";
 //media
 import imageElephant from "../images/FKG.png";
 import youtubeIcon from "../images/youtube.png";
-import videoElephant from "../video/FV 16.mp4";
+import videoElephant from "../video/FV 22.mp4";
 // Icon
 import { IconContext } from "react-icons";
 import { ImPlay3 } from "react-icons/im";
+import { MdOutlineClose } from "react-icons/md";
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,12 +54,48 @@ const Hero = () => {
         "-=0.6"
       );
   }, []);
+
+  //video bg and video youtube
+  const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
-  const endedHandler = () => {
-    videoElephantRef.current.currentTime = 10;
-    videoElephantRef.current.play();
+  // const endedHandler = () => {
+  //   videoElephantRef.current.currentTime = 10;
+  //   videoElephantRef.current.play();
+  // };
+  const durationBg = () => {
+    const currentTimeVideo = videoElephantRef.current.currentTime;
+    if (Math.round(currentTimeVideo) === 21 && !videoShow) {
+      videoElephantRef.current.currentTime = 10;
+      videoElephantRef.current.play();
+    }
+    if (Math.round(currentTimeVideo) === 25 && videoShow) {
+      videoElephantRef.current.currentTime = 22;
+      videoElephantRef.current.play();
+    }
   };
 
+  const clickYoutube = () => {
+    setVideoShow(true);
+    gsap.to(document.querySelector(".hero-text"), {
+      x: -400,
+      opacity: 0,
+    });
+    gsap.to(document.querySelector(".hero .youtube-video"), {
+      opacity: 1,
+      delay: 1,
+    });
+  };
+  const closeBtnVideoYoutube = () => {
+    setVideoShow(false);
+    gsap.to(document.querySelector(".hero-text"), {
+      x: 0,
+      opacity: 1,
+      delay: 1,
+    });
+    gsap.to(document.querySelector(".hero .youtube-video"), {
+      opacity: 0,
+    });
+  };
   return (
     <>
       <section className="hero hero-bg" id="hero" ref={sections}>
@@ -72,7 +109,9 @@ const Hero = () => {
               ref={videoElephantRef}
               muted
               autoPlay
-              onEnded={endedHandler}
+              loop
+              // onEnded={endedHandler}
+              onTimeUpdate={durationBg}
             >
               <source src={videoElephant} type="video/mp4" />
             </video>
@@ -104,13 +143,31 @@ const Hero = () => {
                     <img src={youtubeIcon} alt="" />
                   </a>
                 </IconContext.Provider> */}
-                <a href="#" className="btn-watch">
+                <a href="#" className="btn-watch" onClick={clickYoutube}>
                   <img src={youtubeIcon} alt="" />
                 </a>
                 {/* <a href="#" className="btn-text-watch">
                   Watch Trailer
                 </a> */}
               </Btnn>
+            </div>
+            <div className="youtube-video">
+              <div className="close-btn-youtube">
+                <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                  <a href="#" onClick={closeBtnVideoYoutube}>
+                    <MdOutlineClose />
+                  </a>
+                </IconContext.Provider>
+              </div>
+              <iframe
+                width="660"
+                height="400"
+                src="https://www.youtube.com/embed/qmVpyIX0atc"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </Container>
         </Container>

@@ -34,7 +34,7 @@
   }
 
   .ourteam-characters {
-    min-height: 87vh;
+    min-height: 82vh;
     display: flex;
     align-items: flex-end;
     position: absolute;
@@ -271,8 +271,9 @@
       padding: 10px 0 10px 15px;
       border-left: 1px solid #e28001;
       border-bottom: 1px solid #e28001;
-      position: relative;
-      bottom: 280px;
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
       &::after {
         content: "";
         position: absolute;
@@ -288,7 +289,7 @@
     }
     .characters-information-right {
       position: relative;
-      bottom: 380px;
+      bottom: 300px;
       display: flex;
       justify-content: end;
       width: fit-content;

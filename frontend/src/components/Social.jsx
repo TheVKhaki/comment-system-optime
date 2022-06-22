@@ -70,7 +70,7 @@ const SocialSection = () => {
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
-  const arrayTimeAnimtion = [0, 2, 2, 2.5, 4, 5, 5.5];
+  const arrayTimeAnimtion = [0, 0.5, 0.5, 1, 2.5, 3.5, 4];
   // const shift = (arg) => {
   //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
   //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
@@ -221,30 +221,30 @@ const SocialSection = () => {
       },
     },
   };
-  const lineInfinity = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 4,
-      },
-    },
-  };
-  const lineInfinity2 = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0,
-        delay: 3.5,
-      },
-    },
-  };
+  // const lineInfinity = {
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 1,
+  //       delay: 4,
+  //     },
+  //   },
+  // };
+  // const lineInfinity2 = {
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 0,
+  //       delay: 3.5,
+  //     },
+  //   },
+  // };
   useEffect(() => {
     gsap.to(dimondsFade.current, { opacity: 1 });
     gsap.fromTo(
@@ -321,7 +321,7 @@ const SocialSection = () => {
                     animate={controls}
                     stroke="#e28001"
                     strokeMiterlimit="10"
-                    strokeWidth="3"
+                    strokeWidth="1.5"
                     d="M9.4 104.06L45.22 104.06 45.22 143.2 9.4 143.2"
                   ></motion.path>
                   <motion.path
@@ -330,7 +330,7 @@ const SocialSection = () => {
                     animate={controls}
                     stroke="#e28001"
                     strokeMiterlimit="10"
-                    strokeWidth="3"
+                    strokeWidth="1.5"
                     d="M9.4 195.16L45.22 195.16 45.22 234.29 9.4 234.29"
                   ></motion.path>
                   <motion.path
@@ -339,17 +339,18 @@ const SocialSection = () => {
                     animate={controls}
                     stroke="#e28001"
                     strokeMiterlimit="10"
-                    strokeWidth="3"
+                    strokeWidth="1.5"
                     d="M27.31 258.99L63.13 258.99 63.13 298.12 27.31 298.12"
                   ></motion.path>
                   <motion.path
                     variants={line}
                     initial="hidden"
                     animate={controls}
-                    stroke="#fff"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M204.35 100.09L243.85 60.49 271.47 60.49"
+                    strokeWidth="3"
                   ></motion.path>
                   <motion.path
                     variants={line}
@@ -382,10 +383,11 @@ const SocialSection = () => {
                     variants={line}
                     initial="hidden"
                     animate={controls}
-                    stroke="#fff"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M130.58 100.09L91.08 60.49 63.47 60.49"
+                    strokeWidth="3"
                   ></motion.path>
                   <motion.path
                     variants={line}
@@ -403,10 +405,10 @@ const SocialSection = () => {
                     cx="289.27"
                     cy="60.49"
                     r="17.8"
-                    stroke="#efa51f"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="3"
                   ></motion.circle>
                   <motion.circle
                     variants={circle}
@@ -415,10 +417,10 @@ const SocialSection = () => {
                     cx="289"
                     cy="277.28"
                     r="17.8"
-                    stroke="#efa51f"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                   ></motion.circle>
                   <motion.circle
                     variants={circle}
@@ -427,10 +429,10 @@ const SocialSection = () => {
                     cx="307.43"
                     cy="123.63"
                     r="17.8"
-                    stroke="#efa51f"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                   ></motion.circle>
                   <motion.circle
                     variants={circle}
@@ -439,10 +441,10 @@ const SocialSection = () => {
                     cx="307.18"
                     cy="214.73"
                     r="17.8"
-                    stroke="#efa51f"
+                    stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                   ></motion.circle>
                 </g>
                 <motion.g
@@ -451,7 +453,12 @@ const SocialSection = () => {
                   animate={controls}
                   data-name="bd72b95c-112d-4ddd-a10e-60cbdf75b41a"
                 >
-                  <circle cx="167.48" cy="169.3" r="78.93"></circle>
+                  <circle
+                    cx="167.48"
+                    cy="169.3"
+                    r="78.93"
+                    fill="#101229"
+                  ></circle>
                   <text
                     transform="matrix(.9 -.45 .45 .89 148.49 124.55)"
                     style={{ isolation: "isolate" }}
@@ -583,7 +590,7 @@ const SocialSection = () => {
                   xlinkHref="data:image/png;base64,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"
                 ></motion.image>
               </motion.svg>
-              <motion.div
+              {/* <motion.div
                 variants={lineInfinity2}
                 initial="hidden"
                 animate={controls}
@@ -606,7 +613,7 @@ const SocialSection = () => {
                   strokeWidth="4"
                   d="M64.69 60.49L91.44 60.49 130.85 100.04 204.64 100.15 244.21 60.49 270.6 60.49"
                 ></path>
-              </motion.svg>
+              </motion.svg> */}
               {/* <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="bdecf577-1f6a-4362-830d-59fa8c94bcfc"
@@ -626,17 +633,19 @@ const SocialSection = () => {
                 ></path>
               </motion.svg> */}
 
-              <motion.div
+              {/* <motion.div
                 variants={pulseAnimation}
                 initial="hidden"
                 animate={controls}
                 className="pulse-social-animation"
-              ></motion.div>
+              ></motion.div> */}
               <div className="right-circle-social">
                 <div className="telegram-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
-                      <IconContext.Provider value={{ size: "2.5rem" }}>
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
+                      >
                         <motion.a
                           variants={iconFadeIn}
                           initial="hidden"

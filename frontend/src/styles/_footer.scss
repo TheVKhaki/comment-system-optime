@@ -32,7 +32,8 @@
         flex-shrink: 0;
         width: 100%;
         position: relative;
-        animation: news-tricker 15s linear infinite;
+        animation: news-tricker 30s linear infinite alternate;
+        grid-template-rows: repeat(2, 100px);
         @keyframes news-tricker {
           0% {
             transform: translate(0%, 0);
@@ -67,6 +68,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 20;
       border: 3px solid #e28001;
     }
     .footer-left {
@@ -213,6 +215,13 @@
 
 @media screen and (max-width: 991.98px) {
   .footer-home {
+    .our-partner {
+      .our-partner-news-tricker {
+        .slide-news-tricker {
+          grid-template-rows: repeat(2, 75px);
+        }
+      }
+    }
     footer {
       .footer-logo {
         width: 100%;
