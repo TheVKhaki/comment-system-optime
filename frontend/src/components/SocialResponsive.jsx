@@ -416,7 +416,9 @@ const SocialResponsive = () => {
               </div>
             </IconContext.Provider>
             <span>Telegram</span>
-            <p>+285.02% (7d %)</p>
+            <p>
+              +285.02% <span>(7d %)</span>
+            </p>
           </a>
           <a
             href="#"
@@ -429,7 +431,9 @@ const SocialResponsive = () => {
               </div>
             </IconContext.Provider>
             <span>Twitter</span>
-            <p>+171.69% (7d %)</p>
+            <p>
+              +171.69% <span>(7d %)</span>
+            </p>
           </a>
           <a
             href="#"
@@ -442,7 +446,9 @@ const SocialResponsive = () => {
               </div>
             </IconContext.Provider>
             <span>Youtube</span>
-            <p ref={element6}>+121.10% (7d %)</p>
+            <p ref={element6}>
+              +121.10% <span>(7d %)</span>
+            </p>
           </a>
           <a
             href="#"
@@ -455,7 +461,9 @@ const SocialResponsive = () => {
               </div>
             </IconContext.Provider>
             <span>Trello</span>
-            <p ref={element7}>+1.12% (7d %)</p>
+            <p ref={element7}>
+              +1.12% <span>(7d %)</span>
+            </p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>$50,000</span>
@@ -463,15 +471,15 @@ const SocialResponsive = () => {
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
             <span>$75,000</span>
-            <p>1st July 2022</p>
+            <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-3 text-image-responsive-2">
             <span>$125,000</span>
-            <p>16th July 2022</p>
+            <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-4 text-image-responsive-2">
             <span>$200,000</span>
-            <p>31st July 2022</p>
+            <p>COMING SOON</p>
           </a>
         </div>
       </section>

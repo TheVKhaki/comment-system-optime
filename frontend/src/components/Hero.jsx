@@ -4,7 +4,12 @@ import { Container, Modal, Button } from "react-bootstrap";
 //media
 import imageElephant from "../images/FKG.png";
 import youtubeIcon from "../images/youtube.png";
-import videoElephant from "../video/FV 26.mp4";
+// import videoElephant from "../video/FV 26.mp4";
+import videoElephantPart1 from "../video/v 01_1.mp4";
+import videoElephantPart2 from "../video/V 02_1.mp4";
+import videoElephantPart3 from "../video/V 03_1.mp4";
+import videoElephantPart4 from "../video/V 04_1.mp4";
+import videoElephantPart5 from "../video/V 05_1.mp4";
 // Icon
 import { IconContext } from "react-icons";
 import { ImPlay3 } from "react-icons/im";
@@ -101,41 +106,83 @@ const Hero = () => {
   //video bg and video youtube
   const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
-
+  const videoElephantRef2 = useRef();
+  const videoElephantRef3 = useRef();
+  const videoElephantRef4 = useRef();
+  const videoElephantRef5 = useRef();
   //iframe
   const iframeStop = () => {
     const iframe = document.querySelector(".youtube-video iframe");
     var iframeSrc = iframe.src;
     iframe.src = iframeSrc;
   };
+  const durationEx = () => {
+    console.log("object");
+  };
   const durationBg = () => {
     const currentTimeVideo = videoElephantRef.current.currentTime;
-    console.log(Math.round(currentTimeVideo) + " " + currentTimeVideo);
-    if ((currentTimeVideo) <= 22 && (currentTimeVideo) >= 21 && !videoShow) {
+
+    if (currentTimeVideo <= 22 && currentTimeVideo >= 21 && !videoShow) {
       videoElephantRef.current.currentTime = 10;
       videoElephantRef.current.play();
-      console.log("A => " + Math.round(currentTimeVideo));
     }
-    if (
-      (currentTimeVideo) >= 10 &&
-      (currentTimeVideo) <= 17 &&
-      videoShow
-    ) {
+    if (currentTimeVideo >= 10 && currentTimeVideo <= 17 && videoShow) {
       videoElephantRef.current.currentTime = 21;
       videoElephantRef.current.play();
     }
-    if ((currentTimeVideo) >= 25 && videoShow) {
+    if (currentTimeVideo >= 25 && videoShow) {
       videoElephantRef.current.currentTime = 22;
       videoElephantRef.current.play();
     }
-
-
-
   };
-  const EndHandler = () => {
-    videoElephantRef.current.currentTime = 10;
-    videoElephantRef.current.play();
-  }
+
+  const EndVideoHandler = () => {
+    videoElephantRef.current.classList.remove("video-1");
+    videoElephantRef.current.classList.add("video-2");
+    videoElephantRef2.current.classList.add("video-1");
+    videoElephantRef2.current.play();
+    // videoElephantRef.current.currentTime = 10;
+    // videoElephantRef.current.play();
+  };
+  const EndVideo2Handler = () => {
+    if (videoShow) {
+      videoElephantRef2.current.classList.remove("video-1");
+      videoElephantRef3.current.classList.add("video-1");
+      videoElephantRef3.current.play();
+      videoElephantRef2.current.currentTime = 0;
+    } else {
+      videoElephantRef2.current.currentTime = 0;
+      videoElephantRef2.current.play();
+    }
+  };
+  const EndVideo3Handler = () => {
+    videoElephantRef3.current.classList.remove("video-1");
+    videoElephantRef3.current.currentTime = 0;
+    videoElephantRef4.current.classList.add("video-1");
+    videoElephantRef4.current.play();
+    // videoElephantRef.current.classList.remove("video-1");
+    // videoElephantRef.current.classList.add("video-2");
+    // videoElephantRef2.current.play();
+    // videoElephantRef.current.currentTime = 10;
+    // videoElephantRef.current.play();
+  };
+  const EndVideo4Handler = () => {
+    if (videoShow) {
+      videoElephantRef4.current.currentTime = 0;
+      videoElephantRef4.current.play();
+    } else {
+      videoElephantRef4.current.classList.remove("video-1");
+      videoElephantRef4.current.currentTime = 0;
+      videoElephantRef5.current.classList.add("video-1");
+      videoElephantRef5.current.play();
+    }
+  };
+  const EndVideo5Handler = () => {
+    videoElephantRef5.current.classList.remove("video-1");
+    videoElephantRef5.current.currentTime = 0;
+    videoElephantRef2.current.classList.add("video-1");
+    videoElephantRef2.current.play();
+  };
   const clickYoutube = () => {
     if (width >= 992) {
       setVideoShow(true);
@@ -173,16 +220,73 @@ const Hero = () => {
             <img src={imageElephant} alt="" ref={imgElephant} />
           </div> */}
           <Lazyload>
-            <video
+            {/* <video
               className="video-elephant"
               ref={videoElephantRef}
               muted
               autoPlay
               onEnded={EndHandler}
               // onEnded={endedHandler}
+              onDurationChange={durationEx}
               onTimeUpdate={durationBg}
             >
               <source src={videoElephant} type="video/mp4" />
+            </video> */}
+            <video
+              className="video-elephant video-1"
+              ref={videoElephantRef}
+              muted
+              autoPlay
+              // onEnded={EndHandler}
+              onEnded={EndVideoHandler}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
+            >
+              <source src={videoElephantPart1} type="video/mp4" />
+            </video>
+            <video
+              className="video-elephant video-2"
+              ref={videoElephantRef2}
+              muted
+              // onEnded={EndHandler}
+              onEnded={EndVideo2Handler}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
+            >
+              <source src={videoElephantPart2} type="video/mp4" />
+            </video>
+            <video
+              className="video-elephant video-2"
+              ref={videoElephantRef3}
+              muted
+              // onEnded={EndHandler}
+              onEnded={EndVideo3Handler}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
+            >
+              <source src={videoElephantPart3} type="video/mp4" />
+            </video>
+            <video
+              className="video-elephant video-2"
+              ref={videoElephantRef4}
+              muted
+              // onEnded={EndHandler}
+              onEnded={EndVideo4Handler}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
+            >
+              <source src={videoElephantPart4} type="video/mp4" />
+            </video>
+            <video
+              className="video-elephant video-2"
+              ref={videoElephantRef5}
+              muted
+              // onEnded={EndHandler}
+              onEnded={EndVideo5Handler}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
+            >
+              <source src={videoElephantPart5} type="video/mp4" />
             </video>
           </Lazyload>
           <Container>
@@ -231,10 +335,10 @@ const Hero = () => {
               <iframe
                 width="660"
                 height="400"
-                src="https://www.youtube.com/embed/qmVpyIX0atc"
                 title="YouTube video player"
-                frameBorder="0"
+                src="https://www.youtube.com/embed/147ioPrSuaM"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                frameBorder="0"
                 allowFullScreen
               ></iframe>
             </div>
