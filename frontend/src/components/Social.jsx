@@ -643,9 +643,7 @@ const SocialSection = () => {
                 <div className="telegram-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
                     <div className="circle-icon-social">
-                      <IconContext.Provider
-                        value={{ color: "white", size: "2.5rem" }}
-                      >
+                      <IconContext.Provider value={{ size: "2.5rem" }}>
                         <motion.a
                           variants={iconFadeIn}
                           initial="hidden"

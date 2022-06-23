@@ -288,7 +288,7 @@ const Home = () => {
     // );
   }, [width]);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return (
     <>

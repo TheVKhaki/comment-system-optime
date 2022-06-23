@@ -74,12 +74,12 @@ const Header = () => {
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
-      </header>
+                </Nav >
+              </Offcanvas.Body >
+            </Navbar.Offcanvas >
+          </Container >
+        </Navbar >
+      </header >
     </>
   );
 };

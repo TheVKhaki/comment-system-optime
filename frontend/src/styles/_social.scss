@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+
   .matrix-load {
     position: absolute;
     top: 0;
@@ -25,6 +26,7 @@
       font-size: 25px;
     }
   }
+
   .cover-path {
     position: absolute;
     top: 27%;
@@ -35,6 +37,7 @@
     height: 9px;
     background-color: #000;
   }
+
   .line-gold-action {
     position: absolute;
     top: 45%;
@@ -42,41 +45,50 @@
     transform: translate(-50%, -50%);
     width: 578px;
     z-index: 10;
+
     path {
       stroke-dasharray: 250;
       stroke-dashoffset: 250;
       animation: animateLineGold 2s linear infinite forwards;
     }
+
     @keyframes animateLineGold {
       0% {
         stroke-dashoffset: 250;
       }
+
       40% {
         stroke-dashoffset: 0;
       }
+
       100% {
         stroke-dashoffset: -250;
       }
     }
   }
+
   .line-gold-action-1 {
     path {
       stroke-dasharray: 10, 10;
       stroke-dashoffset: 250;
       animation: animateLineGold 7s linear infinite forwards;
     }
+
     @keyframes animateLineGold {
       0% {
         stroke-dashoffset: 250;
       }
+
       40% {
         stroke-dashoffset: 0;
       }
+
       100% {
         stroke-dashoffset: -250;
       }
     }
   }
+
   .pulse-social-animation {
     position: absolute;
     top: 37%;
@@ -88,6 +100,7 @@
     z-index: -1;
     border: 2px solid #e28001;
   }
+
   .circle-socials {
     width: 100%;
     height: 640px;
@@ -104,14 +117,17 @@
     .right-circle-social {
       position: relative;
       z-index: 11;
+
       .socials-in-circle {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .wrapper-detail {
           width: 132px;
         }
+
         .link-social-in-circle {
           text-align: center;
           display: flex;
@@ -119,9 +135,11 @@
           align-items: center;
           padding-left: 2rem;
         }
+
         svg {
           transition: all 0.3s;
         }
+
         span {
           color: $colorWhite;
           font-size: 27px;
@@ -152,13 +170,16 @@
         padding-left: 2rem;
         position: relative;
         bottom: 505px;
+
         .link-social-in-circle {
           &:hover {
+
             svg,
             span {
               color: #0088cc !important;
             }
           }
+
           // svg,
           // span {
           //   animation: goldColorIcon 2s linear infinite forwards;
@@ -189,8 +210,10 @@
         position: relative;
         bottom: 462px;
         left: 318px;
+
         .link-social-in-circle {
           &:hover {
+
             svg,
             span {
               color: #1da1f2 !important;
@@ -203,8 +226,10 @@
         bottom: 374px;
         position: relative;
         left: 316px;
+
         .link-social-in-circle {
           &:hover {
+
             svg,
             span {
               color: #ff0000 !important;
@@ -217,8 +242,10 @@
         bottom: 334px;
         position: relative;
         left: 286px;
+
         .link-social-in-circle {
           &:hover {
+
             svg,
             span {
               color: #0079bf !important;
@@ -231,6 +258,7 @@
     .left-circle-social {
       position: relative;
       z-index: 0;
+
       // .wrapper-line-action-social-2 {
       //   transform: rotate(45deg);
       //   position: relative;
@@ -281,6 +309,7 @@
         bottom: 711px;
         position: relative;
         right: 305px;
+
         p,
         span {
           color: #404040;
@@ -291,6 +320,7 @@
         bottom: 607px;
         position: relative;
         right: 314px;
+
         p,
         span {
           color: #404040;
@@ -301,6 +331,7 @@
         bottom: 550px;
         position: relative;
         right: 283px;
+
         p,
         span {
           color: #404040;
