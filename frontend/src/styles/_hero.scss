@@ -24,7 +24,12 @@
     pointer-events: none;
     object-fit: cover;
   }
-
+  .video-1 {
+    z-index: 2 !important;
+  }
+  .video-2 {
+    z-index: 1;
+  }
   .hero-text {
     height: 100vh;
     width: 716px;
@@ -60,12 +65,6 @@
       color: rgba($color: #fff, $alpha: 0.8);
       letter-spacing: 0.6px;
     }
-  }
-
-  .golden_q {
-
-    color: #e28001;
-
   }
 
   .btns-hero {

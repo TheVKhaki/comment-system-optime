@@ -599,7 +599,7 @@ const RoadMapStep3 = () => {
 
   return (
     <>
-      <section className="roadmap-step3 roadmap" ref={element}>
+      <section className="roadmap-step3 roadmap" ref={element} id="roadmap-3">
         <div ref={roadMapStep3}>
           <Container>
             <div className="header-roadmap">
@@ -654,16 +654,21 @@ const RoadMapStep3 = () => {
                   initial="hidden"
                   animate={controls}
                 >
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Totam culpa autem, minus explicabo blanditiis ex modi
-                  architecto commodi consequatur. Quia earum architecto ipsum
-                  veritatis sed. Dolorum aperiam eaque excepturi saepe? Quaerat
-                  optio aut ipsum alias amet aliquid non excepturi praesentium
-                  ea impedit architecto temporibus magni sapiente sed rerum eum
-                  accusantium esse hic earum, odio dolores distinctio. Facere
-                  assumenda libero, voluptatum excepturi, veritatis dignissimos
-                  et sit commodi illum minus soluta, esse consectetur numquam
-                  nobis eaque deleniti?
+                  QPoker Ltd owns all immaterial rights of QPoker’s rulebook and
+                  structure. It means none of the world’s other gambling
+                  providers is allowed to start offering QPoker without our
+                  authorization and annual license fees (millions of dollars per
+                  year). We own the same waterproof copyrights as Monopoly and
+                  Trivial Pursuit possess to their games. <br /> Our only
+                  realistic, achievable target is to become a sovereign leader
+                  of global iGaming markets. We will break Pandora’s box by
+                  starting to offer skill-based social games like accurate money
+                  versions, all run by a P2P decentralized platform. Up to this
+                  date, all casinos have been ruthlessly exploiting players by
+                  offering only luck-based idiotic products that provide neither
+                  social amusement nor a chance of winning. Fortunately,
+                  irreversibly this will change as QPoker launches the new Web3
+                  era of fair and ethical iGaming.
                 </motion.p>
                 <Row>
                   <Col className="d-flex justify-content-center">

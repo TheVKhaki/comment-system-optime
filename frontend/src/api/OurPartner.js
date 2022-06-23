@@ -7,11 +7,11 @@ const OurPartnerApi = () => {
   return [
     {
       id: 1,
-      imgSrc: bscscanLogo,
+      imgSrc: openseaLogo,
     },
     {
       id: 2,
-      imgSrc: openseaLogo,
+      imgSrc: bscscanLogo,
     },
     {
       id: 3,
@@ -24,8 +24,7 @@ const OurPartnerApi = () => {
     {
       id: 5,
       imgSrc: binanceLogo,
-    }
-
+    },
   ];
 };
 
