@@ -11,6 +11,7 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //lazyload
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Color } from "three";
 const RoadMapStep4 = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -76,7 +77,7 @@ const RoadMapStep4 = () => {
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
-              <h2>QPoker</h2>
+              <h2 ><span class="golden_q">Q</span>Poker</h2>
               <p>
                 1<sup>st</sup> Airdrop’s Finishing Time
               </p>

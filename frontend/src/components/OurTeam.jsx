@@ -139,17 +139,10 @@ const OurTeam = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="OurTeam"
+                characters="Our Key Members"
               />
             </h2>
-            <p>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="Step4 IGOs and ICOs"
-              />
-            </p>
+
           </div>
 
           <motion.div

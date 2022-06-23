@@ -101,6 +101,7 @@ const Hero = () => {
   //video bg and video youtube
   const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
+
   //iframe
   const iframeStop = () => {
     const iframe = document.querySelector(".youtube-video iframe");
@@ -109,28 +110,32 @@ const Hero = () => {
   };
   const durationBg = () => {
     const currentTimeVideo = videoElephantRef.current.currentTime;
-    if (Math.round(currentTimeVideo) === 21 && !videoShow) {
+    console.log(Math.round(currentTimeVideo) + " " + currentTimeVideo);
+    if ((currentTimeVideo) <= 22 && (currentTimeVideo) >= 21 && !videoShow) {
       videoElephantRef.current.currentTime = 10;
       videoElephantRef.current.play();
+      console.log("A => " + Math.round(currentTimeVideo));
     }
     if (
-      Math.round(currentTimeVideo) >= 10 &&
-      Math.round(currentTimeVideo) <= 15 &&
+      (currentTimeVideo) >= 10 &&
+      (currentTimeVideo) <= 17 &&
       videoShow
     ) {
       videoElephantRef.current.currentTime = 21;
       videoElephantRef.current.play();
     }
-    if (Math.round(currentTimeVideo) === 25 && videoShow) {
+    if ((currentTimeVideo) >= 25 && videoShow) {
       videoElephantRef.current.currentTime = 22;
       videoElephantRef.current.play();
     }
-    if (Math.round(currentTimeVideo) === 25 && !videoShow) {
-      videoElephantRef.current.currentTime = 10;
-      videoElephantRef.current.play();
-    }
-  };
 
+
+
+  };
+  const EndHandler = () => {
+    videoElephantRef.current.currentTime = 10;
+    videoElephantRef.current.play();
+  }
   const clickYoutube = () => {
     if (width >= 992) {
       setVideoShow(true);
@@ -173,7 +178,7 @@ const Hero = () => {
               ref={videoElephantRef}
               muted
               autoPlay
-              loop
+              onEnded={EndHandler}
               // onEnded={endedHandler}
               onTimeUpdate={durationBg}
             >
