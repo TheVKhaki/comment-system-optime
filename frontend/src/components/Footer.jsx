@@ -54,21 +54,21 @@ const Footer = () => {
                 <div className="footer-logo">
                   <div className="footer-social-media">
                     <IconContext.Provider
-                      value={{ color: "white", size: "2rem" }}
+                      value={{ color: "white", size: "2.3rem" }}
                     >
                       <a href="#">
                         <FaTelegramPlane />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
-                      value={{ color: "white", size: "2rem" }}
+                      value={{ color: "white", size: "2.3rem" }}
                     >
                       <a href="#">
                         <FaTwitter />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
-                      value={{ color: "white", size: "2rem" }}
+                      value={{ color: "white", size: "2.3rem" }}
                     >
                       <a href="#">
                         <FaYoutube />

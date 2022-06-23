@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 //Bootstrap
 import { Col, Container, Row } from "react-bootstrap";
 //framer motion
@@ -80,6 +80,20 @@ const RoadMap = () => {
       },
     },
   };
+
+  // useEffect(() => {
+  //   const imagePerspective = document.querySelector(".img-slide-roadmap-1 img");
+  //   imagePerspective.addEventListener("mousemove", function (e) {
+  //     console.log(e.clientX, window.innerWidth);
+  //     const position = (e.clientX / window.innerWidth) * 100 + "px";
+  //     const positionY = (e.clientY / window.innerHeight) * 30 + "px";
+  //     imagePerspective.style.transform = `translate(${position},${positionY})`;
+  //   });
+  //   imagePerspective.addEventListener("mouseleave", function (e) {
+  //     imagePerspective.style.transform = `translate(0,0)`;
+  //   });
+  // }, []);
+
   return (
     <>
       <section className="roadmap-step1 roadmap" ref={element} id="roadmap">
@@ -123,7 +137,7 @@ const RoadMap = () => {
                 animate={controls}
                 className="img-slide-roadmap-1"
               >
-                <LazyLoadImage src={imageRoadMap11} />
+                <img src={imageRoadMap11} alt="" />
               </motion.div>
             </Col>
             <Col

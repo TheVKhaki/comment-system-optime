@@ -1044,10 +1044,10 @@ body.modal-open {
 }
 
 .social-section .circle-socials .right-circle-social .telegram-social {
-  left: 274px;
+  left: 276px;
   padding-left: 2rem;
   position: relative;
-  bottom: 505px;
+  bottom: 504px;
 }
 
 .social-section
@@ -1067,8 +1067,8 @@ body.modal-open {
 
 .social-section .circle-socials .right-circle-social .twitter-social {
   position: relative;
-  bottom: 462px;
-  left: 318px;
+  bottom: 463px;
+  left: 315px;
 }
 
 .social-section
@@ -1291,7 +1291,7 @@ body.modal-open {
 
 .social-responsive .image-social-responsive .text-option-1 {
   top: 31px;
-  left: 7px;
+  left: 17px;
 }
 
 .social-responsive .image-social-responsive .text-option-2 {
@@ -1335,12 +1335,12 @@ body.modal-open {
 
 .social-responsive .image-social-responsive .text-telegram {
   bottom: 0;
-  left: 2px;
+  left: 5px;
 }
 
 .social-responsive .image-social-responsive .text-twitter {
   bottom: 101px;
-  left: 100px;
+  left: 97px;
 }
 
 .social-responsive .image-social-responsive .text-youtube {
@@ -1387,7 +1387,7 @@ body.modal-open {
   }
   .social-responsive .image-social-responsive .text-option-1 {
     top: 25px;
-    left: -4px;
+    left: 0px;
   }
   .social-responsive .image-social-responsive .text-option-2 {
     top: 103px;
@@ -1403,15 +1403,15 @@ body.modal-open {
   }
   .social-responsive .image-social-responsive .text-telegram {
     bottom: -38px;
-    left: 5px;
+    left: 16px;
   }
   .social-responsive .image-social-responsive .text-trello {
     bottom: -38px;
     right: 26px;
   }
   .social-responsive .image-social-responsive .text-twitter {
-    bottom: 42px;
-    left: 89px;
+    bottom: 41px;
+    left: 77px;
   }
   .social-responsive .image-social-responsive .text-youtube {
     bottom: 42px;
@@ -1750,7 +1750,7 @@ body.modal-open {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 .roadmap2-modal .modal-header .btn-close {
@@ -1819,7 +1819,7 @@ body.modal-open {
 .roadmap2-modal .roadmap-participate video {
   border-radius: 50%;
   position: absolute;
-  bottom: 264px;
+  top: 1767px;
   width: 149px;
   z-index: 0;
 }
@@ -1891,6 +1891,7 @@ body.modal-open {
   color: #000;
   border-radius: 11px;
   padding: 10px 5px 20px 11px;
+  z-index: 3;
 }
 
 .roadmap2-modal .roadmap-participate .box-roadmap h3 {
@@ -2392,7 +2393,8 @@ body.modal-open {
   }
   .roadmap .content-slide-3 img {
     height: 350px;
-    width: 60%;
+    width: 100%;
+    margin-top: 2rem;
   }
   .roadmap .btn-slide a {
     width: 100%;
@@ -3169,6 +3171,7 @@ body.modal-open {
   align-items: center;
   z-index: 20;
   border: 3px solid #e28001;
+  opacity: 0.7;
 }
 
 .footer-home footer .footer-left h4 {
@@ -3266,7 +3269,7 @@ body.modal-open {
 }
 
 .footer-home footer .footer-logo .footer-social-media a:hover {
-  background-color: #e28001;
+  border: 3px solid #e28001;
 }
 
 .footer-home footer .footer-logo .footer-social-media a svg {
