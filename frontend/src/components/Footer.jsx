@@ -82,7 +82,7 @@ const Footer = () => {
                 <div className="footer-right">
                   <ul>
                     <li>Company Details</li>
-                    <li>QPoker Ltd</li>
+                    <li>QPoker Ltd.</li>
                     <li>Unit 114, Orion Mall</li>
                     <li>Palm Street, Victoria</li>
                     <li>Mahe Seychelles</li>
@@ -99,7 +99,7 @@ const Footer = () => {
             </Row>
             <Col>
               <div className="footer-copy-right">
-                <p>© 2019-2022 qpoker. All Rights Reserved</p>
+                <p>©2022 qpoker. All Rights Reserved</p>
               </div>
             </Col>
           </Container>

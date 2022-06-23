@@ -24,47 +24,8 @@ const OurPartnerApi = () => {
     {
       id: 5,
       imgSrc: binanceLogo,
-    },
-    {
-      id: 6,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 7,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 8,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 9,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 10,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 11,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 12,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 13,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 14,
-      imgSrc: binanceLogo,
-    },
-    {
-      id: 15,
-      imgSrc: binanceLogo,
-    },
+    }
+
   ];
 };
 

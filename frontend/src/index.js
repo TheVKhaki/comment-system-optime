@@ -14,10 +14,12 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+document.title = "QPoker-Trendsetter of iGaming";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+
         <App />
       </Provider>
     </BrowserRouter>
