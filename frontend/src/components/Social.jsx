@@ -806,7 +806,7 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="+1.12% (7d %)"
+                            characters="+47.30% (7d %)"
                           />
                         </p>
                       </div>
@@ -874,7 +874,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="1st July 2022"
+                      characters="COMING SOON"
                     />
                   </p>
                 </motion.div>
@@ -898,7 +898,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="16th July 2022"
+                      characters="COMING SOON"
                     />
                   </p>
                 </motion.div>
@@ -923,7 +923,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="31st July 2022"
+                      characters="COMING SOON"
                     />
                   </p>
                 </motion.div>

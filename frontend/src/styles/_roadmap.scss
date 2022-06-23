@@ -336,52 +336,60 @@
 
     .line-modal-1 {
       position: absolute;
-      width: 26px;
+      width: 17px;
       height: 239px;
       background-color: #e06f1f;
+      z-index: 3;
       top: 70px;
     }
 
     .line-modal-2 {
       position: absolute;
-      width: 26px;
+      width: 17px;
       height: 264px;
       background-color: #e06f1f;
+      z-index: 3;
       top: 370px;
     }
 
     .line-modal-3 {
       position: absolute;
-      width: 26px;
+      width: 17px;
       height: 300px;
       background-color: #e06f1f;
+      z-index: 3;
       top: 695px;
     }
 
     .line-modal-4 {
       position: absolute;
-      width: 26px;
+      width: 17px;
       height: 277px;
       background-color: #e06f1f;
+      z-index: 3;
       top: 1049px;
     }
 
     .line-modal-5 {
       position: absolute;
-      width: 26px;
+      width: 17px;
       height: 350px;
       background-color: #e06f1f;
+      z-index: 3;
       top: 1382px;
     }
 
     img {
       width: 149px;
     }
-
+    .roadmap-modal-svg {
+      position: static;
+      z-index: unset;
+    }
     svg {
       position: absolute;
       width: 149px;
-      z-index: 1;
+      z-index: 3;
     }
 
     .box-roadmap {

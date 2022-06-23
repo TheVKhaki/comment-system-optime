@@ -10,8 +10,7 @@ import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 //lazyload
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Color } from "three";
+import Lazyload from "../HOC/Lazyload";
 const RoadMapStep4 = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -68,16 +67,16 @@ const RoadMapStep4 = () => {
       <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
         <Container>
           <div className="img-elephant-comingsoon">
-            <LazyLoadImage src={elephantComingsoon} />
-            <LazyLoadImage
-              src={elephantComingsoonRes}
-              // height={300}
-              width={"100%"}
-            />
+            <Lazyload>
+              <img src={elephantComingsoon} alt="" />
+              <img src={elephantComingsoonRes} alt="" />
+            </Lazyload>
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
-              <h2 ><span class="golden_q">Q</span>Poker</h2>
+              <h2>
+                <span style={{ color: "#e28001" }}>Q</span>Poker
+              </h2>
               <p>
                 1<sup>st</sup> Airdrop’s Finishing Time
               </p>

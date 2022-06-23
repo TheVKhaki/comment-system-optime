@@ -76,9 +76,9 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
-          case "#comingsoonn":
-            bullets[5].style.backgroundColor = "#e28001";
-            spinValue = 5;
+          case "#litepaper":
+            bullets[4].style.backgroundColor = "#e28001";
+            spinValue = 4;
             scrollContent(spinValue);
             // setTimeout(() => {
             //   navigate("/");
@@ -92,9 +92,9 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
-          case "#footerr":
-            bullets[7].style.backgroundColor = "#e28001";
-            spinValue = 7;
+          case "#airdrops":
+            bullets[3].style.backgroundColor = "#e28001";
+            spinValue = 3;
             scrollContent(spinValue);
             // setTimeout(() => {
             //   navigate("/");

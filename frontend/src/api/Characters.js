@@ -80,7 +80,7 @@ const Characters = () => {
       job: "Co-Founder",
       abbrPosition: "CPO",
       description:
-        "Michael is an experienced IT entrepreneur. He has extensive experience in software development, team management, and business management. As an excellent strategist, Antonio’s wide-ranging expertise and a strong drive toward excellence make him a key team player. Antonio is the one who’s never afraid of bringing up critical points of view on the table.",
+        "Michael is an experienced IT entrepreneur. He has extensive experience in software development, team management, and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive toward excellence make him a key team player. He is the one who’s never afraid of bringing up critical points of view on the table.",
     },
     {
       id: 5,
@@ -92,7 +92,7 @@ const Characters = () => {
       position: [0, -3, 0],
       env: "venice_sunset_1k_mohammadreza.hdr",
       name: "Johnnie",
-      job: "Blockchain & Cryptography Expert",
+      job: "Blockchain Expert",
       abbrPosition: "",
       description:
         "Johnnie is a professional data analyst and blockchain enthusiast. He has a comprehensive understanding of systems security and significant database processing. Johnnie has managed dozens of challenging web projects in various fields such as finance, gaming, insurance, and more.",

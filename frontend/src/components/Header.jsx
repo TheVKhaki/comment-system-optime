@@ -47,9 +47,9 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="#comingsoonn">Litepaper</Nav.Link>
+              <Nav.Link href="#litepaper">Litepaper</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
-              <Nav.Link href="#footerr">Partners</Nav.Link>
+              <Nav.Link href="#airdrops">Participate</Nav.Link>
             </Nav>
             {/* <div className="btn-header">
               <a href="#">Connect To Wallet</a>
@@ -68,9 +68,9 @@ const Header = () => {
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#social-res">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
-                  <Nav.Link href="#comingsoon">Litepaper</Nav.Link>
+                  <Nav.Link href="#roadmap-3">Litepaper</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
-                  <Nav.Link href="#footer">Partners </Nav.Link>
+                  <Nav.Link href="#roadmap-2">Participate</Nav.Link>
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}

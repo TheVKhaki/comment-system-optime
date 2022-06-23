@@ -41,6 +41,12 @@
       p {
         font-size: 1.5rem;
         color: #16c784;
+        span {
+          font-size: 1.5rem;
+          color: #16c784;
+          font-family: "Rota";
+          font-weight: normal;
+        }
       }
     }
     .text-image-responsive-2 {
@@ -64,14 +70,32 @@
     .text-option-2 {
       top: 124px;
       left: 101px;
+      p {
+        color: #404040;
+      }
+      span {
+        color: #404040;
+      }
     }
     .text-option-3 {
       top: 124px;
       right: 101px;
+      p {
+        color: #404040;
+      }
+      span {
+        color: #404040;
+      }
     }
     .text-option-4 {
       top: 31px;
       right: 7px;
+      p {
+        color: #404040;
+      }
+      span {
+        color: #404040;
+      }
     }
     .text-telegram {
       bottom: 0;
@@ -108,6 +132,64 @@
 }
 @media screen and (max-width: 575.98px) {
   .social-responsive {
+    .header-social {
+      text-align: center;
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 439px) {
+  .social-responsive {
+    .image-social-responsive {
+      .text-image-responsive {
+        p {
+          span {
+            display: block;
+          }
+        }
+      }
+      .svg-responsive-social {
+        width: 350px;
+      }
+      .text-option-1 {
+        top: 25px;
+        left: -4px;
+      }
+      .text-option-2 {
+        top: 103px;
+        left: 59px;
+      }
+      .text-option-3 {
+        top: 103px;
+        right: 59px;
+      }
+      .text-option-4 {
+        top: 25px;
+        right: 0px;
+      }
+      .text-telegram {
+        bottom: -38px;
+        left: 5px;
+      }
+      .text-trello {
+        bottom: -38px;
+        right: 26px;
+      }
+      .text-twitter {
+        bottom: 42px;
+        left: 89px;
+      }
+      .text-youtube {
+        bottom: 42px;
+        right: 88px;
+      }
+    }
     .header-social {
       text-align: center;
       h2 {

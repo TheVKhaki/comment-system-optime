@@ -35,10 +35,11 @@ const Footer = () => {
             <Row className="flex-column flex-lg-row">
               <Col>
                 <div className="footer-left">
-                  <h4>Subscribe</h4>
+                  <h4>Bonus Whore?</h4>
                   <p>
-                    Do you want to have our latest news, meanwhile, our newest
-                    information? So, do subscribe us and push on the button.
+                    Eager to milk us before the paying customers join the line?
+                    Airdrops, bounties and all the other f***ing benefits before
+                    the real action gets started.
                   </p>
                   <form action="">
                     <input type="text" placeholder="Email Address" />
@@ -85,7 +86,7 @@ const Footer = () => {
                     <li>QPoker Ltd.</li>
                     <li>Unit 114, Orion Mall</li>
                     <li>Palm Street, Victoria</li>
-                    <li>Mahe Seychelles</li>
+                    <li>Mahe, Seychelles</li>
                   </ul>
                   <ul>
                     <li>Links</li>
@@ -99,7 +100,7 @@ const Footer = () => {
             </Row>
             <Col>
               <div className="footer-copy-right">
-                <p>©2022 qpoker. All Rights Reserved</p>
+                <p>©2022 QPoker Ltd. All Rights Reserved</p>
               </div>
             </Col>
           </Container>
