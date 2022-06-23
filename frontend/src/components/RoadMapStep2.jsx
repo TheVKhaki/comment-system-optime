@@ -5,6 +5,7 @@ import { Col, Container, Row, Modal } from "react-bootstrap";
 import imageRoadMap2 from "../images/2ND_FRG.png";
 import logoModalRoadMap from "../images/Logo_Newcode Color-16.png";
 import roadMapParticipate from "../images/RMMBS2.svg";
+import rocketgif from "../video/OFF TO ONN_2.mp4";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
@@ -93,6 +94,8 @@ function MyVerticallyCenteredModal(props) {
   const boxModal3 = useRef();
   const boxModal4 = useRef();
   const boxModal5 = useRef();
+  const rocketAnimRef = useRef();
+
   useEffect(() => {
     if (props.show) {
       gsap.fromTo(
@@ -377,6 +380,49 @@ function MyVerticallyCenteredModal(props) {
           },
         }
       );
+      // gsap.fromTo(
+      //   document.querySelector(".roadmap-participate video"),
+      //   {
+      //     currentTime: 0,
+      //   },
+      //   {
+      //     currentTime: 0,
+
+      //     duration: 1,
+      //     scrollTrigger: {
+      //       scroller: ".modal",
+      //       trigger: document.querySelector(".roadmap-participate"),
+      //       start: "1500px center",
+      //       end: "1510px center",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
+      const myEnterFunc = () => {
+        rocketAnimRef.current.play();
+        console.log("object");
+      };
+      const myLeaveFunc = () => {
+        rocketAnimRef.current.currentTime = 0;
+        rocketAnimRef.current.pause();
+        console.log("object1");
+      };
+      gsap.fromTo(
+        document.querySelector(".roadmap-participate video"),
+        {},
+        {
+          duration: 1,
+          scrollTrigger: {
+            scroller: ".modal",
+            trigger: document.querySelector(".roadmap-participate"),
+            start: "1520px center",
+            end: "1520px center",
+            scrub: true,
+            onEnter: myEnterFunc,
+            onEnterBack: myLeaveFunc,
+          },
+        }
+      );
     }
   }, [props.show]);
 
@@ -620,6 +666,9 @@ function MyVerticallyCenteredModal(props) {
               <br /> so, Let's start right now
             </p>
           </div>
+          <video muted loop ref={rocketAnimRef}>
+            <source src={rocketgif} type="video/mp4" />
+          </video>
         </div>
       </Modal.Body>
     </Modal>

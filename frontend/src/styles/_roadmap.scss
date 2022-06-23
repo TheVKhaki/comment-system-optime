@@ -297,6 +297,13 @@
     flex-direction: column;
     margin-top: 7rem;
     position: relative;
+    video {
+      border-radius: 50%;
+      position: absolute;
+      bottom: 264px;
+      width: 149px;
+      z-index: 0;
+    }
     .line-modal-1 {
       position: absolute;
       width: 26px;
@@ -338,6 +345,7 @@
     svg {
       position: absolute;
       width: 149px;
+      z-index: 1;
     }
 
     .box-roadmap {
