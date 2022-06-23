@@ -11,6 +11,7 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //lazyload
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Color } from "three";
 const RoadMapStep4 = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -64,7 +65,7 @@ const RoadMapStep4 = () => {
 
   return (
     <>
-      <section className="roadmap-step4 roadmap" ref={element}>
+      <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
         <Container>
           <div className="img-elephant-comingsoon">
             <LazyLoadImage src={elephantComingsoon} />
@@ -76,8 +77,10 @@ const RoadMapStep4 = () => {
           </div>
           <div className="coming-soon">
             <motion.div className="header-comingsoon">
-              <h2>QPoker</h2>
-              <p>The trendsetter of iGaming</p>
+              <h2 ><span class="golden_q">Q</span>Poker</h2>
+              <p>
+                1<sup>st</sup> Airdrop’s Finishing Time
+              </p>
             </motion.div>
             <motion.div
               variants={textRoadMap}
@@ -125,7 +128,7 @@ const RoadMapStep4 = () => {
                 contracts. Take control over your funds, in every stage.
               </motion.p>
               <a href="#" className="btn-coming-soon btn-main">
-                Lightpaper
+                Join the Rewards
                 <span></span>
               </a>
             </div>

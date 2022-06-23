@@ -139,17 +139,10 @@ const OurTeam = () => {
                 isPlaying={inView}
                 duration={0.5}
                 revealDuration={0.5}
-                characters="OurTeam"
+                characters="Our Key Members"
               />
             </h2>
-            <p>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="Step4 IGOs and ICOs"
-              />
-            </p>
+
           </div>
 
           <motion.div
@@ -200,7 +193,9 @@ const OurTeam = () => {
                         <div className="wrapper-characters-information-mobile">
                           <span>{characters.name.toUpperCase()}</span>
                           <p>
-                            <span>{characters.abbrPosition}</span>
+                            {characters.abbrPosition !== "" && (
+                              <span>{characters.abbrPosition}</span>
+                            )}
                             {characters.job}
                           </p>
                         </div>
@@ -259,7 +254,9 @@ const OurTeam = () => {
                     <div className="wrapper-characters-information-right">
                       <span>{characters.name.toUpperCase()}</span>
                       <p>
-                        <span>{characters.abbrPosition}</span>
+                        {characters.abbrPosition !== "" && (
+                          <span>{characters.abbrPosition}</span>
+                        )}
                         {characters.job}
                       </p>
                     </div>

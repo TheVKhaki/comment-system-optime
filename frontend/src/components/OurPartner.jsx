@@ -12,7 +12,7 @@ const OurPartner = () => {
       <div className="our-partner">
         <Container>
           <div className="header-our-partner">
-            <span>Our Partners</span>
+            <span>Powered By</span>
           </div>
           {/* <Swiper
             modules={[Autoplay, FreeMode]}
@@ -111,22 +111,30 @@ const OurPartner = () => {
           <div className="our-partner-news-tricker">
             <div className="slide-news-tricker">
               {ourPartnerApi.map((ourpartner) => {
-                if (ourpartner.id <= 8) {
+                if (ourpartner.id <= 3) {
                   return (
-                    <div className="item-news-tricker" key={ourpartner.id}>
+                    <a
+                      href="#"
+                      className="item-news-tricker"
+                      key={ourpartner.id}
+                    >
                       <img src={ourpartner.imgSrc} alt="" />
-                    </div>
+                    </a>
                   );
                 }
               })}
             </div>
             <div className="slide-news-tricker">
               {ourPartnerApi.map((ourpartner) => {
-                if (ourpartner.id >= 8) {
+                if (ourpartner.id >= 3) {
                   return (
-                    <div className="item-news-tricker" key={ourpartner.id}>
+                    <a
+                      href="#"
+                      className="item-news-tricker"
+                      key={ourpartner.id}
+                    >
                       <img src={ourpartner.imgSrc} alt="" />
-                    </div>
+                    </a>
                   );
                 }
               })}
