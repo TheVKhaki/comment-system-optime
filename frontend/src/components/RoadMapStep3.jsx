@@ -654,21 +654,21 @@ const RoadMapStep3 = () => {
                   initial="hidden"
                   animate={controls}
                 >
-                  QPoker Ltd owns all immaterial rights of QPoker’s rulebook and
-                  structure. It means none of the world’s other gambling
-                  providers is allowed to start offering QPoker without our
-                  authorization and annual license fees (millions of dollars per
-                  year). We own the same waterproof copyrights as Monopoly and
-                  Trivial Pursuit possess to their games. <br /> Our only
-                  realistic, achievable target is to become a sovereign leader
+                  All immaterial rights of QPoker’s rulebook and structure are
+                  owned by QPoker Ltd. It means none of the world’s other
+                  gambling providers is allowed to start offering QPoker without
+                  our authorization and annual license fees (millions of dollars
+                  per year). We own the same waterproof copyrights as Monopoly
+                  and Trivial Pursuit possess to their games. <br /> Our only,
+                  realistic, and achievable goal is to become a sovereign leader
                   of global iGaming markets. We will break Pandora’s box by
-                  starting to offer skill-based social games like accurate money
+                  starting to offer skill-based social games as real money
                   versions, all run by a P2P decentralized platform. Up to this
                   date, all casinos have been ruthlessly exploiting players by
-                  offering only luck-based idiotic products that provide neither
-                  social amusement nor a chance of winning. Fortunately,
-                  irreversibly this will change as QPoker launches the new Web3
-                  era of fair and ethical iGaming.
+                  offering only luck-based brainless products which do provide
+                  neither social amusement nor a chance of winning. Fortunately,
+                  this will change irreversibly as QPoker launches the new Web3
+                  era of fair and inspirational iGaming.
                 </motion.p>
                 <Row>
                   <Col className="d-flex justify-content-center">

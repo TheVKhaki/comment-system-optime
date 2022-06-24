@@ -81,18 +81,17 @@ const RoadMap = () => {
     },
   };
 
-  // useEffect(() => {
-  //   const imagePerspective = document.querySelector(".img-slide-roadmap-1 img");
-  //   imagePerspective.addEventListener("mousemove", function (e) {
-  //     console.log(e.clientX, window.innerWidth);
-  //     const position = (e.clientX / window.innerWidth) * 100 + "px";
-  //     const positionY = (e.clientY / window.innerHeight) * 30 + "px";
-  //     imagePerspective.style.transform = `translate(${position},${positionY})`;
-  //   });
-  //   imagePerspective.addEventListener("mouseleave", function (e) {
-  //     imagePerspective.style.transform = `translate(0,0)`;
-  //   });
-  // }, []);
+  useEffect(() => {
+    const imagePerspective = document.querySelector(".img-slide-roadmap-1 img");
+    imagePerspective.addEventListener("mousemove", function (e) {
+      const position = (e.clientX / window.innerWidth) * 50 + "px";
+      const positionY = (e.clientY / window.innerHeight) * 30 + "px";
+      imagePerspective.style.transform = `translate(${position},${positionY})`;
+    });
+    // imagePerspective.addEventListener("mouseleave", function (e) {
+    //   imagePerspective.style.transform = `translate(0,0)`;
+    // });
+  }, []);
 
   return (
     <>
