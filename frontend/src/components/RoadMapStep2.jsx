@@ -942,14 +942,14 @@ const RoadMapStep2 = () => {
       },
     },
   };
-  // useEffect(() => {
-  //   const imagePerspective = document.querySelector(".content-slide-2-1 img");
-  //   imagePerspective.addEventListener("mousemove", function (e) {
-  //     const position = (e.clientX / window.innerWidth) * 30 + "px";
-  //     const positionY = (e.clientY / window.innerHeight) * 30 + "px";
-  //     imagePerspective.style.transform = `translate(${position},${positionY})`;
-  //   });
-  // }, []);
+  useEffect(() => {
+    const imagePerspective = document.querySelector(".content-slide-2-1 img");
+    imagePerspective.addEventListener("mousemove", function (e) {
+      const position = (e.clientX / window.innerWidth) * 50 + "px";
+      const positionY = (e.clientY / window.innerHeight) * 30 + "px";
+      imagePerspective.style.transform = `translate(${position},${positionY})`;
+    });
+  }, []);
 
   return (
     <>

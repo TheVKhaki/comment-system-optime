@@ -184,7 +184,7 @@ const Hero = () => {
     videoElephantRef2.current.play();
   };
   const clickYoutube = () => {
-    if (width >= 992) {
+    if (width >= 950 && width <= 990 && height >= 1500 && height <= 1900) {
       setVideoShow(true);
       gsap.to(document.querySelector(".hero-text"), {
         x: -400,
@@ -195,7 +195,20 @@ const Hero = () => {
         zIndex: 2,
         delay: 1,
       });
-    } else {
+    }
+    if (width >= 950) {
+      setVideoShow(true);
+      gsap.to(document.querySelector(".hero-text"), {
+        x: -400,
+        opacity: 0,
+      });
+      gsap.to(document.querySelector(".hero .youtube-video"), {
+        opacity: 1,
+        zIndex: 2,
+        delay: 1,
+      });
+    }
+    if (width <= 950) {
       setModalShow(true);
     }
   };

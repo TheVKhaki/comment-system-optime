@@ -38,7 +38,7 @@ const Footer = () => {
                   <h4>Bonus Whore?</h4>
                   <p>
                     Eager to milk us before the paying customers join the line?
-                    Airdrops, bounties and all the other f***ing benefits before
+                    Airdrops, bounties and other welcoming benefits just before
                     the real action gets started.
                   </p>
                   <form action="">

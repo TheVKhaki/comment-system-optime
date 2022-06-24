@@ -287,14 +287,11 @@ const Home = () => {
     //   { passive: false }
     // );
   }, [width]);
-
-  useEffect(() => { }, []);
-
   return (
     <>
       <main>
         <Hero />
-        {width > 991 ? <SocialSection /> : <SocialResponsive />}
+        {width < 991 ? <SocialResponsive /> : <SocialSection />}
         <RoadMapStep1 />
         <RoadMapStep2 />
         <RoadMapStep3 />

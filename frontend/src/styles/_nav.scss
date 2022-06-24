@@ -137,8 +137,8 @@ body.modal-open {
   padding-right: 0 !important;
 }
 .offcanvas {
-  background-color: #000 !important;
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  opacity: 1;
   .offcanvas-header {
     margin-top: 2rem;
     .btn-close {

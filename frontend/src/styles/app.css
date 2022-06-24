@@ -411,8 +411,8 @@ body.modal-open {
 }
 
 .offcanvas {
-  background-color: #000 !important;
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  opacity: 1;
 }
 
 .offcanvas .offcanvas-header {
@@ -829,8 +829,28 @@ body.modal-open {
   .hero {
     min-height: auto;
   }
+  .hero video {
+    display: block;
+  }
+  .hero .youtube-video iframe {
+    width: 550px;
+    height: 350px;
+  }
+  .hero .btns-hero {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
   .hero .hero-text {
+    text-align: left;
     height: 50vh;
+    width: 77%;
+  }
+  .hero .hero-text p {
+    font-size: 2.3rem;
+  }
+  .hero .hero-text h2 span:last-child {
+    font-size: 4rem;
   }
 }
 
@@ -1062,7 +1082,7 @@ body.modal-open {
   .telegram-social
   .link-social-in-circle:hover
   span {
-  color: #0088cc !important;
+  color: #1da1f2 !important;
 }
 
 .social-section .circle-socials .right-circle-social .twitter-social {
@@ -1083,7 +1103,7 @@ body.modal-open {
   .twitter-social
   .link-social-in-circle:hover
   span {
-  color: #1da1f2 !important;
+  color: #0088cc !important;
 }
 
 .social-section .circle-socials .right-circle-social .youtube-social {
@@ -1579,6 +1599,11 @@ body.modal-open {
   width: 250px;
 }
 
+.roadmap .content-slide-1-1 .img-slide-roadmap-1 img {
+  -webkit-transform: translate(8px, 16px);
+  transform: translate(8px, 16px);
+}
+
 .roadmap .content-slide-1-2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1596,6 +1621,8 @@ body.modal-open {
 
 .roadmap .content-slide-2-1 img {
   height: 490px;
+  -webkit-transform: translate(8px, 16px);
+  transform: translate(8px, 16px);
 }
 
 .roadmap .content-slide-2-2 {
@@ -3271,8 +3298,6 @@ body.modal-open {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .footer-home footer .footer-logo .footer-social-media a:hover {

@@ -129,6 +129,9 @@
       justify-content: center;
       height: 440px;
       width: 250px;
+      img {
+        transform: translate(8px, 16px);
+      }
     }
   }
 
@@ -144,6 +147,7 @@
 
     img {
       height: 490px;
+      transform: translate(8px, 16px);
     }
   }
 
