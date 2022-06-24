@@ -412,10 +412,10 @@ const SocialResponsive = () => {
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
-                <FaTelegramPlane />
+                <FaTwitter />
               </div>
             </IconContext.Provider>
-            <span>Telegram</span>
+            <span>Twitter</span>
             <p>
               +285.02% <span>(7d %)</span>
             </p>
@@ -427,10 +427,10 @@ const SocialResponsive = () => {
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
-                <FaTwitter />
+                <FaTelegramPlane />
               </div>
             </IconContext.Provider>
-            <span>Twitter</span>
+            <span>Telegram</span>
             <p>
               +171.69% <span>(7d %)</span>
             </p>
@@ -467,7 +467,7 @@ const SocialResponsive = () => {
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>$50,000</span>
-            <p>Join Telegram</p>
+            <p>Join Twitter</p>
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
             <span>$75,000</span>

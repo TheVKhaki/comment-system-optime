@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
-
   .matrix-load {
     position: absolute;
     top: 0;
@@ -26,7 +25,6 @@
       font-size: 25px;
     }
   }
-
   .cover-path {
     position: absolute;
     top: 27%;
@@ -37,7 +35,6 @@
     height: 9px;
     background-color: #000;
   }
-
   .line-gold-action {
     position: absolute;
     top: 45%;
@@ -45,50 +42,41 @@
     transform: translate(-50%, -50%);
     width: 578px;
     z-index: 10;
-
     path {
       stroke-dasharray: 250;
       stroke-dashoffset: 250;
       animation: animateLineGold 2s linear infinite forwards;
     }
-
     @keyframes animateLineGold {
       0% {
         stroke-dashoffset: 250;
       }
-
       40% {
         stroke-dashoffset: 0;
       }
-
       100% {
         stroke-dashoffset: -250;
       }
     }
   }
-
   .line-gold-action-1 {
     path {
       stroke-dasharray: 10, 10;
       stroke-dashoffset: 250;
       animation: animateLineGold 7s linear infinite forwards;
     }
-
     @keyframes animateLineGold {
       0% {
         stroke-dashoffset: 250;
       }
-
       40% {
         stroke-dashoffset: 0;
       }
-
       100% {
         stroke-dashoffset: -250;
       }
     }
   }
-
   .pulse-social-animation {
     position: absolute;
     top: 37%;
@@ -100,34 +88,28 @@
     z-index: -1;
     border: 2px solid #e28001;
   }
-
   .circle-socials {
     width: 100%;
     height: 640px;
     position: relative;
     right: 30px;
-
     .all-circle-social {
       width: 100%;
       height: 90%;
       position: relative;
       z-index: 1;
     }
-
     .right-circle-social {
       position: relative;
       z-index: 11;
-
       .socials-in-circle {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-
         .wrapper-detail {
           width: 132px;
         }
-
         .link-social-in-circle {
           text-align: center;
           display: flex;
@@ -135,11 +117,9 @@
           align-items: center;
           padding-left: 2rem;
         }
-
         svg {
           transition: all 0.3s;
         }
-
         span {
           color: $colorWhite;
           font-size: 27px;
@@ -147,7 +127,6 @@
           font-weight: bold;
           transition: all 0.3s;
         }
-
         p {
           font-size: 18px;
           color: #16c784;
@@ -155,25 +134,20 @@
           transition: all 0.3s;
         }
       }
-
       .circle-icon-social {
         width: 25px;
         margin-right: 4rem;
-
         a {
           display: block;
         }
       }
-
       .telegram-social {
-        left: 274px;
+        left: 276px;
         padding-left: 2rem;
         position: relative;
-        bottom: 505px;
-
+        bottom: 504px;
         .link-social-in-circle {
           &:hover {
-
             svg,
             span {
               color: #0088cc !important;
@@ -205,15 +179,12 @@
           // }
         }
       }
-
       .twitter-social {
         position: relative;
-        bottom: 462px;
-        left: 318px;
-
+        bottom: 463px;
+        left: 315px;
         .link-social-in-circle {
           &:hover {
-
             svg,
             span {
               color: #1da1f2 !important;
@@ -221,7 +192,6 @@
           }
         }
       }
-
       .youtube-social {
         bottom: 374px;
         position: relative;
@@ -229,7 +199,6 @@
 
         .link-social-in-circle {
           &:hover {
-
             svg,
             span {
               color: #ff0000 !important;
@@ -237,7 +206,6 @@
           }
         }
       }
-
       .trello-social {
         bottom: 334px;
         position: relative;
@@ -245,7 +213,6 @@
 
         .link-social-in-circle {
           &:hover {
-
             svg,
             span {
               color: #0079bf !important;
@@ -254,11 +221,9 @@
         }
       }
     }
-
     .left-circle-social {
       position: relative;
       z-index: 0;
-
       // .wrapper-line-action-social-2 {
       //   transform: rotate(45deg);
       //   position: relative;
@@ -283,14 +248,12 @@
       .team-info-circle {
         text-align: center;
         line-height: 23px;
-
         span {
           color: $colorWhite;
           font-size: 30px;
           font-family: "Maven Pro", sans-serif;
           font-weight: bold;
         }
-
         p {
           font-size: 20px;
           color: $colorWhite;
@@ -298,47 +261,39 @@
           letter-spacing: 1px;
         }
       }
-
       .team-info-1 {
         right: 275px;
         position: relative;
         bottom: 764px;
       }
-
       .team-info-2 {
         bottom: 711px;
         position: relative;
         right: 305px;
-
         p,
         span {
           color: #404040;
         }
       }
-
       .team-info-3 {
         bottom: 607px;
         position: relative;
         right: 314px;
-
         p,
         span {
           color: #404040;
         }
       }
-
       .team-info-4 {
         bottom: 550px;
         position: relative;
         right: 283px;
-
         p,
         span {
           color: #404040;
         }
       }
     }
-
     img {
       transform: translate(-50%, -50%);
       position: absolute;

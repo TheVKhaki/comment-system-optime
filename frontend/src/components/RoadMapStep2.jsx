@@ -916,11 +916,11 @@ const RoadMapStep2 = () => {
   const imgRoadMap1 = {
     hidden: {
       opacity: 0,
-      x: -100,
+      y: 100,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 1,
         delay: 0.5,
@@ -942,6 +942,14 @@ const RoadMapStep2 = () => {
       },
     },
   };
+  // useEffect(() => {
+  //   const imagePerspective = document.querySelector(".content-slide-2-1 img");
+  //   imagePerspective.addEventListener("mousemove", function (e) {
+  //     const position = (e.clientX / window.innerWidth) * 30 + "px";
+  //     const positionY = (e.clientY / window.innerHeight) * 30 + "px";
+  //     imagePerspective.style.transform = `translate(${position},${positionY})`;
+  //   });
+  // }, []);
 
   return (
     <>
@@ -981,9 +989,9 @@ const RoadMapStep2 = () => {
                   animate={controls}
                   className="d-flex justify-content-center d-sm-block"
                 >
-                  <Lazyload>
-                    <img src={imageRoadMap2} alt="" />
-                  </Lazyload>
+                  {/* <Lazyload> */}
+                  <img src={imageRoadMap2} alt="" />
+                  {/* </Lazyload> */}
                 </motion.div>
               </Col>
               <Col

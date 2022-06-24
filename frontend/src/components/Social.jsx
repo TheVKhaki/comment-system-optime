@@ -650,7 +650,7 @@ const SocialSection = () => {
                           animate={controls}
                           href="#"
                         >
-                          <FaTelegramPlane />
+                          <FaTwitter />
                         </motion.a>
                       </IconContext.Provider>
                     </div>
@@ -664,7 +664,7 @@ const SocialSection = () => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Telegram"
+                          characters="Twitter"
                         />
                       </span>
                       <div className="wrapper-detail">
@@ -693,7 +693,7 @@ const SocialSection = () => {
                           animate={controls}
                           href="#"
                         >
-                          <FaTwitter />
+                          <FaTelegramPlane />
                         </motion.a>
                       </IconContext.Provider>
                     </div>
@@ -708,7 +708,7 @@ const SocialSection = () => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Twitter"
+                          characters="Telegram"
                         />
                       </span>
                       <div className="wrapper-detail">
@@ -850,7 +850,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Join Telegram"
+                      characters="Join Twitter"
                     />
                   </p>
                 </motion.div>
