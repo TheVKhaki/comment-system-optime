@@ -93,14 +93,12 @@
     height: 640px;
     position: relative;
     right: 30px;
-
     .all-circle-social {
       width: 100%;
       height: 90%;
       position: relative;
       z-index: 1;
     }
-
     .right-circle-social {
       position: relative;
       z-index: 11;
@@ -129,7 +127,6 @@
           font-weight: bold;
           transition: all 0.3s;
         }
-
         p {
           font-size: 18px;
           color: #16c784;
@@ -137,16 +134,13 @@
           transition: all 0.3s;
         }
       }
-
       .circle-icon-social {
         width: 25px;
         margin-right: 4rem;
-
         a {
           display: block;
         }
       }
-
       .telegram-social {
         left: 276px;
         padding-left: 2rem;
@@ -159,6 +153,7 @@
               color: #0088cc !important;
             }
           }
+
           // svg,
           // span {
           //   animation: goldColorIcon 2s linear infinite forwards;
@@ -184,7 +179,6 @@
           // }
         }
       }
-
       .twitter-social {
         position: relative;
         bottom: 463px;
@@ -198,11 +192,11 @@
           }
         }
       }
-
       .youtube-social {
         bottom: 374px;
         position: relative;
         left: 316px;
+
         .link-social-in-circle {
           &:hover {
             svg,
@@ -212,11 +206,11 @@
           }
         }
       }
-
       .trello-social {
         bottom: 334px;
         position: relative;
         left: 286px;
+
         .link-social-in-circle {
           &:hover {
             svg,
@@ -227,7 +221,6 @@
         }
       }
     }
-
     .left-circle-social {
       position: relative;
       z-index: 0;
@@ -255,14 +248,12 @@
       .team-info-circle {
         text-align: center;
         line-height: 23px;
-
         span {
           color: $colorWhite;
           font-size: 30px;
           font-family: "Maven Pro", sans-serif;
           font-weight: bold;
         }
-
         p {
           font-size: 20px;
           color: $colorWhite;
@@ -270,13 +261,11 @@
           letter-spacing: 1px;
         }
       }
-
       .team-info-1 {
         right: 275px;
         position: relative;
         bottom: 764px;
       }
-
       .team-info-2 {
         bottom: 711px;
         position: relative;
@@ -286,7 +275,6 @@
           color: #404040;
         }
       }
-
       .team-info-3 {
         bottom: 607px;
         position: relative;
@@ -296,7 +284,6 @@
           color: #404040;
         }
       }
-
       .team-info-4 {
         bottom: 550px;
         position: relative;
@@ -307,7 +294,6 @@
         }
       }
     }
-
     img {
       transform: translate(-50%, -50%);
       position: absolute;

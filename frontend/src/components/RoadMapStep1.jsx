@@ -256,7 +256,6 @@ const RoadMap = () => {
                       </IconContext.Provider>
                       <li>Development of the website (front-end & back-end)</li>
                     </Col>
-
                     <Col lg={6}>
                       <IconContext.Provider
                         value={{
