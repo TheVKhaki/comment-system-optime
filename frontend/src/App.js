@@ -12,29 +12,9 @@ import Header from "./components/Header";
 import SocialSection from "./components/Social";
 //Router
 import { Route, Routes } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const itemMenu = document.querySelectorAll(
-    ".offcanvas-body .navbar-nav .nav-link"
-  );
-  console.log(itemMenu);
-  itemMenu.forEach((itemmenu) => {
-    itemmenu.addEventListener("click", function () {
-      var isChrome =
-        /Chrome/.test(navigator.userAgent) &&
-        /Google Inc/.test(navigator.vendor);
-      if (window.location.hash && isChrome) {
-        setTimeout(function () {
-          var hash = window.location.hash;
-          console.log(hash);
-          window.location.hash = "";
-          window.location.hash = hash;
-        }, 300);
-      }
-    });
-  });
-
   //animation btn-main
   useEffect(() => {
     // window.addEventListener("load", function () {

@@ -826,9 +826,9 @@ const RoadMapStep2 = () => {
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
     if (modalShow) {
-      document.querySelector("html").style.overflow = "hidden";
+      document.querySelector("html").style.overflowY = "hidden";
     } else {
-      document.querySelector("html").style.overflow = "visible";
+      document.querySelector("html").style.overflowY = "visible";
     }
   }, [modalShow]);
 
@@ -909,7 +909,7 @@ const RoadMapStep2 = () => {
               </p>
             </div>
             <Row className="content-slide-2-1">
-              <Col lg={{ span: 4, order: 1 }} xs={{ span: 12, order: 2 }}>
+              <Col lg={{ span: 4, order: 2 }} xs={{ span: 12, order: 2 }}>
                 <motion.div
                   variants={imgRoadMap1}
                   initial="hidden"
@@ -922,7 +922,7 @@ const RoadMapStep2 = () => {
                 </motion.div>
               </Col>
               <Col
-                lg={{ span: 8, order: 2 }}
+                lg={{ span: 8, order: 1 }}
                 xs={{ span: 12, order: 1 }}
                 className="position-relative"
               >

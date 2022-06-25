@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, Suspense, useLayoutEffect } from "react";
 //media
-import Rotation3d from "../images/3d Rotation.svg";
+import Rotation3d from "../images/Rotate360.png";
 //Bootstrap
 import { Container } from "react-bootstrap";
 //Swiper
@@ -10,6 +10,9 @@ import "swiper/css/navigation";
 //icon
 import { IconContext } from "react-icons";
 import { IoCloseSharp } from "react-icons/io5";
+//lottie
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
@@ -64,6 +67,7 @@ const OurTeam = () => {
   const refModel3d = useRef();
   const model3dCharacters = document.querySelectorAll(".model3d-characters");
   const handleClickNFT = (event) => {
+    document.querySelector(".lottie-our-team").classList.add("d-none");
     const e = event.target;
     const result = characters.filter(
       (filterevent) => filterevent.className === e.parentElement.className
@@ -142,9 +146,19 @@ const OurTeam = () => {
       });
     }
   };
+  const player = useRef();
   return (
     <>
       <section className="ourteam" ref={element} id="our-team">
+        <Player
+          ref={player}
+          autoplay={true}
+          loop={true}
+          controls={false}
+          src={clickGif}
+          style={{ height: "300px", width: "100px" }}
+          className="lottie-our-team"
+        ></Player>
         <Container>
           <div className="ourteam-header">
             <h2>
@@ -196,7 +210,8 @@ const OurTeam = () => {
               {characters.map((characters) => {
                 return (
                   <SwiperSlide key={characters.id}>
-                    <div
+                    <a
+                      href="#our-team"
                       className={characters.className}
                       key={characters.id}
                       onClick={handleClickNFT}
@@ -213,7 +228,7 @@ const OurTeam = () => {
                         </div>
                       </div>
                       <img src={characters.image} alt="" />
-                    </div>
+                    </a>
                   </SwiperSlide>
                 );
               })}
