@@ -14,10 +14,16 @@ const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");
     window.addEventListener("scroll", function (e) {
+      console.log(window.scrollY);
       if (window.scrollY > 430) {
         btnGoToTop.classList = "go-to-top opacity-75 visible";
       } else {
         btnGoToTop.classList = "go-to-top opacity-0 invisible";
+      }
+      if (window.scrollY > 7455) {
+        btnGoToTop.style.bottom = "66px";
+      } else {
+        btnGoToTop.style.bottom = "10px";
       }
     });
   }, []);

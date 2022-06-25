@@ -183,7 +183,7 @@ const Hero = () => {
     videoElephantRef2.current.play();
   };
   const clickYoutube = () => {
-    if (width >= 900 && width <= 990 && height >= 1500 && height <= 1900) {
+    if (width >= 900 && width <= 990 && height >= 1500 && height <= 2000) {
       setVideoShow(true);
       gsap.to(document.querySelector(".hero-text"), {
         x: -400,
