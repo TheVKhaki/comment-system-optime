@@ -121,30 +121,16 @@ const OurTeam = () => {
       swiper2.classList.remove("d-block");
     }
   }, [width]);
-
-  //variant animation
-  // const imgOurTeam = {
-  //   hidden: {
-  //     filter: blur(3),
-  //   },
-  //   visible: {
-  //     blur: 4,
-  //     transition: {
-  //       duration: 1,
-  //       delay: 0.5,
-  //     },
-  //   },
-  // };
   useEffect(() => {
     gsap.fromTo(
       document.querySelector(".lottie-our-team"),
       {
-        opacity: 1,
+        opacity: 0.7,
       },
       {
         opacity: 0,
         duration: 0.5,
-        delay: 3,
+        delay: 5,
         scrollTrigger: {
           trigger: document.querySelector(".ourteam"),
           start: "center center",
@@ -159,12 +145,12 @@ const OurTeam = () => {
       gsap.fromTo(
         document.querySelectorAll(".characters-information img"),
         {
-          opacity: 1,
+          opacity: 0.7,
         },
         {
           opacity: 0,
           duration: 0.5,
-          delay: 3,
+          delay: 5,
         }
       );
     }
