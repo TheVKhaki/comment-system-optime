@@ -102,7 +102,6 @@ const Hero = () => {
         "-=0.6"
       );
   }, []);
-
   //video bg and video youtube
   const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
