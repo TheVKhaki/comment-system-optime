@@ -57,7 +57,7 @@
     align-items: flex-end;
     .go-to-top {
       position: fixed;
-      bottom: 66px;
+      bottom: 44px;
       right: 6px;
       background-color: #000;
       border-radius: 50px;
@@ -266,12 +266,11 @@
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 363.98px) {
   .footer-home {
-    .our-partner {
-      .our-partner-news-tricker {
-        .slide-news-tricker {
-        }
+    footer {
+      .go-to-top {
+        bottom: 66px;
       }
     }
   }

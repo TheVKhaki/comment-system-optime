@@ -2493,6 +2493,8 @@ body.modal-open {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  display: none;
+  opacity: 0.7;
 }
 
 .ourteam .center {
@@ -3056,6 +3058,9 @@ body.modal-open {
 }
 
 @media screen and (max-width: 991.98px) {
+  .ourteam .lottie-our-team {
+    display: block;
+  }
   .ourteam .ourteam-header {
     top: 0;
     margin: 4rem 0;
@@ -3221,7 +3226,7 @@ body.modal-open {
 
 .footer-home footer .go-to-top {
   position: fixed;
-  bottom: 66px;
+  bottom: 44px;
   right: 6px;
   background-color: #000;
   border-radius: 50px;
@@ -3435,6 +3440,12 @@ body.modal-open {
     grid-template-rows: repeat(3, 100px);
     -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 363.98px) {
+  .footer-home footer .go-to-top {
+    bottom: 66px;
   }
 }
 

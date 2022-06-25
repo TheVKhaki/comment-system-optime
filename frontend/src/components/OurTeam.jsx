@@ -13,6 +13,8 @@ import { IoCloseSharp } from "react-icons/io5";
 //lottie
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
+//Gsap
+import { gsap } from "gsap";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
@@ -67,7 +69,6 @@ const OurTeam = () => {
   const refModel3d = useRef();
   const model3dCharacters = document.querySelectorAll(".model3d-characters");
   const handleClickNFT = (event) => {
-    document.querySelector(".lottie-our-team").classList.add("d-none");
     const e = event.target;
     const result = characters.filter(
       (filterevent) => filterevent.className === e.parentElement.className
@@ -134,18 +135,53 @@ const OurTeam = () => {
   //     },
   //   },
   // };
-  const canvasRotationDeleteSVG = (e) => {
+  useEffect(() => {
+    gsap.fromTo(
+      document.querySelector(".lottie-our-team"),
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        duration: 0.5,
+        delay: 3,
+        scrollTrigger: {
+          trigger: document.querySelector(".ourteam"),
+          start: "center center",
+          end: "bottom center",
+        },
+      }
+    );
+  }, []);
+  useEffect(() => {
     if (showLoad === 100) {
-      const RotationSVG = document.querySelectorAll(
-        ".characters-information img"
-      );
-      RotationSVG.forEach((Rotationsvg) => {
-        if (e.target.tagName === "CANVAS") {
-          Rotationsvg.classList.add("d-none");
+      console.log("object");
+      gsap.fromTo(
+        document.querySelectorAll(".characters-information img"),
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          duration: 0.5,
+          delay: 3,
         }
-      });
+      );
     }
-  };
+  }, [showLoad]);
+
+  // const canvasRotationDeleteSVG = (e) => {
+  //   if (showLoad === 100) {
+  //     const RotationSVG = document.querySelectorAll(
+  //       ".characters-information img"
+  //     );
+  //     RotationSVG.forEach((Rotationsvg) => {
+  //       if (e.target.tagName === "CANVAS") {
+  //         Rotationsvg.classList.add("d-none");
+  //       }
+  //     });
+  //   }
+  // };
   const player = useRef();
   return (
     <>
@@ -156,7 +192,7 @@ const OurTeam = () => {
           loop={true}
           controls={false}
           src={clickGif}
-          style={{ height: "300px", width: "100px" }}
+          style={{ height: "300px", width: "70px" }}
           className="lottie-our-team"
         ></Player>
         <Container>
@@ -242,7 +278,6 @@ const OurTeam = () => {
               ref={refModel3d}
               data-index={characters.id}
               key={characters.id}
-              onClick={canvasRotationDeleteSVG}
             >
               <Container>
                 <div className="close-model3d" onClick={handleClickClose}>
