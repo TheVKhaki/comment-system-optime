@@ -69,6 +69,7 @@ const OurTeam = () => {
   const refModel3d = useRef();
   const model3dCharacters = document.querySelectorAll(".model3d-characters");
   const handleClickNFT = (event) => {
+    document.querySelector(".lottie-our-team").classList.add("d-none");
     const e = event.target;
     const result = characters.filter(
       (filterevent) => filterevent.className === e.parentElement.className
