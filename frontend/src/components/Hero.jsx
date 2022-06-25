@@ -55,10 +55,10 @@ function MyVerticallyCenteredModal(props) {
           <iframe
             width="660"
             height="400"
-            src="https://www.youtube.com/embed/qmVpyIX0atc"
             title="YouTube video player"
-            frameBorder="0"
+            src="https://www.youtube.com/embed/147ioPrSuaM"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0"
             allowFullScreen
           ></iframe>
         </div>
@@ -184,7 +184,7 @@ const Hero = () => {
     videoElephantRef2.current.play();
   };
   const clickYoutube = () => {
-    if (width >= 950 && width <= 990 && height >= 1500 && height <= 1900) {
+    if (width >= 900 && width <= 990 && height >= 1500 && height <= 1900) {
       setVideoShow(true);
       gsap.to(document.querySelector(".hero-text"), {
         x: -400,
@@ -196,7 +196,7 @@ const Hero = () => {
         delay: 1,
       });
     }
-    if (width >= 950) {
+    if (width >= 900 && window.innerWidth >= 900) {
       setVideoShow(true);
       gsap.to(document.querySelector(".hero-text"), {
         x: -400,
@@ -208,7 +208,7 @@ const Hero = () => {
         delay: 1,
       });
     }
-    if (width <= 950) {
+    if (width <= 900 && window.innerWidth <= 900) {
       setModalShow(true);
     }
   };

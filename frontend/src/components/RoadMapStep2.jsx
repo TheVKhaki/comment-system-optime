@@ -21,69 +21,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function MyVerticallyCenteredModal(props) {
   gsap.registerPlugin(ScrollTrigger);
-  // const [animationComplete, setAnimationComplete] = useState({
-  //   animation1: "hidden",
-  //   animation2: "hidden",
-  //   animation3: "hidden",
-  //   animation4: "hidden",
-  //   animation5: "hidden",
-  // });
-  // const controls = useAnimation();
-  // const controls2 = useAnimation();
-  // const controls3 = useAnimation();
-  // const controls4 = useAnimation();
-  // const controls5 = useAnimation();
-  // const controls6 = useAnimation();
-  // const [element, inView] = useInView({ threshold: 0.9, triggerOnce: true });
-  // const [element2, inView2] = useInView({ threshold: 0.9, triggerOnce: true });
-  // const [element3, inView3] = useInView({ threshold: 0.9, triggerOnce: true });
-  // const [element4, inView4] = useInView({ threshold: 0.9, triggerOnce: true });
-  // const [element5, inView5] = useInView({ threshold: 0.9, triggerOnce: true });
-  // const [element6, inView6] = useInView({ threshold: 0.2, triggerOnce: true });
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  //   if (inView2) {
-  //     controls2.start("visible");
-  //   }
-  //   if (inView3) {
-  //     controls3.start("visible");
-  //   }
-  //   if (inView4) {
-  //     controls4.start("visible");
-  //   }
-  //   if (inView5) {
-  //     controls5.start("visible");
-  //   }
-  //   if (inView6) {
-  //     controls6.start("visible");
-  //   }
-  // }, [controls, inView, inView2, inView3, inView4, inView5, inView6]);
-
-  // const itemPath = {
-  //   hidden: {
-  //     pathLength: 0,
-  //   },
-  //   visible: {
-  //     pathLength: 1,
-  //     transition: {
-  //       duration: 1,
-  //       delay: 0.3,
-  //     },
-  //   },
-  // };
-  // const itemOpacity = {
-  //   hidden: {
-  //     opacity: 0,
-  //   },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //     },
-  //   },
-  // };
   const lineModal1 = useRef();
   const lineModal2 = useRef();
   const lineModal3 = useRef();
@@ -491,24 +428,6 @@ function MyVerticallyCenteredModal(props) {
           },
         }
       );
-      // gsap.fromTo(
-      //   document.querySelector(".roadmap-participate video"),
-      //   {
-      //     currentTime: 0,
-      //   },
-      //   {
-      //     currentTime: 0,
-
-      //     duration: 1,
-      //     scrollTrigger: {
-      //       scroller: ".modal",
-      //       trigger: document.querySelector(".roadmap-participate"),
-      //       start: "1500px center",
-      //       end: "1510px center",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
       const myEnterFunc = () => {
         rocketAnimRef.current.play();
         console.log("object");
@@ -905,6 +824,13 @@ const RoadMapStep2 = () => {
   const roadMapStep2 = useRef(null);
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    if (modalShow) {
+      document.querySelector("html").style.overflow = "hidden";
+    } else {
+      document.querySelector("html").style.overflow = "visible";
+    }
+  }, [modalShow]);
 
   useEffect(() => {
     if (inView) {
@@ -944,9 +870,10 @@ const RoadMapStep2 = () => {
   };
   useEffect(() => {
     const imagePerspective = document.querySelector(".content-slide-2-1 img");
-    imagePerspective.addEventListener("mousemove", function (e) {
-      const position = (e.clientX / window.innerWidth) * 50 + "px";
-      const positionY = (e.clientY / window.innerHeight) * 30 + "px";
+    const sectionInPerspective = document.querySelector(".roadmap-step2");
+    sectionInPerspective.addEventListener("mousemove", function (e) {
+      const position = (e.clientX / window.innerWidth) * 30 + "px";
+      const positionY = (e.clientY / window.innerHeight) * 20 + "px";
       imagePerspective.style.transform = `translate(${position},${positionY})`;
     });
   }, []);

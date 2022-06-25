@@ -23,6 +23,12 @@ const Header = () => {
       }
     });
   }, []);
+  const enterOffcanvas = () => {
+    document.querySelector("html").style.overflow = "hidden";
+  };
+  const exitOffcanvas = () => {
+    document.querySelector("html").style.overflow = "visible";
+  };
   return (
     <>
       <header ref={header}>
@@ -59,6 +65,8 @@ const Header = () => {
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
               placement="end"
+              onEnter={enterOffcanvas}
+              onExit={exitOffcanvas}
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
