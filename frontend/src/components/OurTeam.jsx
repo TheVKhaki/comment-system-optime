@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef, Suspense, useLayoutEffect } from "react";
+//media
+import Rotation3d from "../images/3d Rotation.svg";
 //Bootstrap
 import { Container } from "react-bootstrap";
 //Swiper
@@ -128,7 +130,18 @@ const OurTeam = () => {
   //     },
   //   },
   // };
-
+  const canvasRotationDeleteSVG = (e) => {
+    if (showLoad === 100) {
+      const RotationSVG = document.querySelectorAll(
+        ".characters-information img"
+      );
+      RotationSVG.forEach((Rotationsvg) => {
+        if (e.target.tagName === "CANVAS") {
+          Rotationsvg.classList.add("d-none");
+        }
+      });
+    }
+  };
   return (
     <>
       <section className="ourteam" ref={element} id="our-team">
@@ -142,7 +155,6 @@ const OurTeam = () => {
                 characters="Our Key Members"
               />
             </h2>
-
           </div>
 
           <motion.div
@@ -215,6 +227,7 @@ const OurTeam = () => {
               ref={refModel3d}
               data-index={characters.id}
               key={characters.id}
+              onClick={canvasRotationDeleteSVG}
             >
               <Container>
                 <div className="close-model3d" onClick={handleClickClose}>
@@ -246,6 +259,7 @@ const OurTeam = () => {
               </Canvas>
               {showLoad === 100 && (
                 <Container className="characters-information">
+                  <img className="3d-rotation" src={Rotation3d} alt="" />
                   <div className="characters-information-left">
                     <p>{characters.description}</p>
                   </div>

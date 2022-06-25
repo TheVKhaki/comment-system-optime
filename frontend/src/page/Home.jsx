@@ -291,7 +291,11 @@ const Home = () => {
     <>
       <main>
         <Hero />
-        {width < 991 ? <SocialResponsive /> : <SocialSection />}
+        {width <= 992 && window.innerWidth <= 992 ? (
+          <SocialResponsive />
+        ) : (
+          <SocialSection />
+        )}
         <RoadMapStep1 />
         <RoadMapStep2 />
         <RoadMapStep3 />

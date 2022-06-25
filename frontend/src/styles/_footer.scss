@@ -57,8 +57,8 @@
     align-items: flex-end;
     .go-to-top {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 66px;
+      right: 6px;
       background-color: #000;
       border-radius: 50px;
       width: 50px;
@@ -70,7 +70,6 @@
       align-items: center;
       z-index: 20;
       border: 3px solid #e28001;
-      opacity: 0.7;
     }
     .footer-left {
       h4 {

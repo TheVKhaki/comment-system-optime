@@ -15,7 +15,7 @@ const Footer = () => {
     const btnGoToTop = document.querySelector(".go-to-top");
     window.addEventListener("scroll", function (e) {
       if (window.scrollY > 430) {
-        btnGoToTop.classList = "go-to-top opacity-100 visible";
+        btnGoToTop.classList = "go-to-top opacity-75 visible";
       } else {
         btnGoToTop.classList = "go-to-top opacity-0 invisible";
       }
