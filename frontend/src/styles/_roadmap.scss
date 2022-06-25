@@ -1078,6 +1078,17 @@
   }
 }
 
+@media screen and (min-height: 700px) and (max-height: 840px) and (min-width: 1000px) and (max-width: 1800px) {
+  .roadmap {
+    .btn-slide {
+      margin-top: 3rem;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
 //desktop mode in mobile
 @media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .roadmap {

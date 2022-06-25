@@ -5,7 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import logoImage from "../images/LOW_Logo-New-Color-C.png";
 //Gsap
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 const Header = () => {
   const header = useRef();
@@ -23,11 +23,34 @@ const Header = () => {
       }
     });
   }, []);
+  const [menuShow, setMenuShow] = useState(false);
+  useEffect(() => {
+    const itemMenu = document.querySelectorAll(
+      ".offcanvas-body .navbar-nav .nav-link"
+    );
+    itemMenu.forEach((itemmenu) => {
+      itemmenu.addEventListener("click", function () {
+        var isChrome =
+          /Chrome/.test(navigator.userAgent) &&
+          /Google Inc/.test(navigator.vendor);
+        if (isChrome) {
+          setTimeout(function () {
+            var hash = window.location.hash;
+            console.log(hash);
+            window.location.hash = "";
+            window.location.hash = hash;
+          }, 300);
+        }
+      });
+    });
+  }, [menuShow]);
   const enterOffcanvas = () => {
-    document.querySelector("html").style.overflow = "hidden";
+    document.querySelector("html").style.overflowY = "hidden";
+    setMenuShow(true);
   };
   const exitOffcanvas = () => {
-    document.querySelector("html").style.overflow = "visible";
+    document.querySelector("html").style.overflowY = "visible";
+    setMenuShow(false);
   };
   return (
     <>

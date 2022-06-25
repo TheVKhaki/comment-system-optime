@@ -411,7 +411,7 @@ body.modal-open {
 }
 
 .offcanvas {
-  background-color: rgba(0, 0, 0, 0.6) !important;
+  background-color: black !important;
   opacity: 1;
 }
 
@@ -528,6 +528,12 @@ body.modal-open {
   header .navbar .navbar-brand .logo img {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .offcanvas-end {
+    width: 80% !important;
   }
 }
 
@@ -825,7 +831,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+@media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 900px) {
   .hero {
     min-height: auto;
   }
@@ -2455,6 +2461,15 @@ body.modal-open {
   }
 }
 
+@media screen and (min-height: 700px) and (max-height: 840px) and (min-width: 1000px) and (max-width: 1800px) {
+  .roadmap .btn-slide {
+    margin-top: 3rem;
+  }
+  .roadmap p {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-height: 1900px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .roadmap {
     min-height: auto;
@@ -2468,6 +2483,16 @@ body.modal-open {
   min-height: 100vh;
   background-color: #000;
   position: relative;
+}
+
+.ourteam .lottie-our-team {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .ourteam .center {
@@ -2873,15 +2898,19 @@ body.modal-open {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .ourteam .model3d-characters .characters-information img {
   position: absolute;
-  width: 200px;
-  left: 45%;
-  top: 77%;
+  width: 100px;
+  left: 50%;
+  top: 63%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .ourteam .model3d-characters .characters-information-left {
