@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import logoFooter from "../images/03-03 13.png";
+import logoFooter from "../images/LogoBlack.png";
 import { IconContext } from "react-icons";
 import {
   FaTelegramPlane,

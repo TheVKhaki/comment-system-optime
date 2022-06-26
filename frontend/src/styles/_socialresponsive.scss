@@ -27,6 +27,7 @@
     .text-image-responsive {
       position: absolute;
       text-align: center;
+      width: 130px;
       div {
         display: flex;
         justify-content: center;
@@ -98,20 +99,20 @@
       }
     }
     .text-telegram {
-      bottom: 0;
-      left: 5px;
+      bottom: 1px;
+      left: -2px;
     }
     .text-twitter {
       bottom: 101px;
-      left: 97px;
+      left: 86px;
     }
     .text-youtube {
       bottom: 101px;
-      right: 106px;
+      right: 96px;
     }
     .text-trello {
       bottom: 2px;
-      right: 19px;
+      right: 2px;
     }
   }
 }
@@ -175,19 +176,19 @@
       }
       .text-telegram {
         bottom: -38px;
-        left: 16px;
+        left: -13px;
       }
       .text-trello {
-        bottom: -38px;
-        right: 26px;
+        bottom: -15px;
+        right: -13px;
       }
       .text-twitter {
         bottom: 41px;
-        left: 77px;
+        left: 56px;
       }
       .text-youtube {
         bottom: 42px;
-        right: 88px;
+        right: 62px;
       }
     }
     .header-social {

@@ -1268,6 +1268,7 @@ body.modal-open {
 .social-responsive .image-social-responsive .text-image-responsive {
   position: absolute;
   text-align: center;
+  width: 130px;
 }
 
 .social-responsive .image-social-responsive .text-image-responsive div {
@@ -1360,23 +1361,23 @@ body.modal-open {
 }
 
 .social-responsive .image-social-responsive .text-telegram {
-  bottom: 0;
-  left: 5px;
+  bottom: 1px;
+  left: -2px;
 }
 
 .social-responsive .image-social-responsive .text-twitter {
   bottom: 101px;
-  left: 97px;
+  left: 86px;
 }
 
 .social-responsive .image-social-responsive .text-youtube {
   bottom: 101px;
-  right: 106px;
+  right: 96px;
 }
 
 .social-responsive .image-social-responsive .text-trello {
   bottom: 2px;
-  right: 19px;
+  right: 2px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1429,19 +1430,19 @@ body.modal-open {
   }
   .social-responsive .image-social-responsive .text-telegram {
     bottom: -38px;
-    left: 16px;
+    left: -13px;
   }
   .social-responsive .image-social-responsive .text-trello {
-    bottom: -38px;
-    right: 26px;
+    bottom: -15px;
+    right: -13px;
   }
   .social-responsive .image-social-responsive .text-twitter {
     bottom: 41px;
-    left: 77px;
+    left: 56px;
   }
   .social-responsive .image-social-responsive .text-youtube {
     bottom: 42px;
-    right: 88px;
+    right: 62px;
   }
   .social-responsive .header-social {
     text-align: center;
@@ -2535,6 +2536,38 @@ body.modal-open {
   font-size: 25px;
 }
 
+.ourteam .social-media-our-team {
+  position: absolute !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -60px;
+  width: 200px;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.ourteam .social-media-our-team a {
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+
+.ourteam .social-media-our-team a:nth-child(1) {
+  background-color: #0088cc;
+}
+
+.ourteam .social-media-our-team a:nth-child(2) {
+  background-color: #fba611;
+}
+
+.ourteam .social-media-our-team a:nth-child(3) {
+  background-color: #5865f2;
+}
+
 .ourteam .ourteam-characters {
   min-height: 82vh;
   display: -webkit-box;
@@ -2722,6 +2755,7 @@ body.modal-open {
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 15vh;
+  z-index: 3;
 }
 
 .ourteam

@@ -36,6 +36,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Sam has 12 years of experience managing complex projects, a blockchain virtuoso using local and offshore development teams. Expert in developing products in diverse fields such as finance, health technology, gaming, and security platforms. Founder and co-founder of start-ups, leading the CTO, R&D, and operations activities.",
+      email: "Sam@qpoker.io",
     },
     {
       id: 2,
@@ -51,6 +52,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Matthew is a gifted artist and a motion graphics designer. His expertise is best known for his team-leading skills with animation productions in commercials and short films. He has a unique expression style and can adapt fluently to the audience of choice. Matthew spent three years gaining expertise in one of the biggest advertising agencies in Osaka. Animations behind our provoking meme teaser are complete results of his handprints.",
+      email: "Matthew@qpoker.io",
     },
     {
       id: 3,
@@ -66,6 +68,7 @@ const Characters = () => {
       abbrPosition: "CMO",
       description:
         "Fredrik is a social media and digital strategist with an agency and in-house background, including over nine years of digital and traditional PR and event marketing experience. His expertise includes digital strategy, branded channel development, community management, integrated campaigns, social media relations, training, SEO, website management, and online retail.",
+      email: "Fredrik@qpoker.io",
     },
     {
       id: 4,
@@ -81,6 +84,7 @@ const Characters = () => {
       abbrPosition: "CPO",
       description:
         "Michael is an experienced IT entrepreneur. He has extensive experience in software development, team management, and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive toward excellence make him a key team player. He is the one who’s never afraid of bringing up critical points of view on the table.",
+      email: "Michael@qpoker.io",
     },
     {
       id: 5,
@@ -96,6 +100,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Johnnie is a professional data analyst and blockchain enthusiast. He has a comprehensive understanding of systems security and significant database processing. Johnnie has managed dozens of challenging web projects in various fields such as finance, gaming, insurance, and more.",
+      email: "Johnnie@qpoker.io",
     },
     {
       id: 6,
@@ -111,6 +116,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Vanessa is a social media and digital strategist with an agency and in-house background, including over nine years of digital and traditional PR and event marketing experience. Her expertise includes digital strategy, branded channel development, community management, integrated campaigns, social media relations, training, SEO, website management, and online retail.",
+      email: "Vanessa@qpoker.io",
     },
     {
       id: 7,
@@ -126,6 +132,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Arnold is a venture capitalist and iGaming veteran. He launched one of the first online poker rooms on iPoker Network in the early 2000s. He sold his share of the business in 2008 and has been financing several aspiring iGaming start-ups since then. ",
+      email: "arnold@qpoker.io",
     },
 
     {
@@ -142,6 +149,7 @@ const Characters = () => {
       abbrPosition: "CEO",
       description:
         "Peter is an experienced IT entrepreneur and security expert. He has extensive experience in software development, team leadership, and business management. In the iGaming field, Peter made a long career in management positions in Betsson, the largest multi-national gambling company in Europe, employing over 1,800 people from 55 nationalities.",
+      email: "Peter@qpoker.io",
     },
     {
       id: 9,
@@ -157,6 +165,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Hans has been a multifaceted designer from a young age. He’s been working with several crypto start-ups to create fresh and engaging DApps. He believes that a felicitous design engages you with a good spirit. With QPoker, he shares only one vision, to build a masterly user experience no other iGaming platform has ever reached out to. Hans is one of our earliest members as he has been participating in the QPoker’s design work from the very beginning.",
+      email: "Hans@qpoker.io",
     },
     {
       id: 10,
@@ -172,6 +181,7 @@ const Characters = () => {
       abbrPosition: "",
       description:
         "Eccentric creative genius. Ashley is an uninhibited anarchist whose flow of life comes from breaking taboos. To put it briefly, it is Ashley’s way or the highway. She doesn’t make compromises on her artistic visions. Most likely, if you find NSFW content from our marketing approach, she’s the one to be blamed. For instance, QPoker’s meme teaser script was entirely in her handwriting. ",
+      email: "Ashley@qpoker.io",
     },
   ];
 };

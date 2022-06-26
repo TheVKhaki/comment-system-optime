@@ -9,7 +9,9 @@ import { Navigation } from "swiper";
 import "swiper/css/navigation";
 //icon
 import { IconContext } from "react-icons";
+import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import { HiOutlineMail } from "react-icons/hi";
 //lottie
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
@@ -58,6 +60,7 @@ const OurTeam = () => {
   //animation
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -214,6 +217,7 @@ const OurTeam = () => {
                       onClick={handleClickNFT}
                     >
                       <motion.img
+                        title={characters.job}
                         className={`${inView ? "show" : "hidden"} `}
                         src={characters.image}
                         alt=""
@@ -248,6 +252,38 @@ const OurTeam = () => {
                             )}
                             {characters.job}
                           </p>
+                          <div className="social-media-our-team">
+                            <IconContext.Provider
+                              value={{
+                                color: "white",
+                                size: "2.4rem",
+                              }}
+                            >
+                              <a href="#" target="_blank">
+                                <FaTelegramPlane />
+                              </a>
+                            </IconContext.Provider>
+                            <IconContext.Provider
+                              value={{
+                                color: "white",
+                                size: "2.4rem",
+                              }}
+                            >
+                              <a href={characters.email} target="_blank">
+                                <HiOutlineMail />
+                              </a>
+                            </IconContext.Provider>
+                            <IconContext.Provider
+                              value={{
+                                color: "white",
+                                size: "2.4rem",
+                              }}
+                            >
+                              <a href="#" target="_blank">
+                                <FaDiscord />
+                              </a>
+                            </IconContext.Provider>
+                          </div>
                         </div>
                       </div>
                       <img src={characters.image} alt="" />
@@ -310,6 +346,38 @@ const OurTeam = () => {
                         )}
                         {characters.job}
                       </p>
+                      <div className="social-media-our-team">
+                        <IconContext.Provider
+                          value={{
+                            color: "white",
+                            size: "2.4rem",
+                          }}
+                        >
+                          <a href="#" target="_blank">
+                            <FaTelegramPlane />
+                          </a>
+                        </IconContext.Provider>
+                        <IconContext.Provider
+                          value={{
+                            color: "white",
+                            size: "2.4rem",
+                          }}
+                        >
+                          <a href={characters.email} target="_blank">
+                            <HiOutlineMail />
+                          </a>
+                        </IconContext.Provider>
+                        <IconContext.Provider
+                          value={{
+                            color: "white",
+                            size: "2.4rem",
+                          }}
+                        >
+                          <a href="#" target="_blank">
+                            <FaDiscord />
+                          </a>
+                        </IconContext.Provider>
+                      </div>
                     </div>
                   </div>
                 </Container>

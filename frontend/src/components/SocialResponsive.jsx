@@ -1,10 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 //media
 import socialRes from "../images/social-responsive.svg";
-//observer
-import { useInView } from "react-intersection-observer";
-//Framer motion
-import { motion, useAnimation } from "framer-motion";
 //icon
 import { IconContext } from "react-icons";
 import {
@@ -14,69 +10,42 @@ import {
   FaTrello,
 } from "react-icons/fa";
 const SocialResponsive = () => {
-  const controls = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const controls4 = useAnimation();
-  const controls5 = useAnimation();
-  const controls6 = useAnimation();
-  const controls7 = useAnimation();
-  const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [element2, inView2] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [element3, inView3] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [element4, inView4] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [element5, inView5] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [element6, inView6] = useInView({
-    threshold: 0,
-    triggerOnce: true,
-    rootMargin: "-145px",
+  const [dataSocial, setDataSocial] = useState({
+    telegramChannel: "",
+    twitterFollowers: "",
+    youtubeSubscribers: "",
   });
-  const [element7, inView7] = useInView({
-    threshold: 0,
-    triggerOnce: true,
-    rootMargin: "-161px",
-  });
-
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
+    fetch("https://stag.owl.qpoker.io/api/v1/social_growth")
+      .then((response) => response.json())
+      .then((data) => socialGrowth(data));
+    function socialGrowth(dataSocial) {
+      const telegramGrowth =
+        ((dataSocial.telegram_channel.now -
+          dataSocial.telegram_channel.last_week) /
+          dataSocial.telegram_channel.last_week) *
+        100;
+      const twitterGrowth =
+        ((dataSocial.twitter_followers.now -
+          dataSocial.twitter_followers.last_week) /
+          dataSocial.twitter_followers.last_week) *
+        100;
+      const youtubeGrowth =
+        ((dataSocial.youtube_subscribers.now -
+          dataSocial.youtube_subscribers.last_week) /
+          dataSocial.youtube_subscribers.last_week) *
+        100;
+      setDataSocial({
+        telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
+        twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),
+        youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
+      });
     }
-    if (inView2) {
-      controls2.start("visible");
-    }
-    if (inView3) {
-      controls3.start("visible");
-    }
-    if (inView4) {
-      controls4.start("visible");
-    }
-    if (inView5) {
-      controls5.start("visible");
-    }
-    if (inView6) {
-      controls6.start("visible");
-    }
-    if (inView7) {
-      controls7.start("visible");
-    }
-  }, [controls, inView, inView2, inView3, inView4, inView5, inView6, inView7]);
-
-  const itemPath = {
-    hidden: {
-      pathLength: 0,
-    },
-    visible: {
-      pathLength: 1,
-      transition: {
-        duration: 1,
-        delay: 0.3,
-      },
-    },
-  };
+  }, []);
 
   return (
     <>
-      <section className="social-responsive" id="social-res">
+      <section className="social-responsive" id="campaigns">
         <div className="header-social">
           <h2>NFT Giveaways Go Mammoth</h2>
           <p>Ride on to the Rewards</p>
@@ -220,11 +189,7 @@ const SocialResponsive = () => {
           </svg>
            */}
           <img src={socialRes} alt="" className="svg-responsive-social" />
-          <a
-            href="#"
-            className="text-telegram text-image-responsive"
-            ref={element2}
-          >
+          <a href="#" className="text-telegram text-image-responsive">
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
                 <FaTwitter />
@@ -232,14 +197,10 @@ const SocialResponsive = () => {
             </IconContext.Provider>
             <span>Twitter</span>
             <p>
-              +285.02% <span>(7d %)</span>
+              +{dataSocial.twitterFollowers} <span>(7d %)</span>
             </p>
           </a>
-          <a
-            href="#"
-            className="text-twitter text-image-responsive"
-            ref={element3}
-          >
+          <a href="#" className="text-twitter text-image-responsive">
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
                 <FaTelegramPlane />
@@ -247,38 +208,28 @@ const SocialResponsive = () => {
             </IconContext.Provider>
             <span>Telegram</span>
             <p>
-              +171.69% <span>(7d %)</span>
+              +{dataSocial.telegramChannel}% <span>(7d %)</span>
             </p>
           </a>
-          <a
-            href="#"
-            className="text-youtube text-image-responsive"
-            ref={element4}
-          >
+          <a href="#" className="text-youtube text-image-responsive">
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
                 <FaYoutube />
               </div>
             </IconContext.Provider>
             <span>Youtube</span>
-            <p ref={element6}>
-              +121.10% <span>(7d %)</span>
+            <p>
+              +{dataSocial.youtubeSubscribers}% <span>(7d %)</span>
             </p>
           </a>
-          <a
-            href="#"
-            className="text-trello text-image-responsive"
-            ref={element5}
-          >
+          <a href="#" className="text-trello text-image-responsive">
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div href="#">
                 <FaTrello />
               </div>
             </IconContext.Provider>
             <span>Trello</span>
-            <p ref={element7}>
-              +1.12% <span>(7d %)</span>
-            </p>
+            <p style={{ color: "white" }}>ComingSoon</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>$50,000</span>

@@ -1,11 +1,12 @@
-import { Container, Nav } from "react-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
-import Offcanvas from "react-bootstrap/Offcanvas";
-// import logoImage from "../images/03-03 2.png";
+//react
+import { useEffect, useRef, useState } from "react";
+//bootstrap
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+//media
 import logoImage from "../images/LOW_Logo-New-Color-C.png";
 //Gsap
 import { gsap } from "gsap";
-import { useEffect, useRef, useState } from "react";
+//framer motion
 import { motion } from "framer-motion";
 const Header = () => {
   const header = useRef();
@@ -64,8 +65,8 @@ const Header = () => {
               </div>
             </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
-              <Nav.Link href="#heroo">Home</Nav.Link>
-              <Nav.Link href="#sociall">Campaigns</Nav.Link>
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#campaigns">Campaigns</Nav.Link>
               <Nav.Link href="#roadmapp">RoadMap</Nav.Link>
               <Nav.Link className="logo ">
                 <motion.img
@@ -97,7 +98,7 @@ const Header = () => {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#hero">Home</Nav.Link>
-                  <Nav.Link href="#social-res">Campaigns</Nav.Link>
+                  <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
                   <Nav.Link href="#roadmap-3">Litepaper</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>

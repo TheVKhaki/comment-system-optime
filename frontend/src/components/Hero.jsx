@@ -317,7 +317,7 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#social-res" className="btn-hero btn-main">
+                <a href="#campaigns" className="btn-hero btn-main">
                   Explore
                   <span></span>
                 </a>

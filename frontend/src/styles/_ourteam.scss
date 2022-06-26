@@ -40,7 +40,28 @@
       font-size: 25px;
     }
   }
-
+  .social-media-our-team {
+    position: absolute !important;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    width: 200px;
+    justify-content: space-evenly;
+    a {
+      padding: 0.7rem;
+      border-radius: 50%;
+      &:nth-child(1) {
+        background-color: #0088cc;
+      }
+      &:nth-child(2) {
+        background-color: #fba611;
+      }
+      &:nth-child(3) {
+        background-color: #5865f2;
+      }
+    }
+  }
   .ourteam-characters {
     min-height: 82vh;
     display: flex;
@@ -151,7 +172,7 @@
         justify-content: end;
         width: fit-content;
         margin-bottom: 15vh;
-
+        z-index: 3;
         .wrapper-characters-information-mobile {
           border: 1px solid #e28001;
           position: relative;
