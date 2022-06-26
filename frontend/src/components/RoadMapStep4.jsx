@@ -78,7 +78,7 @@ const RoadMapStep4 = () => {
                 <span style={{ color: "#e28001" }}>Q</span>Poker
               </h2>
               <p>
-                1<sup>st</sup> Airdrop’s Finishing Time
+                1<sup>st</sup> Airdrop’s Starting Time
               </p>
             </motion.div>
             <motion.div

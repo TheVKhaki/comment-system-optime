@@ -13,7 +13,6 @@ import { useInView } from "react-intersection-observer";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
 //lazyload
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Lazyload from "../HOC/Lazyload";
 //gsap
 import { gsap } from "gsap";

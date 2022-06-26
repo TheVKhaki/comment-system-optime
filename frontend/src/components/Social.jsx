@@ -5,7 +5,7 @@ import {
   FaYoutube,
   FaTrello,
 } from "react-icons/fa";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
@@ -15,55 +15,16 @@ import { gsap } from "gsap";
 const SocialSection = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [dataSocial, setDataSocial] = useState({
+    telegramChannel: "",
+    twitterFollowers: "",
+    youtubeSubscribers: "",
+  });
   const sections2 = useRef(null);
   const sections2Fade = useRef(null);
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-      //Canvas
-      // Initialising the canvas
-      // var canvas = document.querySelector(".matrix-load canvas"),
-      //   ctx = canvas.getContext("2d");
-
-      // // Setting the width and height of the canvas
-      // canvas.width = window.innerWidth;
-      // canvas.height = window.innerHeight;
-
-      // // Setting up the letters
-      // var letters =
-      //   "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
-      // letters = letters.split("");
-
-      // // Setting up the columns
-      // var fontSize = 10,
-      //   columns = canvas.width / fontSize;
-
-      // // Setting up the drops
-      // var drops = [];
-      // for (var i = 0; i < columns; i++) {
-      //   drops[i] = 1;
-      // }
-
-      // // Setting up the draw function
-      // function draw() {
-      //   ctx.fillStyle = "rgba(0, 0, 0, .1)";
-      //   ctx.fillRect(0, 0, canvas.width, canvas.height);
-      //   for (var i = 0; i < drops.length; i++) {
-      //     var text = letters[Math.floor(Math.random() * letters.length)];
-      //     ctx.fillStyle = "#e28001";
-      //     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      //     drops[i]++;
-      //     // if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-      //     //   drops[i] = 0;
-      //     // }
-      //   }
-      // }
-
-      // // Loop the animation
-      // setInterval(draw, 16);
-      // setTimeout(() => {
-      //   canvas.style.display = "none";
-      // }, 2000);
     } else {
       controls.start("hidden");
     }
@@ -258,10 +219,41 @@ const SocialSection = () => {
       }
     );
   }, []);
+  useEffect(() => {
+    fetch("https://stag.owl.qpoker.io/api/v1/social_growth")
+      .then((response) => response.json())
+      .then((data) => socialGrowth(data));
+    function socialGrowth(dataSocial) {
+      const telegramGrowth =
+        ((dataSocial.telegram_channel.now -
+          dataSocial.telegram_channel.last_week) /
+          dataSocial.telegram_channel.last_week) *
+        100;
+      const twitterGrowth =
+        ((dataSocial.twitter_followers.now -
+          dataSocial.twitter_followers.last_week) /
+          dataSocial.twitter_followers.last_week) *
+        100;
+      const youtubeGrowth =
+        ((dataSocial.youtube_subscribers.now -
+          dataSocial.youtube_subscribers.last_week) /
+          dataSocial.youtube_subscribers.last_week) *
+        100;
+      setDataSocial({
+        telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
+        twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),
+        youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
+      });
+    }
+  }, []);
 
   return (
     <>
-      <section className="social-section" id="social" ref={element}>
+      <section
+        className="social-section d-lg-block d-none"
+        id="social"
+        ref={element}
+      >
         <div ref={sections2}>
           <div ref={sections2Fade}>
             {/* <div className="matrix-load">
@@ -676,7 +668,11 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="+285.02% (7d %)"
+                            characters={
+                              "+" +
+                              dataSocial.twitterFollowers.toString() +
+                              "% (7d %)"
+                            }
                           />
                         </p>
                       </div>
@@ -720,7 +716,11 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="+171.69% (7d %)"
+                            characters={
+                              "+" +
+                              dataSocial.telegramChannel.toString() +
+                              "% (7d %)"
+                            }
                           />
                         </p>
                       </div>
@@ -764,7 +764,11 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="+121.10% (7d %)"
+                            characters={
+                              "+" +
+                              dataSocial.youtubeSubscribers.toString() +
+                              "% (7d %)"
+                            }
                           />
                         </p>
                       </div>
@@ -802,13 +806,13 @@ const SocialSection = () => {
                         />
                       </span>
                       <div className="wrapper-detail">
-                        <p>
+                        <p style={{ color: "white" }}>
                           {" "}
                           <RandomReveal
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="+47.30% (7d %)"
+                            characters="ComingSoon"
                           />
                         </p>
                       </div>

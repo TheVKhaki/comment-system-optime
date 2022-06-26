@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 //media
-import logoQpoker from "../images/03-03 13.png";
+import logoQpoker from "../images/LogoBlack.png";
 import metamask from "../images/login/metamask.png";
 //icon
 import { IconContext } from "react-icons";
