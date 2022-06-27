@@ -154,7 +154,6 @@ const Hero = () => {
       videoElephantRef4.current.currentTime = 0;
       videoElephantRef5.current.classList.add("video-1");
       videoElephantRef5.current.play();
-      console.log("QPokerrrrrrrrr2")
     }
   };
   const EndVideo5Handler = () => {
@@ -232,8 +231,8 @@ const Hero = () => {
               autoPlay
               // onEnded={EndHandler}
               onEnded={EndVideoHandler}
-            // onDurationChange={durationEx}
-            // onTimeUpdate={durationBg}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
             >
               <source src={videoElephantPart1} type="video/mp4" />
             </video>
@@ -243,8 +242,8 @@ const Hero = () => {
               muted
               // onEnded={EndHandler}
               onEnded={EndVideo2Handler}
-            // onDurationChange={durationEx}
-            // onTimeUpdate={durationBg}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
             >
               <source src={videoElephantPart2} type="video/mp4" />
             </video>
@@ -254,8 +253,8 @@ const Hero = () => {
               muted
               // onEnded={EndHandler}
               onEnded={EndVideo3Handler}
-            // onDurationChange={durationEx}
-            // onTimeUpdate={durationBg}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
             >
               <source src={videoElephantPart3} type="video/mp4" />
             </video>
@@ -265,8 +264,8 @@ const Hero = () => {
               muted
               // onEnded={EndHandler}
               onEnded={EndVideo4Handler}
-            // onDurationChange={durationEx}
-            // onTimeUpdate={durationBg}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
             >
               <source src={videoElephantPart4} type="video/mp4" />
             </video>
@@ -276,8 +275,8 @@ const Hero = () => {
               muted
               // onEnded={EndHandler}
               onEnded={EndVideo5Handler}
-            // onDurationChange={durationEx}
-            // onTimeUpdate={durationBg}
+              // onDurationChange={durationEx}
+              // onTimeUpdate={durationBg}
             >
               <source src={videoElephantPart5} type="video/mp4" />
             </video>
@@ -288,7 +287,6 @@ const Hero = () => {
                 <h2>
                   <span>Q</span>Poker
                   <br />
-
                   <span>Metaverse Quess'em Poker</span>
                 </h2>
                 <p>
