@@ -71,7 +71,7 @@ services:
         # - traefik.http.middlewares.${STACK_NAME}-www-redirect.redirectregex.replacement=https://www.${DOMAIN}/$${3}
         - traefik.http.middlewares.${STACK_NAME?Variable not set}-auth.basicauth.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}
         # Middleware to redirect www, to disable it remove the next line
-        - traefik.http.routers.${STACK_NAME?Variable not set}-proxy-https.middlewares=${STACK_NAME?Variable not set}-www-redirect,${STACK_NAME?Variable not set}-security,${STACK_NAME?Variable not set}-auth
+        - traefik.http.routers.${STACK_NAME?Variable not set}-proxy-https.middlewares=${STACK_NAME?Variable not set}-www-redirect,${STACK_NAME?Variable not set}-security${PROXY_EXTRA_MIDDLEWARES}
         # Middleware to redirect www, and redirect HTTP to HTTPS
         # to disable www redirection remove the section: ${STACK_NAME?Variable not set}-www-redirect,
         - traefik.http.routers.${STACK_NAME?Variable not set}-proxy-http.middlewares=${STACK_NAME?Variable not set}-www-redirect,${STACK_NAME?Variable not set}-https-redirect,${STACK_NAME?Variable not set}-security
