@@ -12,8 +12,7 @@ import { RandomReveal } from "react-random-reveal";
 //Icon
 import { IconContext } from "react-icons";
 import { FaCheck, FaHourglassHalf } from "react-icons/fa";
-//lazyload
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const RoadMap = () => {
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });

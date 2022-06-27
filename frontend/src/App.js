@@ -1,6 +1,5 @@
 import "./styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "fullpage.js/dist/fullpage.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
 //Page
@@ -8,8 +7,6 @@ import Home from "./page/Home";
 //Components
 import Header from "./components/Header";
 import SocialSection from "./components/Social";
-//Router
-import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
