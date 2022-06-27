@@ -288,7 +288,7 @@ const Hero = () => {
                 <h2>
                   <span>Q</span>Poker
                   <br />
-                  <h1>Kirrrrrrr</h1>
+
                   <span>Metaverse Quess'em Poker</span>
                 </h2>
                 <p>
