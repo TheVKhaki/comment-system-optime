@@ -37,7 +37,6 @@ const Header = () => {
         if (isChrome) {
           setTimeout(function () {
             var hash = window.location.hash;
-            console.log(hash);
             window.location.hash = "";
             window.location.hash = hash;
           }, 300);

@@ -197,7 +197,7 @@ const SocialResponsive = () => {
             </IconContext.Provider>
             <span>Twitter</span>
             <p>
-              +{dataSocial.twitterFollowers} <span>(7d %)</span>
+              +{dataSocial.twitterFollowers}% <span>(7d %)</span>
             </p>
           </a>
           <a href="#" className="text-twitter text-image-responsive">

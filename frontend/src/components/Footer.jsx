@@ -14,7 +14,6 @@ const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");
     window.addEventListener("scroll", function (e) {
-      console.log(window.scrollY);
       if (window.scrollY > 430) {
         btnGoToTop.classList = "go-to-top opacity-75 visible";
       } else {
@@ -35,6 +34,10 @@ const Footer = () => {
   return (
     <>
       <section className="footer-home" id="footer">
+        <div className="comingsoon-ourpartner">
+          <h3>ComingSoon</h3>
+        </div>
+
         <OurPartner />
         <footer>
           <Container>
@@ -95,11 +98,21 @@ const Footer = () => {
                     <li>Mahe, Seychelles</li>
                   </ul>
                   <ul>
-                    <li>Links</li>
-                    <li>Blog</li>
-                    <li>FAQ</li>
-                    <li>Privacy Policy</li>
-                    <li>About Us</li>
+                    <li>
+                      <a href="#">Links</a>{" "}
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>{" "}
+                    </li>
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#">About Us</a>
+                    </li>
                   </ul>
                 </div>
               </Col>

@@ -111,7 +111,7 @@ const Home = () => {
     if (app.classList.contains("fullscreen")) {
       root.addEventListener("wheel", function (e) {
         var currentTime = new Date().getTime();
-        console.log(currentTime - lastTime < animationDuration);
+
         if (currentTime - lastTime < animationDuration) {
           e.preventDefault();
           return;

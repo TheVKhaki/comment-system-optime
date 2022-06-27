@@ -429,12 +429,10 @@ function MyVerticallyCenteredModal(props) {
       );
       const myEnterFunc = () => {
         rocketAnimRef.current.play();
-        console.log("object");
       };
       const myLeaveFunc = () => {
         rocketAnimRef.current.currentTime = 0;
         rocketAnimRef.current.pause();
-        console.log("object1");
       };
       gsap.fromTo(
         document.querySelector(".roadmap-participate video"),
