@@ -259,7 +259,15 @@ const OurTeam = () => {
                                 size: "2.4rem",
                               }}
                             >
-                              <a href="#" target="_blank">
+                              <a
+                                href={characters.telegram}
+                                target="_blank"
+                                className={`${
+                                  characters.telegram === ""
+                                    ? "text-muted"
+                                    : null
+                                }`}
+                              >
                                 <FaTelegramPlane />
                               </a>
                             </IconContext.Provider>
@@ -279,7 +287,15 @@ const OurTeam = () => {
                                 size: "2.4rem",
                               }}
                             >
-                              <a href="#" target="_blank">
+                              <a
+                                href={characters.discord}
+                                target="_blank"
+                                className={`${
+                                  characters.discord === ""
+                                    ? "text-muted"
+                                    : null
+                                }`}
+                              >
                                 <FaDiscord />
                               </a>
                             </IconContext.Provider>
@@ -353,7 +369,13 @@ const OurTeam = () => {
                             size: "2.4rem",
                           }}
                         >
-                          <a href="#" target="_blank">
+                          <a
+                            href={characters.telegram}
+                            target="_blank"
+                            className={`${
+                              characters.telegram === "" ? "text-muted" : null
+                            }`}
+                          >
                             <FaTelegramPlane />
                           </a>
                         </IconContext.Provider>
@@ -373,7 +395,13 @@ const OurTeam = () => {
                             size: "2.4rem",
                           }}
                         >
-                          <a href="#" target="_blank">
+                          <a
+                            href={characters.discord}
+                            target="_blank"
+                            className={`${
+                              characters.discord === "" ? "text-muted" : null
+                            }`}
+                          >
                             <FaDiscord />
                           </a>
                         </IconContext.Provider>

@@ -32,6 +32,7 @@
         flex-shrink: 0;
         width: 100%;
         position: relative;
+        align-items: center;
         // animation: news-tricker 30s linear infinite alternate;
         grid-template-rows: repeat(2, 120px);
         // @keyframes news-tricker {

@@ -2551,6 +2551,10 @@ body.modal-open {
   justify-content: space-evenly;
 }
 
+.ourteam .social-media-our-team .text-muted {
+  background-color: #6c757d !important;
+}
+
 .ourteam .social-media-our-team a {
   padding: 0.7rem;
   border-radius: 50%;
@@ -3237,6 +3241,9 @@ body.modal-open {
   flex-shrink: 0;
   width: 100%;
   position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-grid-rows: (120px) [2];
   grid-template-rows: repeat(2, 120px);
 }

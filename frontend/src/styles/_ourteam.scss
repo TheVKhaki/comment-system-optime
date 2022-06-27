@@ -48,6 +48,9 @@
     bottom: -60px;
     width: 200px;
     justify-content: space-evenly;
+    .text-muted {
+      background-color: #6c757d !important;
+    }
     a {
       padding: 0.7rem;
       border-radius: 50%;

@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 function App() {
   //animation btn-main
   useEffect(() => {
+    // alert(`width ${window.innerWidth},
+    // height ${window.innerHeight}`);
     // window.addEventListener("load", function () {
     //   const width = window.innerWidth;
     //   const height = window.innerHeight;
