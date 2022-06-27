@@ -1,11 +1,10 @@
 import binanceLogo from "../images/binance.webp";
-import bscscanLogo from "../images/bscscan-logo.svg";
+import bscscanLogo from "../images/bscscan-logoWITE-01.svg";
 import openseaLogo from "../images/OpenSea-Full-Logo (light).svg";
-import polygonLogo from "../images/polygon_token_logo-freelogovectors.net_.svg";
+import polygonLogo from "../images/polygon_Wite-01.svg";
 import quickswapLogo from "../images/QuickSwap-Exchange-Logo.png";
-
 import alchemy from "../images/alchemy.png";
-import openzepplin from "../images/oppen_Zepplin.webp";
+import openzepplin from "../images/oppen_ZepplinWITE.png";
 import certik from "../images/certik.svg";
 
 const OurPartnerApi = () => {
@@ -41,7 +40,7 @@ const OurPartnerApi = () => {
     {
       id: 8,
       imgSrc: certik,
-    }
+    },
   ];
 };
 

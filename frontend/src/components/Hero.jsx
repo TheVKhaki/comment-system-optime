@@ -115,26 +115,6 @@ const Hero = () => {
     var iframeSrc = iframe.src;
     iframe.src = iframeSrc;
   };
-  const durationEx = () => {
-    console.log("object");
-  };
-  const durationBg = () => {
-    const currentTimeVideo = videoElephantRef.current.currentTime;
-
-    if (currentTimeVideo <= 22 && currentTimeVideo >= 21 && !videoShow) {
-      videoElephantRef.current.currentTime = 10;
-      videoElephantRef.current.play();
-    }
-    if (currentTimeVideo >= 10 && currentTimeVideo <= 17 && videoShow) {
-      videoElephantRef.current.currentTime = 21;
-      videoElephantRef.current.play();
-    }
-    if (currentTimeVideo >= 25 && videoShow) {
-      videoElephantRef.current.currentTime = 22;
-      videoElephantRef.current.play();
-    }
-  };
-
   const EndVideoHandler = () => {
     videoElephantRef.current.classList.remove("video-1");
     videoElephantRef.current.classList.add("video-2");

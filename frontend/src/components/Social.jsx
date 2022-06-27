@@ -250,7 +250,7 @@ const SocialSection = () => {
   return (
     <>
       <section
-        className="social-section d-lg-block d-none"
+        className="social-section d-lg-flex d-none"
         id="social"
         ref={element}
       >

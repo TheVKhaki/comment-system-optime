@@ -145,7 +145,6 @@ const OurTeam = () => {
   }, []);
   useEffect(() => {
     if (showLoad === 100) {
-      console.log("object");
       gsap.fromTo(
         document.querySelectorAll(".characters-information img"),
         {
@@ -154,7 +153,7 @@ const OurTeam = () => {
         {
           opacity: 0,
           duration: 0.5,
-          delay: 5,
+          delay: 3,
         }
       );
     }
