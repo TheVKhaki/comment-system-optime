@@ -12,8 +12,10 @@ import { RandomReveal } from "react-random-reveal";
 //Icon
 import { IconContext } from "react-icons";
 import { FaCheck, FaHourglassHalf } from "react-icons/fa";
-
+//react responsive
+import { useMediaQuery } from "react-responsive";
 const RoadMap = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
@@ -53,14 +55,18 @@ const RoadMap = () => {
   };
 
   useEffect(() => {
-    const imagePerspective = document.querySelector(".img-slide-roadmap-1 img");
-    const sectionInPerspective = document.querySelector(".roadmap-step1");
-    sectionInPerspective.addEventListener("mousemove", function (e) {
-      const position = (e.clientX / window.innerWidth) * 30 + "px";
-      const positionY = (e.clientY / window.innerHeight) * 20 + "px";
-      imagePerspective.style.transform = `translate(${position},${positionY})`;
-    });
-  }, []);
+    if (!isTabletOrMobile) {
+      const imagePerspective = document.querySelector(
+        ".img-slide-roadmap-1 img"
+      );
+      const sectionInPerspective = document.querySelector(".roadmap-step1");
+      sectionInPerspective.addEventListener("mousemove", function (e) {
+        const position = (e.clientX / window.innerWidth) * 30 + "px";
+        const positionY = (e.clientY / window.innerHeight) * 20 + "px";
+        imagePerspective.style.transform = `translate(${position},${positionY})`;
+      });
+    }
+  }, [isTabletOrMobile]);
 
   return (
     <>
@@ -125,138 +131,139 @@ const RoadMap = () => {
                   suscipit temporibus hic saepe rem nemo adipisci, dolorem
                   officiis quos doloremque unde numquam alias?
                 </p> */}
-                <ul>
-                  <Row>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Innovation and formation of the rulebook</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Manuscript and production of promotion videos</li>
-                    </Col>
 
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>
-                        Designing of the game structure and visual outlook
-                      </li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Tutorized game demonstration video</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaHourglassHalf />
-                        </span>
-                      </IconContext.Provider>
-                      <li>
-                        Programming of the game software’s alpha version
-                        (debugging stage)
-                      </li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaHourglassHalf />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Publishing of the white paper</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>Development of the website (front-end & back-end)</li>
-                    </Col>
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>
-                        Build of the social media robots for bounty campaigns{" "}
-                      </li>
-                    </Col>
+                <Row>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>Innovation and formation of the rulebook</span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>Manuscript and production of promotion videos</span>
+                  </Col>
 
-                    <Col lg={6}>
-                      <IconContext.Provider
-                        value={{
-                          color: "#e28001",
-                          size: "2rem",
-                        }}
-                      >
-                        <span>
-                          <FaCheck />
-                        </span>
-                      </IconContext.Provider>
-                      <li>
-                        Market research and creation of a feasibility study
-                      </li>
-                    </Col>
-                  </Row>
-                </ul>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>
+                      Designing of the game structure and visual outlook
+                    </span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>Tutorized game demonstration video</span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaHourglassHalf />
+                      </span>
+                    </IconContext.Provider>
+                    <span>
+                      Programming of the game software’s alpha version
+                      (debugging stage)
+                    </span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaHourglassHalf />
+                      </span>
+                    </IconContext.Provider>
+                    <span>Publishing of the white paper</span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>
+                      Development of the website (front-end & back-end)
+                    </span>
+                  </Col>
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>
+                      Build of the social media robots for bounty campaigns{" "}
+                    </span>
+                  </Col>
+
+                  <Col lg={6}>
+                    <IconContext.Provider
+                      value={{
+                        color: "#e28001",
+                        size: "2rem",
+                      }}
+                    >
+                      <span>
+                        <FaCheck />
+                      </span>
+                    </IconContext.Provider>
+                    <span>
+                      Market research and creation of a feasibility study
+                    </span>
+                  </Col>
+                </Row>
               </motion.div>
             </Col>
           </Row>

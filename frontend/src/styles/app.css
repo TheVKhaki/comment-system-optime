@@ -222,6 +222,10 @@ body button {
   z-index: -1;
 }
 
+.btn-main:hover {
+  border: 2px solid transparent;
+}
+
 .btn-main:hover span {
   width: 225%;
   height: 450px;
@@ -1579,22 +1583,24 @@ body.modal-open {
   min-height: 34vh;
 }
 
-.roadmap .content-slide-1-1 .text-roadmap-1 ul .col-lg-6 {
+.roadmap .content-slide-1-1 .text-roadmap-1 .col-lg-6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.roadmap .content-slide-1-1 .text-roadmap-1 ul span {
+.roadmap .content-slide-1-1 .text-roadmap-1 span:first-child {
   margin-right: 1.5rem;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.roadmap .content-slide-1-1 .text-roadmap-1 ul li {
+.roadmap .content-slide-1-1 .text-roadmap-1 span:last-child {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #fff;
+  font-family: "Rota";
+  letter-spacing: 0.5px;
 }
 
 .roadmap .content-slide-1-1 .img-slide-roadmap-1 {
@@ -1930,7 +1936,7 @@ body.modal-open {
   background-color: #f5f5f5;
   color: #000;
   border-radius: 11px;
-  padding: 10px 5px 20px 11px;
+  padding: 10px 5px 10px 11px;
   z-index: 3;
 }
 
@@ -1941,8 +1947,9 @@ body.modal-open {
 
 .roadmap2-modal .roadmap-participate .box-roadmap p {
   color: #000;
-  font-size: 21px;
-  margin-top: 2rem;
+  font-size: 19px;
+  margin-top: 0rem;
+  letter-spacing: 0.5px;
 }
 
 .roadmap2-modal .roadmap-participate .box-roadmap-2 {
@@ -2225,9 +2232,13 @@ body.modal-open {
     position: static;
     width: 100%;
     height: auto;
+    -webkit-transform: none;
+    transform: none;
   }
   .roadmap .content-slide-2-1 img {
     height: 380px;
+    -webkit-transform: none;
+    transform: none;
   }
   .roadmap .content-slide-3 {
     margin-top: 0;
@@ -2316,19 +2327,19 @@ body.modal-open {
     display: none;
   }
   .roadmap2-modal .roadmap-participate .box-twitter {
-    top: 104px;
+    top: 75px;
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-twitter-1 {
-    top: 412px;
+    top: 388px;
     left: auto;
   }
   .roadmap2-modal .roadmap-participate .box-telegram {
-    top: 753px;
+    top: 730px;
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-qpoker {
-    top: 1099px;
+    top: 1076px;
     left: auto;
   }
   .roadmap2-modal .roadmap-participate .box-youtube {
@@ -2374,7 +2385,7 @@ body.modal-open {
     right: 25px;
   }
   .roadmap .content-slide-1-1 .img-slide-roadmap-1 {
-    width: 84%;
+    width: 40%;
   }
 }
 
@@ -3461,6 +3472,15 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.8);
   margin: 1.5rem 0;
   letter-spacing: 1px;
+}
+
+.footer-home footer .footer-right ul li:not(:first-child) a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-home footer .footer-right ul li:not(:first-child) a:hover {
+  color: #e28001;
 }
 
 .footer-home footer .footer-right ul li a {

@@ -221,6 +221,7 @@ body {
     z-index: -1;
   }
   &:hover {
+    border: 2px solid transparent;
     span {
       width: 225%;
       height: 450px;

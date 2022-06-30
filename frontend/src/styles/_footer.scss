@@ -189,6 +189,14 @@
 
       ul {
         li {
+          &:not(:first-child) {
+            a {
+              transition: all 0.2s;
+              &:hover {
+                color: #e28001;
+              }
+            }
+          }
           a {
             color: #fff;
           }
