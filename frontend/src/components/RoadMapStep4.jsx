@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 //media
-import elephantComingsoon from "../images/BKGR4-03.png";
+import elephantComingsoon from "../images/FR 02_02 copy.webp";
 import elephantComingsoonRes from "../images/BKGR4-03-Res.png";
 //motion
 import { motion, useAnimation } from "framer-motion";
@@ -88,22 +88,10 @@ const RoadMapStep4 = () => {
               className="countdown"
             >
               <div className="countdown-number">
-                <div className="time-number">
-                  {/* <div className="time-couneter">D</div> */}
-                  {timeLeft.days}
-                </div>
-                <div className="time-number">
-                  {/* <div className="time-couneter">H</div> */}
-                  {timeLeft.hours}
-                </div>
-                <div className="time-number">
-                  {/* <div className="time-couneter">M</div> */}
-                  {timeLeft.minutes}
-                </div>
-                <div className="time-number">
-                  {/* <div className="time-couneter">S</div> */}
-                  {timeLeft.seconds}
-                </div>
+                <div className="time-number">{timeLeft.days}</div>
+                <div className="time-number">{timeLeft.hours}</div>
+                <div className="time-number">{timeLeft.minutes}</div>
+                <div className="time-number">{timeLeft.seconds}</div>
               </div>
             </motion.div>
             <div className="coming-soon-text">

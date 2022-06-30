@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 //Bootstrap
-import { Col, Container, Row, Modal } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 //Media
 import imageRoadMap3 from "../images/3RD_FRG.png";
-import logoModalMore from "../images/logoModalMore.png";
-import modalCMC from "../images/modalCMC.png";
-import roadMapCMC from "../images/RMMBS3.svg";
+// import logoModalMore from "../images/logoModalMore.png";
+// import modalCMC from "../images/modalCMC.png";
+// import roadMapCMC from "../images/RMMBS3.svg";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
 //RandomReveal
@@ -14,8 +14,8 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 import Lazyload from "../HOC/Lazyload";
 //gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 //Modal Component
 // function MyVerticallyCenteredModal(props) {
 //   gsap.registerPlugin(ScrollTrigger);

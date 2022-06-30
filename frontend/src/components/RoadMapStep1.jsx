@@ -37,20 +37,6 @@ const RoadMap = () => {
       },
     },
   };
-  const imgRoadMap2 = {
-    hidden: {
-      opacity: 0,
-      x: 100,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1,
-        delay: 1.5,
-      },
-    },
-  };
   const textRoadMap1 = {
     hidden: {
       opacity: 0,
@@ -65,20 +51,6 @@ const RoadMap = () => {
       },
     },
   };
-  const textRoadMap2 = {
-    hidden: {
-      opacity: 0,
-      y: 70,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 1.5,
-      },
-    },
-  };
 
   useEffect(() => {
     const imagePerspective = document.querySelector(".img-slide-roadmap-1 img");
@@ -88,9 +60,6 @@ const RoadMap = () => {
       const positionY = (e.clientY / window.innerHeight) * 20 + "px";
       imagePerspective.style.transform = `translate(${position},${positionY})`;
     });
-    // imagePerspective.addEventListener("mouseleave", function (e) {
-    //   imagePerspective.style.transform = `translate(0,0)`;
-    // });
   }, []);
 
   return (
@@ -291,40 +260,6 @@ const RoadMap = () => {
               </motion.div>
             </Col>
           </Row>
-          {/* <Row className="content-slide-1-2">
-            <Col
-              lg={{ order: "first", span: 9 }}
-              xs={{ order: "last", span: 12 }}
-            >
-              <motion.div
-                variants={textRoadMap2}
-                initial="hidden"
-                animate={controls}
-                className="text-roadmap-2"
-              >
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,
-                  unde sequi! Est voluptatum nam aspernatur minus expedita ipsum
-                  laudantium saepe, fuga iste officiis eaque velit atque
-                  distinctio nihil quidem consequuntur vel quas nostrum,
-                  reiciendis necessitatibus?
-                </p>
-              </motion.div>
-            </Col>
-            <Col
-              lg={{ order: "last", span: 3 }}
-              xs={{ order: "first", span: 12 }}
-            >
-              <motion.div
-                variants={imgRoadMap2}
-                initial="hidden"
-                animate={controls}
-                className="img-slide-roadmap-1 img-slide-roadmap-1-2"
-              >
-                <LazyLoadImage src={imageRoadMap12} />
-              </motion.div>
-            </Col>
-          </Row> */}
         </Container>
       </section>
     </>

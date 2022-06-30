@@ -4,7 +4,6 @@ import { Col, Container, Row, Modal } from "react-bootstrap";
 //Media
 import imageRoadMap2 from "../images/2ND_FRG.png";
 import logoModalRoadMap from "../images/Logo_Newcode Color-16.png";
-import roadMapParticipate from "../images/RMMBS2.png";
 import rocketgif from "../video/ON_2.mp4";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
@@ -12,8 +11,6 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
-//lazyload
-import Lazyload from "../HOC/Lazyload";
 //gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

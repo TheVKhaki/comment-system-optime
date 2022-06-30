@@ -35,7 +35,7 @@ const Footer = () => {
     <>
       <section className="footer-home" id="footer">
         <div className="comingsoon-ourpartner">
-          <h3>ComingSoon</h3>
+          <h3>Coming Soon</h3>
         </div>
 
         <OurPartner />
@@ -65,21 +65,21 @@ const Footer = () => {
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="#">
+                      <a href="/#">
                         <FaTelegramPlane />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="#">
+                      <a href="/#">
                         <FaTwitter />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="#">
+                      <a href="/#">
                         <FaYoutube />
                       </a>
                     </IconContext.Provider>
@@ -98,20 +98,18 @@ const Footer = () => {
                     <li>Mahe, Seychelles</li>
                   </ul>
                   <ul>
+                    <li>Links</li>
                     <li>
-                      <a href="#">Links</a>{" "}
+                      <a href="/#">Blog</a>{" "}
                     </li>
                     <li>
-                      <a href="#">Blog</a>{" "}
+                      <a href="/#">FAQ</a>
                     </li>
                     <li>
-                      <a href="#">FAQ</a>
+                      <a href="/#">Privacy Policy</a>
                     </li>
                     <li>
-                      <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#">About Us</a>
+                      <a href="/#">About Us</a>
                     </li>
                   </ul>
                 </div>

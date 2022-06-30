@@ -32,12 +32,12 @@
   }
   .hero-text {
     height: 100vh;
-    width: 716px;
+    width: 720px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 2;
+    z-index: 10;
 
     .box {
       opacity: 0;

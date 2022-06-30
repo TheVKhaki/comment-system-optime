@@ -168,44 +168,6 @@ const SocialSection = () => {
       },
     },
   };
-  const pulseAnimation = {
-    hidden: {
-      opacity: 0,
-      scale: 100,
-    },
-    visible: {
-      opacity: 1,
-      scale: 0,
-      transition: {
-        duration: 2.5,
-        delay: arrayTimeAnimtion[0],
-      },
-    },
-  };
-  // const lineInfinity = {
-  //   hidden: {
-  //     opacity: 0,
-  //   },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //       delay: 4,
-  //     },
-  //   },
-  // };
-  // const lineInfinity2 = {
-  //   hidden: {
-  //     opacity: 0,
-  //   },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 0,
-  //       delay: 3.5,
-  //     },
-  //   },
-  // };
   useEffect(() => {
     gsap.to(dimondsFade.current, { opacity: 1 });
     gsap.fromTo(
@@ -256,9 +218,6 @@ const SocialSection = () => {
       >
         <div ref={sections2}>
           <div ref={sections2Fade}>
-            {/* <div className="matrix-load">
-              <canvas></canvas>
-            </div> */}
             <motion.div
               variants={headerFadeIn}
               initial="hidden"
@@ -582,55 +541,6 @@ const SocialSection = () => {
                   xlinkHref="data:image/png;base64,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"
                 ></motion.image>
               </motion.svg>
-              {/* <motion.div
-                variants={lineInfinity2}
-                initial="hidden"
-                animate={controls}
-                className="cover-path"
-              ></motion.div>
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="bdecf577-1f6a-4362-830d-59fa8c94bcfc"
-                viewBox="0 0 334.96 334.61"
-                className="line-gold-action "
-                variants={lineInfinity}
-                initial="hidden"
-                animate={controls}
-              >
-                <path
-                  fill="none"
-                  stroke="#efa51f"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="4"
-                  d="M64.69 60.49L91.44 60.49 130.85 100.04 204.64 100.15 244.21 60.49 270.6 60.49"
-                ></path>
-              </motion.svg> */}
-              {/* <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="bdecf577-1f6a-4362-830d-59fa8c94bcfc"
-                viewBox="0 0 334.96 334.61"
-                className="line-gold-action line-gold-action-1"
-                variants={lineInfinity}
-                initial="hidden"
-                animate={controls}
-              >
-                <path
-                  fill="none"
-                  stroke="#efa51f"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="4"
-                  d="M64.69 60.49L91.44 60.49 130.85 100.04 204.64 100.15 244.21 60.49 270.6 60.49"
-                ></path>
-              </motion.svg> */}
-
-              {/* <motion.div
-                variants={pulseAnimation}
-                initial="hidden"
-                animate={controls}
-                className="pulse-social-animation"
-              ></motion.div> */}
               <div className="right-circle-social">
                 <div className="telegram-social socials-in-circle">
                   <a href="#" className="link-social-in-circle">
@@ -821,20 +731,6 @@ const SocialSection = () => {
                 </div>
               </div>
               <div className="left-circle-social">
-                {/* <motion.div
-                  variants={lineInfinity1}
-                  initial="hidden"
-                  animate="visible"
-                  className="line-action-social-1"
-                ></motion.div>
-                <div className="wrapper-line-action-social-2">
-                  <motion.div
-                    variants={lineInfinity2}
-                    initial="hidden"
-                    animate="visible"
-                    className="line-action-social-2"
-                  ></motion.div>
-                </div> */}
                 <motion.div
                   variants={textFadeIn}
                   initial="hidden"
@@ -935,87 +831,6 @@ const SocialSection = () => {
                 </motion.div>
               </div>
             </div>
-
-            {/* <div className="circle-social">
-          <div className="right-circle-social">
-            <div className="telegram-social socials-in-circle">
-              <div className="circle-icon-social">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 95.48 57.13"
-                >
-                  <g
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    data-name="Layer 8"
-                  >
-                    <path
-                      stroke="#000"
-                      d="M7.27 51.81L24.23 23.12 51.88 23.12"
-                    ></path>
-                    <circle
-                      cx="70.4"
-                      cy="23.12"
-                      r="17.8"
-                      stroke="#efa51f"
-                      strokeWidth="2"
-                    ></circle>
-                  </g>
-                </svg>
-                <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-                  <a href="#">
-                    <FaTelegramPlane />
-                  </a>
-                </IconContext.Provider>
-              </div>
-              <div>
-                <span>Telegram</span>
-                <p>under gathering</p>
-              </div>
-            </div>
-            <div className="twitter-social socials-in-circle">
-              <div className="circle-icon-social">
-                <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-                  <a href="#">
-                    <FaTwitter />
-                  </a>
-                </IconContext.Provider>
-              </div>
-              <div>
-                <span>Twitter</span>
-                <p>under gathering</p>
-              </div>
-            </div>
-            <div className="youtube-social socials-in-circle">
-              <div className="circle-icon-social">
-                <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-                  <a href="#">
-                    <FaYoutube />
-                  </a>
-                </IconContext.Provider>
-              </div>
-              <div>
-                <span>Youtube</span>
-                <p>under gathering</p>
-              </div>
-            </div>
-            <div className="github-social socials-in-circle">
-              <div className="circle-icon-social">
-                <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-                  <a href="#">
-                    <FaGithub />
-                  </a>
-                </IconContext.Provider>
-              </div>
-              <div>
-                <span>Github</span>
-                <p>under gathering</p>
-              </div>
-            </div>
-          </div>
-          <img src={logoFooter} alt="" />
-        </div> */}
           </div>
         </div>
       </section>

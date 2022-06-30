@@ -14,6 +14,7 @@ const Header = () => {
   useEffect(() => {
     gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
+  //go to top
   useEffect(() => {
     const headerMobile = document.querySelector("header");
     window.addEventListener("scroll", function (e) {
@@ -24,6 +25,7 @@ const Header = () => {
       }
     });
   }, []);
+  //chrome issue for links
   const [menuShow, setMenuShow] = useState(false);
   useEffect(() => {
     const itemMenu = document.querySelectorAll(
@@ -44,6 +46,7 @@ const Header = () => {
       });
     });
   }, [menuShow]);
+  //scroll in menu open hidden
   const enterOffcanvas = () => {
     document.querySelector("html").style.overflowY = "hidden";
     setMenuShow(true);
@@ -63,7 +66,7 @@ const Header = () => {
                 <h1>QPoker</h1>
               </div>
             </Navbar.Brand>
-            <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
+            <Nav className="justify-content-center flex-grow-1 align-items-center">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#campaigns">Campaigns</Nav.Link>
               <Nav.Link href="#roadmapp">RoadMap</Nav.Link>

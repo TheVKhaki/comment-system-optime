@@ -68,7 +68,6 @@
 
     &.btn-slide-3 {
       position: relative;
-      top: 20px;
       display: flex;
       justify-content: end;
       margin-right: 6rem;
@@ -1081,7 +1080,7 @@
 @media screen and (min-height: 700px) and (max-height: 840px) and (min-width: 1000px) and (max-width: 1800px) {
   .roadmap {
     .btn-slide {
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
     p {
       font-size: 20px;

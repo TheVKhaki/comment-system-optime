@@ -335,6 +335,9 @@ header .navbar .navbar-nav a {
 
 header .navbar .navbar-nav .nav-link {
   color: #fff;
+}
+
+header .navbar .navbar-nav .nav-link:not(:last-child) {
   margin-right: 4rem;
 }
 
@@ -590,7 +593,7 @@ body.modal-open {
 
 .hero .hero-text {
   height: 100vh;
-  width: 716px;
+  width: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,7 +605,7 @@ body.modal-open {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 .hero .hero-text .box {
@@ -1532,7 +1535,6 @@ body.modal-open {
 
 .roadmap .btn-slide.btn-slide-3 {
   position: relative;
-  top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2464,7 +2466,7 @@ body.modal-open {
 
 @media screen and (min-height: 700px) and (max-height: 840px) and (min-width: 1000px) and (max-width: 1800px) {
   .roadmap .btn-slide {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   .roadmap p {
     font-size: 20px;
@@ -3233,6 +3235,7 @@ body.modal-open {
   background-color: #000;
   -webkit-filter: blur(9px);
   filter: blur(9px);
+  pointer-events: none;
 }
 
 .footer-home .our-partner .container {
@@ -3493,7 +3496,8 @@ body.modal-open {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-size: 13vw;
+    font-size: 12vw;
+    white-space: nowrap;
   }
   .footer-home .our-partner .our-partner-news-tricker .slide-news-tricker {
     -ms-grid-rows: (100px) [2];
@@ -3551,7 +3555,7 @@ body.modal-open {
 
 @media screen and (max-height: 830px) {
   .footer-home .our-partner .our-partner-news-tricker {
-    margin-top: 16vh;
+    margin-top: 12vh;
   }
 }
 
