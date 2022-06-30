@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { Col, Container, Row, Modal } from "react-bootstrap";
 //Media
-import imageRoadMap2 from "../images/2ND_FRG.png";
+import imageRoadMap2 from "../images/2ND_FRG.webp";
 import logoModalRoadMap from "../images/Logo_Newcode Color-16.png";
 import rocketgif from "../video/ON_2.mp4";
 //RandomReveal
@@ -14,7 +14,8 @@ import { motion, useAnimation } from "framer-motion";
 //gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+//react responsive
+import { useMediaQuery } from "react-responsive";
 function MyVerticallyCenteredModal(props) {
   gsap.registerPlugin(ScrollTrigger);
   const lineModal1 = useRef();
@@ -761,36 +762,46 @@ function MyVerticallyCenteredModal(props) {
           <div className="box-twitter box-roadmap" ref={boxModal1}>
             <h3>Telegram Bot</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repellat officiis, nobis voluptas veritatis ducimus provident
+              dicta sunt quam odit consequatur, natus minus atque inventore,
+              quasi
             </p>
           </div>
           <div className="box-twitter-1 box-roadmap" ref={boxModal2}>
             <h3>Telegram Channel</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repellat officiis, nobis voluptas veritatis ducimus provident
+              dicta sunt quam odit consequatur, natus minus atque inventore,
+              quasi
             </p>
           </div>
           <div className="box-telegram box-roadmap" ref={boxModal3}>
             <h3>Twitter</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repellat officiis, nobis voluptas veritatis ducimus provident
+              dicta sunt quam odit consequatur, natus minus atque inventore,
+              quasi
             </p>
           </div>
           <div className="box-qpoker box-roadmap" ref={boxModal4}>
             <h3>Youtube</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repellat officiis, nobis voluptas veritatis ducimus provident
+              dicta sunt quam odit consequatur, natus minus atque inventore,
+              quasi
             </p>
           </div>
           <div className="box-youtube box-roadmap" ref={boxModal5}>
             <h3>Refer-a-Friend</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repellat officiis, nobis voluptas veritatis ducimus provident
+              dicta sunt quam odit consequatur, natus minus atque inventore,
+              quasi
             </p>
           </div>
           <div className="box-roadmap-2">
@@ -814,6 +825,7 @@ function MyVerticallyCenteredModal(props) {
 }
 
 const RoadMapStep2 = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
   const [modalShow, setModalShow] = useState(false);
   const roadMapStep2 = useRef(null);
   const controls = useAnimation();
@@ -863,14 +875,16 @@ const RoadMapStep2 = () => {
     },
   };
   useEffect(() => {
-    const imagePerspective = document.querySelector(".content-slide-2-1 img");
-    const sectionInPerspective = document.querySelector(".roadmap-step2");
-    sectionInPerspective.addEventListener("mousemove", function (e) {
-      const position = (e.clientX / window.innerWidth) * 30 + "px";
-      const positionY = (e.clientY / window.innerHeight) * 20 + "px";
-      imagePerspective.style.transform = `translate(${position},${positionY})`;
-    });
-  }, []);
+    if (!isTabletOrMobile) {
+      const imagePerspective = document.querySelector(".content-slide-2-1 img");
+      const sectionInPerspective = document.querySelector(".roadmap-step2");
+      sectionInPerspective.addEventListener("mousemove", function (e) {
+        const position = (e.clientX / window.innerWidth) * 30 + "px";
+        const positionY = (e.clientY / window.innerHeight) * 20 + "px";
+        imagePerspective.style.transform = `translate(${position},${positionY})`;
+      });
+    }
+  }, [isTabletOrMobile]);
 
   return (
     <>

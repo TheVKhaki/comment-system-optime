@@ -105,20 +105,21 @@
     min-height: 34vh;
 
     .text-roadmap-1 {
-      ul {
-        .col-lg-6 {
-          display: flex;
-        }
+      .col-lg-6 {
+        display: flex;
+      }
 
-        span {
+      span {
+        &:first-child {
           margin-right: 1.5rem;
           flex-shrink: 0;
         }
-
-        li {
+        &:last-child {
           font-size: 2rem;
           margin-bottom: 2rem;
           color: #fff;
+          font-family: "Rota";
+          letter-spacing: 0.5px;
         }
       }
     }
@@ -400,7 +401,7 @@
       background-color: #f5f5f5;
       color: #000;
       border-radius: 11px;
-      padding: 10px 5px 20px 11px;
+      padding: 10px 5px 10px 11px;
       z-index: 3;
       h3 {
         color: #000;
@@ -409,8 +410,9 @@
 
       p {
         color: #000;
-        font-size: 21px;
-        margin-top: 2rem;
+        font-size: 19px;
+        margin-top: 0rem;
+        letter-spacing: 0.5px;
       }
     }
 
@@ -731,6 +733,7 @@
           position: static;
           width: 100%;
           height: auto;
+          transform: none;
         }
       }
     }
@@ -738,6 +741,7 @@
     .content-slide-2-1 {
       img {
         height: 380px;
+        transform: none;
       }
     }
 
@@ -852,22 +856,22 @@
   .roadmap2-modal {
     .roadmap-participate {
       .box-twitter {
-        top: 104px;
+        top: 75px;
         right: auto;
       }
 
       .box-twitter-1 {
-        top: 412px;
+        top: 388px;
         left: auto;
       }
 
       .box-telegram {
-        top: 753px;
+        top: 730px;
         right: auto;
       }
 
       .box-qpoker {
-        top: 1099px;
+        top: 1076px;
         left: auto;
       }
 
@@ -936,7 +940,7 @@
 
     .content-slide-1-1 {
       .img-slide-roadmap-1 {
-        width: 84%;
+        width: 40%;
       }
     }
   }

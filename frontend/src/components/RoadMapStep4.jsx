@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 //media
-import elephantComingsoon from "../images/FR 02_02 copy.webp";
-import elephantComingsoonRes from "../images/BKGR4-03-Res.png";
+import elephantComingsoon from "../images/BKGR4-03.webp";
+import elephantComingsoonRes from "../images/BKGR4-03-Res.webp";
 //motion
 import { motion, useAnimation } from "framer-motion";
 //RandomReveal
