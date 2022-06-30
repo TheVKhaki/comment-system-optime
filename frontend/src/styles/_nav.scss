@@ -44,7 +44,10 @@ header {
       }
       .nav-link {
         color: #fff;
-        margin-right: 4rem;
+        &:not(:last-child) {
+          margin-right: 4rem;
+        }
+
         &:focus {
           color: #fff;
         }

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, Suspense, useLayoutEffect } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 //media
 import Rotation3d from "../images/Rotate360.png";
 //Bootstrap
@@ -13,7 +13,7 @@ import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 //lottie
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
 //Gsap
 import { gsap } from "gsap";
@@ -23,40 +23,19 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //Framermotion
 import { motion, useAnimation } from "framer-motion";
+//react responsive
+import { useMediaQuery } from "react-responsive";
 //Characters 3dmodel
 import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
-import {
-  Environment,
-  OrbitControls,
-  useProgress,
-  Center,
-  Html,
-} from "@react-three/drei";
+import { Environment, OrbitControls, Center, Html } from "@react-three/drei";
 import Model3d from "./Model3d";
 
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener("resize", updateSize);
-    updateSize();
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
-  return size;
-}
-
 const OurTeam = () => {
-  const [width] = useWindowSize();
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
   //state characters
   const [characters, setCharacters] = useState(Characters);
-  const [show, setShow] = useState(false);
   const [showLoad, setShowLoad] = useState(0);
-  const [currentModel, setCurrentModel] = useState(null);
-  const [position, setPosition] = useState([0, -3, 0]);
   //animation
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -75,41 +54,23 @@ const OurTeam = () => {
     document.querySelector(".lottie-our-team").classList.add("d-none");
     const e = event.target;
     const result = characters.filter(
-      (filterevent) => filterevent.className === e.parentElement.className
+      (filterevent) => filterevent.className === e.offsetParent.className
     );
     const resultModel3dCharacters = [...model3dCharacters].filter(
       (filterevent) => +filterevent.getAttribute("data-index") === result[0].id
     );
     resultModel3dCharacters[0].className = "model3d-characters d-block";
-    setCurrentModel(result[0].model3d);
-    setPosition(result[0].position);
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters hidden d-none";
-    setShow(true);
   };
   // handle click close 3dmodel
   const handleClickClose = () => {
-    setShow(false);
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters";
     const hiddenModel3d = [...model3dCharacters].map(
       (addClass) => (addClass.className = "model3d-characters d-none")
     );
   };
-
-  //   const paddingright = (window.innerWidth / 100) * 15;
-  //   const OrderCalc = (imageObject.order % 5) * 200;
-  //   let X = 0;
-  //   let Y = 0;
-  //   // if (imageObject.order / 5 <= 1) {
-  //   //   X = paddingright + OrderCalc;
-  //   //   Y = window.innerHeight / 2 - 100;
-  //   // } else {
-  //   //   X = paddingright + OrderCalc;
-  //   //   Y = window.innerHeight / 2 + 50;
-  //   // }
-  //   X = paddingright + OrderCalc;
-  //   Y = window.innerHeight / 2 - (imageObject.layer - 1) * 150;
   function Loader() {
     return <Html center>Loading...</Html>;
   }
@@ -117,14 +78,14 @@ const OurTeam = () => {
   useEffect(() => {
     const swiper1 = document.querySelector(".swiper-ourteam-1initialized");
     const swiper2 = document.querySelector(".swiper-ourteam-2initialized");
-    if (width < 992) {
+    if (isTabletOrMobile) {
       swiper1.classList.add("d-none");
       swiper2.classList.add("d-block");
     } else {
       swiper1.classList.remove("d-none");
       swiper2.classList.remove("d-block");
     }
-  }, [width]);
+  }, [isTabletOrMobile]);
   useEffect(() => {
     gsap.fromTo(
       document.querySelector(".lottie-our-team"),
@@ -159,18 +120,6 @@ const OurTeam = () => {
     }
   }, [showLoad]);
 
-  // const canvasRotationDeleteSVG = (e) => {
-  //   if (showLoad === 100) {
-  //     const RotationSVG = document.querySelectorAll(
-  //       ".characters-information img"
-  //     );
-  //     RotationSVG.forEach((Rotationsvg) => {
-  //       if (e.target.tagName === "CANVAS") {
-  //         Rotationsvg.classList.add("d-none");
-  //       }
-  //     });
-  //   }
-  // };
   const player = useRef();
   return (
     <>
@@ -236,8 +185,7 @@ const OurTeam = () => {
               {characters.map((characters) => {
                 return (
                   <SwiperSlide key={characters.id}>
-                    <a
-                      href="#our-team"
+                    <div
                       className={characters.className}
                       key={characters.id}
                       onClick={handleClickNFT}
@@ -301,8 +249,10 @@ const OurTeam = () => {
                           </div>
                         </div>
                       </div>
-                      <img src={characters.image} alt="" />
-                    </a>
+                      <a href="#our-team">
+                        <img src={characters.image} alt="" />
+                      </a>
+                    </div>
                   </SwiperSlide>
                 );
               })}
@@ -327,7 +277,7 @@ const OurTeam = () => {
                 </div>
               </Container>
               <Canvas camera={{ position: [0, 0, 10] }}>
-                <Center position={characters.position}>
+                <Center>
                   <Suspense fallback={<Loader />}>
                     <Model3d
                       setShowLoad={setShowLoad}

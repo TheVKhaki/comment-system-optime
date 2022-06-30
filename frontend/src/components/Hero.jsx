@@ -1,18 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 //Bootstrap
-import { Container, Modal, Button } from "react-bootstrap";
+import { Container, Modal } from "react-bootstrap";
 //media
-import imageElephant from "../images/FKG.png";
 import youtubeIcon from "../images/youtube.png";
-// import videoElephant from "../video/FV 26.mp4";
-import videoElephantPart1 from "../video/v 01_1.mp4";
-import videoElephantPart2 from "../video/V 02_1.mp4";
-import videoElephantPart3 from "../video/V 03_1.mp4";
-import videoElephantPart4 from "../video/V 04_1.mp4";
-import videoElephantPart5 from "../video/V 05_1.mp4";
+import videoElephantPart1 from "../video/P01.webm";
+import videoElephantPart2 from "../video/P02.webm";
+import videoElephantPart3 from "../video/P03.webm";
+import videoElephantPart4 from "../video/P04.webm";
+import videoElephantPart5 from "../video/P05.webm";
 // Icon
+//responsive
+import { useMediaQuery } from "react-responsive";
 import { IconContext } from "react-icons";
-import { ImPlay3 } from "react-icons/im";
 import { MdOutlineClose } from "react-icons/md";
 //Gsap
 import { gsap } from "gsap";
@@ -28,7 +27,7 @@ function Btnn({ children }) {
   return <div className="btns-hero">{children}</div>;
 }
 
-//modal
+//modal youtube
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
@@ -103,6 +102,7 @@ const Hero = () => {
       );
   }, []);
   //video bg and video youtube
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 900px)" });
   const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
   const videoElephantRef2 = useRef();
@@ -120,30 +120,28 @@ const Hero = () => {
     videoElephantRef.current.classList.add("video-2");
     videoElephantRef2.current.classList.add("video-1");
     videoElephantRef2.current.play();
-    // videoElephantRef.current.currentTime = 10;
-    // videoElephantRef.current.play();
   };
   const EndVideo2Handler = () => {
     if (videoShow) {
       videoElephantRef2.current.classList.remove("video-1");
       videoElephantRef3.current.classList.add("video-1");
       videoElephantRef3.current.play();
-      videoElephantRef2.current.currentTime = 0;
+      setTimeout(() => {
+        videoElephantRef2.current.currentTime = 0;
+      }, 2000);
     } else {
       videoElephantRef2.current.currentTime = 0;
       videoElephantRef2.current.play();
     }
   };
-  const EndVideo3Handler = () => {
+  const EndVideo3Handler = (e) => {
+    console.log(e);
     videoElephantRef3.current.classList.remove("video-1");
-    videoElephantRef3.current.currentTime = 0;
+    setTimeout(() => {
+      videoElephantRef3.current.currentTime = 0;
+    }, 2000);
     videoElephantRef4.current.classList.add("video-1");
     videoElephantRef4.current.play();
-    // videoElephantRef.current.classList.remove("video-1");
-    // videoElephantRef.current.classList.add("video-2");
-    // videoElephantRef2.current.play();
-    // videoElephantRef.current.currentTime = 10;
-    // videoElephantRef.current.play();
   };
   const EndVideo4Handler = () => {
     if (videoShow) {
@@ -151,17 +149,22 @@ const Hero = () => {
       videoElephantRef4.current.play();
     } else {
       videoElephantRef4.current.classList.remove("video-1");
-      videoElephantRef4.current.currentTime = 0;
+      setTimeout(() => {
+        videoElephantRef4.current.currentTime = 0;
+      }, 2000);
       videoElephantRef5.current.classList.add("video-1");
       videoElephantRef5.current.play();
     }
   };
   const EndVideo5Handler = () => {
     videoElephantRef5.current.classList.remove("video-1");
-    videoElephantRef5.current.currentTime = 0;
     videoElephantRef2.current.classList.add("video-1");
     videoElephantRef2.current.play();
+    setTimeout(() => {
+      videoElephantRef5.current.currentTime = 0;
+    }, 2000);
   };
+  //animation for click youtube
   const clickYoutube = () => {
     if (width >= 900 && width <= 990 && height >= 1500 && height <= 2000) {
       setVideoShow(true);
@@ -208,79 +211,51 @@ const Hero = () => {
     <>
       <section className="hero hero-bg" id="hero" ref={sections}>
         <Container fluid>
-          {/* <div className="hero-img-elephant">
-            <img src={imageElephant} alt="" ref={imgElephant} />
-          </div> */}
-          <Lazyload>
-            {/* <video
-              className="video-elephant"
-              ref={videoElephantRef}
-              muted
-              autoPlay
-              onEnded={EndHandler}
-              // onEnded={endedHandler}
-              onDurationChange={durationEx}
-              onTimeUpdate={durationBg}
-            >
-              <source src={videoElephant} type="video/mp4" />
-            </video> */}
-            <video
-              className="video-elephant video-1"
-              ref={videoElephantRef}
-              muted
-              autoPlay
-              // onEnded={EndHandler}
-              onEnded={EndVideoHandler}
-              // onDurationChange={durationEx}
-              // onTimeUpdate={durationBg}
-            >
-              <source src={videoElephantPart1} type="video/mp4" />
-            </video>
-            <video
-              className="video-elephant video-2"
-              ref={videoElephantRef2}
-              muted
-              // onEnded={EndHandler}
-              onEnded={EndVideo2Handler}
-              // onDurationChange={durationEx}
-              // onTimeUpdate={durationBg}
-            >
-              <source src={videoElephantPart2} type="video/mp4" />
-            </video>
-            <video
-              className="video-elephant video-2"
-              ref={videoElephantRef3}
-              muted
-              // onEnded={EndHandler}
-              onEnded={EndVideo3Handler}
-              // onDurationChange={durationEx}
-              // onTimeUpdate={durationBg}
-            >
-              <source src={videoElephantPart3} type="video/mp4" />
-            </video>
-            <video
-              className="video-elephant video-2"
-              ref={videoElephantRef4}
-              muted
-              // onEnded={EndHandler}
-              onEnded={EndVideo4Handler}
-              // onDurationChange={durationEx}
-              // onTimeUpdate={durationBg}
-            >
-              <source src={videoElephantPart4} type="video/mp4" />
-            </video>
-            <video
-              className="video-elephant video-2"
-              ref={videoElephantRef5}
-              muted
-              // onEnded={EndHandler}
-              onEnded={EndVideo5Handler}
-              // onDurationChange={durationEx}
-              // onTimeUpdate={durationBg}
-            >
-              <source src={videoElephantPart5} type="video/mp4" />
-            </video>
-          </Lazyload>
+          {!isTabletOrMobile && (
+            <Lazyload>
+              <video
+                className="video-elephant video-1"
+                ref={videoElephantRef}
+                muted
+                autoPlay
+                onEnded={EndVideoHandler}
+              >
+                <source src={videoElephantPart1} type="video/webm" />
+              </video>
+              <video
+                className="video-elephant video-2"
+                ref={videoElephantRef2}
+                muted
+                onEnded={EndVideo2Handler}
+              >
+                <source src={videoElephantPart2} type="video/webm" />
+              </video>
+              <video
+                className="video-elephant video-2"
+                ref={videoElephantRef3}
+                muted
+                onEnded={EndVideo3Handler}
+              >
+                <source src={videoElephantPart3} type="video/webm" />
+              </video>
+              <video
+                className="video-elephant video-2"
+                ref={videoElephantRef4}
+                muted
+                onEnded={EndVideo4Handler}
+              >
+                <source src={videoElephantPart4} type="video/webm" />
+              </video>
+              <video
+                className="video-elephant video-2"
+                ref={videoElephantRef5}
+                muted
+                onEnded={EndVideo5Handler}
+              >
+                <source src={videoElephantPart5} type="video/webm" />
+              </video>
+            </Lazyload>
+          )}
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>
@@ -301,19 +276,9 @@ const Hero = () => {
                   Explore
                   <span></span>
                 </a>
-                {/* <IconContext.Provider value={{ color: "white", size: "3rem" }}>
-                  <a href="#" className="btn-watch btn-main">
-                    <ImPlay3 />
-                    <span></span>
-                    <img src={youtubeIcon} alt="" />
-                  </a>
-                </IconContext.Provider> */}
                 <a href="#" className="btn-watch" onClick={clickYoutube}>
                   <img src={youtubeIcon} alt="" />
                 </a>
-                {/* <a href="#" className="btn-text-watch">
-                  Watch Trailer
-                </a> */}
               </Btnn>
             </div>
             <div className="youtube-video">
