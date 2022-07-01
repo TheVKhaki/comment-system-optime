@@ -51,15 +51,17 @@ function MyVerticallyCenteredModal(props) {
               </a>
             </IconContext.Provider>
           </div>
-          <iframe
-            width="660"
-            height="400"
-            title="YouTube video player"
-            src="https://www.youtube.com/embed/147ioPrSuaM"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+          {props.show && (
+            <iframe
+              width="660"
+              height="400"
+              title="YouTube video player"
+              src="https://www.youtube.com/embed/147ioPrSuaM"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
       </Modal.Body>
     </Modal>
@@ -289,17 +291,18 @@ const Hero = () => {
                   </a>
                 </IconContext.Provider>
               </div>
-              <Lazyload>
+              {videoShow && (
                 <iframe
                   width="660"
                   height="400"
+                  loading="lazy"
                   title="YouTube video player"
                   src="https://www.youtube.com/embed/147ioPrSuaM"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   frameBorder="0"
                   allowFullScreen
                 ></iframe>
-              </Lazyload>
+              )}
             </div>
           </Container>
         </Container>

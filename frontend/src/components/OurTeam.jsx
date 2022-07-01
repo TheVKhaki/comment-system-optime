@@ -17,6 +17,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
 //Gsap
 import { gsap } from "gsap";
+//lozyload
+import Lazyload from "../HOC/Lazyload";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //observer
@@ -74,18 +76,6 @@ const OurTeam = () => {
   function Loader() {
     return <Html center>Loading...</Html>;
   }
-
-  useEffect(() => {
-    const swiper1 = document.querySelector(".swiper-ourteam-1initialized");
-    const swiper2 = document.querySelector(".swiper-ourteam-2initialized");
-    if (isTabletOrMobile) {
-      swiper1.classList.add("d-none");
-      swiper2.classList.add("d-block");
-    } else {
-      swiper1.classList.remove("d-none");
-      swiper2.classList.remove("d-block");
-    }
-  }, [isTabletOrMobile]);
   useEffect(() => {
     gsap.fromTo(
       document.querySelector(".lottie-our-team"),
@@ -164,12 +154,14 @@ const OurTeam = () => {
                       key={characters.id}
                       onClick={handleClickNFT}
                     >
-                      <motion.img
-                        title={characters.job}
-                        className={`${inView ? "show" : "hidden"} `}
-                        src={characters.image}
-                        alt=""
-                      />
+                      <Lazyload>
+                        <motion.img
+                          title={characters.job}
+                          className={`${inView ? "show" : "hidden"} `}
+                          src={characters.image}
+                          alt=""
+                        />
+                      </Lazyload>
                     </div>
                   </SwiperSlide>
                 );
@@ -250,7 +242,9 @@ const OurTeam = () => {
                         </div>
                       </div>
                       <a href="#our-team">
-                        <img src={characters.image} alt="" />
+                        <Lazyload>
+                          <img src={characters.image} alt="" />
+                        </Lazyload>
                       </a>
                     </div>
                   </SwiperSlide>
