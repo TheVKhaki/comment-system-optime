@@ -137,7 +137,6 @@ const Hero = () => {
     }
   };
   const EndVideo3Handler = (e) => {
-    console.log(e);
     videoElephantRef3.current.classList.remove("video-1");
     setTimeout(() => {
       videoElephantRef3.current.currentTime = 0;
