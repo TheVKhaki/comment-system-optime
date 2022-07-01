@@ -187,7 +187,6 @@
     .swiper-ourteam-2initialized {
       width: 400px;
       display: none;
-
       .characters-information-mobile {
         position: relative;
         display: flex;
@@ -472,6 +471,12 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+      }
+      .swiper-ourteam-1initialized {
+        display: none;
+      }
+      .swiper-ourteam-2initialized {
+        display: block;
       }
       img {
         object-fit: contain;

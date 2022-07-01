@@ -3166,6 +3166,12 @@ body.modal-open {
     -ms-flex-align: center;
     align-items: center;
   }
+  .ourteam .ourteam-characters .swiper-ourteam-1initialized {
+    display: none;
+  }
+  .ourteam .ourteam-characters .swiper-ourteam-2initialized {
+    display: block;
+  }
   .ourteam .ourteam-characters img {
     -o-object-fit: contain;
     object-fit: contain;

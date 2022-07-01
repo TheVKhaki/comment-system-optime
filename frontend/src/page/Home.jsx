@@ -109,34 +109,38 @@ const Home = () => {
     let animationDuration = 700;
     var lastTime = new Date().getTime();
     if (app.classList.contains("fullscreen")) {
-      root.addEventListener("wheel", function (e) {
-        var currentTime = new Date().getTime();
+      root.addEventListener(
+        "wheel",
+        function (e) {
+          var currentTime = new Date().getTime();
 
-        if (currentTime - lastTime < animationDuration) {
-          e.preventDefault();
-          return;
-        }
-        if (canScroll) {
-          bullets.forEach((bulletColor) => {
-            bulletColor.style.backgroundColor = "white";
-          });
-          if (e.deltaY > 0) {
-            if (spinValue < sections.length - 1) {
-              spinValue += 1;
-            }
-          } else {
-            if (spinValue !== 0) {
-              spinValue -= 1;
-            }
+          if (currentTime - lastTime < animationDuration) {
+            e.preventDefault();
+            return;
           }
-          bullets[spinValue].style.backgroundColor = "#e28001";
-          scrollContent(spinValue);
-        }
-        lastTime = currentTime;
-        // setTimeout(() => {
-        //   canScroll = true;
-        // }, 2000);
-      });
+          if (canScroll) {
+            bullets.forEach((bulletColor) => {
+              bulletColor.style.backgroundColor = "white";
+            });
+            if (e.deltaY > 0) {
+              if (spinValue < sections.length - 1) {
+                spinValue += 1;
+              }
+            } else {
+              if (spinValue !== 0) {
+                spinValue -= 1;
+              }
+            }
+            bullets[spinValue].style.backgroundColor = "#e28001";
+            scrollContent(spinValue);
+          }
+          lastTime = currentTime;
+          // setTimeout(() => {
+          //   canScroll = true;
+          // }, 2000);
+        },
+        { passive: true }
+      );
 
       window.addEventListener("keydown", function keys(e) {
         if (canScroll) {
