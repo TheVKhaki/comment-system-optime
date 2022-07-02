@@ -212,51 +212,53 @@ const Hero = () => {
     <>
       <section className="hero hero-bg" id="hero" ref={sections}>
         <Container fluid>
-          {!isTabletOrMobile && (
-            <Lazyload>
-              <video
-                className="video-elephant video-1"
-                ref={videoElephantRef}
-                muted
-                autoPlay
-                onEnded={EndVideoHandler}
-              >
-                <source src={videoElephantPart1} type="video/webm" />
-              </video>
-              <video
-                className="video-elephant video-2"
-                ref={videoElephantRef2}
-                muted
-                onEnded={EndVideo2Handler}
-              >
-                <source src={videoElephantPart2} type="video/webm" />
-              </video>
-              <video
-                className="video-elephant video-2"
-                ref={videoElephantRef3}
-                muted
-                onEnded={EndVideo3Handler}
-              >
-                <source src={videoElephantPart3} type="video/webm" />
-              </video>
-              <video
-                className="video-elephant video-2"
-                ref={videoElephantRef4}
-                muted
-                onEnded={EndVideo4Handler}
-              >
-                <source src={videoElephantPart4} type="video/webm" />
-              </video>
-              <video
-                className="video-elephant video-2"
-                ref={videoElephantRef5}
-                muted
-                onEnded={EndVideo5Handler}
-              >
-                <source src={videoElephantPart5} type="video/webm" />
-              </video>
-            </Lazyload>
-          )}
+          <Lazyload>
+            {!isTabletOrMobile && (
+              <>
+                <video
+                  className="video-elephant video-1"
+                  ref={videoElephantRef}
+                  muted
+                  autoPlay
+                  onEnded={EndVideoHandler}
+                >
+                  <source src={videoElephantPart1} type="video/webm" />
+                </video>
+                <video
+                  className="video-elephant video-2"
+                  ref={videoElephantRef2}
+                  muted
+                  onEnded={EndVideo2Handler}
+                >
+                  <source src={videoElephantPart2} type="video/webm" />
+                </video>
+                <video
+                  className="video-elephant video-2"
+                  ref={videoElephantRef3}
+                  muted
+                  onEnded={EndVideo3Handler}
+                >
+                  <source src={videoElephantPart3} type="video/webm" />
+                </video>
+                <video
+                  className="video-elephant video-2"
+                  ref={videoElephantRef4}
+                  muted
+                  onEnded={EndVideo4Handler}
+                >
+                  <source src={videoElephantPart4} type="video/webm" />
+                </video>
+                <video
+                  className="video-elephant video-2"
+                  ref={videoElephantRef5}
+                  muted
+                  onEnded={EndVideo5Handler}
+                >
+                  <source src={videoElephantPart5} type="video/webm" />
+                </video>
+              </>
+            )}
+          </Lazyload>
           <Container>
             <div className="hero-text" ref={homeText}>
               <TextHero>

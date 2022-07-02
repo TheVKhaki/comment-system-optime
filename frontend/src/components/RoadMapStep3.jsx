@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 //Bootstrap
 import { Col, Container, Row } from "react-bootstrap";
 //Media
-import imageRoadMap3 from "../images/3RD_FRG.png";
+import imageRoadMap3 from "../images/3RD_FRG.webp";
 // import logoModalMore from "../images/logoModalMore.png";
 // import modalCMC from "../images/modalCMC.png";
 // import roadMapCMC from "../images/RMMBS3.svg";
