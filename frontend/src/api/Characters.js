@@ -119,7 +119,7 @@ const Characters = () => {
       layer: 2,
       order: 10,
       model3d: model3dGirl1,
-      position: [0, -10, 0],
+      position: [0, 0, 0],
       env: "venice_sunset_1k_6.hdr",
       name: "Vanessa",
       job: "Community Manager",

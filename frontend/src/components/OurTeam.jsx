@@ -271,7 +271,7 @@ const OurTeam = () => {
                 </div>
               </Container>
               <Canvas camera={{ position: [0, 0, 10] }}>
-                <Center position={characters.position}>
+                <Center position={[0, 0, 0]}>
                   <Suspense fallback={<Loader />}>
                     <Model3d
                       setShowLoad={setShowLoad}
