@@ -447,14 +447,19 @@
 }
 @media screen and (max-width: 991.98px) {
   .ourteam {
+    .model3d-characters {
+      top: 56%;
+    }
     .lottie-our-team {
       display: block;
     }
     .ourteam-header {
       top: 0;
       margin: 4rem 0;
+      min-height: 27vh;
     }
     .ourteam-characters {
+      min-height: 74vh;
       left: 50%;
       .character-1,
       .character-2,
