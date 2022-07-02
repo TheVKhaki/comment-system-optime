@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 //observer
 import { useInView } from "react-intersection-observer";
 //Media
-import imageRoadMap11 from "../images/1ST_FRG.png";
+import imageRoadMap11 from "../images/1ST_FRG.webp";
 //RandomReveal
 import { RandomReveal } from "react-random-reveal";
 //Icon
