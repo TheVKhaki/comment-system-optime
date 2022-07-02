@@ -11,7 +11,11 @@ const Model3d = (props) => {
   const gltf = useLoader(GLTFLoader, props.currentModel);
   return (
     <>
-      <primitive object={gltf.scene} scale={[0.11, 0.11, 0.11]} />
+      <primitive
+        object={gltf.scene}
+        scale={[0.11, 0.11, 0.11]}
+        position={props.position}
+      />
     </>
   );
 };

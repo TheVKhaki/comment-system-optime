@@ -270,24 +270,30 @@ const OurTeam = () => {
                   </IconContext.Provider>
                 </div>
               </Container>
-              <Canvas camera={{ position: [0, 0, 10] }}>
-                <Center position={[0, 0, 0]}>
-                  <Suspense fallback={<Loader />}>
-                    <Model3d
-                      setShowLoad={setShowLoad}
-                      currentModel={characters.model3d}
-                    />
-                    <OrbitControls
-                      enablePan={false}
-                      reverseOrbit={false}
-                      enableZoom={false}
-                    />
-                    <Environment
-                      path={"/model3d-env/"}
-                      files={characters.env}
-                    />
-                  </Suspense>
-                </Center>
+              <Canvas
+                camera={{
+                  far: 1000,
+                  near: 1,
+                  fov: 75,
+                  position: [0, 0, 10],
+                  zoom: 1,
+                }}
+              >
+                {/* <Center> */}
+                <Suspense fallback={<Loader />}>
+                  <Model3d
+                    setShowLoad={setShowLoad}
+                    currentModel={characters.model3d}
+                    position={characters.position}
+                  />
+                  <OrbitControls
+                    enablePan={false}
+                    reverseOrbit={false}
+                    enableZoom={false}
+                  />
+                  <Environment path={"/model3d-env/"} files={characters.env} />
+                </Suspense>
+                {/* </Center> */}
               </Canvas>
               {showLoad === 100 && (
                 <Container className="characters-information">
