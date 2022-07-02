@@ -1234,6 +1234,12 @@ body.modal-open {
   height: 400px;
 }
 
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .social-section .circle-socials {
+    bottom: 25px;
+  }
+}
+
 .social-responsive {
   padding: 4rem 0;
 }
@@ -1499,6 +1505,7 @@ body.modal-open {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 0;
+  overflow: hidden;
 }
 
 .roadmap.roadmap-step4 .img-elephant-comingsoon {
@@ -1506,6 +1513,11 @@ body.modal-open {
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+.roadmap.roadmap-step4 .img-elephant-comingsoon img {
+  width: auto;
+  height: auto;
 }
 
 .roadmap .roadmap-date p {
@@ -1638,6 +1650,7 @@ body.modal-open {
   height: 490px;
   -webkit-transform: translate(8px, 16px);
   transform: translate(8px, 16px);
+  width: auto;
 }
 
 .roadmap .content-slide-2-2 {
@@ -2493,6 +2506,35 @@ body.modal-open {
   }
 }
 
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .roadmap {
+    padding-top: 0;
+  }
+  .roadmap.roadmap-step1,
+  .roadmap.roadmap-step2,
+  .roadmap.roadmap-step3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .roadmap .content-slide-1-1 {
+    margin-top: 3rem;
+  }
+  .roadmap.roadmap-step4 .img-elephant-comingsoon {
+    top: 0;
+  }
+  .roadmap p {
+    font-size: 20px;
+  }
+}
+
 .ourteam {
   min-height: 100vh;
   background-color: #000;
@@ -3231,6 +3273,16 @@ body.modal-open {
   }
 }
 
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .ourteam .ourteam-header {
+    min-height: 14vh;
+    top: 0;
+  }
+  .ourteam .ourteam-characters {
+    min-height: 96vh;
+  }
+}
+
 .footer-home {
   position: relative;
   min-height: 100vh;
@@ -3600,6 +3652,36 @@ body.modal-open {
   }
   .footer-home footer {
     min-height: auto;
+  }
+}
+
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .footer-home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+  }
+  .footer-home .comingsoon-ourpartner h3 {
+    top: 21vh;
+  }
+  .footer-home .our-partner {
+    min-height: auto;
+  }
+  .footer-home .our-partner .header-our-partner {
+    top: 1vh;
+  }
+  .footer-home .our-partner .our-partner-news-tricker {
+    margin-top: 0;
+  }
+  .footer-home footer .footer-copy-right p {
+    padding: 1rem 0;
   }
 }
 

@@ -347,3 +347,33 @@
     }
   }
 }
+
+//responsive for height 700px to 600px
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .footer-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .comingsoon-ourpartner {
+      h3 {
+        top: 21vh;
+      }
+    }
+    .our-partner {
+      min-height: auto;
+      .header-our-partner {
+        top: 1vh;
+      }
+      .our-partner-news-tricker {
+        margin-top: 0;
+      }
+    }
+    footer {
+      .footer-copy-right {
+        p {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

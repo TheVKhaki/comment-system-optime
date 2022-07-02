@@ -925,7 +925,7 @@ const RoadMapStep2 = () => {
                   className="d-flex justify-content-center d-sm-block"
                 >
                   {/* <Lazyload> */}
-                  <img src={imageRoadMap2} alt="" />
+                  <img src={imageRoadMap2} alt="" width={858} height={1089} />
                   {/* </Lazyload> */}
                 </motion.div>
               </Col>

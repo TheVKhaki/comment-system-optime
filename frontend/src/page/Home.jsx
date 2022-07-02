@@ -7,7 +7,7 @@ import RoadMapStep4 from "../components/RoadMapStep4";
 import OurTeam from "../components/OurTeam";
 import SocialResponsive from "../components/SocialResponsive";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
@@ -15,6 +15,25 @@ import useWindowSize from "../custom hook/ResizeEvent";
 const Home = () => {
   const [width, height] = useWindowSize();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
+  const height700 = useMediaQuery({ maxHeight: 700 });
+  const height600 = useMediaQuery({ minHeight: 600 });
+  const width992 = useMediaQuery({ minWidth: 992 });
+  const [finalSpinVAlue, setFinalSpinVAlue] = useState(0);
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (height700 && height600 && width992) {
+      if (finalSpinVAlue >= 1) {
+        header.classList.remove("d-flex");
+        header.classList.add("d-none");
+      } else {
+        header.classList.remove("d-none");
+        header.classList.add("d-flex");
+      }
+    } else {
+      header.classList.remove("d-none");
+      header.classList.add("d-flex");
+    }
+  }, [finalSpinVAlue, width992, height600, height700]);
 
   // window.addEventListener("load", function () {
   //   setTimeout(() => {
@@ -25,6 +44,10 @@ const Home = () => {
   //   const sectionHero = document.querySelector(".hero");
   //   sectionHero.scrollIntoView();
   // }, []);
+  // const main = useRef();
+  // useEffect(() => {
+  //   console.log(main.current);
+  // }, [main]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -34,6 +57,7 @@ const Home = () => {
     const btnHero = document.querySelector(".btn-hero");
     const navLink = document.querySelectorAll(".navbar-nav .nav-link");
     const content = document.querySelector("main");
+
     let spinValue = 0;
     let canScroll = true;
     btnHero.addEventListener("click", function (e) {
@@ -167,6 +191,7 @@ const Home = () => {
       });
     }
     const scrollContent = (count) => {
+      setFinalSpinVAlue(count);
       content.setAttribute("style", `transform:translateY(-${count * 100}vh)`);
     };
 

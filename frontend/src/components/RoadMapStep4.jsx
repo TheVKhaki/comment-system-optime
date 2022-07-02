@@ -39,7 +39,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`07/01/${year}`) - +new Date();
+    let difference = +new Date(`07/10/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -61,14 +61,13 @@ const RoadMapStep4 = () => {
     }, 1000);
     return () => clearTimeout(timer);
   });
-
   return (
     <>
       <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
         <Container>
           <div className="img-elephant-comingsoon">
             <Lazyload>
-              <img src={elephantComingsoon} alt="" />
+              <img src={elephantComingsoon} alt="" width={500} height={600} />
               <img src={elephantComingsoonRes} alt="" />
             </Lazyload>
           </div>

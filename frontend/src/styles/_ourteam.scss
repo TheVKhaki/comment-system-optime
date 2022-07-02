@@ -528,3 +528,15 @@
     }
   }
 }
+//responsive for height 700px to 600px
+@media screen and (max-height: 699.98px) and (min-height: 600px) and (max-width: 1399.98px) and (min-width: 992px) {
+  .ourteam {
+    .ourteam-header {
+      min-height: 14vh;
+      top: 0;
+    }
+    .ourteam-characters {
+      min-height: 96vh;
+    }
+  }
+}

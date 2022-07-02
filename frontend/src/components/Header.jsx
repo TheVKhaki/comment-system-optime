@@ -10,7 +10,6 @@ import { gsap } from "gsap";
 import { motion } from "framer-motion";
 const Header = () => {
   const header = useRef();
-
   useEffect(() => {
     gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
