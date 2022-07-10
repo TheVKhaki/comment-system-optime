@@ -35,11 +35,25 @@ const RoadMapStep4 = () => {
       },
     },
   };
+  const textComingSoon = {
+    hidden: {
+      opacity: 0,
+      x: -80,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
 
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`07/10/${year}`) - +new Date();
+    let difference = +new Date(`07/22/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -71,7 +85,12 @@ const RoadMapStep4 = () => {
               <img src={elephantComingsoonRes} alt="" />
             </Lazyload>
           </div>
-          <div className="coming-soon">
+          <motion.div
+            className="coming-soon"
+            variants={textComingSoon}
+            initial="hidden"
+            animate={controls}
+          >
             <motion.div className="header-comingsoon">
               <h2>
                 <span style={{ color: "#e28001" }}>Q</span>Poker
@@ -80,12 +99,7 @@ const RoadMapStep4 = () => {
                 1<sup>st</sup> Airdrop’s Starting Time
               </p>
             </motion.div>
-            <motion.div
-              variants={textRoadMap}
-              initial="hidden"
-              animate={controls}
-              className="countdown"
-            >
+            <motion.div className="countdown">
               <div className="countdown-number">
                 <div className="time-number">{timeLeft.days}</div>
                 <div className="time-number">{timeLeft.hours}</div>
@@ -93,7 +107,7 @@ const RoadMapStep4 = () => {
                 <div className="time-number">{timeLeft.seconds}</div>
               </div>
             </motion.div>
-            <div className="coming-soon-text">
+            <motion.div className="coming-soon-text">
               <span>
                 <RandomReveal
                   isPlaying={inView}
@@ -102,11 +116,7 @@ const RoadMapStep4 = () => {
                   characters="COMING SOON"
                 />
               </span>
-              <motion.p
-                variants={textRoadMap}
-                initial="hidden"
-                animate={controls}
-              >
+              <motion.p>
                 Evolution of real money skill games has leaped forward. We are
                 launching a trailblazing poker variant innovated by a group of
                 poker enthusiasts in 2019-2022. QPoker is the first
@@ -117,8 +127,8 @@ const RoadMapStep4 = () => {
                 Join the Rewards
                 <span></span>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </Container>
       </section>
     </>

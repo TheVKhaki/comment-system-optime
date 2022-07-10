@@ -10,9 +10,9 @@ import imgGirl1 from "../images/characters/3.webp";
 import imgMan1 from "../images/characters/5.webp";
 import imgMan2 from "../images/characters/6.webp";
 import model3dSam from "../images/3dmodel-characters/9.glb";
-import model3dSina from "../images/3dmodel-characters/10.glb";
+import model3dSina from "../images/3dmodel-characters/10.gltf";
 import model3dHenrik from "../images/3dmodel-characters/4.glb";
-import model3dMohammad from "../images/3dmodel-characters/7.glb";
+import model3dMohammad from "../images/3dmodel-characters/7.gltf";
 import model3dMohammadreza from "../images/3dmodel-characters/8.glb";
 import model3dGirl1 from "../images/3dmodel-characters/2.glb";
 import model3dMan1 from "../images/3dmodel-characters/5.glb";
@@ -47,7 +47,7 @@ const Characters = () => {
       layer: 1,
       order: 3,
       model3d: model3dSina,
-      position: [0, -4, 0],
+      position: [0, -3, 0],
       env: "venice_sunset_1k_2.hdr",
       name: "Matthew",
       job: "Lead Designer & Art Director",
@@ -83,7 +83,7 @@ const Characters = () => {
       layer: 1,
       order: 4,
       model3d: model3dMohammad,
-      position: [0, -5, 0],
+      position: [0, -4, 0],
       env: "venice_sunset_1k_4.hdr",
       name: "Michael",
       job: "Co-Founder",

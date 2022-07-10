@@ -263,7 +263,7 @@ const Hero = () => {
             <div className="hero-text" ref={homeText}>
               <TextHero>
                 <h2>
-                  <span>Q</span>Poker
+                  <span>Q</span>Poker GameFI 2.0
                   <br />
                   <span>Metaverse Quess'em Poker</span>
                 </h2>
