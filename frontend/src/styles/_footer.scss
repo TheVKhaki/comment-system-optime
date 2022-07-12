@@ -17,6 +17,7 @@
     background-color: #000;
     filter: blur(9px);
     pointer-events: none;
+    user-select: none;
     .container {
       overflow: hidden;
     }
