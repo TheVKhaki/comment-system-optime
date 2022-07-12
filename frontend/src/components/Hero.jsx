@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { Container, Modal } from "react-bootstrap";
 //media
 import youtubeIcon from "../images/youtube.png";
-import videoElephantPart1 from "../video/P01.webm";
-import videoElephantPart2 from "../video/P02.webm";
-import videoElephantPart3 from "../video/P03.webm";
-import videoElephantPart4 from "../video/P04.webm";
-import videoElephantPart5 from "../video/P05.webm";
+import videoElephantPart1 from "../video/01.webm";
+import videoElephantPart2 from "../video/02.webm";
+import videoElephantPart3 from "../video/03.webm";
+import videoElephantPart4 from "../video/04.webm";
+import videoElephantPart5 from "../video/05.webm";
 // Icon
 //responsive
 import { useMediaQuery } from "react-responsive";
@@ -263,7 +263,7 @@ const Hero = () => {
             <div className="hero-text" ref={homeText}>
               <TextHero>
                 <h2>
-                  <span>Q</span>Poker
+                  <span>Q</span>Poker GameFI 2.0
                   <br />
                   <span>Metaverse Quess'em Poker</span>
                 </h2>

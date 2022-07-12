@@ -3310,6 +3310,10 @@ body.modal-open {
   -webkit-filter: blur(9px);
   filter: blur(9px);
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .footer-home .our-partner .container {
