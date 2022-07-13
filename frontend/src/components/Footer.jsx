@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
   FaArrowUp,
+  FaDiscord,
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
 
@@ -51,9 +52,9 @@ const Footer = () => {
                     the real action gets started.
                   </p>
                   <form action="">
-                    <input type="text" placeholder="Email Address" />
+                    {/* <input type="text" placeholder="Email Address" /> */}
                     <button className="btn-main">
-                      Subscribe
+                      Join our Telegram
                       <span></span>
                     </button>
                   </form>
@@ -66,7 +67,7 @@ const Footer = () => {
                       value={{ color: "white", size: "2.3rem" }}
                     >
                       <a href="/#">
-                        <FaTelegramPlane />
+                        <FaDiscord />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
