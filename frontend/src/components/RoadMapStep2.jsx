@@ -762,46 +762,42 @@ function MyVerticallyCenteredModal(props) {
           <div className="box-twitter box-roadmap" ref={boxModal1}>
             <h3>Telegram Bot</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repellat officiis, nobis voluptas veritatis ducimus provident
-              dicta sunt quam odit consequatur, natus minus atque inventore,
-              quasi
+              First step to gain the rewards. Our Telegram Bot will authenticate
+              your campaign participation and review your score, automatically.
+              The whole procedure takes less than a minute.
             </p>
           </div>
           <div className="box-twitter-1 box-roadmap" ref={boxModal2}>
             <h3>Telegram Channel</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repellat officiis, nobis voluptas veritatis ducimus provident
-              dicta sunt quam odit consequatur, natus minus atque inventore,
-              quasi
+              Second step is to join our Telegram channel. Everything you need
+              to know about our project’s progress, news, announcements, or
+              campaign tutorials, you will find here.
             </p>
           </div>
           <div className="box-telegram box-roadmap" ref={boxModal3}>
             <h3>Twitter</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repellat officiis, nobis voluptas veritatis ducimus provident
-              dicta sunt quam odit consequatur, natus minus atque inventore,
-              quasi
+              Third step is to follow our Twitter account. By retweeting and
+              commenting on our tweets, you maximize the points earned at our
+              Airdrop campaigns.
             </p>
           </div>
           <div className="box-qpoker box-roadmap" ref={boxModal4}>
             <h3>Youtube</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repellat officiis, nobis voluptas veritatis ducimus provident
-              dicta sunt quam odit consequatur, natus minus atque inventore,
-              quasi
+              Fourth step is to follow our YouTube channel. We call you to
+              familiarize with our fascinating game project by publishing
+              several educational and promotional videos.
             </p>
           </div>
           <div className="box-youtube box-roadmap" ref={boxModal5}>
             <h3>Refer-a-Friend</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repellat officiis, nobis voluptas veritatis ducimus provident
-              dicta sunt quam odit consequatur, natus minus atque inventore,
-              quasi
+              Final step is to invite one of your friends to look into QPoker’s
+              state-of-the-art platform. By completing this step, you make a
+              truly positive impact for our community and also collect highest
+              points in our Airdrop campaigns.
             </p>
           </div>
           <div className="box-roadmap-2">
