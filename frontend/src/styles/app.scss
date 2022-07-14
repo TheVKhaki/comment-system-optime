@@ -1,0 +1,281 @@
+// variable
+$mainColor: #e28001;
+$colorWhite: #fff;
+$colorBlack: #000;
+
+//Fonts
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-SemiBold.woff2") format("woff2"),
+    url("../font/MavenPro-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Black.woff2") format("woff2"),
+    url("../font/MavenPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-ExtraBold.woff2") format("woff2"),
+    url("../font/MavenPro-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Regular.woff2") format("woff2"),
+    url("../font/MavenPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Medium.woff2") format("woff2"),
+    url("../font/MavenPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/MavenPro-Bold.woff2") format("woff2"),
+    url("../font/MavenPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Bold.woff2") format("woff2"),
+    url("../font/Rota-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Regular.woff2") format("woff2"),
+    url("../font/Rota-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Medium.woff2") format("woff2"),
+    url("../font/Rota-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-SemiBold.woff2") format("woff2"),
+    url("../font/Rota-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Rota";
+  src: url("../font/Rota-Black.woff2") format("woff2"),
+    url("../font/Rota-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+//global style
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: $colorBlack;
+  // scrollbar-width: none;
+}
+
+body {
+  line-height: 1.5;
+  background-color: $colorBlack !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  a {
+    text-decoration: none;
+    color: $colorBlack;
+    font-family: "Rota", sans-serif;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $colorBlack;
+    }
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-family: "Rota", sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+
+  p {
+    font-family: "Rota";
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $colorWhite;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: bold;
+  }
+
+  span {
+    font-family: "Maven Pro", sans-serif;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    font-family: "Maven Pro", sans-serif;
+  }
+}
+
+.btn-main {
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  padding-top: 0.4rem;
+  color: #e28001;
+  border: 2px solid #e28001;
+  transition: all 0.45s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #e28001;
+    transition: width 0.45s ease-in-out, height 0.45s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &:hover {
+    border: 2px solid transparent;
+    span {
+      width: 225%;
+      height: 450px;
+    }
+  }
+}
+
+.home-swiper {
+  height: 100vh;
+}
+
+@media screen and (min-width: 992px) {
+  .fullscreen {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    main {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: transform 0.7s ease-out;
+    }
+    section {
+      height: 100vh;
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  main {
+    transform: none !important;
+  }
+  .btn-main {
+    span {
+      top: 20% !important;
+      left: 90% !important;
+    }
+    &:hover {
+      span {
+        top: 20% !important;
+        left: 90% !important;
+      }
+    }
+  }
+}
+//Nav
+@import "./nav";
+//Page Home
+@import "./hero";
+@import "./social";
+@import "./socialresponsive";
+@import "./roadmap";
+@import "./ourteam";
+//Footer Home
+@import "./footer";
+//Page Login
+@import "./login";
