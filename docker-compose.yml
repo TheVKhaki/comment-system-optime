@@ -22,8 +22,10 @@ services:
       - --entryPoints.web.forwardedHeaders.insecure
       # Enable the access log, with HTTP requests
       - --accesslog
+      - --accesslog.format=json
       # Enable the Traefik log, for configurations and errors
       - --log
+      - --log.format=json
       # Enable the Dashboard and API
       - --api
     deploy:
