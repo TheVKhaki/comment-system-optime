@@ -803,12 +803,10 @@ function MyVerticallyCenteredModal(props) {
           <div className="box-roadmap-2">
             <h3>Airdrop Rewards</h3>
             <p>
-              After all the above steps, all participants can cash their points
-              at the specified times. Our smart contracts ultimately do this,
-              and in this way, all the people who trusted us and have worked to
-              grow our social networks and identify us will get the best of
-              them.
-              <br /> so, Let's start right now
+              After finishing the above steps, all participants will get
+              credited their prizes at the specified times. With our smart
+              contracts, all the rewards will get proceeded automatically, on a
+              quick schedule.
             </p>
           </div>
           <video muted loop ref={rocketAnimRef}>

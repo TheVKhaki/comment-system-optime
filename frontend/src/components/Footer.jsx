@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
   FaArrowUp,
-  FaDiscord,
+  FaTrello,
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
 
@@ -67,7 +67,7 @@ const Footer = () => {
                       value={{ color: "white", size: "2.3rem" }}
                     >
                       <a href="/#">
-                        <FaDiscord />
+                        <FaTrello />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider

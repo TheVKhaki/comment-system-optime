@@ -24,6 +24,7 @@ const Characters = () => {
   return [
     {
       id: 1,
+      idMobile: 2,
       className: "character-1",
       image: imgSam,
       layer: 1,
@@ -42,6 +43,7 @@ const Characters = () => {
     },
     {
       id: 2,
+      idMobile: 3,
       className: "character-2",
       image: imgSina,
       layer: 1,
@@ -60,6 +62,7 @@ const Characters = () => {
     },
     {
       id: 3,
+      idMobile: 1,
       className: "character-3",
       image: imgHenrik,
       layer: 1,
@@ -78,6 +81,7 @@ const Characters = () => {
     },
     {
       id: 4,
+      idMobile: 4,
       className: "character-4",
       image: imgMohammad,
       layer: 1,
@@ -96,6 +100,7 @@ const Characters = () => {
     },
     {
       id: 5,
+      idMobile: 5,
       className: "character-5",
       image: imgMohammadreza,
       layer: 1,
@@ -114,6 +119,7 @@ const Characters = () => {
     },
     {
       id: 6,
+      idMobile: 6,
       className: "character-6",
       image: imgGirl1,
       layer: 2,
@@ -132,6 +138,7 @@ const Characters = () => {
     },
     {
       id: 7,
+      idMobile: 7,
       className: "character-7",
       image: imgMan1,
       layer: 2,
@@ -151,6 +158,7 @@ const Characters = () => {
 
     {
       id: 8,
+      idMobile: 8,
       className: "character-8",
       image: imgAmir,
       layer: 2,
@@ -169,6 +177,7 @@ const Characters = () => {
     },
     {
       id: 9,
+      idMobile: 9,
       className: "character-9",
       image: imgMan2,
       layer: 2,
@@ -187,6 +196,7 @@ const Characters = () => {
     },
     {
       id: 10,
+      idMobile: 10,
       className: "character-10",
       image: imgGirl2,
       layer: 2,

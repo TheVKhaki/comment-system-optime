@@ -157,7 +157,7 @@
           &:nth-child(1) {
             &:hover {
               svg {
-                color: #404eed !important;
+                color: #0079bf !important;
               }
             }
           }
@@ -334,6 +334,11 @@
 @media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .footer-home {
     min-height: auto;
+    .comingsoon-ourpartner {
+      h3 {
+        top: 305px;
+      }
+    }
     .our-partner {
       min-height: auto;
       .our-partner-news-tricker {
