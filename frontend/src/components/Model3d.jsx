@@ -13,7 +13,7 @@ const Model3d = (props) => {
     <>
       <primitive
         object={gltf.scene}
-        scale={[0.11, 0.11, 0.11]}
+        scale={[0.06, 0.06, 0.06]}
         position={props.position}
       />
     </>
