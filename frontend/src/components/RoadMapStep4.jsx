@@ -53,7 +53,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`07/22/${year}`) - +new Date();
+    let difference = +new Date(`07/27/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -101,10 +101,18 @@ const RoadMapStep4 = () => {
             </motion.div>
             <motion.div className="countdown">
               <div className="countdown-number">
-                <div className="time-number">{timeLeft.days}</div>
-                <div className="time-number">{timeLeft.hours}</div>
-                <div className="time-number">{timeLeft.minutes}</div>
-                <div className="time-number">{timeLeft.seconds}</div>
+                <div className="time-number">
+                  {timeLeft.days} <span>Days</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.hours} <span>Hours</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.minutes} <span>Minutes</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.seconds} <span>Seconds</span>
+                </div>
               </div>
             </motion.div>
             <motion.div className="coming-soon-text">
