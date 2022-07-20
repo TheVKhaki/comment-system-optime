@@ -182,7 +182,7 @@ const SocialSection = () => {
     );
   }, []);
   useEffect(() => {
-    fetch("https://stag.owl.qpoker.io/api/v1/social-growth")
+    fetch("https://stag.owl.qpoker.io/api/v1/public/social-growth")
       .then((response) => response.json())
       .then((data) => socialGrowth(data));
     function socialGrowth(dataSocial) {

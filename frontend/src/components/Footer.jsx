@@ -11,10 +11,6 @@ import {
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
 
-
-
-
-
 const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");
@@ -57,11 +53,10 @@ const Footer = () => {
                   </p>
                   <form action="">
                     {/* <input type="text" placeholder="Email Address" /> */}
-                    <button className="btn-main">
-                      {/* https://t.me/qpokerio */}
+                    <a href="https://t.me/qpokerio" className="btn-main">
                       Join our Telegram
                       <span></span>
-                    </button>
+                    </a>
                   </form>
                 </div>
               </Col>
