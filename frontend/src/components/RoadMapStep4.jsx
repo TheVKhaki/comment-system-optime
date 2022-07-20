@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 //media
 import elephantComingsoon from "../images/BKGR4-03.webp";
 import elephantComingsoonRes from "../images/BKGR4-03-Res.webp";
@@ -75,6 +75,17 @@ const RoadMapStep4 = () => {
     }, 1000);
     return () => clearTimeout(timer);
   });
+  const btnComingSoon = useRef();
+  const textBtnComingSoon = useRef();
+  useEffect(() => {
+    btnComingSoon.current.addEventListener("mouseover", function (params) {
+      textBtnComingSoon.current.innerHTML = "Coming Soon";
+    });
+    btnComingSoon.current.addEventListener("mouseout", function (params) {
+      textBtnComingSoon.current.innerHTML = "Join the Rewards";
+    });
+  }, []);
+
   return (
     <>
       <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
@@ -131,8 +142,12 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
-              <a href="#" className="btn-coming-soon btn-main">
-                Join the Rewards
+              <a
+                href="#"
+                className="btn-coming-soon btn-main"
+                ref={btnComingSoon}
+              >
+                <p ref={textBtnComingSoon}>Join the Rewards</p>
                 <span></span>
               </a>
             </motion.div>

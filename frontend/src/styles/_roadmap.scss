@@ -272,7 +272,6 @@
     }
 
     .btn-coming-soon {
-      font-size: 2.5rem;
       width: 260px;
       height: 60px;
       display: flex;
@@ -280,7 +279,16 @@
       align-items: center;
       border-radius: 10px;
       margin-top: 2rem;
-      font-weight: bold;
+      &:hover {
+        p {
+          color: #000;
+        }
+      }
+      p {
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #e28001;
+      }
     }
   }
 }
