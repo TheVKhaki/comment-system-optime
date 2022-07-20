@@ -3475,7 +3475,7 @@ body.modal-open {
   font-size: 17px;
 }
 
-.footer-home footer .footer-left form button {
+.footer-home footer .footer-left form a {
   margin-top: 1rem;
   height: 50px;
   font-size: 20px;
@@ -3484,13 +3484,14 @@ body.modal-open {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-top: 0;
+  font-family: "Maven Pro", sans-serif;
 }
 
-.footer-home footer .footer-left form button:hover {
+.footer-home footer .footer-left form a:hover {
   color: #000;
 }
 
-.footer-home footer .footer-left form button:hover span {
+.footer-home footer .footer-left form a:hover span {
   width: 225%;
   height: 950px;
 }

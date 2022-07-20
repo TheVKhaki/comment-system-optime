@@ -84,6 +84,9 @@ const RoadMapStep4 = () => {
     btnComingSoon.current.addEventListener("mouseout", function (params) {
       textBtnComingSoon.current.innerHTML = "Join the Rewards";
     });
+    btnComingSoon.current.addEventListener("click", function (params) {
+      textBtnComingSoon.current.innerHTML = "Coming Soon";
+    });
   }, []);
 
   return (
@@ -142,11 +145,7 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
-              <a
-                href="#"
-                className="btn-coming-soon btn-main"
-                ref={btnComingSoon}
-              >
+              <a className="btn-coming-soon btn-main" ref={btnComingSoon}>
                 <p ref={textBtnComingSoon}>Join the Rewards</p>
                 <span></span>
               </a>
