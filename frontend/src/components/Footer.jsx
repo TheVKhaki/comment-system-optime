@@ -11,6 +11,10 @@ import {
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
 
+
+
+
+
 const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");
@@ -54,6 +58,7 @@ const Footer = () => {
                   <form action="">
                     {/* <input type="text" placeholder="Email Address" /> */}
                     <button className="btn-main">
+                      {/* https://t.me/qpokerio */}
                       Join our Telegram
                       <span></span>
                     </button>
@@ -66,21 +71,21 @@ const Footer = () => {
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
+                      <a href="https://trello.com/b/RsomwpDG">
                         <FaTrello />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
+                      <a href="https://twitter.com/QPoker_io">
                         <FaTwitter />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
+                      <a href="https://www.youtube.com/channel/UCZeSEvAStNu29wUA3exSjXg">
                         <FaYoutube />
                       </a>
                     </IconContext.Provider>
