@@ -57,7 +57,7 @@ const Characters = () => {
       description:
         "Marvin is a gifted artist and motion graphics designer. Well-deserved reputation is built on team leading skills with diverse animation productions, both in commercials and short films. He is known for unique expression style and can adapt fluently to any target audience. Marvin has more than ten years of experience cooperating with various advertising companies and medias. Visual effects and CGI animations behind our provoking meme teaser video are completely his handprint.",
       email: "mailto:Marvin@qpoker.io",
-      telegram: "T.me/marvinnft",
+      telegram: "T.me/marvin_qpokerltd",
       discord: "",
     },
     {
