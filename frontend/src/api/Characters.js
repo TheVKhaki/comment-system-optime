@@ -1,22 +1,22 @@
 //images
-import imgHenrik from "../images/characters/4.webp";
-import imgSina from "../images/characters/10.webp";
-import imgMohammad from "../images/characters/7.webp";
+import imgHans from "../images/characters/4.webp";
+import imgMarvin from "../images/characters/10.webp";
+import imgMichael from "../images/characters/7.webp";
 import imgSam from "../images/characters/9.webp";
-import imgMohammadreza from "../images/characters/8.webp";
-import imgAmir from "../images/characters/1.webp";
+import imgJohnnie from "../images/characters/8.webp";
+import imgPeter from "../images/characters/1.webp";
 import imgGirl2 from "../images/characters/2.webp";
 import imgGirl1 from "../images/characters/3.webp";
 import imgMan1 from "../images/characters/5.webp";
 import imgMan2 from "../images/characters/6.webp";
 import model3dSam from "../images/3dmodel-characters/9.glb";
-import model3dSina from "../images/3dmodel-characters/10.gltf";
-import model3dHenrik from "../images/3dmodel-characters/4.glb";
-import model3dMohammad from "../images/3dmodel-characters/7.gltf";
-import model3dMohammadreza from "../images/3dmodel-characters/8.glb";
+import model3dMarvin from "../images/3dmodel-characters/10.gltf";
+import model3dHans from "../images/3dmodel-characters/4.glb";
+import model3dMichael from "../images/3dmodel-characters/7.gltf";
+import model3dJohnnie from "../images/3dmodel-characters/8.glb";
 import model3dGirl1 from "../images/3dmodel-characters/2.glb";
 import model3dMan1 from "../images/3dmodel-characters/5.glb";
-import model3dAmir from "../images/3dmodel-characters/1.glb";
+import model3dPeter from "../images/3dmodel-characters/1.glb";
 import model3dMan2 from "../images/3dmodel-characters/6.glb";
 import model3dGirl2 from "../images/3dmodel-characters/3.glb";
 
@@ -45,10 +45,10 @@ const Characters = () => {
       id: 2,
       idMobile: 3,
       className: "character-2",
-      image: imgSina,
+      image: imgMarvin,
       layer: 1,
       order: 3,
-      model3d: model3dSina,
+      model3d: model3dMarvin,
       position: [0, -4, 0],
       env: "venice_sunset_1k_2.hdr",
       name: "Marvin",
@@ -64,10 +64,10 @@ const Characters = () => {
       id: 3,
       idMobile: 1,
       className: "character-3",
-      image: imgHenrik,
+      image: imgHans,
       layer: 1,
       order: 1,
-      model3d: model3dHenrik,
+      model3d: model3dHans,
       position: [0, -4, 0],
       env: "venice_sunset_1k_3.hdr",
       name: "Hans",
@@ -83,10 +83,10 @@ const Characters = () => {
       id: 4,
       idMobile: 4,
       className: "character-4",
-      image: imgMohammad,
+      image: imgMichael,
       layer: 1,
       order: 4,
-      model3d: model3dMohammad,
+      model3d: model3dMichael,
       position: [0, -4, 0],
       env: "venice_sunset_1k_4.hdr",
       name: "Michael",
@@ -102,10 +102,10 @@ const Characters = () => {
       id: 5,
       idMobile: 5,
       className: "character-5",
-      image: imgMohammadreza,
+      image: imgJohnnie,
       layer: 1,
       order: 2,
-      model3d: model3dMohammadreza,
+      model3d: model3dJohnnie,
       position: [0, -4, 0],
       env: "venice_sunset_1k_5.hdr",
       name: "Johnnie",
@@ -160,10 +160,10 @@ const Characters = () => {
       id: 8,
       idMobile: 8,
       className: "character-8",
-      image: imgAmir,
+      image: imgPeter,
       layer: 2,
       order: 6,
-      model3d: model3dAmir,
+      model3d: model3dPeter,
       position: [0, -5, 0],
       env: "venice_sunset_1k_8.hdr",
       name: "Peter",
