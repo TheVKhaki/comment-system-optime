@@ -52,9 +52,12 @@ const SocialResponsive = () => {
         </div>
         <div className="image-social-responsive">
           <img src={socialRes} alt="" className="svg-responsive-social" />
-          <a href="#" className="text-telegram text-image-responsive">
+          <a
+            href="https://twitter.com/QPoker_io"
+            className="text-telegram text-image-responsive"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTwitter />
               </div>
             </IconContext.Provider>
@@ -63,9 +66,12 @@ const SocialResponsive = () => {
               +{dataSocial.twitterFollowers}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-twitter text-image-responsive">
+          <a
+            href="https://t.me/qpokerio"
+            className="text-twitter text-image-responsive"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTelegramPlane />
               </div>
             </IconContext.Provider>
@@ -74,9 +80,12 @@ const SocialResponsive = () => {
               +{dataSocial.telegramChannel}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-youtube text-image-responsive">
+          <a
+            href="https://youtu.be/147ioPrSuaM"
+            className="text-youtube text-image-responsive"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaYoutube />
               </div>
             </IconContext.Provider>
@@ -85,9 +94,12 @@ const SocialResponsive = () => {
               +{dataSocial.youtubeSubscribers}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-trello text-image-responsive">
+          <a
+            href="https://trello.com/b/RsomwpDG"
+            className="text-trello text-image-responsive"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTrello />
               </div>
             </IconContext.Provider>
