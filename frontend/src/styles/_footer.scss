@@ -127,7 +127,7 @@
           }
         }
 
-        button {
+        a {
           margin-top: 1rem;
           height: 50px;
           font-size: 20px;
@@ -135,7 +135,7 @@
           border-radius: 7px;
           transition: all 0.3s;
           padding-top: 0;
-
+          font-family: "Maven Pro", sans-serif;
           &:hover {
             color: #000;
 
@@ -333,7 +333,8 @@
 
     .our-partner {
       .our-partner-news-tricker {
-        .slide-news-tricker {}
+        .slide-news-tricker {
+        }
       }
     }
   }
