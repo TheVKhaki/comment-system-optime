@@ -147,7 +147,7 @@ const RoadMapStep4 = () => {
               </motion.p>
               <a className="btn-coming-soon btn-main" ref={btnComingSoon}>
                 <p ref={textBtnComingSoon}>Join the Rewards</p>
-                <span></span>
+                <span aria-hidden="true"></span>
               </a>
             </motion.div>
           </motion.div>
