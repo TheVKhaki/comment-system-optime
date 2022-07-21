@@ -546,6 +546,8 @@ const SocialSection = () => {
                   <a
                     href="https://twitter.com/QPoker_io"
                     className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -595,6 +597,8 @@ const SocialSection = () => {
                   <a
                     href="https://t.me/qpokerio"
                     className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -645,6 +649,8 @@ const SocialSection = () => {
                   <a
                     href="https://youtu.be/147ioPrSuaM"
                     className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -695,6 +701,8 @@ const SocialSection = () => {
                   <a
                     href="https://trello.com/b/RsomwpDG"
                     className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="circle-icon-social">
                       <IconContext.Provider
@@ -730,7 +738,7 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="ComingSoon"
+                            characters="our executive board"
                           />
                         </p>
                       </div>

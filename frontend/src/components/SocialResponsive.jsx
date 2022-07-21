@@ -55,6 +55,8 @@ const SocialResponsive = () => {
           <a
             href="https://twitter.com/QPoker_io"
             className="text-telegram text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div>
@@ -69,6 +71,8 @@ const SocialResponsive = () => {
           <a
             href="https://t.me/qpokerio"
             className="text-twitter text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div>
@@ -83,6 +87,8 @@ const SocialResponsive = () => {
           <a
             href="https://youtu.be/147ioPrSuaM"
             className="text-youtube text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div>
@@ -97,6 +103,8 @@ const SocialResponsive = () => {
           <a
             href="https://trello.com/b/RsomwpDG"
             className="text-trello text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
           >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
               <div>
@@ -104,7 +112,7 @@ const SocialResponsive = () => {
               </div>
             </IconContext.Provider>
             <span>Trello</span>
-            <p style={{ color: "white" }}>ComingSoon</p>
+            <p style={{ color: "white" }}>our executive board</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>$50,000</span>

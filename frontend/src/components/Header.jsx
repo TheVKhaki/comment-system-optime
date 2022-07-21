@@ -79,8 +79,8 @@ const Header = () => {
                 />
               </Nav.Link>
               <Nav.Link href="#litepaper">Litepaper</Nav.Link>
-              <Nav.Link href="#our-teamm">Team</Nav.Link>
               <Nav.Link href="#airdrops">Participate</Nav.Link>
+              <Nav.Link href="#our-teamm">Team</Nav.Link>
             </Nav>
             {/* <div className="btn-header">
               <a href="#">Connect To Wallet</a>
@@ -94,7 +94,10 @@ const Header = () => {
               onExit={exitOffcanvas}
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
+                <Offcanvas.Title
+                  id="offcanvasNavbarLabel"
+                  aria-hidden="true"
+                ></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
@@ -102,8 +105,8 @@ const Header = () => {
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
                   <Nav.Link href="#roadmap-3">Litepaper</Nav.Link>
-                  <Nav.Link href="#our-team">Team</Nav.Link>
                   <Nav.Link href="#roadmap-2">Participate</Nav.Link>
+                  <Nav.Link href="#our-team">Team</Nav.Link>
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}

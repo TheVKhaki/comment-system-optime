@@ -57,10 +57,16 @@ const Home = () => {
     const btnHero = document.querySelector(".btn-hero");
     const navLink = document.querySelectorAll(".navbar-nav .nav-link");
     const content = document.querySelector("main");
+    const all = document.querySelectorAll("*");
 
     let spinValue = 0;
     let canScroll = true;
     btnHero.addEventListener("click", function (e) {
+      all.forEach((element) => {
+        if (element.innerHTML === "") {
+          console.log(element);
+        }
+      });
       bullets.forEach((bulletColor) => {
         bulletColor.style.backgroundColor = "white";
       });
@@ -224,15 +230,16 @@ const Home = () => {
       <div className="bullet-section">
         <span
           data-section="#hero"
+          aria-hidden="true"
           style={{ backgroundColor: "#e28001" }}
         ></span>
-        <span data-section="#social"></span>
-        <span data-section="#roadmap"></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span data-section="#our-team"></span>
-        <span data-section="#footer"></span>
+        <span data-section="#social" aria-hidden="true"></span>
+        <span data-section="#roadmap" aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span data-section="#our-team" aria-hidden="true"></span>
+        <span data-section="#footer" aria-hidden="true"></span>
       </div>
     </>
   );
