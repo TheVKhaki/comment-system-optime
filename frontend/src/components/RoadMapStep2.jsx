@@ -953,7 +953,7 @@ const RoadMapStep2 = () => {
                 >
                   <a className="btn-main" onClick={() => setModalShow(true)}>
                     Join the Winners
-                    <span></span>
+                    <span aria-hidden="true"></span>
                   </a>
                 </motion.div>
               </Col>

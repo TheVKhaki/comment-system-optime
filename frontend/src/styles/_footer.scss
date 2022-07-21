@@ -106,43 +106,37 @@
         letter-spacing: 1px;
         margin: 2rem 0;
       }
+      // input {
+      //   height: 50px;
+      //   border-radius: 7px;
+      //   background-color: transparent;
+      //   border: 3px solid $mainColor;
+      //   outline: none;
+      //   color: $colorWhite;
+      //   padding: 0 10px;
+      //   font-size: 17px;
 
-      form {
-        display: flex;
-        flex-direction: column;
+      //   &::placeholder {
+      //     color: $colorWhite;
+      //     font-size: 17px;
+      //   }
+      // }
 
-        input {
-          height: 50px;
-          border-radius: 7px;
-          background-color: transparent;
-          border: 3px solid $mainColor;
-          outline: none;
-          color: $colorWhite;
-          padding: 0 10px;
-          font-size: 17px;
+      a {
+        margin-top: 1rem;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 7px;
+        transition: all 0.3s;
+        padding-top: 0;
+        font-family: "Maven Pro", sans-serif;
+        &:hover {
+          color: #000;
 
-          &::placeholder {
-            color: $colorWhite;
-            font-size: 17px;
-          }
-        }
-
-        a {
-          margin-top: 1rem;
-          height: 50px;
-          font-size: 20px;
-          font-weight: bold;
-          border-radius: 7px;
-          transition: all 0.3s;
-          padding-top: 0;
-          font-family: "Maven Pro", sans-serif;
-          &:hover {
-            color: #000;
-
-            span {
-              width: 225%;
-              height: 950px;
-            }
+          span {
+            width: 225%;
+            height: 950px;
           }
         }
       }
@@ -218,8 +212,14 @@
             }
           }
 
-          a {
+          span {
             color: #fff;
+            display: block;
+            cursor: pointer;
+            font-family: "Rota";
+            &:hover {
+              color: #e28001;
+            }
           }
 
           &:first-child {
@@ -227,6 +227,7 @@
             font-size: 20px;
             font-family: "Maven Pro", sans-serif;
             font-weight: bold;
+            min-width: 120px;
           }
 
           font-size: 19px;

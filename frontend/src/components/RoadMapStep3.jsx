@@ -684,7 +684,7 @@ const RoadMapStep3 = () => {
                         // onClick={() => setModalShow(true)}
                       >
                         Litepaper
-                        <span></span>
+                        <span aria-hidden="true"></span>
                       </a>
                     </motion.div>
                   </Col>

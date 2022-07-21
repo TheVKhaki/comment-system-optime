@@ -277,7 +277,7 @@ const Hero = () => {
               <Btnn>
                 <a href="#campaigns" className="btn-hero btn-main">
                   Explore
-                  <span></span>
+                  <span aria-hidden="true"></span>
                 </a>
                 <a href="#" className="btn-watch" onClick={clickYoutube}>
                   <img src={youtubeIcon} alt="" />

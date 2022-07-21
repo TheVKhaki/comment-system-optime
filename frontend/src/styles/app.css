@@ -1386,11 +1386,11 @@ body.modal-open {
 
 .social-responsive .image-social-responsive .text-youtube {
   bottom: 102px;
-  right: 94px;
+  right: 95px;
 }
 
 .social-responsive .image-social-responsive .text-trello {
-  bottom: 2px;
+  bottom: -20px;
   right: 2px;
 }
 
@@ -3434,48 +3434,7 @@ body.modal-open {
   margin: 2rem 0;
 }
 
-.footer-home footer .footer-left form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.footer-home footer .footer-left form input {
-  height: 50px;
-  border-radius: 7px;
-  background-color: transparent;
-  border: 3px solid #e28001;
-  outline: none;
-  color: #fff;
-  padding: 0 10px;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input:-ms-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::-ms-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form a {
+.footer-home footer .footer-left a {
   margin-top: 1rem;
   height: 50px;
   font-size: 20px;
@@ -3487,11 +3446,11 @@ body.modal-open {
   font-family: "Maven Pro", sans-serif;
 }
 
-.footer-home footer .footer-left form a:hover {
+.footer-home footer .footer-left a:hover {
   color: #000;
 }
 
-.footer-home footer .footer-left form a:hover span {
+.footer-home footer .footer-left a:hover span {
   width: 225%;
   height: 950px;
 }
@@ -3571,8 +3530,15 @@ body.modal-open {
   color: #e28001;
 }
 
-.footer-home footer .footer-right ul li a {
+.footer-home footer .footer-right ul li span {
   color: #fff;
+  display: block;
+  cursor: pointer;
+  font-family: "Rota";
+}
+
+.footer-home footer .footer-right ul li span:hover {
+  color: #e28001;
 }
 
 .footer-home footer .footer-right ul li:first-child {
@@ -3580,6 +3546,7 @@ body.modal-open {
   font-size: 20px;
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
+  min-width: 120px;
 }
 
 .footer-home footer .footer-copy-right p {
