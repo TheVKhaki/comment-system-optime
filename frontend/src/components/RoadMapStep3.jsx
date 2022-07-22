@@ -13,6 +13,7 @@ import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 import Lazyload from "../HOC/Lazyload";
+import LightPaper from "../docs/QPoker-Lightpaper.pdf"
 //gsap
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -681,7 +682,8 @@ const RoadMapStep3 = () => {
                       <a
                         target="_blank"
                         className="btn-main"
-                        // onClick={() => setModalShow(true)}
+                        href={LightPaper}
+
                       >
                         Litepaper
                         <span aria-hidden="true"></span>
