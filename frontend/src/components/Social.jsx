@@ -738,7 +738,7 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="our executive board"
+                            characters="executive board"
                           />
                         </p>
                       </div>
