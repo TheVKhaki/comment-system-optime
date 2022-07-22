@@ -1282,6 +1282,7 @@ body.modal-open {
   position: absolute;
   text-align: center;
   width: 130px;
+  padding-top: 2rem;
 }
 
 .social-responsive .image-social-responsive .text-image-responsive div {
@@ -1384,12 +1385,12 @@ body.modal-open {
 }
 
 .social-responsive .image-social-responsive .text-youtube {
-  bottom: 101px;
-  right: 96px;
+  bottom: 102px;
+  right: 95px;
 }
 
 .social-responsive .image-social-responsive .text-trello {
-  bottom: 2px;
+  bottom: -20px;
   right: 2px;
 }
 
@@ -1746,17 +1747,27 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   font-family: "Maven Pro", sans-serif;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .roadmap .countdown .countdown-number .time-number .time-couneter {
   position: absolute;
   top: -56px;
   rotate: -60deg;
+}
+
+.roadmap .countdown .countdown-number .time-number span {
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 9px;
+  background-color: #000;
+  border: 1px solid #e28001;
+  border-radius: 0 0 10px 10px;
 }
 
 .roadmap .coming-soon-text {
@@ -1786,7 +1797,6 @@ body.modal-open {
 }
 
 .roadmap .coming-soon-text .btn-coming-soon {
-  font-size: 2.5rem;
   width: 260px;
   height: 60px;
   display: -webkit-box;
@@ -1800,7 +1810,16 @@ body.modal-open {
   align-items: center;
   border-radius: 10px;
   margin-top: 2rem;
+}
+
+.roadmap .coming-soon-text .btn-coming-soon:hover p {
+  color: #000;
+}
+
+.roadmap .coming-soon-text .btn-coming-soon p {
   font-weight: bold;
+  font-size: 2.5rem;
+  color: #e28001;
 }
 
 .roadmap2-modal .modal-header {
@@ -3187,6 +3206,7 @@ body.modal-open {
   .ourteam .ourteam-characters {
     min-height: 74vh;
     left: 50%;
+    position: relative;
   }
   .ourteam .ourteam-characters .character-1,
   .ourteam .ourteam-characters .character-2,
@@ -3265,7 +3285,7 @@ body.modal-open {
 
 @media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .ourteam {
-    min-height: 50vh;
+    min-height: auto;
   }
   .ourteam .ourteam-characters {
     min-height: auto;
@@ -3274,7 +3294,7 @@ body.modal-open {
     .ourteam-characters
     .swiper-ourteam-2initialized
     .characters-information-mobile {
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -3414,48 +3434,7 @@ body.modal-open {
   margin: 2rem 0;
 }
 
-.footer-home footer .footer-left form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.footer-home footer .footer-left form input {
-  height: 50px;
-  border-radius: 7px;
-  background-color: transparent;
-  border: 3px solid #e28001;
-  outline: none;
-  color: #fff;
-  padding: 0 10px;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input:-ms-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::-ms-input-placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form input::placeholder {
-  color: #fff;
-  font-size: 17px;
-}
-
-.footer-home footer .footer-left form button {
+.footer-home footer .footer-left a {
   margin-top: 1rem;
   height: 50px;
   font-size: 20px;
@@ -3464,13 +3443,14 @@ body.modal-open {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-top: 0;
+  font-family: "Maven Pro", sans-serif;
 }
 
-.footer-home footer .footer-left form button:hover {
+.footer-home footer .footer-left a:hover {
   color: #000;
 }
 
-.footer-home footer .footer-left form button:hover span {
+.footer-home footer .footer-left a:hover span {
   width: 225%;
   height: 950px;
 }
@@ -3506,7 +3486,7 @@ body.modal-open {
 }
 
 .footer-home footer .footer-logo .footer-social-media a:nth-child(1):hover svg {
-  color: #404eed !important;
+  color: #0079bf !important;
 }
 
 .footer-home footer .footer-logo .footer-social-media a:nth-child(2) {
@@ -3550,8 +3530,15 @@ body.modal-open {
   color: #e28001;
 }
 
-.footer-home footer .footer-right ul li a {
+.footer-home footer .footer-right ul li span {
   color: #fff;
+  display: block;
+  cursor: pointer;
+  font-family: "Rota";
+}
+
+.footer-home footer .footer-right ul li span:hover {
+  color: #e28001;
 }
 
 .footer-home footer .footer-right ul li:first-child {
@@ -3559,6 +3546,7 @@ body.modal-open {
   font-size: 20px;
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
+  min-width: 120px;
 }
 
 .footer-home footer .footer-copy-right p {
@@ -3649,6 +3637,9 @@ body.modal-open {
 @media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .footer-home {
     min-height: auto;
+  }
+  .footer-home .comingsoon-ourpartner h3 {
+    top: 305px;
   }
   .footer-home .our-partner {
     min-height: auto;

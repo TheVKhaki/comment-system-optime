@@ -28,6 +28,7 @@
       position: absolute;
       text-align: center;
       width: 130px;
+      padding-top: 2rem;
       div {
         display: flex;
         justify-content: center;
@@ -107,11 +108,11 @@
       left: 86px;
     }
     .text-youtube {
-      bottom: 101px;
-      right: 96px;
+      bottom: 102px;
+      right: 95px;
     }
     .text-trello {
-      bottom: 2px;
+      bottom: -20px;
       right: 2px;
     }
   }

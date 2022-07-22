@@ -182,7 +182,7 @@ const SocialSection = () => {
     );
   }, []);
   useEffect(() => {
-    fetch("https://stag.owl.qpoker.io/api/v1/social-growth")
+    fetch("https://stag.owl.qpoker.io/api/v1/public/social-growth")
       .then((response) => response.json())
       .then((data) => socialGrowth(data));
     function socialGrowth(dataSocial) {
@@ -543,19 +543,23 @@ const SocialSection = () => {
               </motion.svg>
               <div className="right-circle-social">
                 <div className="telegram-social socials-in-circle">
-                  <a href="#" className="link-social-in-circle">
+                  <a
+                    href="https://twitter.com/QPoker_io"
+                    className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="circle-icon-social">
                       <IconContext.Provider
                         value={{ size: "2.5rem", color: "white" }}
                       >
-                        <motion.a
+                        <motion.div
                           variants={iconFadeIn}
                           initial="hidden"
                           animate={controls}
-                          href="#"
                         >
                           <FaTwitter />
-                        </motion.a>
+                        </motion.div>
                       </IconContext.Provider>
                     </div>
                     <motion.div
@@ -590,19 +594,23 @@ const SocialSection = () => {
                   </a>
                 </div>
                 <div className="twitter-social socials-in-circle">
-                  <a href="#" className="link-social-in-circle">
+                  <a
+                    href="https://t.me/qpokerio"
+                    className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="circle-icon-social">
                       <IconContext.Provider
                         value={{ color: "white", size: "2.5rem" }}
                       >
-                        <motion.a
+                        <motion.div
                           variants={iconFadeIn}
                           initial="hidden"
                           animate={controls}
-                          href="#"
                         >
                           <FaTelegramPlane />
-                        </motion.a>
+                        </motion.div>
                       </IconContext.Provider>
                     </div>
                     <motion.div
@@ -638,19 +646,23 @@ const SocialSection = () => {
                   </a>
                 </div>
                 <div className="youtube-social socials-in-circle">
-                  <a href="#" className="link-social-in-circle">
+                  <a
+                    href="https://youtu.be/147ioPrSuaM"
+                    className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="circle-icon-social">
                       <IconContext.Provider
                         value={{ color: "white", size: "2.5rem" }}
                       >
-                        <motion.a
+                        <motion.div
                           variants={iconFadeIn}
                           initial="hidden"
                           animate={controls}
-                          href="#"
                         >
                           <FaYoutube />
-                        </motion.a>
+                        </motion.div>
                       </IconContext.Provider>
                     </div>
                     <motion.div
@@ -686,19 +698,23 @@ const SocialSection = () => {
                   </a>
                 </div>
                 <div className="trello-social socials-in-circle">
-                  <a href="#" className="link-social-in-circle">
+                  <a
+                    href="https://trello.com/b/RsomwpDG"
+                    className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="circle-icon-social">
                       <IconContext.Provider
                         value={{ color: "white", size: "2.5rem" }}
                       >
-                        <motion.a
+                        <motion.div
                           variants={iconFadeIn}
                           initial="hidden"
                           animate={controls}
-                          href="#"
                         >
                           <FaTrello />
-                        </motion.a>
+                        </motion.div>
                       </IconContext.Provider>
                     </div>
                     <motion.div
@@ -722,7 +738,7 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="ComingSoon"
+                            characters="executive board"
                           />
                         </p>
                       </div>

@@ -25,8 +25,6 @@ import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //Framermotion
 import { motion, useAnimation } from "framer-motion";
-//react responsive
-import { useMediaQuery } from "react-responsive";
 //Characters 3dmodel
 import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
@@ -34,9 +32,9 @@ import { Environment, OrbitControls, Center, Html } from "@react-three/drei";
 import Model3d from "./Model3d";
 
 const OurTeam = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
   //state characters
   const [characters, setCharacters] = useState(Characters);
+  const [charactersMobile, setCharactersMobile] = useState(Characters);
   const [showLoad, setShowLoad] = useState(0);
   //animation
   const controls = useAnimation();
@@ -174,82 +172,86 @@ const OurTeam = () => {
               modules={[Navigation]}
               navigation
             >
-              {characters.map((characters) => {
-                return (
-                  <SwiperSlide key={characters.id}>
-                    <div
-                      className={characters.className}
-                      key={characters.id}
-                      onClick={handleClickNFT}
-                    >
-                      <div className="characters-information-mobile">
-                        <div className="wrapper-characters-information-mobile">
-                          <span>{characters.name.toUpperCase()}</span>
-                          <p>
-                            {characters.abbrPosition !== "" && (
-                              <span>{characters.abbrPosition}</span>
-                            )}
-                            {characters.job}
-                          </p>
-                          <div className="social-media-our-team">
-                            <IconContext.Provider
-                              value={{
-                                color: "white",
-                                size: "2.4rem",
-                              }}
-                            >
-                              <a
-                                href={characters.telegram}
-                                target="_blank"
-                                className={`${
-                                  characters.telegram === ""
-                                    ? "text-muted"
-                                    : null
-                                }`}
+              {charactersMobile
+                .sort((a, b) => {
+                  return a.idMobile - b.idMobile;
+                })
+                .map((characters) => {
+                  return (
+                    <SwiperSlide key={characters.id}>
+                      <div
+                        className={characters.className}
+                        key={characters.id}
+                        onClick={handleClickNFT}
+                      >
+                        <div className="characters-information-mobile">
+                          <div className="wrapper-characters-information-mobile">
+                            <span>{characters.name.toUpperCase()}</span>
+                            <p>
+                              {characters.abbrPosition !== "" && (
+                                <span>{characters.abbrPosition}</span>
+                              )}
+                              {characters.job}
+                            </p>
+                            <div className="social-media-our-team">
+                              <IconContext.Provider
+                                value={{
+                                  color: "white",
+                                  size: "2.4rem",
+                                }}
                               >
-                                <FaTelegramPlane />
-                              </a>
-                            </IconContext.Provider>
-                            <IconContext.Provider
-                              value={{
-                                color: "white",
-                                size: "2.4rem",
-                              }}
-                            >
-                              <a href={characters.email} target="_blank">
-                                <HiOutlineMail />
-                              </a>
-                            </IconContext.Provider>
-                            <IconContext.Provider
-                              value={{
-                                color: "white",
-                                size: "2.4rem",
-                              }}
-                            >
-                              <a
-                                href={characters.discord}
-                                target="_blank"
-                                className={`${
-                                  characters.discord === ""
-                                    ? "text-muted"
-                                    : null
-                                }`}
+                                <a
+                                  href={characters.telegram}
+                                  target="_blank"
+                                  className={`${
+                                    characters.telegram === ""
+                                      ? "text-muted"
+                                      : null
+                                  }`}
+                                >
+                                  <FaTelegramPlane />
+                                </a>
+                              </IconContext.Provider>
+                              <IconContext.Provider
+                                value={{
+                                  color: "white",
+                                  size: "2.4rem",
+                                }}
                               >
-                                <FaDiscord />
-                              </a>
-                            </IconContext.Provider>
+                                <a href={characters.email} target="_blank">
+                                  <HiOutlineMail />
+                                </a>
+                              </IconContext.Provider>
+                              <IconContext.Provider
+                                value={{
+                                  color: "white",
+                                  size: "2.4rem",
+                                }}
+                              >
+                                <a
+                                  href={characters.discord}
+                                  target="_blank"
+                                  className={`${
+                                    characters.discord === ""
+                                      ? "text-muted"
+                                      : null
+                                  }`}
+                                >
+                                  <FaDiscord />
+                                </a>
+                              </IconContext.Provider>
+                            </div>
                           </div>
                         </div>
+                        <a href="#our-team">
+                          <Lazyload>
+                            <img src={characters.image} alt="" />
+                          </Lazyload>
+                        </a>
                       </div>
-                      <a href="#our-team">
-                        <Lazyload>
-                          <img src={characters.image} alt="" />
-                        </Lazyload>
-                      </a>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
+                    </SwiperSlide>
+                  );
+                })}
             </Swiper>
           </motion.div>
           {/* {showLoad && <div className="loading-nft">Loading...</div>} */}

@@ -233,14 +233,21 @@
         width: 60px;
         height: 60px;
         display: flex;
-        justify-content: center;
         font-family: "Maven Pro", sans-serif;
         position: relative;
-
+        flex-direction: column;
         .time-couneter {
           position: absolute;
           top: -56px;
           rotate: -60deg;
+        }
+        span {
+          font-size: 1.2rem;
+          position: relative;
+          bottom: 9px;
+          background-color: #000;
+          border: 1px solid #e28001;
+          border-radius: 0 0 10px 10px;
         }
       }
     }
@@ -265,7 +272,6 @@
     }
 
     .btn-coming-soon {
-      font-size: 2.5rem;
       width: 260px;
       height: 60px;
       display: flex;
@@ -273,7 +279,16 @@
       align-items: center;
       border-radius: 10px;
       margin-top: 2rem;
-      font-weight: bold;
+      &:hover {
+        p {
+          color: #000;
+        }
+      }
+      p {
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #e28001;
+      }
     }
   }
 }

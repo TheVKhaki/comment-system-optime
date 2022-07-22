@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 //media
 import elephantComingsoon from "../images/BKGR4-03.webp";
 import elephantComingsoonRes from "../images/BKGR4-03-Res.webp";
@@ -53,7 +53,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`07/22/${year}`) - +new Date();
+    let difference = +new Date(`08/2/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -75,6 +75,20 @@ const RoadMapStep4 = () => {
     }, 1000);
     return () => clearTimeout(timer);
   });
+  const btnComingSoon = useRef();
+  const textBtnComingSoon = useRef();
+  useEffect(() => {
+    btnComingSoon.current.addEventListener("mouseover", function (params) {
+      textBtnComingSoon.current.innerHTML = "Coming Soon";
+    });
+    btnComingSoon.current.addEventListener("mouseout", function (params) {
+      textBtnComingSoon.current.innerHTML = "Join the Rewards";
+    });
+    btnComingSoon.current.addEventListener("click", function (params) {
+      textBtnComingSoon.current.innerHTML = "Coming Soon";
+    });
+  }, []);
+
   return (
     <>
       <section className="roadmap-step4 roadmap" ref={element} id="comingsoon">
@@ -101,10 +115,18 @@ const RoadMapStep4 = () => {
             </motion.div>
             <motion.div className="countdown">
               <div className="countdown-number">
-                <div className="time-number">{timeLeft.days}</div>
-                <div className="time-number">{timeLeft.hours}</div>
-                <div className="time-number">{timeLeft.minutes}</div>
-                <div className="time-number">{timeLeft.seconds}</div>
+                <div className="time-number">
+                  {timeLeft.days} <span>Days</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.hours} <span>Hours</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.minutes} <span>Minutes</span>
+                </div>
+                <div className="time-number">
+                  {timeLeft.seconds} <span>Seconds</span>
+                </div>
               </div>
             </motion.div>
             <motion.div className="coming-soon-text">
@@ -123,9 +145,9 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
-              <a href="#" className="btn-coming-soon btn-main">
-                Join the Rewards
-                <span></span>
+              <a className="btn-coming-soon btn-main" ref={btnComingSoon}>
+                <p ref={textBtnComingSoon}>Join the Rewards</p>
+                <span aria-hidden="true"></span>
               </a>
             </motion.div>
           </motion.div>

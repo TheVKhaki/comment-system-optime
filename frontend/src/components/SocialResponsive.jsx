@@ -16,7 +16,7 @@ const SocialResponsive = () => {
     youtubeSubscribers: "",
   });
   useEffect(() => {
-    fetch("https://stag.owl.qpoker.io/api/v1/social_growth")
+    fetch("https://stag.owl.qpoker.io/api/v1/public/social-growth")
       .then((response) => response.json())
       .then((data) => socialGrowth(data));
     function socialGrowth(dataSocial) {
@@ -52,9 +52,14 @@ const SocialResponsive = () => {
         </div>
         <div className="image-social-responsive">
           <img src={socialRes} alt="" className="svg-responsive-social" />
-          <a href="#" className="text-telegram text-image-responsive">
+          <a
+            href="https://twitter.com/QPoker_io"
+            className="text-telegram text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTwitter />
               </div>
             </IconContext.Provider>
@@ -63,9 +68,14 @@ const SocialResponsive = () => {
               +{dataSocial.twitterFollowers}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-twitter text-image-responsive">
+          <a
+            href="https://t.me/qpokerio"
+            className="text-twitter text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTelegramPlane />
               </div>
             </IconContext.Provider>
@@ -74,9 +84,14 @@ const SocialResponsive = () => {
               +{dataSocial.telegramChannel}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-youtube text-image-responsive">
+          <a
+            href="https://youtu.be/147ioPrSuaM"
+            className="text-youtube text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaYoutube />
               </div>
             </IconContext.Provider>
@@ -85,14 +100,19 @@ const SocialResponsive = () => {
               +{dataSocial.youtubeSubscribers}% <span>(7d %)</span>
             </p>
           </a>
-          <a href="#" className="text-trello text-image-responsive">
+          <a
+            href="https://trello.com/b/RsomwpDG"
+            className="text-trello text-image-responsive"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconContext.Provider value={{ color: "white", size: "2.5rem" }}>
-              <div href="#">
+              <div>
                 <FaTrello />
               </div>
             </IconContext.Provider>
             <span>Trello</span>
-            <p style={{ color: "white" }}>ComingSoon</p>
+            <p style={{ color: "white" }}>executive board</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
             <span>$50,000</span>

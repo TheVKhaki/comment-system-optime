@@ -1,7 +1,5 @@
-image: registry.qholes.com/sam.mosleh/docker-with-compose
-
-before_script:
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+default:
+  image: $CI_REGISTRY/sam.mosleh/docker-with-compose
 
 stages:
   - build
@@ -10,6 +8,7 @@ stages:
 build-stag:
   stage: build
   script:
+    - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       TAG=stag
       FRONTEND_ENV=staging
@@ -23,6 +22,7 @@ build-stag:
 build-prod:
   stage: build
   script:
+    - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       TAG=prod
       FRONTEND_ENV=production
@@ -36,6 +36,7 @@ build-prod:
 deploy-stag:
   stage: deploy
   script:
+    - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       DOMAIN=stag.qpoker.io
       TRAEFIK_TAG=stag.qpoker.io
@@ -54,6 +55,7 @@ deploy-stag:
 deploy-prod:
   stage: deploy
   script:
+    - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       DOMAIN=qpoker.io
       TRAEFIK_TAG=qpoker.io

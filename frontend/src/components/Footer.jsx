@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
   FaArrowUp,
-  FaDiscord,
+  FaTrello,
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
 
@@ -25,6 +25,23 @@ const Footer = () => {
       } else {
         btnGoToTop.style.bottom = "10px";
       }
+    });
+
+    //change text in footer right to coming soon
+    const linkFooterRight = document.querySelectorAll(".footer-right span");
+    const firstTextLinks = [
+      linkFooterRight[0].innerText,
+      linkFooterRight[1].innerText,
+      linkFooterRight[2].innerText,
+      linkFooterRight[3].innerText,
+    ];
+    linkFooterRight.forEach((element, index) => {
+      element.addEventListener("mouseenter", function (params) {
+        element.innerHTML = "Coming Soon";
+      });
+      element.addEventListener("mouseleave", function (params) {
+        element.innerHTML = firstTextLinks[index];
+      });
     });
   }, []);
 
@@ -51,13 +68,16 @@ const Footer = () => {
                     Airdrops, bounties and other welcoming benefits just before
                     the real action gets started.
                   </p>
-                  <form action="">
-                    {/* <input type="text" placeholder="Email Address" /> */}
-                    <button className="btn-main">
-                      Join our Telegram
-                      <span></span>
-                    </button>
-                  </form>
+                  {/* <input type="text" placeholder="Email Address" /> */}
+                  <a
+                    href="https://t.me/qpokerio"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-main"
+                  >
+                    Join our Telegram
+                    <span aria-hidden="true"></span>
+                  </a>
                 </div>
               </Col>
               <Col className="d-flex justify-content-center">
@@ -66,21 +86,33 @@ const Footer = () => {
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
-                        <FaDiscord />
+                      <a
+                        href="https://trello.com/b/RsomwpDG"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FaTrello />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
+                      <a
+                        href="https://twitter.com/QPoker_io"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FaTwitter />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
                       value={{ color: "white", size: "2.3rem" }}
                     >
-                      <a href="/#">
+                      <a
+                        href="https://www.youtube.com/channel/UCZeSEvAStNu29wUA3exSjXg"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FaYoutube />
                       </a>
                     </IconContext.Provider>
@@ -101,16 +133,16 @@ const Footer = () => {
                   <ul>
                     <li>Links</li>
                     <li>
-                      <a href="/#">Blog</a>{" "}
+                      <span>Blog</span>{" "}
                     </li>
                     <li>
-                      <a href="/#">FAQ</a>
+                      <span>FAQ</span>
                     </li>
                     <li>
-                      <a href="/#">Privacy Policy</a>
+                      <span>Privacy Policy</span>
                     </li>
                     <li>
-                      <a href="/#">About Us</a>
+                      <span>About Us</span>
                     </li>
                   </ul>
                 </div>
