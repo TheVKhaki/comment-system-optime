@@ -682,7 +682,8 @@ const RoadMapStep3 = () => {
                       <a
                         target="_blank"
                         className="btn-main"
-                        href="/docs/qpoker-lightpaper.pdf"
+                        href="/docs/qpoker-litepaper.pdf"
+                        title="QPoker-Trendsetter of iGaming Lite-Paper"
                       >
                         Litepaper
                         <span aria-hidden="true"></span>
