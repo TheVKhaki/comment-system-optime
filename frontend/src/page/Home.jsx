@@ -35,11 +35,11 @@ const Home = () => {
     }
   }, [finalSpinVAlue, width992, height600, height700]);
 
-  // window.addEventListener("load", function () {
-  //   setTimeout(() => {
-  //     window.scrollTo(0, 0);
-  //   }, 50);
-  // });
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+  });
   // useEffect(() => {
   //   const sectionHero = document.querySelector(".hero");
   //   sectionHero.scrollIntoView();
