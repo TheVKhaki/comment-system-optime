@@ -112,7 +112,7 @@ const Characters = () => {
       job: " & Blockchain Expert",
       abbrPosition: "CTO",
       description:
-        "Johnnie is a professional data analyst and blockchain enthusiast. He has all-around understanding over systems security and multi-model databases. In recent years, MR has been working as a senior analyst of data management in major finance and e-commerce businesses.",
+        "Johnnie is a professional data analyst and blockchain enthusiast. He has all-around understanding over systems security and multi-model databases. In recent years, Johnnie has been working as a senior analyst of data management in major finance and e-commerce businesses.",
       email: "mailto:Johnnie@qpoker.io",
       telegram: "https://T.me/J_M_Martin",
       discord: "",
