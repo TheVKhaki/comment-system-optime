@@ -1390,8 +1390,8 @@ body.modal-open {
 }
 
 .social-responsive .image-social-responsive .text-trello {
-  bottom: -20px;
-  right: 2px;
+  bottom: 1px;
+  right: 1px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1447,8 +1447,8 @@ body.modal-open {
     left: -13px;
   }
   .social-responsive .image-social-responsive .text-trello {
-    bottom: -15px;
-    right: -13px;
+    bottom: -16px;
+    right: -11px;
   }
   .social-responsive .image-social-responsive .text-twitter {
     bottom: 41px;
