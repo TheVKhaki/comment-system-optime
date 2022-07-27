@@ -42,6 +42,7 @@ deploy-stag:
       TRAEFIK_TAG=stag.qpoker.io
       STACK_NAME=stag-qpoker-io
       TAG=stag
+      PROXY_AUTH=true
       sh ./scripts/deploy.sh
   environment:
     name: staging

@@ -31,7 +31,7 @@ const Header = () => {
       ".offcanvas-body .navbar-nav .nav-link"
     );
     itemMenu.forEach((itemmenu) => {
-      itemmenu.addEventListener("click", function () {
+      itemmenu.addEventListener("click", function (e) {
         var isChrome =
           /Chrome/.test(navigator.userAgent) &&
           /Google Inc/.test(navigator.vendor);
