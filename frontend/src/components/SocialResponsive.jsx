@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaTrello,
 } from "react-icons/fa";
+import { gsap } from "gsap";
 const SocialResponsive = () => {
   const [dataSocial, setDataSocial] = useState({
     telegramChannel: "",
@@ -41,6 +42,38 @@ const SocialResponsive = () => {
         youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
       });
     }
+  }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      document.querySelector(
+        ".social-responsive .image-social-responsive .text-telegram span"
+      ),
+      {
+        color: "#1da1f2",
+      },
+      {
+        color: "#fff",
+        duration: 1,
+        yoyo: true,
+        repeatDelay: 3,
+        repeat: -1,
+      }
+    );
+    gsap.fromTo(
+      document.querySelector(
+        ".social-responsive .image-social-responsive .text-telegram svg"
+      ),
+      {
+        color: "#1da1f2",
+      },
+      {
+        duration: 1,
+        color: "#fff",
+        yoyo: true,
+        repeatDelay: 3,
+        repeat: -1,
+      }
+    );
   }, []);
 
   return (
