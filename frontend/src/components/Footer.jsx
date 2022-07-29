@@ -62,20 +62,18 @@ const Footer = () => {
             <Row className="flex-column flex-lg-row">
               <Col>
                 <div className="footer-left">
-                  <h4>Bonus Whore?</h4>
+                  <h4>Subscribe</h4>
                   <p>
-                    Eager to milk us before the paying customers join the line?
-                    Airdrops, bounties and other welcoming benefits just before
-                    the real action gets started.
+                    Airdrops, bounties & giveaways.. be first in line to hear about our magnificent welcoming benefits
                   </p>
                   {/* <input type="text" placeholder="Email Address" /> */}
                   <a
-                    href="https://t.me/qpokerio"
+                    href="https://twitter.com/QPoker_io"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-main"
                   >
-                    Join our Telegram
+                    Join our Twitter
                     <span aria-hidden="true"></span>
                   </a>
                 </div>

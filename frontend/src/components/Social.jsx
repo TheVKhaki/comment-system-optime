@@ -180,6 +180,36 @@ const SocialSection = () => {
         drawSVG: "100%",
       }
     );
+    gsap.fromTo(
+      document.querySelector(
+        ".social-section .circle-socials .right-circle-social .socials-in-circle span"
+      ),
+      {
+        color: "#1da1f2",
+      },
+      {
+        color: "#fff",
+        duration: 1,
+        yoyo: true,
+        repeatDelay: 1,
+        repeat: -1,
+      }
+    );
+    gsap.fromTo(
+      document.querySelector(
+        ".social-section .circle-socials .right-circle-social .socials-in-circle svg"
+      ),
+      {
+        color: "#1da1f2",
+      },
+      {
+        duration: 1,
+        color: "#fff",
+        yoyo: true,
+        repeatDelay: 1,
+        repeat: -1,
+      }
+    );
   }, []);
   useEffect(() => {
     fetch(process.env.REACT_APP_SOCIAL_GROWTH)
