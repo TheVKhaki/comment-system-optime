@@ -78,7 +78,7 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="#litepaper">Litepaper</Nav.Link>
+              <Nav.Link href="/docs/qpoker-litepaper.pdf">Litepaper</Nav.Link>
               <Nav.Link href="#airdrops">Participate</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
             </Nav>

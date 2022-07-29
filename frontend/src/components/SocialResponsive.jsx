@@ -55,7 +55,7 @@ const SocialResponsive = () => {
         color: "#fff",
         duration: 1,
         yoyo: true,
-        repeatDelay: 3,
+        repeatDelay: 1,
         repeat: -1,
       }
     );
@@ -70,7 +70,7 @@ const SocialResponsive = () => {
         duration: 1,
         color: "#fff",
         yoyo: true,
-        repeatDelay: 3,
+        repeatDelay: 1,
         repeat: -1,
       }
     );
