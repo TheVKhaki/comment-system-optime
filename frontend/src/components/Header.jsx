@@ -104,7 +104,7 @@ const Header = () => {
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
-                  <Nav.Link href="#roadmap-3">Litepaper</Nav.Link>
+                  <Nav.Link href="/docs/qpoker-litepaper.pdf">Litepaper</Nav.Link>
                   <Nav.Link href="#roadmap-2">Participate</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
                   {/* <div className="btn-header">
