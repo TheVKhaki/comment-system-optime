@@ -200,7 +200,7 @@ body button {
   font-size: 19px;
   padding-top: 0.4rem;
   color: #e28001;
-  border: 2px solid #e28001;
+  border: 3px solid #e28001;
   -webkit-transition: all 0.45s;
   transition: all 0.45s;
   position: relative;
@@ -223,7 +223,7 @@ body button {
 }
 
 .btn-main:hover {
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 
 .btn-main:hover span {
@@ -1519,6 +1519,7 @@ body.modal-open {
 .roadmap.roadmap-step4 .img-elephant-comingsoon img {
   width: auto;
   height: auto;
+  pointer-events: none;
 }
 
 .roadmap .roadmap-date p {
