@@ -53,9 +53,9 @@ const SocialResponsive = () => {
       },
       {
         color: "#fff",
-        duration: 1,
+        duration: 0.1,
         yoyo: true,
-        repeatDelay: 1,
+        repeatDelay: 3,
         repeat: -1,
       }
     );
@@ -67,10 +67,10 @@ const SocialResponsive = () => {
         color: "#1da1f2",
       },
       {
-        duration: 1,
+        duration: 0.1,
         color: "#fff",
         yoyo: true,
-        repeatDelay: 1,
+        repeatDelay: 3,
         repeat: -1,
       }
     );
