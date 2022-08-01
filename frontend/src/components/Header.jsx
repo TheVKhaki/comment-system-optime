@@ -8,8 +8,11 @@ import logoImage from "../images/LOW_Logo-New-Color-C.png";
 import { gsap } from "gsap";
 //framer motion
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const header = useRef();
+
   useEffect(() => {
     gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
@@ -78,7 +81,9 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="/docs/qpoker-litepaper.pdf">Litepaper</Nav.Link>
+              <Nav.Link href="/lite-paper" target="_blank">
+                Litepaper
+              </Nav.Link>
               <Nav.Link href="#airdrops">Participate</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
             </Nav>
@@ -104,7 +109,9 @@ const Header = () => {
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
-                  <Nav.Link href="/docs/qpoker-litepaper.pdf">Litepaper</Nav.Link>
+                  <Nav.Link href="/lite-paper" target="_blank">
+                    Litepaper
+                  </Nav.Link>
                   <Nav.Link href="#roadmap-2">Participate</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
                   {/* <div className="btn-header">

@@ -1666,6 +1666,10 @@ body.modal-open {
   margin-top: 2rem;
 }
 
+.roadmap .content-slide-3 p br {
+  margin-bottom: 0.8rem;
+}
+
 .roadmap .content-slide-3 img {
   height: 450px;
   -o-object-fit: cover;

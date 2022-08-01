@@ -12,7 +12,11 @@ import { useInView } from "react-intersection-observer";
 //Gsap
 import { gsap } from "gsap";
 
-const SocialSection = () => {
+//axios client
+// import index from "../api/client/index"
+
+const SocialSection = (_props) => {
+  const props = _props;
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [dataSocial, setDataSocial] = useState({
@@ -180,41 +184,72 @@ const SocialSection = () => {
         drawSVG: "100%",
       }
     );
-    gsap.fromTo(
+    gsap.to(
       document.querySelector(
         ".social-section .circle-socials .right-circle-social .socials-in-circle span"
       ),
       {
-        color: "#1da1f2",
-      },
-      {
-        color: "#fff",
-        duration: 0.1,
-        yoyo: true,
-        repeatDelay: 3,
+        keyframes: {
+          "0%": { color: "#fff" },
+          "10%": { color: "#1da1f2" },
+          "89%": { color: "#1da1f2" },
+          "90%": { color: "#fff" },
+        },
+        duration: 1.5,
+        repeatDelay: 1.5,
         repeat: -1,
       }
     );
-    gsap.fromTo(
+    gsap.to(
       document.querySelector(
         ".social-section .circle-socials .right-circle-social .socials-in-circle svg"
       ),
       {
-        color: "#1da1f2",
-      },
-      {
-        duration: 0.1,
-        color: "#fff",
-        yoyo: true,
-        repeatDelay: 3,
+        keyframes: {
+          "0%": { color: "#fff" },
+          "10%": { color: "#1da1f2" },
+          "89%": { color: "#1da1f2" },
+          "90%": { color: "#fff" },
+        },
+        duration: 1.5,
+        repeatDelay: 1.5,
         repeat: -1,
       }
     );
   }, []);
   useEffect(() => {
-    fetch(process.env.REACT_APP_SOCIAL_GROWTH)
-      .then((response) => response.json())
-      .then((data) => socialGrowth(data));
+    let error_count = 0;
+    let error_count_max = 20;
+    const make_request = setInterval(() => {
+      props.api_client.public
+        .getPublicSocialGrowth()
+        .catch((error) => {
+          if (error_count_max > error_count) {
+            console.error("setDataSocial", error);
+            setDataSocial({
+              telegramChannel: "pending ...",
+              twitterFollowers: "pending ...",
+              youtubeSubscribers: "pending ...",
+            });
+            error_count++;
+            console.log("error_count", error_count);
+          } else {
+            setDataSocial({
+              telegramChannel: " (Please refresh !) ",
+              twitterFollowers: " (Please refresh !) ",
+              youtubeSubscribers: " (Please refresh !) ",
+            });
+            clearInterval(make_request);
+          }
+        })
+        .then((data) => {
+          if (data != undefined) {
+            clearInterval(make_request);
+            socialGrowth(data);
+          }
+          console.log("data", data);
+        });
+    }, 2000);
     function socialGrowth(dataSocial) {
       const telegramGrowth =
         ((dataSocial.telegram_channel.now -
@@ -768,7 +803,7 @@ const SocialSection = () => {
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
-                            characters="executive board"
+                            characters="Executive Board"
                           />
                         </p>
                       </div>
@@ -798,7 +833,7 @@ const SocialSection = () => {
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
-                      characters="Join Twitter"
+                      characters="Getting Started 🔥"
                     />
                   </p>
                 </motion.div>

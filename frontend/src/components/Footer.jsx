@@ -64,7 +64,9 @@ const Footer = () => {
                 <div className="footer-left">
                   <h4>Subscribe</h4>
                   <p>
-                    Airdrops, bounties & giveaways.. be first in line to hear about our magnificent welcoming benefits
+                    Airdrops, Bounties & Giveaways.. <br />
+                    Be first in line to hear about our magnificent welcoming
+                    benefits
                   </p>
                   {/* <input type="text" placeholder="Email Address" /> */}
                   <a

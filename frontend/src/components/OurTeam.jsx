@@ -74,6 +74,9 @@ const OurTeam = () => {
   function Loader() {
     return <Html center>Loading...</Html>;
   }
+  function name_generate(title, job) {
+    return title + " " + job;
+  }
   useEffect(() => {
     gsap.fromTo(
       document.querySelector(".lottie-our-team"),
@@ -154,7 +157,10 @@ const OurTeam = () => {
                     >
                       <Lazyload>
                         <motion.img
-                          title={characters.job}
+                          title={name_generate(
+                            characters.abbrPosition,
+                            characters.job
+                          )}
                           className={`${inView ? "show" : "hidden"} `}
                           src={characters.image}
                           alt=""
@@ -229,6 +235,7 @@ const OurTeam = () => {
                                 }}
                               >
                                 <a
+                                  title="Coming soon"
                                   href={characters.discord}
                                   target="_blank"
                                   className={`${

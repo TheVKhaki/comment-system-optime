@@ -275,8 +275,12 @@ const Hero = () => {
                 </p>
               </TextHero>
               <Btnn>
-                <a href="#campaigns" className="btn-hero btn-main">
-                  Explore
+                <a
+                  href="/lite-paper"
+                  target="_blank"
+                  className="btn-hero btn-main"
+                >
+                  Litepaper
                   <span aria-hidden="true"></span>
                 </a>
                 <a href="#" className="btn-watch" onClick={clickYoutube}>

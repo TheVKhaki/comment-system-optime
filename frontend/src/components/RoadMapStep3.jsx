@@ -13,7 +13,7 @@ import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 import Lazyload from "../HOC/Lazyload";
-
+import { Link } from "react-router-dom";
 //gsap
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -657,19 +657,19 @@ const RoadMapStep3 = () => {
                 >
                   All immaterial rights of QPoker’s rulebook and structure are
                   owned by QPoker Ltd. It means none of the world’s other
-                  gambling providers is allowed to start offering QPoker without
-                  our authorization and annual license fees (millions of dollars
-                  per year). We own the same waterproof copyrights as Monopoly
-                  and Trivial Pursuit possess to their games. <br /> Our only,
-                  realistic, and achievable goal is to become a sovereign leader
-                  of global iGaming markets. We will break Pandora’s box by
-                  starting to offer skill-based social games as real money
-                  versions, all run by a P2P decentralized platform. Up to this
-                  date, all casinos have been ruthlessly exploiting players by
-                  offering only luck-based brainless products which do provide
-                  neither social amusement nor a chance of winning. Fortunately,
-                  this will change irreversibly as QPoker launches the new Web3
-                  era of fair and inspirational iGaming.
+                  gambling providers are allowed to start offering QPoker
+                  without our authorization and annual license fees (millions of
+                  dollars per year). We own the same waterproof copyrights as
+                  Monopoly and Trivial Pursuit possess to their games. <br />{" "}
+                  Our only, realistic, and achievable goal is to become a
+                  sovereign leader of global iGaming markets. We will break
+                  Pandora’s box by starting to offer skill-based social games as
+                  real money versions, all run by a P2P decentralized platform.
+                  Up to this date, all casinos have been ruthlessly exploiting
+                  players by offering only luck-based brainless products which
+                  do provide neither social amusement nor a chance of winning.
+                  Fortunately, this will change irreversibly as QPoker launches
+                  the new Web3 era of fair and inspirational iGaming.
                 </motion.p>
                 <Row>
                   <Col className="d-flex justify-content-center">
@@ -679,15 +679,15 @@ const RoadMapStep3 = () => {
                       animate={controls}
                       className="btn-slide btn-slide-3"
                     >
-                      <a
+                      <Link
+                        to="lite-paper"
                         target="_blank"
                         className="btn-main"
-                        href="/docs/qpoker-litepaper.pdf"
                         title="QPoker-Trendsetter of iGaming Lite-Paper"
                       >
                         Litepaper
                         <span aria-hidden="true"></span>
-                      </a>
+                      </Link>
                     </motion.div>
                   </Col>
                 </Row>
