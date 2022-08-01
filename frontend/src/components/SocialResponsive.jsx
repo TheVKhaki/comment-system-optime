@@ -10,16 +10,48 @@ import {
   FaTrello,
 } from "react-icons/fa";
 import { gsap } from "gsap";
-const SocialResponsive = () => {
+
+const SocialResponsive = (_props) => {
   const [dataSocial, setDataSocial] = useState({
     telegramChannel: "",
     twitterFollowers: "",
     youtubeSubscribers: "",
   });
+  const props = _props;
   useEffect(() => {
-    fetch(process.env.REACT_APP_SOCIAL_GROWTH)
-      .then((response) => response.json())
-      .then((data) => socialGrowth(data));
+    let error_count = 0;
+    let error_count_max = 20;
+    const make_request = setInterval(() => {
+      props.api_client.public
+        .getPublicSocialGrowth()
+        .catch((error) => {
+          if (error_count_max > error_count) {
+            console.error("setDataSocial", error);
+            setDataSocial({
+              telegramChannel: "pending ...",
+              twitterFollowers: "pending ...",
+              youtubeSubscribers: "pending ...",
+            });
+            error_count++;
+            console.log("error_count", error_count);
+          } else {
+            setDataSocial({
+              telegramChannel: " (Please refresh !) ",
+              twitterFollowers: " (Please refresh !) ",
+              youtubeSubscribers: " (Please refresh !) ",
+            });
+            clearInterval(make_request);
+          }
+        })
+        .then((data) => {
+          if (data != undefined) {
+            clearInterval(make_request);
+
+            socialGrowth(data);
+          }
+          console.log("data", data);
+        });
+    }, 2000);
     function socialGrowth(dataSocial) {
       const telegramGrowth =
         ((dataSocial.telegram_channel.now -
@@ -44,33 +76,35 @@ const SocialResponsive = () => {
     }
   }, []);
   useEffect(() => {
-    gsap.fromTo(
+    gsap.to(
       document.querySelector(
         ".social-responsive .image-social-responsive .text-telegram span"
       ),
       {
-        color: "#1da1f2",
-      },
-      {
-        color: "#fff",
-        duration: 0.1,
-        yoyo: true,
-        repeatDelay: 3,
+        keyframes: {
+          "0%": { color: "#fff" },
+          "10%": { color: "#1da1f2" },
+          "89%": { color: "#1da1f2" },
+          "90%": { color: "#fff" },
+        },
+        duration: 1.5,
+        repeatDelay: 1.5,
         repeat: -1,
       }
     );
-    gsap.fromTo(
+    gsap.to(
       document.querySelector(
         ".social-responsive .image-social-responsive .text-telegram svg"
       ),
       {
-        color: "#1da1f2",
-      },
-      {
-        duration: 0.1,
-        color: "#fff",
-        yoyo: true,
-        repeatDelay: 3,
+        keyframes: {
+          "0%": { color: "#fff" },
+          "10%": { color: "#1da1f2" },
+          "89%": { color: "#1da1f2" },
+          "90%": { color: "#fff" },
+        },
+        duration: 1.5,
+        repeatDelay: 1.5,
         repeat: -1,
       }
     );
@@ -148,19 +182,19 @@ const SocialResponsive = () => {
             <p style={{ color: "white" }}>executive board</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
-            <span>$50,000</span>
+            <span>$5,000</span>
             <p>Join Twitter</p>
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
-            <span>$75,000</span>
+            <span>$7,500</span>
             <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-3 text-image-responsive-2">
-            <span>$125,000</span>
+            <span>$12,500</span>
             <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-4 text-image-responsive-2">
-            <span>$200,000</span>
+            <span>$20,000</span>
             <p>COMING SOON</p>
           </a>
         </div>

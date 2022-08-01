@@ -164,7 +164,11 @@
   .content-slide-3 {
     align-items: center;
     margin-top: 2rem;
-
+    p {
+      br {
+        margin-bottom: 0.8rem;
+      }
+    }
     img {
       height: 450px;
       object-fit: cover;

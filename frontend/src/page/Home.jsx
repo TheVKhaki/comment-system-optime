@@ -11,7 +11,8 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
-
+import { ApiClient } from "../api/client/ApiClient";
+import Header from "../components/Header";
 const Home = () => {
   const [width, height] = useWindowSize();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
@@ -19,6 +20,9 @@ const Home = () => {
   const height600 = useMediaQuery({ minHeight: 600 });
   const width992 = useMediaQuery({ minWidth: 992 });
   const [finalSpinVAlue, setFinalSpinVAlue] = useState(0);
+  const api_client = new ApiClient({
+    BASE: process.env.REACT_APP_OWL_URL,
+  });
   useEffect(() => {
     const header = document.querySelector("header");
     if (height700 && height600 && width992) {
@@ -61,22 +65,22 @@ const Home = () => {
 
     let spinValue = 0;
     let canScroll = true;
-    btnHero.addEventListener("click", function (e) {
-      all.forEach((element) => {
-        if (element.innerHTML === "") {
-          console.log(element);
-        }
-      });
-      bullets.forEach((bulletColor) => {
-        bulletColor.style.backgroundColor = "white";
-      });
-      bullets[1].style.backgroundColor = "#e28001";
-      spinValue = 1;
-      scrollContent(spinValue);
-      // setTimeout(() => {
-      //   navigate("/");
-      // }, 100);
-    });
+    // btnHero.addEventListener("click", function (e) {
+    //   all.forEach((element) => {
+    //     if (element.innerHTML === "") {
+    //       console.log(element);
+    //     }
+    //   });
+    //   bullets.forEach((bulletColor) => {
+    //     bulletColor.style.backgroundColor = "white";
+    //   });
+    //   bullets[1].style.backgroundColor = "#e28001";
+    //   spinValue = 1;
+    //   scrollContent(spinValue);
+    //   // setTimeout(() => {
+    //   //   navigate("/");
+    //   // }, 100);
+    // });
     navLink.forEach((navLink, indexbullet) => {
       navLink.addEventListener("click", function (e) {
         bullets.forEach((bulletColor) => {
@@ -217,9 +221,14 @@ const Home = () => {
   }, [width]);
   return (
     <>
+      <Header />
       <main>
         <Hero />
-        {isTabletOrMobile ? <SocialResponsive /> : <SocialSection />}
+        {isTabletOrMobile ? (
+          <SocialResponsive api_client={api_client} />
+        ) : (
+          <SocialSection api_client={api_client} />
+        )}
         <RoadMapStep1 />
         <RoadMapStep2 />
         <RoadMapStep3 />

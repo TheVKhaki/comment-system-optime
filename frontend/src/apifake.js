@@ -1,7 +1,7 @@
 export const memberTeam = [
   {
     id: 1,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -10,7 +10,7 @@ export const memberTeam = [
   },
   {
     id: 2,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -19,7 +19,7 @@ export const memberTeam = [
   },
   {
     id: 3,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -28,7 +28,7 @@ export const memberTeam = [
   },
   {
     id: 4,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -37,7 +37,7 @@ export const memberTeam = [
   },
   {
     id: 5,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -46,7 +46,7 @@ export const memberTeam = [
   },
   {
     id: 6,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -55,7 +55,7 @@ export const memberTeam = [
   },
   {
     id: 7,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
@@ -64,7 +64,7 @@ export const memberTeam = [
   },
   {
     id: 8,
-    nickname: "khaki",
+    nickname: "Lorem_member",
     discription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,asperiores",
     telegram: "#",
