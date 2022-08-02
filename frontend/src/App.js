@@ -4,12 +4,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 //Page
 import Home from "./page/Home";
-import RedirectPage from "./page/RedirectPage.jsx";
+
 //Components
 import Header from "./components/Header";
 import SocialSection from "./components/Social";
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
 
 function App() {
   //animation btn-main
@@ -56,10 +55,7 @@ function App() {
   }, []);
   return (
     <div className="App fullscreen">
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="lite-paper" element={<RedirectPage />} />
-      </Routes>
+      <Home />
     </div>
   );
 }

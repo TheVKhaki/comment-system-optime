@@ -13,7 +13,7 @@ import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 import Lazyload from "../HOC/Lazyload";
-import { Link } from "react-router-dom";
+
 //gsap
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -679,15 +679,15 @@ const RoadMapStep3 = () => {
                       animate={controls}
                       className="btn-slide btn-slide-3"
                     >
-                      <Link
-                        to="lite-paper"
+                      <a
+                        href="/litepaper"
                         target="_blank"
                         className="btn-main"
-                        title="QPoker-Trendsetter of iGaming Lite-Paper"
+                        title="QPoker-Trendsetter of iGaming Litepaper"
                       >
                         Litepaper
                         <span aria-hidden="true"></span>
-                      </Link>
+                      </a>
                     </motion.div>
                   </Col>
                 </Row>
