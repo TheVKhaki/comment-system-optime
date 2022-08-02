@@ -326,6 +326,10 @@ header .navbar {
   padding-top: 0;
 }
 
+header .navbar .navbar-nav {
+  margin-top: 0.5rem;
+}
+
 header .navbar .navbar-nav .nav-link.active {
   color: #fff;
 }
@@ -1666,8 +1670,10 @@ body.modal-open {
   margin-top: 2rem;
 }
 
-.roadmap .content-slide-3 p br {
+.roadmap .content-slide-3 p hr {
   margin-bottom: 0.8rem;
+  height: 0px;
+  margin-top: 0;
 }
 
 .roadmap .content-slide-3 img {

@@ -660,7 +660,7 @@ const RoadMapStep3 = () => {
                   gambling providers are allowed to start offering QPoker
                   without our authorization and annual license fees (millions of
                   dollars per year). We own the same waterproof copyrights as
-                  Monopoly and Trivial Pursuit possess to their games. <br />{" "}
+                  Monopoly and Trivial Pursuit possess to their games. <hr />
                   Our only, realistic, and achievable goal is to become a
                   sovereign leader of global iGaming markets. We will break
                   Pandora’s box by starting to offer skill-based social games as
