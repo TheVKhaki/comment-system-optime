@@ -136,7 +136,7 @@ const SocialResponsive = (_props) => {
             </p>
           </a>
           <a
-            href="https://t.me/qpokerio"
+            href="https://t.me/qpoker_io"
             className="text-twitter text-image-responsive"
             target="_blank"
             rel="noreferrer"

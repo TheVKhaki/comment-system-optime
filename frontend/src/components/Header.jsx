@@ -8,7 +8,6 @@ import logoImage from "../images/LOW_Logo-New-Color-C.png";
 import { gsap } from "gsap";
 //framer motion
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const header = useRef();
@@ -81,7 +80,7 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="/lite-paper" target="_blank">
+              <Nav.Link href="/litepaper" target="_blank">
                 Litepaper
               </Nav.Link>
               <Nav.Link href="#airdrops">Participate</Nav.Link>
@@ -109,7 +108,7 @@ const Header = () => {
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
-                  <Nav.Link href="/lite-paper" target="_blank">
+                  <Nav.Link href="/litepaper" target="_blank">
                     Litepaper
                   </Nav.Link>
                   <Nav.Link href="#roadmap-2">Participate</Nav.Link>

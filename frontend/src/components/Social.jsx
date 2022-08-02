@@ -660,7 +660,7 @@ const SocialSection = (_props) => {
                 </div>
                 <div className="twitter-social socials-in-circle">
                   <a
-                    href="https://t.me/qpokerio"
+                    href="https://t.me/qpoker_io"
                     className="link-social-in-circle"
                     target="_blank"
                     rel="noreferrer"
