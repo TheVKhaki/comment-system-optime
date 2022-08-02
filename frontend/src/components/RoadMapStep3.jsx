@@ -654,6 +654,7 @@ const RoadMapStep3 = () => {
                   variants={textRoadMap}
                   initial="hidden"
                   animate={controls}
+                  className="hidden-hr"
                 >
                   All immaterial rights of QPoker’s rulebook and structure are
                   owned by QPoker Ltd. It means none of the world’s other
