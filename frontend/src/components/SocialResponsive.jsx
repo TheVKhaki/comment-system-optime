@@ -186,15 +186,15 @@ const SocialResponsive = (_props) => {
             <p>Getting Started 🔥</p>
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
-            <span>$7,500</span>
+            <span>$75,000</span>
             <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-3 text-image-responsive-2">
-            <span>$12,500</span>
+            <span>$125,000</span>
             <p>COMING SOON</p>
           </a>
           <a href="#" className="text-option-4 text-image-responsive-2">
-            <span>$20,000</span>
+            <span>$200,000</span>
             <p>COMING SOON</p>
           </a>
         </div>
