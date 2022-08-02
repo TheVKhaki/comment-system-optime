@@ -179,11 +179,11 @@ const SocialResponsive = (_props) => {
               </div>
             </IconContext.Provider>
             <span>Trello</span>
-            <p style={{ color: "white" }}>executive board</p>
+            <p style={{ color: "white" }}>Executive Board</p>
           </a>
           <a href="#" className="text-option-1 text-image-responsive-2">
-            <span>$5,000</span>
-            <p>Join Twitter</p>
+            <span>$50,000</span>
+            <p>Getting Started 🔥</p>
           </a>
           <a href="#" className="text-option-2 text-image-responsive-2">
             <span>$7,500</span>

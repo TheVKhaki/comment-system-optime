@@ -165,8 +165,10 @@
     align-items: center;
     margin-top: 2rem;
     p {
-      br {
+      hr {
         margin-bottom: 0.8rem;
+        height: 0px;
+        margin-top: 0;
       }
     }
     img {
