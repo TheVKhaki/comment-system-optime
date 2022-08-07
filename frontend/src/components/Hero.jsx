@@ -56,7 +56,7 @@ function MyVerticallyCenteredModal(props) {
               width="660"
               height="400"
               title="YouTube video player"
-              src="https://www.youtube.com/embed/147ioPrSuaM"
+              src="https://www.youtube.com/watch?v=6O_6_K3tr5c"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               frameBorder="0"
               allowFullScreen
@@ -302,7 +302,7 @@ const Hero = () => {
                   height="400"
                   loading="lazy"
                   title="YouTube video player"
-                  src="https://www.youtube.com/embed/147ioPrSuaM"
+                  src="https://www.youtube.com/watch?v=6O_6_K3tr5c"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   frameBorder="0"
                   allowFullScreen
