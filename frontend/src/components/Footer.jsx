@@ -109,7 +109,7 @@ const Footer = () => {
                       value={{ color: "white", size: "2.3rem" }}
                     >
                       <a
-                        href="https://www.youtube.com/channel/UCZeSEvAStNu29wUA3exSjXg"
+                        href="https://youtu.be/6O_6_K3tr5c"
                         target="_blank"
                         rel="noreferrer"
                       >

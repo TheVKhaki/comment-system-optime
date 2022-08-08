@@ -712,7 +712,7 @@ const SocialSection = (_props) => {
                 </div>
                 <div className="youtube-social socials-in-circle">
                   <a
-                    href="https://youtu.be/147ioPrSuaM"
+                    href="https://youtu.be/6O_6_K3tr5c"
                     className="link-social-in-circle"
                     target="_blank"
                     rel="noreferrer"
