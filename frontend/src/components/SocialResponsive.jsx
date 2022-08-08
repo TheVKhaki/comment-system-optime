@@ -152,7 +152,7 @@ const SocialResponsive = (_props) => {
             </p>
           </a>
           <a
-            href="https://youtu.be/147ioPrSuaM"
+            href="https://youtu.be/6O_6_K3tr5c"
             className="text-youtube text-image-responsive"
             target="_blank"
             rel="noreferrer"
