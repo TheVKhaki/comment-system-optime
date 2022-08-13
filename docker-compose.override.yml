@@ -21,7 +21,7 @@ services:
       # Enable the Dashboard and API
       - --api
       # Enable the Dashboard and API in insecure mode for local development
-      - --api.insecure=true
+      - --api.insecure
     labels:
       - traefik.enable=true
       - traefik.http.routers.${STACK_NAME?Variable not set}-traefik-public-http.rule=Host(`${DOMAIN?Variable not set}`)
@@ -32,22 +32,26 @@ services:
       context: ./frontend
       args:
         FRONTEND_ENV: development
+    volumes:
+      - ./frontend/nginx.conf:/opt/bitnami/nginx/conf/server_blocks/default.conf
     labels:
       - traefik.enable=true
       - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
       - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.rule=PathPrefix(`/`)
-      - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=80
+      - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=8080
 
   payment:
     build:
       context: ./payment
       args:
         FRONTEND_ENV: development
+    volumes:
+      - ./payment/nginx.conf:/opt/bitnami/nginx/conf/server_blocks/default.conf
     labels:
       - traefik.enable=true
       - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
       - traefik.http.routers.${STACK_NAME?Variable not set}-payment-http.rule=PathPrefix(`/payment`)
-      - traefik.http.services.${STACK_NAME?Variable not set}-payment.loadbalancer.server.port=80
+      - traefik.http.services.${STACK_NAME?Variable not set}-payment.loadbalancer.server.port=8080
 
 networks:
   traefik-public:

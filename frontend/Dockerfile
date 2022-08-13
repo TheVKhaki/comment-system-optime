@@ -1,4 +1,4 @@
-FROM node:16 as build-stage
+FROM node:16.16.0-bullseye as build-stage
 
 WORKDIR /app
 
@@ -18,8 +18,8 @@ RUN mv .env.$FRONTEND_ENV .env && \
 RUN npm run build
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
-FROM nginx:1.23
+FROM bitnami/nginx:1.23.1-debian-11-r9
 
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /opt/bitnami/nginx/conf/server_blocks/default.conf
 
-COPY --from=build-stage /app/build/ /usr/share/nginx/html
+COPY --from=build-stage /app/build /app
