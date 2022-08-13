@@ -22,4 +22,4 @@ FROM bitnami/nginx:1.23.1-debian-11-r9
 
 COPY ./nginx.conf /opt/bitnami/nginx/conf/server_blocks/default.conf
 
-COPY --from=build-stage /app/build /app/payment
+COPY --from=build-stage --chown=1001:1001 /app/build /app/payment
