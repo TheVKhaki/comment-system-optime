@@ -3,13 +3,16 @@ import { useEffect, useState, useRef, Suspense } from "react";
 import Rotation3d from "../images/Rotate360.png";
 //Bootstrap
 import { Container } from "react-bootstrap";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
+import Button from "react-bootstrap/Button";
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css/navigation";
 //icon
 import { IconContext } from "react-icons";
-import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
+import { FaTelegramPlane, FaDiscord, FaInfoCircle } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
@@ -31,13 +34,13 @@ import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Center, Html } from "@react-three/drei";
 import Model3d from "./Model3d";
-
 const OurTeam = () => {
   //state characters
   const [characters, setCharacters] = useState(Characters);
   const [charactersMobile, setCharactersMobile] = useState(Characters);
   const [showLoad, setShowLoad] = useState(0);
   const [idCurrentModel, setIdCurrentModel] = useState();
+  const [show, setShow] = useState(false);
   //animation
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -106,7 +109,6 @@ const OurTeam = () => {
 
     if (currentModel === 10) {
       nextModel = currentModel;
-      // e.target.viewportElement.classList.add("opacity-75");
     } else {
       nextModel = currentModel + 1;
     }
@@ -246,7 +248,38 @@ const OurTeam = () => {
                       >
                         <div className="characters-information-mobile">
                           <div className="wrapper-characters-information-mobile">
-                            <span>{characters.name.toUpperCase()}</span>
+                            <span>
+                              {characters.name.toUpperCase()}
+                              <OverlayTrigger
+                                trigger="click"
+                                placement="top"
+                                rootClose={true}
+                                overlay={
+                                  <Popover id={`popover-positioned`}>
+                                    <Popover.Header as="h3">
+                                      {characters.name}
+                                    </Popover.Header>
+                                    <Popover.Body>
+                                      <p>{characters.description}</p>
+                                    </Popover.Body>
+                                  </Popover>
+                                }
+                              >
+                                <Button variant="secondary">
+                                  {" "}
+                                  <IconContext.Provider
+                                    value={{
+                                      color: "#e28001",
+                                      size: "2.4rem",
+                                    }}
+                                  >
+                                    <span>
+                                      <FaInfoCircle />
+                                    </span>
+                                  </IconContext.Provider>
+                                </Button>
+                              </OverlayTrigger>
+                            </span>
                             <p>
                               {characters.abbrPosition !== "" && (
                                 <span>{characters.abbrPosition}</span>
@@ -369,7 +402,12 @@ const OurTeam = () => {
                     size: "7rem",
                   }}
                 >
-                  <div className="prev-3d-model" onClick={handleClickPrev}>
+                  <div
+                    className={`prev-3d-model ${
+                      characters.id === 1 && "opacity-50"
+                    }`}
+                    onClick={handleClickPrev}
+                  >
                     <MdArrowBackIos />
                   </div>
                 </IconContext.Provider>
@@ -379,7 +417,12 @@ const OurTeam = () => {
                     size: "7rem",
                   }}
                 >
-                  <div className="next-3d-model" onClick={handleClickNext}>
+                  <div
+                    className={`next-3d-model ${
+                      characters.id === 10 && "opacity-50"
+                    }`}
+                    onClick={handleClickNext}
+                  >
                     <MdArrowForwardIos />
                   </div>
                 </IconContext.Provider>

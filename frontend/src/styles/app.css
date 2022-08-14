@@ -2894,6 +2894,36 @@ body.modal-open {
   .ourteam-characters
   .swiper-ourteam-2initialized
   .characters-information-mobile
+  .wrapper-characters-information-mobile
+  .btn-secondary {
+  background-color: transparent;
+  border: none;
+}
+
+.ourteam
+  .ourteam-characters
+  .swiper-ourteam-2initialized
+  .characters-information-mobile
+  .wrapper-characters-information-mobile
+  .btn-secondary:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.ourteam
+  .ourteam-characters
+  .swiper-ourteam-2initialized
+  .characters-information-mobile
+  .wrapper-characters-information-mobile
+  .btn-secondary:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.ourteam
+  .ourteam-characters
+  .swiper-ourteam-2initialized
+  .characters-information-mobile
   .wrapper-characters-information-mobile::after {
   content: "";
   position: absolute;
@@ -3076,6 +3106,10 @@ body.modal-open {
   cursor: pointer;
 }
 
+.ourteam .model3d-characters .characters-information .prev-3d-model.opacity-50 {
+  pointer-events: none;
+}
+
 .ourteam .model3d-characters .characters-information .next-3d-model {
   cursor: pointer;
   position: absolute;
@@ -3083,6 +3117,10 @@ body.modal-open {
   left: 62%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.ourteam .model3d-characters .characters-information .next-3d-model.opacity-50 {
+  pointer-events: none;
 }
 
 .ourteam .model3d-characters .characters-information-left {
@@ -3359,6 +3397,22 @@ body.modal-open {
   .ourteam .ourteam-characters {
     min-height: 96vh;
   }
+}
+
+#popover-positioned {
+  max-width: 350px;
+}
+
+#popover-positioned h3 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #e28001;
+}
+
+#popover-positioned .popover-body p {
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 0.6px;
 }
 
 .footer-home {

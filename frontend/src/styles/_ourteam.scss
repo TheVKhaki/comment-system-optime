@@ -208,6 +208,17 @@
           z-index: -1;
           min-width: 330px;
           text-align: center;
+          .btn-secondary {
+            background-color: transparent;
+            border: none;
+            &:hover {
+              background-color: transparent;
+              border: none;
+            }
+            &:focus {
+              box-shadow: none;
+            }
+          }
           &::after {
             content: "";
             position: absolute;
@@ -335,6 +346,9 @@
         pointer-events: none;
       }
       .prev-3d-model {
+        &.opacity-50 {
+          pointer-events: none;
+        }
         position: absolute;
         top: 58%;
         left: 41%;
@@ -342,6 +356,9 @@
         cursor: pointer;
       }
       .next-3d-model {
+        &.opacity-50 {
+          pointer-events: none;
+        }
         cursor: pointer;
         position: absolute;
         top: 58%;
@@ -587,6 +604,23 @@
     }
     .ourteam-characters {
       min-height: 96vh;
+    }
+  }
+}
+
+//popover ourteam mobile
+#popover-positioned {
+  max-width: 350px;
+  h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #e28001;
+  }
+  .popover-body {
+    p {
+      color: #000;
+      font-size: 15px;
+      letter-spacing: 0.6px;
     }
   }
 }
