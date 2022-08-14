@@ -12,6 +12,7 @@ import { IconContext } from "react-icons";
 import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 //lottie
 import { Player } from "@lottiefiles/react-lottie-player";
 import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
@@ -36,6 +37,7 @@ const OurTeam = () => {
   const [characters, setCharacters] = useState(Characters);
   const [charactersMobile, setCharactersMobile] = useState(Characters);
   const [showLoad, setShowLoad] = useState(0);
+  const [idCurrentModel, setIdCurrentModel] = useState();
   //animation
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -56,10 +58,12 @@ const OurTeam = () => {
     const result = characters.filter(
       (filterevent) => filterevent.className === e.offsetParent.className
     );
+    setIdCurrentModel(result[0].id);
     const resultModel3dCharacters = [...model3dCharacters].filter(
       (filterevent) => +filterevent.getAttribute("data-index") === result[0].id
     );
-    resultModel3dCharacters[0].className = "model3d-characters d-block";
+    resultModel3dCharacters[0].className =
+      "model3d-characters d-block container-lg";
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters hidden d-none";
   };
@@ -68,8 +72,57 @@ const OurTeam = () => {
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters";
     const hiddenModel3d = [...model3dCharacters].map(
-      (addClass) => (addClass.className = "model3d-characters d-none")
+      (addClass) =>
+        (addClass.className = "model3d-characters d-none container-lg")
     );
+  };
+  //click prev model 3d
+  const handleClickPrev = () => {
+    let currentModel = idCurrentModel;
+    let prevModel;
+    if (currentModel === 1) {
+      prevModel = currentModel;
+    } else {
+      prevModel = currentModel - 1;
+    }
+
+    const resultModel3dCharacters = [...model3dCharacters].filter(
+      (filterevent) => +filterevent.getAttribute("data-index") === prevModel
+    );
+
+    const hiddenModel3d = [...model3dCharacters].map(
+      (addClass) =>
+        (addClass.className = "model3d-characters d-none container-lg")
+    );
+    console.log(resultModel3dCharacters);
+    resultModel3dCharacters[0].className =
+      "model3d-characters d-block container-lg";
+    setIdCurrentModel(prevModel);
+  };
+  //click next model 3d
+  const handleClickNext = (e) => {
+    let currentModel = idCurrentModel;
+    let nextModel;
+
+    if (currentModel === 10) {
+      nextModel = currentModel;
+      // e.target.viewportElement.classList.add("opacity-75");
+    } else {
+      nextModel = currentModel + 1;
+    }
+
+    const resultModel3dCharacters = [...model3dCharacters].filter(
+      (filterevent) => +filterevent.getAttribute("data-index") === nextModel
+    );
+
+    const hiddenModel3d = [...model3dCharacters].map(
+      (addClass) =>
+        (addClass.className = "model3d-characters d-none container-lg")
+    );
+    console.log(resultModel3dCharacters);
+    resultModel3dCharacters[0].className =
+      "model3d-characters d-block container-lg";
+    setIdCurrentModel(nextModel);
   };
   function Loader() {
     return <Html center>Loading...</Html>;
@@ -77,24 +130,24 @@ const OurTeam = () => {
   function name_generate(title, job) {
     return title + " " + job;
   }
-  useEffect(() => {
-    gsap.fromTo(
-      document.querySelector(".lottie-our-team"),
-      {
-        opacity: 0.7,
-      },
-      {
-        opacity: 0,
-        duration: 0.5,
-        delay: 5,
-        scrollTrigger: {
-          trigger: document.querySelector(".ourteam"),
-          start: "center center",
-          end: "bottom center",
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     document.querySelector(".lottie-our-team"),
+  //     {
+  //       opacity: 0.7,
+  //     },
+  //     {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //       delay: 5,
+  //       scrollTrigger: {
+  //         trigger: document.querySelector(".ourteam"),
+  //         start: "center center",
+  //         end: "bottom center",
+  //       },
+  //     }
+  //   );
+  // }, []);
   useEffect(() => {
     if (showLoad === 100) {
       gsap.fromTo(
@@ -134,6 +187,7 @@ const OurTeam = () => {
                 characters="Our Key Members"
               />
             </h2>
+            <p>Click on the photos to see the details</p>
           </div>
 
           <motion.div
@@ -265,7 +319,7 @@ const OurTeam = () => {
           {/* {show === true && ( */}
           {characters.map((characters) => (
             <div
-              className="model3d-characters d-none"
+              className="model3d-characters d-none container-lg"
               ref={refModel3d}
               data-index={characters.id}
               key={characters.id}
@@ -304,70 +358,91 @@ const OurTeam = () => {
                 </Suspense>
                 {/* </Center> */}
               </Canvas>
-              {showLoad === 100 && (
-                <Container className="characters-information">
-                  <img className="3d-rotation" src={Rotation3d} alt="" />
-                  <div className="characters-information-left">
-                    <p>{characters.description}</p>
-                  </div>
 
-                  <div className="characters-information-right">
-                    <div className="wrapper-characters-information-right">
-                      <span>{characters.name.toUpperCase()}</span>
-                      <p>
-                        {characters.abbrPosition !== "" && (
-                          <span>{characters.abbrPosition}</span>
-                        )}
-                        {characters.job}
-                      </p>
-                      <div className="social-media-our-team">
-                        <IconContext.Provider
-                          value={{
-                            color: "white",
-                            size: "2.4rem",
-                          }}
+              <Container className="characters-information">
+                {showLoad === 100 && (
+                  <img className="3d-rotation" src={Rotation3d} alt="" />
+                )}
+                <IconContext.Provider
+                  value={{
+                    color: "#e28001",
+                    size: "7rem",
+                  }}
+                >
+                  <div className="prev-3d-model" onClick={handleClickPrev}>
+                    <MdArrowBackIos />
+                  </div>
+                </IconContext.Provider>
+                <IconContext.Provider
+                  value={{
+                    color: "#e28001",
+                    size: "7rem",
+                  }}
+                >
+                  <div className="next-3d-model" onClick={handleClickNext}>
+                    <MdArrowForwardIos />
+                  </div>
+                </IconContext.Provider>
+                <div className="characters-information-left">
+                  <p>{characters.description}</p>
+                </div>
+
+                <div className="characters-information-right">
+                  <div className="wrapper-characters-information-right">
+                    <span>{characters.name.toUpperCase()}</span>
+                    <p>
+                      {characters.abbrPosition !== "" && (
+                        <span>{characters.abbrPosition}</span>
+                      )}
+                      {characters.job}
+                    </p>
+                    <div className="social-media-our-team">
+                      <IconContext.Provider
+                        value={{
+                          color: "white",
+                          size: "2.4rem",
+                        }}
+                      >
+                        <a
+                          href={characters.telegram}
+                          target="_blank"
+                          className={`${
+                            characters.telegram === "" ? "text-muted" : null
+                          }`}
                         >
-                          <a
-                            href={characters.telegram}
-                            target="_blank"
-                            className={`${
-                              characters.telegram === "" ? "text-muted" : null
-                            }`}
-                          >
-                            <FaTelegramPlane />
-                          </a>
-                        </IconContext.Provider>
-                        <IconContext.Provider
-                          value={{
-                            color: "white",
-                            size: "2.4rem",
-                          }}
+                          <FaTelegramPlane />
+                        </a>
+                      </IconContext.Provider>
+                      <IconContext.Provider
+                        value={{
+                          color: "white",
+                          size: "2.4rem",
+                        }}
+                      >
+                        <a href={characters.email} target="_blank">
+                          <HiOutlineMail />
+                        </a>
+                      </IconContext.Provider>
+                      <IconContext.Provider
+                        value={{
+                          color: "white",
+                          size: "2.4rem",
+                        }}
+                      >
+                        <a
+                          href={characters.discord}
+                          target="_blank"
+                          className={`${
+                            characters.discord === "" ? "text-muted" : null
+                          }`}
                         >
-                          <a href={characters.email} target="_blank">
-                            <HiOutlineMail />
-                          </a>
-                        </IconContext.Provider>
-                        <IconContext.Provider
-                          value={{
-                            color: "white",
-                            size: "2.4rem",
-                          }}
-                        >
-                          <a
-                            href={characters.discord}
-                            target="_blank"
-                            className={`${
-                              characters.discord === "" ? "text-muted" : null
-                            }`}
-                          >
-                            <FaDiscord />
-                          </a>
-                        </IconContext.Provider>
-                      </div>
+                          <FaDiscord />
+                        </a>
+                      </IconContext.Provider>
                     </div>
                   </div>
-                </Container>
-              )}
+                </div>
+              </Container>
             </div>
           ))}
         </Container>
