@@ -3421,6 +3421,10 @@ body.modal-open {
   background-color: #000;
 }
 
+.footer-home .comingsoon-ourpartner {
+  display: none;
+}
+
 .footer-home .comingsoon-ourpartner h3 {
   position: absolute;
   z-index: 2;
@@ -3434,13 +3438,6 @@ body.modal-open {
 .footer-home .our-partner {
   min-height: 50vh;
   background-color: #000;
-  -webkit-filter: blur(9px);
-  filter: blur(9px);
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .footer-home .our-partner .container {
@@ -3631,6 +3628,7 @@ body.modal-open {
 .footer-home footer .footer-right ul li:not(:first-child) a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  color: #fff;
 }
 
 .footer-home footer .footer-right ul li:not(:first-child) a:hover {
