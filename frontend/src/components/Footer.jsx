@@ -27,22 +27,22 @@ const Footer = () => {
       }
     });
 
-    //change text in footer right to coming soon
-    const linkFooterRight = document.querySelectorAll(".footer-right span");
-    const firstTextLinks = [
-      linkFooterRight[0].innerText,
-      linkFooterRight[1].innerText,
-      linkFooterRight[2].innerText,
-      linkFooterRight[3].innerText,
-    ];
-    linkFooterRight.forEach((element, index) => {
-      element.addEventListener("mouseenter", function (params) {
-        element.innerHTML = "Coming Soon";
-      });
-      element.addEventListener("mouseleave", function (params) {
-        element.innerHTML = firstTextLinks[index];
-      });
-    });
+    //   //change text in footer right to coming soon
+    //   const linkFooterRight = document.querySelectorAll(".footer-right span");
+    //   const firstTextLinks = [
+    //     linkFooterRight[0].innerText,
+    //     linkFooterRight[1].innerText,
+    //     linkFooterRight[2].innerText,
+    //     linkFooterRight[3].innerText,
+    //   ];
+    //   linkFooterRight.forEach((element, index) => {
+    //     element.addEventListener("mouseenter", function (params) {
+    //       element.innerHTML = "Coming Soon";
+    //     });
+    //     element.addEventListener("mouseleave", function (params) {
+    //       element.innerHTML = firstTextLinks[index];
+    //     });
+    //   });
   }, []);
 
   const goToTop = () => {
@@ -133,16 +133,27 @@ const Footer = () => {
                   <ul>
                     <li>Links</li>
                     <li>
-                      <span>Blog</span>{" "}
+                      <a href="https://blog.qpoker.io" target="_blank">
+                        Blog
+                      </a>{" "}
                     </li>
                     <li>
-                      <span>FAQ</span>
+                      <a href="https://blog.qpoker.io/faq" target="_blank">
+                        FAQ
+                      </a>
                     </li>
                     <li>
-                      <span>Privacy Policy</span>
+                      <a
+                        href="https://blog.qpoker.io/privacy-policy"
+                        target="_blank"
+                      >
+                        Privacy Policy
+                      </a>
                     </li>
                     <li>
-                      <span>About Us</span>
+                      <a href="https://blog.qpoker.io/about-us" target="_blank">
+                        About Us
+                      </a>
                     </li>
                   </ul>
                 </div>
