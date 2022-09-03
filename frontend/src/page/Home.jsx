@@ -52,6 +52,7 @@ const Home = () => {
   // useEffect(() => {
   //   console.log(main.current);
   // }, [main]);
+  useEffect(() => {}, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -62,9 +63,83 @@ const Home = () => {
     const navLink = document.querySelectorAll(".navbar-nav .nav-link");
     const content = document.querySelector("main");
     const all = document.querySelectorAll("*");
-
+    const locationHash = window.location.hash;
     let spinValue = 0;
     let canScroll = true;
+    const scrollContent = (count) => {
+      setFinalSpinVAlue(count);
+      content.setAttribute("style", `transform:translateY(-${count * 100}vh)`);
+    };
+    switch (locationHash) {
+      case "#home":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[0].style.backgroundColor = "#e28001";
+        spinValue = 0;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      case "#campaigns":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[1].style.backgroundColor = "#e28001";
+        spinValue = 1;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      case "#roadmapp":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[2].style.backgroundColor = "#e28001";
+        spinValue = 2;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      case "#litepaper":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[4].style.backgroundColor = "#e28001";
+        spinValue = 4;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      case "#our-teamm":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[6].style.backgroundColor = "#e28001";
+        spinValue = 6;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      case "#airdrops":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
+        bullets[3].style.backgroundColor = "#e28001";
+        spinValue = 3;
+        scrollContent(spinValue);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 100);
+        break;
+      default:
+        break;
+    }
     // btnHero.addEventListener("click", function (e) {
     //   all.forEach((element) => {
     //     if (element.innerHTML === "") {
@@ -200,10 +275,6 @@ const Home = () => {
         }, 700);
       });
     }
-    const scrollContent = (count) => {
-      setFinalSpinVAlue(count);
-      content.setAttribute("style", `transform:translateY(-${count * 100}vh)`);
-    };
 
     // let index = 0;
 
