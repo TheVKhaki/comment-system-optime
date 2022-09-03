@@ -70,11 +70,11 @@ const Home = () => {
       setFinalSpinVAlue(count);
       content.setAttribute("style", `transform:translateY(-${count * 100}vh)`);
     };
-    bullets.forEach((bulletColor) => {
-      bulletColor.style.backgroundColor = "white";
-    });
     switch (locationHash) {
       case "#home":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[0].style.backgroundColor = "#e28001";
         spinValue = 0;
         scrollContent(spinValue);
@@ -83,6 +83,9 @@ const Home = () => {
         // }, 100);
         break;
       case "#campaigns":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[1].style.backgroundColor = "#e28001";
         spinValue = 1;
         scrollContent(spinValue);
@@ -91,6 +94,9 @@ const Home = () => {
         // }, 100);
         break;
       case "#roadmapp":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[2].style.backgroundColor = "#e28001";
         spinValue = 2;
         scrollContent(spinValue);
@@ -99,6 +105,9 @@ const Home = () => {
         // }, 100);
         break;
       case "#litepaper":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[4].style.backgroundColor = "#e28001";
         spinValue = 4;
         scrollContent(spinValue);
@@ -107,6 +116,9 @@ const Home = () => {
         // }, 100);
         break;
       case "#our-teamm":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[6].style.backgroundColor = "#e28001";
         spinValue = 6;
         scrollContent(spinValue);
@@ -115,6 +127,9 @@ const Home = () => {
         // }, 100);
         break;
       case "#airdrops":
+        bullets.forEach((bulletColor) => {
+          bulletColor.style.backgroundColor = "white";
+        });
         bullets[3].style.backgroundColor = "#e28001";
         spinValue = 3;
         scrollContent(spinValue);
