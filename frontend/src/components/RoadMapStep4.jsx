@@ -53,7 +53,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`09/15/${year}`) - +new Date();
+    let difference = +new Date(`10/10/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
