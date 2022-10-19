@@ -1,9 +1,10 @@
 version: "3.5"
 services:
   proxy:
+    image: traefik:v2.8.3
     ports:
       - "80:80"
-      - "8090:8080"
+      - "8080:8080"
     command:
       # Enable Docker in Traefik, so that it reads labels from Docker services
       - --providers.docker
@@ -36,6 +37,7 @@ services:
       - ./frontend/nginx.conf:/opt/bitnami/nginx/conf/server_blocks/default.conf
     labels:
       - traefik.enable=true
+      - traefik.docker.network=${STACK_NAME?Variable not set}_default
       - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
       - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.rule=PathPrefix(`/`)
       - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=8080
