@@ -2,6 +2,9 @@ version: "3.5"
 services:
   frontend:
     image: "${DOCKER_IMAGE_FRONTEND?Variable not set}:${TAG-latest}"
+    networks:
+      - default
+      - ${TRAEFIK_PUBLIC_NETWORK?Variable not set}
     build:
       context: ./frontend
       args:
@@ -13,6 +16,7 @@ services:
         - traefik.constraint-label=${TRAEFIK_PUBLIC_TAG?Variable not set}
         - traefik.http.middlewares.${STACK_NAME?Variable not set}-www-redirect.redirectregex.regex=^https?://(www.)?(${DOMAIN?Variable not set})/(.*)
         - traefik.http.middlewares.${STACK_NAME?Variable not set}-www-redirect.redirectregex.replacement=https://${DOMAIN?Variable not set}/$${3}
+        - traefik.http.middlewares.${STACK_NAME?Variable not set}-auth.basicauth.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.rule=(Host(`${DOMAIN?Variable not set}`) || Host(`www.${DOMAIN?Variable not set}`)) && PathPrefix(`/`)
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.entrypoints=http
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.middlewares=https-redirect,common-security-headers,${STACK_NAME?Variable not set}-www-redirect
@@ -20,7 +24,7 @@ services:
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.entrypoints=https
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.tls=true
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.tls.certresolver=le
-        - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.middlewares=common-security-headers,${STACK_NAME?Variable not set}-www-redirect
+        - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.middlewares=common-security-headers,${STACK_NAME?Variable not set}-www-redirect${PROXY_EXTRA_MIDDLEWARES}
         - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=8080
 
 networks:
