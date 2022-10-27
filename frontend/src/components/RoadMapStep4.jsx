@@ -52,8 +52,23 @@ const RoadMapStep4 = () => {
 
   //Countdown
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    let difference = +new Date(`10/28/${year}`) - +new Date();
+    let endEvent = new Date("2022-10-29");
+    let nowDate = new Date();
+    let monthData = endEvent.getUTCMonth();
+    let dayData = endEvent.getUTCDate();
+    let yearData = endEvent.getUTCFullYear();
+    let difference =
+      +new Date(Date.UTC(yearData, monthData, dayData)) -
+      +new Date(
+        Date.UTC(
+          nowDate.getUTCFullYear(),
+          nowDate.getUTCMonth(),
+          nowDate.getUTCDate(),
+          nowDate.getUTCHours(),
+          nowDate.getUTCMinutes(),
+          nowDate.getUTCSeconds()
+        )
+      );
     let timeLeft = {};
 
     if (difference > 0) {
