@@ -52,7 +52,7 @@ const RoadMapStep4 = () => {
 
   //Countdown
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2022-10-29");
+    let endEvent = new Date("2022-11-5");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
