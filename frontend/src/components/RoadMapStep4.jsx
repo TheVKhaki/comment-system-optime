@@ -52,7 +52,7 @@ const RoadMapStep4 = () => {
 
   //Countdown
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2022-11-5");
+    let endEvent = new Date("2022-11-1");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
@@ -160,8 +160,13 @@ const RoadMapStep4 = () => {
                 decentralized iGaming platform run by proof-of-stake smart
                 contracts. Take control over your funds, in every stage.
               </motion.p>
-              <a className="btn-coming-soon btn-main" ref={btnComingSoon}>
-                <p ref={textBtnComingSoon}>Join the Rewards</p>
+              <a
+                className="btn-coming-soon btn-main"
+                href="https://t.me/qpoker_giveaways_bot"
+                ref={btnComingSoon}
+                target="_blank"
+              >
+                <p>Join the Rewards</p>
                 <span aria-hidden="true"></span>
               </a>
             </motion.div>
