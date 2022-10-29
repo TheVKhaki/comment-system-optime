@@ -770,17 +770,18 @@ function MyVerticallyCenteredModal(props) {
           <div className="box-twitter-1 box-roadmap" ref={boxModal2}>
             <h3>Telegram Channel</h3>
             <p>
-              Second step is to join our Telegram channel. Everything you need
-              to know about our project’s progress, news, announcements, or
-              campaign tutorials, you will find here.
+              Second step is to join our Telegram channel and Telegram group.
+              Everything you need to know about our project’s progress, news,
+              announcements, or campaign tutorials, you will find here.
             </p>
           </div>
           <div className="box-telegram box-roadmap" ref={boxModal3}>
             <h3>Twitter</h3>
             <p>
-              Third step is to follow our Twitter account. By retweeting and
-              commenting on our tweets, you maximize the points earned at our
-              Airdrop campaigns.
+              Third step is connecting your twitter account. We will calculate
+              your activity in our twitter automatically. By using #qpoker,
+              retweeting and commenting on our tweets, you maximize the points
+              earned at our Airdrop campaigns.
             </p>
           </div>
           <div className="box-qpoker box-roadmap" ref={boxModal4}>
@@ -792,10 +793,10 @@ function MyVerticallyCenteredModal(props) {
             </p>
           </div>
           <div className="box-youtube box-roadmap" ref={boxModal5}>
-            <h3>Refer-a-Friend</h3>
+            <h3>Refer Your Friends</h3>
             <p>
-              Final step is to invite one of your friends to look into QPoker’s
-              state-of-the-art platform. By completing this step, you make a
+              Final step is to invite your friends to look into QPoker’s
+              state-of-the-art platform. By Referring each friend, you make a
               truly positive impact for our community and also collect highest
               points in our Airdrop campaigns.
             </p>
@@ -808,6 +809,11 @@ function MyVerticallyCenteredModal(props) {
               contracts, all the rewards will get proceeded automatically, on a
               quick schedule.
             </p>
+            <div className="link-box-roadmap-2">
+              <a href="https://participate.qpoker.io" target="_blank">
+                Click here to check our Participate Panel
+              </a>
+            </div>
           </div>
           <video muted loop ref={rocketAnimRef}>
             <source src={rocketgif} type="video/mp4" />
