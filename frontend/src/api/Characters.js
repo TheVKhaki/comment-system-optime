@@ -150,7 +150,7 @@ const Characters = () => {
       job: "Investor & iGaming Specialist",
       abbrPosition: "",
       description:
-        "Arne is a venture capitalist and iGaming veteran. He launched one of the first online poker rooms on iPoker Network back in the early 2000s. He sold his share of the business in 2008 and subsequently has been financing several ambitious iGaming start-ups.",
+        "Arne is a venture capitalist and iGaming veteran. He launched one of the first online poker rooms on iPoker Network back in the early 2000s. He sold his share of the business in 2006 and subsequently has been financing several ambitious iGaming start-ups.",
       email: "mailto:arne@qpoker.io",
       telegram: "",
       discord: "",
