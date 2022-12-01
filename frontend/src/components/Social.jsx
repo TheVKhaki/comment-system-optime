@@ -232,7 +232,6 @@ const SocialSection = (_props) => {
               youtubeSubscribers: "pending ...",
             });
             error_count++;
-            console.log("error_count", error_count);
           } else {
             setDataSocial({
               telegramChannel: " (Please refresh !) ",
@@ -247,7 +246,6 @@ const SocialSection = (_props) => {
             clearInterval(make_request);
             socialGrowth(data);
           }
-          console.log("data", data);
         });
     }, 2000);
     function socialGrowth(dataSocial) {

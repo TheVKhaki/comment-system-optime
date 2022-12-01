@@ -235,6 +235,64 @@ body button {
   height: 100vh;
 }
 
+.pulse {
+  position: relative;
+}
+
+.pulse-ring {
+  display: block;
+  border-radius: 40px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  -webkit-animation: animation-pulse 3.5s ease-out;
+  animation: animation-pulse 3.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fff;
+  top: -5px;
+  left: -6px;
+}
+
+@-webkit-keyframes animation-pulse {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-pulse {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .fullscreen {
     height: 100vh;
@@ -762,6 +820,7 @@ body.modal-open {
   }
   .modal {
     padding-right: 0 !important;
+    padding-left: 0 !important;
   }
   .modal-content.youtube-modal {
     background-color: transparent;
@@ -2391,11 +2450,11 @@ body.modal-open {
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-twitter-1 {
-    top: 388px;
+    top: 375px;
     left: auto;
   }
   .roadmap2-modal .roadmap-participate .box-telegram {
-    top: 730px;
+    top: 701px;
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-qpoker {
