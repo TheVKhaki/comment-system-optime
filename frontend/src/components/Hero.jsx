@@ -265,11 +265,11 @@ const Hero = () => {
                 <h2>
                   <span>Q</span>Poker GameFI 2.0
                   <br />
-                  <span>Metaverse Quess'em Poker</span>
+                  <span>Social Gaming in Crypto</span>
                 </h2>
                 <p>
                   Early 2000s Texas Hold’em boom was huge, QPoker will be
-                  bigger. A brand new play-to-earn NFT card game which blends
+                  bigger. A brand new cryptocurrency card game which blends
                   together optimal amount of luck and skill. Compete with
                   citizens all around the world.
                 </p>
