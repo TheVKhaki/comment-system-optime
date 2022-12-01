@@ -33,7 +33,6 @@ const SocialResponsive = (_props) => {
               youtubeSubscribers: "pending ...",
             });
             error_count++;
-            console.log("error_count", error_count);
           } else {
             setDataSocial({
               telegramChannel: " (Please refresh !) ",
@@ -49,7 +48,6 @@ const SocialResponsive = (_props) => {
 
             socialGrowth(data);
           }
-          console.log("data", data);
         });
     }, 2000);
     function socialGrowth(dataSocial) {

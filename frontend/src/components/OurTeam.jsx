@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef, Suspense } from "react";
 //media
 import Rotation3d from "../images/Rotate360.png";
+//component
+import QuestionMark from "./QuestionMark";
 //Bootstrap
 import { Container } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -97,7 +99,6 @@ const OurTeam = () => {
       (addClass) =>
         (addClass.className = "model3d-characters d-none container-lg")
     );
-    console.log(resultModel3dCharacters);
     resultModel3dCharacters[0].className =
       "model3d-characters d-block container-lg";
     setIdCurrentModel(prevModel);
@@ -121,7 +122,6 @@ const OurTeam = () => {
       (addClass) =>
         (addClass.className = "model3d-characters d-none container-lg")
     );
-    console.log(resultModel3dCharacters);
     resultModel3dCharacters[0].className =
       "model3d-characters d-block container-lg";
     setIdCurrentModel(nextModel);
@@ -250,35 +250,10 @@ const OurTeam = () => {
                           <div className="wrapper-characters-information-mobile">
                             <span>
                               {characters.name.toUpperCase()}
-                              <OverlayTrigger
-                                trigger="click"
-                                placement="top"
-                                rootClose={true}
-                                overlay={
-                                  <Popover id={`popover-positioned`}>
-                                    <Popover.Header as="h3">
-                                      {characters.name}
-                                    </Popover.Header>
-                                    <Popover.Body>
-                                      <p>{characters.description}</p>
-                                    </Popover.Body>
-                                  </Popover>
-                                }
-                              >
-                                <Button variant="secondary">
-                                  {" "}
-                                  <IconContext.Provider
-                                    value={{
-                                      color: "#e28001",
-                                      size: "2.4rem",
-                                    }}
-                                  >
-                                    <span>
-                                      <FaInfoCircle />
-                                    </span>
-                                  </IconContext.Provider>
-                                </Button>
-                              </OverlayTrigger>
+                              <QuestionMark
+                                name={characters.name}
+                                description={characters.description}
+                              />
                             </span>
                             <p>
                               {characters.abbrPosition !== "" && (

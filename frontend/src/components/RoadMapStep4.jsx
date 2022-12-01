@@ -51,8 +51,9 @@ const RoadMapStep4 = () => {
   };
 
   //Countdown
+  const [endCount, setEndCount] = useState(false);
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2022-11-01");
+    let endEvent = new Date("2022-12-09");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
@@ -88,6 +89,12 @@ const RoadMapStep4 = () => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
+    if (!timeLeft) {
+      clearTimeout(timer);
+      setEndCount(true);
+    } else {
+      setEndCount(false);
+    }
     return () => clearTimeout(timer);
   });
   const btnComingSoon = useRef();
@@ -128,22 +135,25 @@ const RoadMapStep4 = () => {
                 1<sup>st</sup> Airdrop’s Starting Time
               </p>
             </motion.div>
-            <motion.div className="countdown">
-              <div className="countdown-number">
-                <div className="time-number">
-                  {timeLeft.days} <span>Days</span>
+            {!endCount && (
+              <motion.div className="countdown">
+                <div className="countdown-number">
+                  <div className="time-number">
+                    {timeLeft.days} <span>Days</span>
+                  </div>
+                  <div className="time-number">
+                    {timeLeft.hours} <span>Hours</span>
+                  </div>
+                  <div className="time-number">
+                    {timeLeft.minutes} <span>Minutes</span>
+                  </div>
+                  <div className="time-number">
+                    {timeLeft.seconds} <span>Seconds</span>
+                  </div>
                 </div>
-                <div className="time-number">
-                  {timeLeft.hours} <span>Hours</span>
-                </div>
-                <div className="time-number">
-                  {timeLeft.minutes} <span>Minutes</span>
-                </div>
-                <div className="time-number">
-                  {timeLeft.seconds} <span>Seconds</span>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            )}
+
             <motion.div className="coming-soon-text">
               <span>
                 <RandomReveal
