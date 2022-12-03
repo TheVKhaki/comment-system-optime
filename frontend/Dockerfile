@@ -18,7 +18,7 @@ RUN mv .env.$FRONTEND_ENV .env && \
 RUN npm run build
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
-FROM bitnami/nginx:1.23.1-debian-11-r9
+FROM bitnami/nginx:1.23.2-debian-11-r4
 
 COPY ./nginx.conf /opt/bitnami/nginx/conf/server_blocks/default.conf
 
