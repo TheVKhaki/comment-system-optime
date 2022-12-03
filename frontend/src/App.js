@@ -2,6 +2,7 @@ import "./styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 //Page
 import Home from "./page/Home";
 
