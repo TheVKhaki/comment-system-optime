@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import SocialSection from "../components/Social";
+import RoadMap from "../components/RoadMap";
 import RoadMapStep1 from "../components/RoadMapStep1";
 import RoadMapStep2 from "../components/RoadMapStep2";
 import RoadMapStep3 from "../components/RoadMapStep3";
@@ -7,7 +8,7 @@ import RoadMapStep4 from "../components/RoadMapStep4";
 import OurTeam from "../components/OurTeam";
 import SocialResponsive from "../components/SocialResponsive";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 //custom hook
 import useWindowSize from "../custom hook/ResizeEvent";
@@ -20,6 +21,12 @@ const Home = () => {
   const height600 = useMediaQuery({ minHeight: 600 });
   const width992 = useMediaQuery({ minWidth: 992 });
   const [finalSpinVAlue, setFinalSpinVAlue] = useState(0);
+  const [roadmapSlideLast, setRoadmapSlideLast] = useState(0);
+  console.log(roadmapSlideLast);
+  const myStateRef = useRef(roadmapSlideLast);
+  useEffect(() => {
+    myStateRef.current = roadmapSlideLast;
+  }, [roadmapSlideLast]);
   const api_client = new ApiClient({
     BASE: process.env.REACT_APP_OWL_URL,
   });
@@ -52,8 +59,6 @@ const Home = () => {
   // useEffect(() => {
   //   console.log(main.current);
   // }, [main]);
-  useEffect(() => {}, []);
-
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const bullets = document.querySelectorAll(".bullet-section span");
@@ -217,33 +222,47 @@ const Home = () => {
     });
     let animationDuration = 700;
     var lastTime = new Date().getTime();
+
     if (app.classList.contains("fullscreen")) {
       root.addEventListener(
         "wheel",
         function (e) {
-          var currentTime = new Date().getTime();
+          // console.log(spinValue !== 2 || roadmapSlideLast);
+          if (
+            spinValue !== 2 ||
+            myStateRef.current === 0 ||
+            myStateRef.current === 2
+          ) {
+            console.log("object");
+            var currentTime = new Date().getTime();
 
-          if (currentTime - lastTime < animationDuration) {
-            e.preventDefault();
-            return;
-          }
-          if (canScroll) {
-            bullets.forEach((bulletColor) => {
-              bulletColor.style.backgroundColor = "white";
-            });
-            if (e.deltaY > 0) {
-              if (spinValue < sections.length - 1) {
-                spinValue += 1;
-              }
-            } else {
-              if (spinValue !== 0) {
-                spinValue -= 1;
-              }
+            if (currentTime - lastTime < animationDuration) {
+              e.preventDefault();
+              return;
             }
-            bullets[spinValue].style.backgroundColor = "#e28001";
-            scrollContent(spinValue);
+            if (canScroll) {
+              bullets.forEach((bulletColor) => {
+                bulletColor.style.backgroundColor = "white";
+              });
+              if (e.deltaY > 0) {
+                if (spinValue < sections.length - 1) {
+                  if (spinValue !== 2 || myStateRef.current === 2) {
+                    spinValue += 1;
+                  }
+                }
+              } else {
+                if (spinValue !== 0) {
+                  if (spinValue !== 2 || myStateRef.current === 0) {
+                    spinValue -= 1;
+                  }
+                }
+              }
+              bullets[spinValue].style.backgroundColor = "#e28001";
+              scrollContent(spinValue);
+            }
+            lastTime = currentTime;
           }
-          lastTime = currentTime;
+
           // setTimeout(() => {
           //   canScroll = true;
           // }, 2000);
@@ -300,7 +319,7 @@ const Home = () => {
         ) : (
           <SocialSection api_client={api_client} />
         )}
-        <RoadMapStep1 />
+        <RoadMap setRoadmapSlideLast={setRoadmapSlideLast} />
         <RoadMapStep2 />
         <RoadMapStep3 />
         <RoadMapStep4 />
