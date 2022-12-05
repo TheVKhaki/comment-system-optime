@@ -22,7 +22,7 @@ const Home = () => {
   const width992 = useMediaQuery({ minWidth: 992 });
   const [finalSpinVAlue, setFinalSpinVAlue] = useState(0);
   const [roadmapSlideLast, setRoadmapSlideLast] = useState(0);
-  console.log(roadmapSlideLast);
+
   const myStateRef = useRef(roadmapSlideLast);
   useEffect(() => {
     myStateRef.current = roadmapSlideLast;
@@ -319,7 +319,10 @@ const Home = () => {
         ) : (
           <SocialSection api_client={api_client} />
         )}
-        <RoadMap setRoadmapSlideLast={setRoadmapSlideLast} />
+        <RoadMap
+          setRoadmapSlideLast={setRoadmapSlideLast}
+          roadmapSlideLast={roadmapSlideLast}
+        />
         <RoadMapStep2 />
         <RoadMapStep3 />
         <RoadMapStep4 />
