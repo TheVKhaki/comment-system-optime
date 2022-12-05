@@ -6,7 +6,7 @@ import { RandomReveal } from "react-random-reveal";
 import { gsap } from "gsap";
 import bgVideo from "../video/RoadmapVideo_R02.mp4";
 import { Mousewheel } from "swiper";
-import { EffectFade, Navigation } from "swiper";
+import { EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import lineSlide from "../images/Lines_00000.png";
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
@@ -212,12 +212,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
               ></video>
               <img src={lineSlide} alt="" />
               <Swiper
-                modules={[Mousewheel, EffectFade, Navigation]}
+                modules={[Mousewheel, EffectFade]}
                 effect="fade"
                 spaceBetween={0}
                 slidesPerView={1}
                 mousewheel={true}
-                navigation
                 onSlideChange={(e) => handleSlideChange(e)}
                 onTransitionStart={(e) => handleTransitionStart(e)}
                 onTransitionEnd={handleTransitionEnd}
