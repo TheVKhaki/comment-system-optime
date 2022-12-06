@@ -5,13 +5,14 @@ import { useInView } from "react-intersection-observer";
 import { RandomReveal } from "react-random-reveal";
 import { gsap } from "gsap";
 import bgVideo from "../video/RoadmapVideo_R02.mp4";
-import { Mousewheel } from "swiper";
-import { EffectFade } from "swiper";
+import { EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import ETHLottie from "../lottie/ETH (1).json";
 import lineSlide from "../images/Lines_00000.png";
+import { useMediaQuery } from "react-responsive";
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991.98px)" });
   const videoSlider = document.querySelector(".slider-roadmap video");
   const [slideOneEnd, setSlideOneEnd] = useState(false);
   const [slideTwoEnd, setSlideTwoEnd] = useState(false);
@@ -23,14 +24,16 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     if (inView) {
       // videoSlider.play();
     } else {
-      setSlideOneEnd(false);
-      setSlideTwoEnd(false);
-      setTimeout(() => {
-        swiper.enable();
-        swiper.slideTo(0);
-        videoSlider.currentTime = 0;
-        videoSlider.load();
-      }, 500);
+      if (!isTabletOrMobile) {
+        setSlideOneEnd(false);
+        setSlideTwoEnd(false);
+        setTimeout(() => {
+          swiper.enable();
+          swiper.slideTo(0);
+          videoSlider.currentTime = 0;
+          videoSlider.load();
+        }, 500);
+      }
     }
   }, [controls, inView]);
   // useEffect(() => {
@@ -77,7 +80,10 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const app = useRef();
   const handleSlideChange = (e) => {};
   const handleTransitionStart = (e) => {
-    videoSlider.play();
+    if (!isTabletOrMobile) {
+      videoSlider.play();
+    }
+
     gsap.fromTo(
       ".swiper-slide-active ul li",
       {
@@ -92,8 +98,8 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         stagger: 0.1,
         onComplete: () => {
           setRoadmapSlideLast(e.activeIndex);
-          if (e.activeIndex === 1) {
-            console.log(videoSlider.currentTime);
+          if (isTabletOrMobile) {
+            e.enable();
           }
         },
       }
@@ -142,6 +148,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           from: "end",
         },
         onStart: function () {
+          console.log("first");
           lottiePlayer.current.play();
           e.disable();
         },
@@ -150,31 +157,35 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     );
   };
   const handleTransitionStartEnd = (e) => {
-    videoSlider.currentTime = 0;
-    videoSlider.load();
-    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-    swiper.slideTo(0);
-    setSlideOneEnd(false);
-    setSlideTwoEnd(false);
-    // gsap.fromTo(
-    //   ".swiper-slide-next ul li",
-    //   {
-    //     y: 0,
-    //     opacity: 1,
-    //   },
-    //   {
-    //     y: 160,
-    //     opacity: 0,
-    //     duration: 0.5,
-    //     stagger: {
-    //       each: 0.1,
-    //       from: "end",
-    //     },
-    //     onStart: function () {
-    //       e.disable();
-    //     },
-    //   }
-    // );
+    if (!isTabletOrMobile) {
+      videoSlider.currentTime = 0;
+      videoSlider.load();
+      const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
+      swiper.slideTo(0);
+      setSlideOneEnd(false);
+      setSlideTwoEnd(false);
+    }
+    if (isTabletOrMobile) {
+      gsap.fromTo(
+        ".swiper-slide-next ul li",
+        {
+          y: 0,
+          opacity: 1,
+        },
+        {
+          y: 160,
+          opacity: 0,
+          duration: 0.5,
+          stagger: {
+            each: 0.1,
+            from: "end",
+          },
+          onStart: function () {
+            e.disable();
+          },
+        }
+      );
+    }
   };
 
   return (
@@ -208,12 +219,15 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         <div className="slider-roadmap">
           <div ref={app}>
             <div className="bg-home">
-              <video
-                onTimeUpdate={handleCurrentTime}
-                src={bgVideo}
-                muted
-                className="w-100 h100"
-              ></video>
+              {!isTabletOrMobile && (
+                <video
+                  onTimeUpdate={handleCurrentTime}
+                  src={bgVideo}
+                  muted
+                  className="w-100 h100"
+                ></video>
+              )}
+
               <img src={lineSlide} alt="" />
               <Player
                 ref={lottiePlayer}
@@ -223,11 +237,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 className="lottie-roadmap-slider-eth"
               ></Player>
               <Swiper
-                modules={[Mousewheel, EffectFade]}
+                modules={[EffectFade, Navigation]}
                 effect="fade"
                 spaceBetween={0}
                 slidesPerView={1}
-                mousewheel={true}
+                navigation
                 allowTouchMove={false}
                 onSlideChange={(e) => handleSlideChange(e)}
                 onTransitionStart={(e) => handleTransitionStart(e)}
@@ -261,7 +275,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <h1>1Apr-30Jul</h1>
                   <ul>
                     <li>QPoker-Game Public Sale</li>
-                    <li>Releasing the beta version of the QPoker game</li>
+                    <li>Beta version of iGaming-Platform</li>
                     <li>Decentralized EXchange (DEX)</li>
                     <li>Releasing Governance ERV-20 Token</li>
                     <li>Releasing Qpoker Treasury</li>
@@ -272,9 +286,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <h1>4Apr-30Jul</h1>
                   <ul>
                     <li>QPoker-Game Public Sale</li>
-                    <li>Releasing the beta version of the QPoker game</li>
+                    <li>Beta version of iGaming-Platform</li>
                     <li>Decentralized EXchange (DEX)</li>
-                    <li>Releasing Governance ERV-20 Token</li>
+                    <li>Releasing Governance ERC-20 Token</li>
                     <li>Releasing Qpoker Treasury</li>
                   </ul>
                 </SwiperSlide>
