@@ -231,7 +231,7 @@ const Home = () => {
           if (
             spinValue !== 2 ||
             myStateRef.current === 0 ||
-            myStateRef.current === 2
+            myStateRef.current === 3
           ) {
             console.log("object");
             var currentTime = new Date().getTime();
@@ -246,7 +246,7 @@ const Home = () => {
               });
               if (e.deltaY > 0) {
                 if (spinValue < sections.length - 1) {
-                  if (spinValue !== 2 || myStateRef.current === 2) {
+                  if (spinValue !== 2 || myStateRef.current === 3) {
                     spinValue += 1;
                   }
                 }

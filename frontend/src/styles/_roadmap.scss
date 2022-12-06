@@ -41,6 +41,19 @@
       }
     }
   }
+  &.roadmap-step-slider {
+    .header-roadmap {
+      position: relative;
+      z-index: 1;
+    }
+    .lottie-roadmap-slider-eth {
+      position: absolute;
+      top: 41%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   .slider-roadmap {
     position: absolute;
     height: 100vh;
@@ -115,7 +128,7 @@
         transition: all 0.5s;
         font-weight: 500;
         font-size: 35px;
-        margin-bottom: 7rem;
+        margin-bottom: 8rem;
       }
       ul li {
         color: #fff;
