@@ -8,35 +8,39 @@ import bgVideo from "../video/RoadmapVideo_R02.mp4";
 import { Mousewheel } from "swiper";
 import { EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import ETHLottie from "../lottie/ETH (1).json";
 import lineSlide from "../images/Lines_00000.png";
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const videoSlider = document.querySelector(".slider-roadmap video");
   const [slideOneEnd, setSlideOneEnd] = useState(false);
   const [slideTwoEnd, setSlideTwoEnd] = useState(false);
+  const lottiePlayer = useRef();
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2 });
   useEffect(() => {
     const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
     if (inView) {
-      videoSlider.play();
+      // videoSlider.play();
     } else {
+      setSlideOneEnd(false);
+      setSlideTwoEnd(false);
       setTimeout(() => {
+        swiper.enable();
+        swiper.slideTo(0);
         videoSlider.currentTime = 0;
         videoSlider.load();
-        swiper.slideTo(0);
-        setSlideOneEnd(false);
-        setSlideTwoEnd(false);
-      }, 400);
+      }, 500);
     }
   }, [controls, inView]);
-  useEffect(() => {
-    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-    swiper.disable();
-  }, []);
+  // useEffect(() => {
+  //   const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
+  //   swiper.disable();
+  // }, []);
 
   const handleCurrentTime = (e) => {
     const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-    if (roadmapSlideLast === 0) {
+    if (roadmapSlideLast === 1) {
       if (!slideOneEnd) {
         if (Math.round(e.target.currentTime) === 3) {
           videoSlider.pause();
@@ -51,7 +55,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     ) {
       swiper.disable();
     }
-    if (roadmapSlideLast === 1) {
+    if (roadmapSlideLast === 2) {
       if (!slideTwoEnd) {
         if (Math.round(e.target.currentTime) === 6) {
           videoSlider.pause();
@@ -138,6 +142,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           from: "end",
         },
         onStart: function () {
+          lottiePlayer.current.play();
           e.disable();
         },
         onComplete: function () {},
@@ -147,7 +152,6 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const handleTransitionStartEnd = (e) => {
     videoSlider.currentTime = 0;
     videoSlider.load();
-    videoSlider.play();
     const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
     swiper.slideTo(0);
     setSlideOneEnd(false);
@@ -174,7 +178,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   };
 
   return (
-    <section className="roadmap" ref={element}>
+    <section className="roadmap roadmap-step-slider" ref={element}>
       <Container>
         <div className="header-roadmap">
           <h2>
@@ -211,12 +215,20 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 className="w-100 h100"
               ></video>
               <img src={lineSlide} alt="" />
+              <Player
+                ref={lottiePlayer}
+                controls={false}
+                src={ETHLottie}
+                style={{ height: "100px", width: "70px" }}
+                className="lottie-roadmap-slider-eth"
+              ></Player>
               <Swiper
                 modules={[Mousewheel, EffectFade]}
                 effect="fade"
                 spaceBetween={0}
                 slidesPerView={1}
                 mousewheel={true}
+                allowTouchMove={false}
                 onSlideChange={(e) => handleSlideChange(e)}
                 onTransitionStart={(e) => handleTransitionStart(e)}
                 onTransitionEnd={handleTransitionEnd}
@@ -247,6 +259,17 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 <SwiperSlide>
                   {" "}
                   <h1>1Apr-30Jul</h1>
+                  <ul>
+                    <li>QPoker-Game Public Sale</li>
+                    <li>Releasing the beta version of the QPoker game</li>
+                    <li>Decentralized EXchange (DEX)</li>
+                    <li>Releasing Governance ERV-20 Token</li>
+                    <li>Releasing Qpoker Treasury</li>
+                  </ul>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <h1>4Apr-30Jul</h1>
                   <ul>
                     <li>QPoker-Game Public Sale</li>
                     <li>Releasing the beta version of the QPoker game</li>
