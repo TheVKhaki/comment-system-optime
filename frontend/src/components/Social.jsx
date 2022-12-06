@@ -156,7 +156,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: arrayTimeAnimtion[3],
+        delay: arrayTimeAnimtion[5],
       },
     },
   };
@@ -631,16 +631,20 @@ const SocialSection = (_props) => {
                       animate={controls}
                     >
                       <span>
-                        <RandomReveal
+                        Twitter
+                        {/* <RandomReveal
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
                           characters="Twitter"
-                        />
+                        /> */}
                       </span>
                       <div className="wrapper-detail">
                         <p>
-                          {" "}
+                          {"+" +
+                            dataSocial.twitterFollowers.toString() +
+                            "% (7d %)"}
+                          {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
                             duration={4.6}
@@ -650,7 +654,7 @@ const SocialSection = (_props) => {
                               dataSocial.twitterFollowers.toString() +
                               "% (7d %)"
                             }
-                          />
+                          /> */}
                         </p>
                       </div>
                     </motion.div>
@@ -682,17 +686,21 @@ const SocialSection = (_props) => {
                       animate={controls}
                     >
                       <span>
-                        {" "}
+                        Telegram
+                        {/* {" "}
                         <RandomReveal
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
                           characters="Telegram"
-                        />
+                        /> */}
                       </span>
                       <div className="wrapper-detail">
                         <p>
-                          {" "}
+                          {"+" +
+                            dataSocial.telegramChannel.toString() +
+                            "% (7d %)"}
+                          {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
                             duration={4.6}
@@ -702,7 +710,7 @@ const SocialSection = (_props) => {
                               dataSocial.telegramChannel.toString() +
                               "% (7d %)"
                             }
-                          />
+                          />*/}
                         </p>
                       </div>
                     </motion.div>
@@ -734,17 +742,21 @@ const SocialSection = (_props) => {
                       animate={controls}
                     >
                       <span>
-                        {" "}
+                        Youtube
+                        {/* {" "}
                         <RandomReveal
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
                           characters="Youtube"
-                        />
+                        /> */}
                       </span>
                       <div className="wrapper-detail">
                         <p>
-                          {" "}
+                          {"+" +
+                            dataSocial.youtubeSubscribers.toString() +
+                            "% (7d %)"}
+                          {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
                             duration={4.6}
@@ -754,7 +766,7 @@ const SocialSection = (_props) => {
                               dataSocial.youtubeSubscribers.toString() +
                               "% (7d %)"
                             }
-                          />
+                          /> */}
                         </p>
                       </div>
                     </motion.div>
@@ -786,23 +798,25 @@ const SocialSection = (_props) => {
                       animate={controls}
                     >
                       <span>
-                        {" "}
+                        Trello
+                        {/* {" "}
                         <RandomReveal
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
                           characters="Trello"
-                        />
+                        /> */}
                       </span>
                       <div className="wrapper-detail">
                         <p style={{ color: "white" }}>
-                          {" "}
+                          Executive Board
+                          {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
                             duration={4.6}
                             revealDuration={0.5}
                             characters="Executive Board"
-                          />
+                          /> */}
                         </p>
                       </div>
                     </motion.div>
@@ -817,22 +831,22 @@ const SocialSection = (_props) => {
                   className="team-info-1 team-info-circle"
                 >
                   <span>
-                    {" "}
-                    <RandomReveal
+                    $50,000
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="$50,000"
-                    />
+                    /> */}
                   </span>
                   <p>
-                    {" "}
-                    <RandomReveal
+                    Getting Started 🔥
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="Getting Started 🔥"
-                    />
+                    /> */}
                   </p>
                 </motion.div>
                 <motion.div
@@ -842,21 +856,22 @@ const SocialSection = (_props) => {
                   className="team-info-2 team-info-circle"
                 >
                   <span>
-                    {" "}
-                    <RandomReveal
+                    $75,000
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="$75,000"
-                    />
+                    /> */}
                   </span>
                   <p>
-                    <RandomReveal
+                    COMING SOON
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="COMING SOON"
-                    />
+                    /> */}
                   </p>
                 </motion.div>
                 <motion.div
@@ -866,21 +881,22 @@ const SocialSection = (_props) => {
                   className="team-info-3 team-info-circle"
                 >
                   <span>
-                    {" "}
-                    <RandomReveal
+                    $125,000
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="$125,000"
-                    />
+                    /> */}
                   </span>
                   <p>
-                    <RandomReveal
+                    COMING SOON
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="COMING SOON"
-                    />
+                    /> */}
                   </p>
                 </motion.div>
                 <motion.div
@@ -890,22 +906,22 @@ const SocialSection = (_props) => {
                   className="team-info-4 team-info-circle"
                 >
                   <span>
-                    {" "}
-                    <RandomReveal
+                    $200,000
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="$200,000"
-                    />
+                    /> */}
                   </span>
                   <p>
-                    {" "}
-                    <RandomReveal
+                    COMING SOON
+                    {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
                       revealDuration={0.5}
                       characters="COMING SOON"
-                    />
+                    /> */}
                   </p>
                 </motion.div>
               </div>
