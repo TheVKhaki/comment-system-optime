@@ -1587,7 +1587,7 @@ body.modal-open {
 
 .roadmap.roadmap-step-slider .header-roadmap {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .roadmap.roadmap-step-slider .lottie-roadmap-slider-eth {
@@ -1596,6 +1596,7 @@ body.modal-open {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .roadmap .slider-roadmap {
@@ -1612,6 +1613,14 @@ body.modal-open {
   transition: all 0.3s;
 }
 
+.roadmap .slider-roadmap .video-slider {
+  z-index: 1;
+}
+
+.roadmap .slider-roadmap .video-slider.active {
+  z-index: 2 !important;
+}
+
 .roadmap .slider-roadmap video {
   position: absolute;
   height: 100vh;
@@ -1625,6 +1634,7 @@ body.modal-open {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .roadmap .slider-roadmap .swiper {
@@ -1638,6 +1648,7 @@ body.modal-open {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 3;
 }
 
 .roadmap .slider-roadmap .swiper .swiper-button-prev,
@@ -1722,6 +1733,7 @@ body.modal-open {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .roadmap .slider-roadmap .gif-slide {
@@ -2495,10 +2507,17 @@ body.modal-open {
     bottom: auto;
   }
   .roadmap.roadmap-step-slider {
+    height: 800px;
     background: url(../images/1ST_BCK.webp) no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 2;
+  }
+  .roadmap .slider-roadmap {
+    height: 800px;
+  }
+  .roadmap .slider-roadmap .swiper {
+    height: 800px;
   }
   .roadmap.roadmap-step2 {
     background-size: cover;
@@ -2678,9 +2697,6 @@ body.modal-open {
 }
 
 @media screen and (max-width: 575.98px) {
-  .roadmap.roadmap-step-slider {
-    min-height: 85vh;
-  }
   .roadmap.roadmap-step-slider .lottie-roadmap-slider-eth {
     top: 43%;
   }
@@ -2691,11 +2707,11 @@ body.modal-open {
     font-size: 20px;
   }
   .roadmap .slider-roadmap .swiper .swiper-button-prev {
-    margin-left: 0;
+    margin-left: 5px;
     top: 43%;
   }
   .roadmap .slider-roadmap .swiper .swiper-button-next {
-    margin-right: 0;
+    margin-right: 5px;
     top: 43%;
   }
   .roadmap p {
