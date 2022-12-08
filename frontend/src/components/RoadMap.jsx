@@ -4,8 +4,12 @@ import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 import { RandomReveal } from "react-random-reveal";
 import { gsap } from "gsap";
-import sliderVideo from "../video/RoadmapVideo_R03.mp4";
-import sliderVideoReverse from "../video/RoadmapVideo_R04_Reverse.mp4";
+import sliderVideo1 from "../video/RoadmapBKG_Part01.mp4";
+import sliderVideo2 from "../video/RoadmapBKG_Part02.mp4";
+import sliderVideo3 from "../video/RoadmapBKG_Part03.mp4";
+import sliderVideoReverse1 from "../video/Reverse_RoadmapBKG_Part01.mp4";
+import sliderVideoReverse2 from "../video/Reverse_RoadmapBKG_Part02.mp4";
+import sliderVideoReverse3 from "../video/Reverse_RoadmapBKG_Part03.mp4";
 import { EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -19,16 +23,10 @@ import paginationGifReverseOne from "../video/GIF.Reverse_Pageination01.gif";
 import paginationGifReverseTwo from "../video/GIF.Reverse_Pageination02.gif";
 import paginationGifReverseThree from "../video/GIF.Reverse_Pageination03.gif";
 import ReactFreezeframe from "react-freezeframe";
+import Lazyload from "../HOC/Lazyload";
 
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991.98px)" });
-  const videoSlider = document.querySelector(".slider-roadmap .video-slider");
-  const videoSliderRevers = document.querySelector(
-    ".slider-roadmap .video-slider-revers"
-  );
-  const [slideOneEnd, setSlideOneEnd] = useState(false);
-  const [slideTwoEnd, setSlideTwoEnd] = useState(false);
-  const [slideThreeEnd, setSlideThreeEnd] = useState(false);
   const lottiePlayer = useRef();
   const controls = useAnimation();
   const [elementView, inView] = useInView({ threshold: 0.2 });
@@ -43,109 +41,6 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const freezeGifReverse1 = useRef();
   const freezeGifReverse2 = useRef();
   const freezeGifReverse3 = useRef();
-  let prev = false;
-  const handleCurrentTime = (e) => {
-    console.log(e.target.currentTime);
-    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-    if (roadmapSlideLast === 1) {
-      if (!slideOneEnd) {
-        if (Math.round(e.target.currentTime) === 3) {
-          videoSliderRevers.currentTime = 6;
-          videoSlider.pause();
-          swiper.enable();
-          setSlideOneEnd(true);
-        }
-      }
-    }
-    if (
-      Math.round(e.target.currentTime) > 3 &&
-      Math.round(e.target.currentTime) < 6
-    ) {
-      swiper.disable();
-    }
-    if (roadmapSlideLast === 2) {
-      if (!slideTwoEnd) {
-        if (Math.round(e.target.currentTime) === 6) {
-          videoSliderRevers.currentTime = 3;
-          videoSlider.pause();
-          swiper.enable();
-          setSlideTwoEnd(true);
-        }
-      }
-    }
-    if (
-      Math.round(e.target.currentTime) > 6 &&
-      Math.round(e.target.currentTime) < 9
-    ) {
-      swiper.disable();
-    }
-    if (Math.round(e.target.currentTime) === 9) {
-      swiper.enable();
-      videoSliderRevers.currentTime = 0;
-    }
-  };
-  const handleCurrentTimeReverse = (e) => {
-    console.log(prev);
-    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-    if (roadmapSlideLast === 0) {
-      if (!slideOneEnd) {
-        if (e.target.currentTime === e.target.duration) {
-          videoSlider.currentTime = 0;
-          swiper.enable();
-          setSlideOneEnd(true);
-        }
-      }
-    }
-    if (
-      Math.round(e.target.currentTime) > 3 &&
-      Math.round(e.target.currentTime) < 6
-    ) {
-      swiper.disable();
-    }
-    if (
-      Math.round(e.target.currentTime) > 0 &&
-      Math.round(e.target.currentTime) < 3
-    ) {
-      swiper.disable();
-    }
-    if (roadmapSlideLast === 1) {
-      if (!slideTwoEnd) {
-        if (Math.round(e.target.currentTime) === 6) {
-          setTimeout(() => {
-            if (prev) {
-              videoSlider.currentTime = 3;
-            }
-          }, 1000);
-          videoSliderRevers.pause();
-          swiper.enable();
-          setSlideTwoEnd(true);
-        }
-      }
-    }
-    if (roadmapSlideLast === 2) {
-      if (!slideThreeEnd) {
-        if (Math.round(e.target.currentTime) === 3) {
-          setTimeout(() => {
-            if (prev) {
-              videoSlider.currentTime = 6;
-            }
-          }, 1000);
-          videoSliderRevers.pause();
-          swiper.enable();
-          setSlideThreeEnd(true);
-        }
-      }
-    }
-    if (
-      Math.round(e.target.currentTime) > 6 &&
-      Math.round(e.target.currentTime) < 9
-    ) {
-      swiper.disable();
-    }
-    if (Math.round(e.target.currentTime) === 0) {
-      swiper.enable();
-    }
-  };
   const app = useRef();
   const handleSlideChange = (e) => {};
   const handleTransitionStart = (e) => {
@@ -163,6 +58,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         stagger: 0.1,
         onComplete: () => {
           setRoadmapSlideLast(e.activeIndex);
+          if (isTabletOrMobile) {
+            e.enable();
+          }
         },
       }
     );
@@ -194,9 +92,36 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
 
   //   return () => ctx.revert(); // cleanup
   // }, []);
+  const videoSlider1 = useRef();
+  const videoSlider2 = useRef();
+  const videoSlider3 = useRef();
+  const videoSliderRevers1 = useRef();
+  const videoSliderRevers2 = useRef();
+  const videoSliderRevers3 = useRef();
+  const videoSliderEnd = () => {
+    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
+    swiper.enable();
+  };
+
   const handleTransitionStartNext = (e) => {
     const gifSlide = document.querySelectorAll(".gif-slide");
+    const videoSlide = document.querySelectorAll(".video-slider");
     if (e.activeIndex === 1) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSlider1.current.classList.add("active");
+        videoSlider1.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
       freezeGif1.current.start();
       setTimeout(() => {
         gifSlide.forEach((gifSlide) => {
@@ -207,6 +132,22 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
       }, 3000);
     }
     if (e.activeIndex === 2) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSlider2.current.classList.add("active");
+        videoSlider2.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
+
       if (!gifSlide[1].classList.contains("active")) {
         gifSlide.forEach((gifSlide) => {
           gifSlide.classList.remove("active");
@@ -223,6 +164,22 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
       }, 3000);
     }
     if (e.activeIndex === 3) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSlider3.current.classList.add("active");
+        videoSlider3.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
+
       if (!gifSlide[2].classList.contains("active")) {
         gifSlide.forEach((gifSlide) => {
           gifSlide.classList.remove("active");
@@ -238,16 +195,16 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         freezeGif3.current.stop();
       }, 4300);
     }
-    if (!isTabletOrMobile) {
-      prev = false;
-      videoSlider.play();
-      videoSliderRevers.style.opacity = 0;
-      setTimeout(() => {
-        setSlideOneEnd(false);
-        setSlideTwoEnd(false);
-        setSlideThreeEnd(false);
-      }, 1000);
-    }
+    // if (!isTabletOrMobile) {
+    //   prev = false;
+    //   videoSlider.play();
+    //   videoSliderRevers.style.opacity = 0;
+    //   setTimeout(() => {
+    //     setSlideOneEnd(false);
+    //     setSlideTwoEnd(false);
+    //     setSlideThreeEnd(false);
+    //   }, 1000);
+    // }
     gsap.fromTo(
       ".swiper-slide-prev ul li",
       {
@@ -263,9 +220,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           from: "end",
         },
         onStart: function () {
-          console.log("first");
           lottiePlayer.current.play();
-          e.disable();
         },
         onComplete: function () {},
       }
@@ -273,7 +228,24 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   };
   const handleTransitionStartEnd = (e) => {
     const gifSlide = document.querySelectorAll(".gif-slide");
+    const videoSlide = document.querySelectorAll(".video-slider");
     if (e.activeIndex === 0) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSliderRevers1.current.classList.add("active");
+        videoSliderRevers1.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
+
       if (!gifSlide[3].classList.contains("active")) {
         gifSlide.forEach((gifSlide) => {
           gifSlide.classList.remove("active");
@@ -290,6 +262,22 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
       }, 3500);
     }
     if (e.activeIndex === 1) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSliderRevers2.current.classList.add("active");
+        videoSliderRevers2.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
+
       if (!gifSlide[4].classList.contains("active")) {
         gifSlide.forEach((gifSlide) => {
           gifSlide.classList.remove("active");
@@ -306,6 +294,22 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
       }, 3000);
     }
     if (e.activeIndex === 2) {
+      e.disable();
+      if (!isTabletOrMobile) {
+        videoSlide.forEach((videoSlide) => {
+          videoSlide.classList.remove("active");
+        });
+        videoSliderRevers3.current.classList.add("active");
+        videoSliderRevers3.current.play();
+        setTimeout(() => {
+          videoSlide.forEach((videoSlide) => {
+            if (!videoSlide.classList.contains("active")) {
+              videoSlide.currentTime = 0;
+            }
+          });
+        }, 1000);
+      }
+
       freezeGifReverse3.current.start();
       setTimeout(() => {
         gifSlide.forEach((gifSlide) => {
@@ -315,38 +319,37 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         freezeGifReverse3.current.stop();
       }, 4700);
     }
-    if (!isTabletOrMobile) {
-      prev = true;
-      videoSliderRevers.style.opacity = 1;
-      videoSliderRevers.play();
-      setTimeout(() => {
-        setSlideOneEnd(false);
-        setSlideTwoEnd(false);
-        setSlideThreeEnd(false);
-      }, 1000);
-    }
-    if (!isTabletOrMobile) {
-      gsap.fromTo(
-        ".swiper-slide-next ul li",
-        {
-          y: 0,
-          opacity: 1,
+    // if (!isTabletOrMobile) {
+    //   prev = true;
+    //   videoSliderRevers.style.opacity = 1;
+    //   videoSliderRevers.play();
+    //   setTimeout(() => {
+    //     setSlideOneEnd(false);
+    //     setSlideTwoEnd(false);
+    //     setSlideThreeEnd(false);
+    //   }, 1000);
+    // }
+    // if (!isTabletOrMobile) {
+    gsap.fromTo(
+      ".swiper-slide-next ul li",
+      {
+        y: 0,
+        opacity: 1,
+      },
+      {
+        y: 160,
+        opacity: 0,
+        duration: 0.5,
+        stagger: {
+          each: 0.1,
+          from: "end",
         },
-        {
-          y: 160,
-          opacity: 0,
-          duration: 0.5,
-          stagger: {
-            each: 0.1,
-            from: "end",
-          },
-          onStart: function () {
-            lottiePlayer.current.play();
-            e.disable();
-          },
-        }
-      );
-    }
+        onStart: function () {
+          lottiePlayer.current.play();
+        },
+      }
+    );
+    // }
   };
 
   return (
@@ -380,23 +383,60 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         <div className="slider-roadmap">
           <div ref={app}>
             <div className="bg-home">
-              {!isTabletOrMobile && (
-                <>
-                  <video
-                    onTimeUpdate={handleCurrentTime}
-                    src={sliderVideo}
-                    muted
-                    className="video-slider w-100 h100"
-                  ></video>
-                  <video
-                    onTimeUpdate={handleCurrentTimeReverse}
-                    src={sliderVideoReverse}
-                    muted
-                    className="video-slider-revers w-100 h100"
-                  ></video>
-                </>
-              )}
-
+              <Lazyload>
+                {!isTabletOrMobile && (
+                  <>
+                    <video
+                      // onTimeUpdate={handleCurrentTime}
+                      onEnded={videoSliderEnd}
+                      ref={videoSlider1}
+                      src={sliderVideo1}
+                      muted
+                      className="video-slider w-100 h100 active"
+                    ></video>
+                    <video
+                      // onTimeUpdate={handleCurrentTimeReverse}
+                      onEnded={videoSliderEnd}
+                      ref={videoSlider2}
+                      src={sliderVideo2}
+                      muted
+                      className="video-slider w-100 h100"
+                    ></video>
+                    <video
+                      // onTimeUpdate={handleCurrentTime}
+                      onEnded={videoSliderEnd}
+                      ref={videoSlider3}
+                      src={sliderVideo3}
+                      muted
+                      className="video-slider w-100 h100"
+                    ></video>
+                    <video
+                      // onTimeUpdate={handleCurrentTimeReverse}
+                      onEnded={videoSliderEnd}
+                      ref={videoSliderRevers1}
+                      src={sliderVideoReverse1}
+                      muted
+                      className="video-slider w-100 h100"
+                    ></video>
+                    <video
+                      // onTimeUpdate={handleCurrentTime}
+                      onEnded={videoSliderEnd}
+                      ref={videoSliderRevers2}
+                      src={sliderVideoReverse2}
+                      muted
+                      className="video-slider w-100 h100"
+                    ></video>
+                    <video
+                      // onTimeUpdate={handleCurrentTimeReverse}
+                      onEnded={videoSliderEnd}
+                      ref={videoSliderRevers3}
+                      src={sliderVideoReverse3}
+                      muted
+                      className="video-slider w-100 h100"
+                    ></video>
+                  </>
+                )}
+              </Lazyload>
               <img src={lineSlide} alt="" />
               <Player
                 ref={lottiePlayer}
@@ -465,28 +505,55 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
             </div>
             <div className="slider-roadmap-pagination">
               <div className="gif-slide active">
-                <ReactFreezeframe src={paginationGifOne} ref={freezeGif1} />
+                <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
+                  src={paginationGifOne}
+                  ref={freezeGif1}
+                />
               </div>
               <div className="gif-slide">
-                <ReactFreezeframe src={paginationGifTwo} ref={freezeGif2} />
+                <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
+                  src={paginationGifTwo}
+                  ref={freezeGif2}
+                />
               </div>
               <div className="gif-slide">
-                <ReactFreezeframe src={paginationGifThree} ref={freezeGif3} />
+                <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
+                  src={paginationGifThree}
+                  ref={freezeGif3}
+                />
               </div>
               <div className="gif-slide ">
                 <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
                   src={paginationGifReverseOne}
                   ref={freezeGifReverse1}
                 />
               </div>
               <div className="gif-slide">
                 <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
                   src={paginationGifReverseTwo}
                   ref={freezeGifReverse2}
                 />
               </div>
               <div className="gif-slide">
                 <ReactFreezeframe
+                  options={{
+                    trigger: false,
+                  }}
                   src={paginationGifReverseThree}
                   ref={freezeGifReverse3}
                 />
