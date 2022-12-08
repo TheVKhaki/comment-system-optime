@@ -227,41 +227,29 @@ const Home = () => {
       root.addEventListener(
         "wheel",
         function (e) {
-          // console.log(spinValue !== 2 || roadmapSlideLast);
-          if (
-            spinValue !== 2 ||
-            myStateRef.current === 0 ||
-            myStateRef.current === 3
-          ) {
-            console.log("object");
-            var currentTime = new Date().getTime();
+          var currentTime = new Date().getTime();
 
-            if (currentTime - lastTime < animationDuration) {
-              e.preventDefault();
-              return;
-            }
-            if (canScroll) {
-              bullets.forEach((bulletColor) => {
-                bulletColor.style.backgroundColor = "white";
-              });
-              if (e.deltaY > 0) {
-                if (spinValue < sections.length - 1) {
-                  if (spinValue !== 2 || myStateRef.current === 3) {
-                    spinValue += 1;
-                  }
-                }
-              } else {
-                if (spinValue !== 0) {
-                  if (spinValue !== 2 || myStateRef.current === 0) {
-                    spinValue -= 1;
-                  }
-                }
-              }
-              bullets[spinValue].style.backgroundColor = "#e28001";
-              scrollContent(spinValue);
-            }
-            lastTime = currentTime;
+          if (currentTime - lastTime < animationDuration) {
+            e.preventDefault();
+            return;
           }
+          if (canScroll) {
+            bullets.forEach((bulletColor) => {
+              bulletColor.style.backgroundColor = "white";
+            });
+            if (e.deltaY > 0) {
+              if (spinValue < sections.length - 1) {
+                spinValue += 1;
+              }
+            } else {
+              if (spinValue !== 0) {
+                spinValue -= 1;
+              }
+            }
+            bullets[spinValue].style.backgroundColor = "#e28001";
+            scrollContent(spinValue);
+          }
+          lastTime = currentTime;
 
           // setTimeout(() => {
           //   canScroll = true;

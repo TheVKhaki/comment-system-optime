@@ -60,6 +60,10 @@
     width: 100vw;
     top: 0;
     left: 0;
+    .video-slider-revers {
+      opacity: 0;
+      transition: all 0.3s;
+    }
     video {
       position: absolute;
       height: 100vh;
@@ -131,6 +135,24 @@
             opacity: 1;
           }
         }
+      }
+    }
+    .react-freezeframe {
+      position: absolute;
+      bottom: 84px;
+      width: 300px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .gif-slide {
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+      img {
+        top: 0;
+        left: 0;
+        transform: none;
       }
     }
   }
