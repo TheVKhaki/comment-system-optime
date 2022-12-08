@@ -4,48 +4,53 @@ import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 import { RandomReveal } from "react-random-reveal";
 import { gsap } from "gsap";
-import bgVideo from "../video/RoadmapVideo_R02.mp4";
+import sliderVideo from "../video/RoadmapVideo_R03.mp4";
+import sliderVideoReverse from "../video/RoadmapVideo_R04_Reverse.mp4";
 import { EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import ETHLottie from "../lottie/ETH (1).json";
 import lineSlide from "../images/Lines_00000.png";
 import { useMediaQuery } from "react-responsive";
+import paginationGifOne from "../video/GIF_Pageination01.gif";
+import paginationGifTwo from "../video/GIF_Pageination02.gif";
+import paginationGifThree from "../video/GIF_Pageination03.gif";
+import paginationGifReverseOne from "../video/GIF.Reverse_Pageination01.gif";
+import paginationGifReverseTwo from "../video/GIF.Reverse_Pageination02.gif";
+import paginationGifReverseThree from "../video/GIF.Reverse_Pageination03.gif";
+import ReactFreezeframe from "react-freezeframe";
+
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991.98px)" });
-  const videoSlider = document.querySelector(".slider-roadmap video");
+  const videoSlider = document.querySelector(".slider-roadmap .video-slider");
+  const videoSliderRevers = document.querySelector(
+    ".slider-roadmap .video-slider-revers"
+  );
   const [slideOneEnd, setSlideOneEnd] = useState(false);
   const [slideTwoEnd, setSlideTwoEnd] = useState(false);
+  const [slideThreeEnd, setSlideThreeEnd] = useState(false);
   const lottiePlayer = useRef();
   const controls = useAnimation();
-  const [element, inView] = useInView({ threshold: 0.2 });
+  const [elementView, inView] = useInView({ threshold: 0.2 });
   useEffect(() => {
-    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
     if (inView) {
       // videoSlider.play();
-    } else {
-      if (!isTabletOrMobile) {
-        setSlideOneEnd(false);
-        setSlideTwoEnd(false);
-        setTimeout(() => {
-          swiper.enable();
-          swiper.slideTo(0);
-          videoSlider.currentTime = 0;
-          videoSlider.load();
-        }, 500);
-      }
     }
   }, [controls, inView]);
-  // useEffect(() => {
-  //   const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-  //   swiper.disable();
-  // }, []);
-
+  const freezeGif1 = useRef();
+  const freezeGif2 = useRef();
+  const freezeGif3 = useRef();
+  const freezeGifReverse1 = useRef();
+  const freezeGifReverse2 = useRef();
+  const freezeGifReverse3 = useRef();
+  let prev = false;
   const handleCurrentTime = (e) => {
+    console.log(e.target.currentTime);
     const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
     if (roadmapSlideLast === 1) {
       if (!slideOneEnd) {
         if (Math.round(e.target.currentTime) === 3) {
+          videoSliderRevers.currentTime = 6;
           videoSlider.pause();
           swiper.enable();
           setSlideOneEnd(true);
@@ -61,6 +66,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     if (roadmapSlideLast === 2) {
       if (!slideTwoEnd) {
         if (Math.round(e.target.currentTime) === 6) {
+          videoSliderRevers.currentTime = 3;
           videoSlider.pause();
           swiper.enable();
           setSlideTwoEnd(true);
@@ -75,15 +81,74 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     }
     if (Math.round(e.target.currentTime) === 9) {
       swiper.enable();
+      videoSliderRevers.currentTime = 0;
+    }
+  };
+  const handleCurrentTimeReverse = (e) => {
+    console.log(prev);
+    const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
+    if (roadmapSlideLast === 0) {
+      if (!slideOneEnd) {
+        if (e.target.currentTime === e.target.duration) {
+          videoSlider.currentTime = 0;
+          swiper.enable();
+          setSlideOneEnd(true);
+        }
+      }
+    }
+    if (
+      Math.round(e.target.currentTime) > 3 &&
+      Math.round(e.target.currentTime) < 6
+    ) {
+      swiper.disable();
+    }
+    if (
+      Math.round(e.target.currentTime) > 0 &&
+      Math.round(e.target.currentTime) < 3
+    ) {
+      swiper.disable();
+    }
+    if (roadmapSlideLast === 1) {
+      if (!slideTwoEnd) {
+        if (Math.round(e.target.currentTime) === 6) {
+          setTimeout(() => {
+            if (prev) {
+              videoSlider.currentTime = 3;
+            }
+          }, 1000);
+          videoSliderRevers.pause();
+          swiper.enable();
+          setSlideTwoEnd(true);
+        }
+      }
+    }
+    if (roadmapSlideLast === 2) {
+      if (!slideThreeEnd) {
+        if (Math.round(e.target.currentTime) === 3) {
+          setTimeout(() => {
+            if (prev) {
+              videoSlider.currentTime = 6;
+            }
+          }, 1000);
+          videoSliderRevers.pause();
+          swiper.enable();
+          setSlideThreeEnd(true);
+        }
+      }
+    }
+    if (
+      Math.round(e.target.currentTime) > 6 &&
+      Math.round(e.target.currentTime) < 9
+    ) {
+      swiper.disable();
+    }
+    if (Math.round(e.target.currentTime) === 0) {
+      swiper.enable();
     }
   };
   const app = useRef();
   const handleSlideChange = (e) => {};
   const handleTransitionStart = (e) => {
-    if (!isTabletOrMobile) {
-      videoSlider.play();
-    }
-
     gsap.fromTo(
       ".swiper-slide-active ul li",
       {
@@ -98,9 +163,6 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         stagger: 0.1,
         onComplete: () => {
           setRoadmapSlideLast(e.activeIndex);
-          if (isTabletOrMobile) {
-            e.enable();
-          }
         },
       }
     );
@@ -133,6 +195,59 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   //   return () => ctx.revert(); // cleanup
   // }, []);
   const handleTransitionStartNext = (e) => {
+    const gifSlide = document.querySelectorAll(".gif-slide");
+    if (e.activeIndex === 1) {
+      freezeGif1.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[1].classList.add("active");
+        freezeGif1.current.stop();
+      }, 3000);
+    }
+    if (e.activeIndex === 2) {
+      if (!gifSlide[1].classList.contains("active")) {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[1].classList.add("active");
+      }
+      freezeGif2.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[2].classList.add("active");
+        freezeGif2.current.stop();
+      }, 3000);
+    }
+    if (e.activeIndex === 3) {
+      if (!gifSlide[2].classList.contains("active")) {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[2].classList.add("active");
+      }
+      freezeGif3.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[5].classList.add("active");
+        freezeGif3.current.stop();
+      }, 4300);
+    }
+    if (!isTabletOrMobile) {
+      prev = false;
+      videoSlider.play();
+      videoSliderRevers.style.opacity = 0;
+      setTimeout(() => {
+        setSlideOneEnd(false);
+        setSlideTwoEnd(false);
+        setSlideThreeEnd(false);
+      }, 1000);
+    }
     gsap.fromTo(
       ".swiper-slide-prev ul li",
       {
@@ -157,15 +272,60 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     );
   };
   const handleTransitionStartEnd = (e) => {
-    if (!isTabletOrMobile) {
-      videoSlider.currentTime = 0;
-      videoSlider.load();
-      const swiper = document.querySelector(".slider-roadmap .swiper").swiper;
-      swiper.slideTo(0);
-      setSlideOneEnd(false);
-      setSlideTwoEnd(false);
+    const gifSlide = document.querySelectorAll(".gif-slide");
+    if (e.activeIndex === 0) {
+      if (!gifSlide[3].classList.contains("active")) {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[3].classList.add("active");
+      }
+      freezeGifReverse1.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[0].classList.add("active");
+        freezeGifReverse1.current.stop();
+      }, 3500);
     }
-    if (isTabletOrMobile) {
+    if (e.activeIndex === 1) {
+      if (!gifSlide[4].classList.contains("active")) {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[4].classList.add("active");
+      }
+      freezeGifReverse2.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[3].classList.add("active");
+        freezeGifReverse2.current.stop();
+      }, 3000);
+    }
+    if (e.activeIndex === 2) {
+      freezeGifReverse3.current.start();
+      setTimeout(() => {
+        gifSlide.forEach((gifSlide) => {
+          gifSlide.classList.remove("active");
+        });
+        gifSlide[4].classList.add("active");
+        freezeGifReverse3.current.stop();
+      }, 4700);
+    }
+    if (!isTabletOrMobile) {
+      prev = true;
+      videoSliderRevers.style.opacity = 1;
+      videoSliderRevers.play();
+      setTimeout(() => {
+        setSlideOneEnd(false);
+        setSlideTwoEnd(false);
+        setSlideThreeEnd(false);
+      }, 1000);
+    }
+    if (!isTabletOrMobile) {
       gsap.fromTo(
         ".swiper-slide-next ul li",
         {
@@ -181,6 +341,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
             from: "end",
           },
           onStart: function () {
+            lottiePlayer.current.play();
             e.disable();
           },
         }
@@ -189,7 +350,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   };
 
   return (
-    <section className="roadmap roadmap-step-slider" ref={element}>
+    <section className="roadmap roadmap-step-slider" ref={elementView}>
       <Container>
         <div className="header-roadmap">
           <h2>
@@ -220,12 +381,20 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           <div ref={app}>
             <div className="bg-home">
               {!isTabletOrMobile && (
-                <video
-                  onTimeUpdate={handleCurrentTime}
-                  src={bgVideo}
-                  muted
-                  className="w-100 h100"
-                ></video>
+                <>
+                  <video
+                    onTimeUpdate={handleCurrentTime}
+                    src={sliderVideo}
+                    muted
+                    className="video-slider w-100 h100"
+                  ></video>
+                  <video
+                    onTimeUpdate={handleCurrentTimeReverse}
+                    src={sliderVideoReverse}
+                    muted
+                    className="video-slider-revers w-100 h100"
+                  ></video>
+                </>
               )}
 
               <img src={lineSlide} alt="" />
@@ -293,6 +462,41 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   </ul>
                 </SwiperSlide>
               </Swiper>
+            </div>
+            <div className="slider-roadmap-pagination">
+              <div className="gif-slide active">
+                <ReactFreezeframe src={paginationGifOne} ref={freezeGif1} />
+              </div>
+              <div className="gif-slide">
+                <ReactFreezeframe src={paginationGifTwo} ref={freezeGif2} />
+              </div>
+              <div className="gif-slide">
+                <ReactFreezeframe src={paginationGifThree} ref={freezeGif3} />
+              </div>
+              <div className="gif-slide ">
+                <ReactFreezeframe
+                  src={paginationGifReverseOne}
+                  ref={freezeGifReverse1}
+                />
+              </div>
+              <div className="gif-slide">
+                <ReactFreezeframe
+                  src={paginationGifReverseTwo}
+                  ref={freezeGifReverse2}
+                />
+              </div>
+              <div className="gif-slide">
+                <ReactFreezeframe
+                  src={paginationGifReverseThree}
+                  ref={freezeGifReverse3}
+                />
+              </div>
+              {/* // <img src= className="gif-slide-1" alt="" /> */}
+
+              {/* {roadmapSlideLast === 1 && <img src={paginationGifTwo} alt="" />}
+              {roadmapSlideLast === 2 && (
+                <img src={paginationGifThree} alt="" />
+              )} */}
             </div>
           </div>
         </div>

@@ -1606,6 +1606,12 @@ body.modal-open {
   left: 0;
 }
 
+.roadmap .slider-roadmap .video-slider-revers {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .roadmap .slider-roadmap video {
   position: absolute;
   height: 100vh;
@@ -1707,6 +1713,30 @@ body.modal-open {
   -webkit-transform: translate(0);
   transform: translate(0);
   opacity: 1;
+}
+
+.roadmap .slider-roadmap .react-freezeframe {
+  position: absolute;
+  bottom: 84px;
+  width: 300px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.roadmap .slider-roadmap .gif-slide {
+  opacity: 0;
+}
+
+.roadmap .slider-roadmap .gif-slide.active {
+  opacity: 1;
+}
+
+.roadmap .slider-roadmap .gif-slide img {
+  top: 0;
+  left: 0;
+  -webkit-transform: none;
+  transform: none;
 }
 
 .roadmap .roadmap-date p {
