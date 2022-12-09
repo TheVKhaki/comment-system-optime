@@ -50,7 +50,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: arrayTimeAnimtion[6],
+        delay: arrayTimeAnimtion[4],
       },
     },
   };
@@ -157,6 +157,54 @@ const SocialSection = (_props) => {
       transition: {
         duration: 1,
         delay: arrayTimeAnimtion[5],
+      },
+    },
+  };
+  const textFadeIn1 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 3.5,
+      },
+    },
+  };
+  const textFadeIn2 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 3.7,
+      },
+    },
+  };
+  const textFadeIn3 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 3.9,
+      },
+    },
+  };
+  const textFadeIn4 = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 4.1,
       },
     },
   };
@@ -626,7 +674,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn}
+                      variants={textFadeIn1}
                       initial="hidden"
                       animate={controls}
                     >
@@ -681,7 +729,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn}
+                      variants={textFadeIn2}
                       initial="hidden"
                       animate={controls}
                     >
@@ -737,7 +785,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn}
+                      variants={textFadeIn3}
                       initial="hidden"
                       animate={controls}
                     >
@@ -793,7 +841,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn}
+                      variants={textFadeIn4}
                       initial="hidden"
                       animate={controls}
                     >
@@ -825,7 +873,7 @@ const SocialSection = (_props) => {
               </div>
               <div className="left-circle-social">
                 <motion.div
-                  variants={textFadeIn}
+                  variants={textFadeIn1}
                   initial="hidden"
                   animate={controls}
                   className="team-info-1 team-info-circle"
@@ -850,7 +898,7 @@ const SocialSection = (_props) => {
                   </p>
                 </motion.div>
                 <motion.div
-                  variants={textFadeIn}
+                  variants={textFadeIn2}
                   initial="hidden"
                   animate={controls}
                   className="team-info-2 team-info-circle"
@@ -875,7 +923,7 @@ const SocialSection = (_props) => {
                   </p>
                 </motion.div>
                 <motion.div
-                  variants={textFadeIn}
+                  variants={textFadeIn3}
                   initial="hidden"
                   animate={controls}
                   className="team-info-3 team-info-circle"
@@ -900,7 +948,7 @@ const SocialSection = (_props) => {
                   </p>
                 </motion.div>
                 <motion.div
-                  variants={textFadeIn}
+                  variants={textFadeIn4}
                   initial="hidden"
                   animate={controls}
                   className="team-info-4 team-info-circle"

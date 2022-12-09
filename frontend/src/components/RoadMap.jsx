@@ -44,26 +44,45 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const app = useRef();
   const handleSlideChange = (e) => {};
   const handleTransitionStart = (e) => {
-    gsap.fromTo(
-      ".swiper-slide-active ul li",
-      {
-        y: 160,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        duration: 1,
-        delay: 0.6,
-        opacity: 1,
-        stagger: 0.1,
-        onComplete: () => {
-          setRoadmapSlideLast(e.activeIndex);
-          if (isTabletOrMobile) {
-            e.enable();
-          }
+    if (isTabletOrMobile) {
+      gsap.fromTo(
+        ".swiper-slide-active ul li",
+        {
+          y: 160,
+          opacity: 0,
         },
-      }
-    );
+        {
+          y: 0,
+          duration: 0.5,
+          delay: 0.3,
+          opacity: 1,
+          stagger: 0.1,
+          onComplete: () => {
+            setRoadmapSlideLast(e.activeIndex);
+            e.enable();
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        ".swiper-slide-active ul li",
+        {
+          y: 160,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          duration: 1,
+          delay: 0.6,
+          opacity: 1,
+          stagger: 0.1,
+          onComplete: () => {
+            setRoadmapSlideLast(e.activeIndex);
+          },
+        }
+      );
+    }
+
     // const h1Slide = document.querySelector(
     //   ".swiper-slide.swiper-slide-active h1"
     // );
@@ -205,26 +224,47 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     //     setSlideThreeEnd(false);
     //   }, 1000);
     // }
-    gsap.fromTo(
-      ".swiper-slide-prev ul li",
-      {
-        y: 0,
-        opacity: 1,
-      },
-      {
-        y: 160,
-        opacity: 0,
-        duration: 0.5,
-        stagger: {
-          each: 0.1,
-          from: "end",
+    if (isTabletOrMobile) {
+      gsap.fromTo(
+        ".swiper-slide-prev ul li",
+        {
+          y: 0,
+          opacity: 1,
         },
-        onStart: function () {
-          lottiePlayer.current.play();
+        {
+          y: 160,
+          opacity: 0,
+          duration: 0.2,
+          stagger: {
+            each: 0.1,
+            from: "end",
+          },
+          onStart: function () {
+            lottiePlayer.current.play();
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        ".swiper-slide-prev ul li",
+        {
+          y: 0,
+          opacity: 1,
         },
-        onComplete: function () {},
-      }
-    );
+        {
+          y: 160,
+          opacity: 0,
+          duration: 0.5,
+          stagger: {
+            each: 0.1,
+            from: "end",
+          },
+          onStart: function () {
+            lottiePlayer.current.play();
+          },
+        }
+      );
+    }
   };
   const handleTransitionStartEnd = (e) => {
     const gifSlide = document.querySelectorAll(".gif-slide");
@@ -317,7 +357,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[4].classList.add("active");
         freezeGifReverse3.current.stop();
-      }, 4700);
+      }, 4900);
     }
     // if (!isTabletOrMobile) {
     //   prev = true;
@@ -441,6 +481,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
               <Player
                 ref={lottiePlayer}
                 controls={false}
+                speed="0.4"
                 src={ETHLottie}
                 style={{ height: "100px", width: "70px" }}
                 className="lottie-roadmap-slider-eth"
