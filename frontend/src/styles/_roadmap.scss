@@ -882,7 +882,7 @@
       }
     }
     &.roadmap-step-slider {
-      height: 800px;
+      min-height: 800px;
       background: url(../images/1ST_BCK.webp) no-repeat;
       background-position: center;
       background-size: cover;
@@ -1144,6 +1144,9 @@
       }
     }
     .slider-roadmap {
+      .react-freezeframe {
+        bottom: 110px;
+      }
       img {
         top: 43%;
       }
@@ -1313,7 +1316,21 @@
 @media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .roadmap {
     min-height: auto;
-
+    &.roadmap-step-slider {
+      min-height: 1000px;
+    }
+    .slider-roadmap {
+      height: 1000px;
+      img {
+        top: 42%;
+      }
+      .lottie-roadmap-slider-eth {
+        top: 42%;
+      }
+      .swiper {
+        height: 1000px;
+      }
+    }
     .header-roadmap {
       min-height: auto;
     }

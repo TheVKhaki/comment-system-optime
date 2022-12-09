@@ -1,5 +1,5 @@
 import binanceLogo from "../images/binance.webp";
-import bscscanLogo from "../images/bscscan-logoWITE-01.svg";
+import unityLogo from "../images/unity-logo.png";
 import openseaLogo from "../images/OpenSea-Full-Logo (light).svg";
 import polygonLogo from "../images/polygon_Wite-01.svg";
 import quickswapLogo from "../images/QuickSwap-Exchange-Logo.png";
@@ -15,7 +15,7 @@ const OurPartnerApi = () => {
     },
     {
       id: 2,
-      imgSrc: bscscanLogo,
+      imgSrc: unityLogo,
     },
     {
       id: 3,

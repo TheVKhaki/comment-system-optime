@@ -13,9 +13,13 @@ const OurPartner = () => {
           </div>
           <div className="our-partner-news-tricker">
             <div className="slide-news-tricker">
-              {ourPartnerApi.map((ourpartner) => {
+              {ourPartnerApi.map((ourpartner, index) => {
                 return (
-                  <a href="#" className="item-news-tricker" key={ourpartner.id}>
+                  <a
+                    href="#"
+                    className={`item-news-tricker ${"logo" + index}`}
+                    key={ourpartner.id}
+                  >
                     <img src={ourpartner.imgSrc} alt="" />
                   </a>
                 );
