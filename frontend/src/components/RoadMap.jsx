@@ -4,24 +4,24 @@ import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 import { RandomReveal } from "react-random-reveal";
 import { gsap } from "gsap";
-import sliderVideo1 from "../video/RoadmapBKG_Part01.mp4";
-import sliderVideo2 from "../video/RoadmapBKG_Part02.mp4";
-import sliderVideo3 from "../video/RoadmapBKG_Part03.mp4";
-import sliderVideoReverse1 from "../video/Reverse_RoadmapBKG_Part01.mp4";
-import sliderVideoReverse2 from "../video/Reverse_RoadmapBKG_Part02.mp4";
-import sliderVideoReverse3 from "../video/Reverse_RoadmapBKG_Part03.mp4";
+import sliderVideo1 from "../video/BkgV02_P01.mp4";
+import sliderVideo2 from "../video/BkgV02_P02.mp4";
+import sliderVideo3 from "../video/BkgV02_P03.mp4";
+import sliderVideoReverse1 from "../video/Reverse_BkgV02_P01.mp4";
+import sliderVideoReverse2 from "../video/Reverse_BkgV02_P02.mp4";
+import sliderVideoReverse3 from "../video/Reverse_BkgV02_P03.mp4";
 import { EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import ETHLottie from "../lottie/ETH (1).json";
 import lineSlide from "../images/Lines_00000.png";
 import { useMediaQuery } from "react-responsive";
-import paginationGifOne from "../video/GIF_Pageination01.gif";
-import paginationGifTwo from "../video/GIF_Pageination02.gif";
-import paginationGifThree from "../video/GIF_Pageination03.gif";
-import paginationGifReverseOne from "../video/GIF.Reverse_Pageination01.gif";
-import paginationGifReverseTwo from "../video/GIF.Reverse_Pageination02.gif";
-import paginationGifReverseThree from "../video/GIF.Reverse_Pageination03.gif";
+import paginationGifOne from "../video/Pageination01.gif";
+import paginationGifTwo from "../video/Pageination02.gif";
+import paginationGifThree from "../video/Pageination03.gif";
+import paginationGifReverseOne from "../video/Reverse_Pageination01.gif";
+import paginationGifReverseTwo from "../video/Reverse_Pageination02.gif";
+import paginationGifReverseThree from "../video/Reverse_Pageination03.gif";
 import ReactFreezeframe from "react-freezeframe";
 import Lazyload from "../HOC/Lazyload";
 
@@ -148,7 +148,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[1].classList.add("active");
         freezeGif1.current.stop();
-      }, 3000);
+      }, 2550);
     }
     if (e.activeIndex === 2) {
       e.disable();
@@ -180,7 +180,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[2].classList.add("active");
         freezeGif2.current.stop();
-      }, 3000);
+      }, 2240);
     }
     if (e.activeIndex === 3) {
       e.disable();
@@ -212,7 +212,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[5].classList.add("active");
         freezeGif3.current.stop();
-      }, 4300);
+      }, 4250);
     }
     // if (!isTabletOrMobile) {
     //   prev = false;
@@ -299,7 +299,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[0].classList.add("active");
         freezeGifReverse1.current.stop();
-      }, 3500);
+      }, 2520);
     }
     if (e.activeIndex === 1) {
       e.disable();
@@ -331,7 +331,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[3].classList.add("active");
         freezeGifReverse2.current.stop();
-      }, 3000);
+      }, 2250);
     }
     if (e.activeIndex === 2) {
       e.disable();
@@ -357,7 +357,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         });
         gifSlide[4].classList.add("active");
         freezeGifReverse3.current.stop();
-      }, 4900);
+      }, 4250);
     }
     // if (!isTabletOrMobile) {
     //   prev = true;
