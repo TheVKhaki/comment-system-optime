@@ -1607,18 +1607,14 @@ body.modal-open {
   left: 0;
 }
 
-.roadmap .slider-roadmap .video-slider-revers {
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 .roadmap .slider-roadmap .video-slider {
   z-index: 1;
+  opacity: 0;
 }
 
 .roadmap .slider-roadmap .video-slider.active {
   z-index: 2 !important;
+  opacity: 1 !important;
 }
 
 .roadmap .slider-roadmap video {
@@ -1649,6 +1645,7 @@ body.modal-open {
   -ms-flex-align: center;
   align-items: center;
   z-index: 3;
+  width: 1000px;
 }
 
 .roadmap .slider-roadmap .swiper .swiper-button-prev,
@@ -2518,6 +2515,7 @@ body.modal-open {
   }
   .roadmap .slider-roadmap .swiper {
     height: 800px;
+    width: auto;
   }
   .roadmap.roadmap-step2 {
     background-size: cover;

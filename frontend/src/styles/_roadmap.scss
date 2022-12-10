@@ -61,14 +61,12 @@
     width: 100vw;
     top: 0;
     left: 0;
-    .video-slider-revers {
-      opacity: 0;
-      transition: all 0.3s;
-    }
     .video-slider {
       z-index: 1;
+      opacity: 0;
       &.active {
         z-index: 2 !important;
+        opacity: 1 !important;
       }
     }
     video {
@@ -89,6 +87,7 @@
       justify-content: center;
       align-items: center;
       z-index: 3;
+      width: 1000px;
       .swiper-button-prev,
       .swiper-button-next {
         color: #e28001;
@@ -892,6 +891,7 @@
       height: 800px;
       .swiper {
         height: 800px;
+        width: auto;
       }
     }
     &.roadmap-step2 {

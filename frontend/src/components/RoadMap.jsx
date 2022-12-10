@@ -147,7 +147,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[1].classList.add("active");
-        freezeGif1.current.stop();
+        setTimeout(() => {
+          freezeGif1.current.stop();
+        }, 500);
       }, 2550);
     }
     if (e.activeIndex === 2) {
@@ -179,7 +181,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[2].classList.add("active");
-        freezeGif2.current.stop();
+        setTimeout(() => {
+          freezeGif2.current.stop();
+        }, 500);
       }, 2240);
     }
     if (e.activeIndex === 3) {
@@ -211,7 +215,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[5].classList.add("active");
-        freezeGif3.current.stop();
+        setTimeout(() => {
+          freezeGif3.current.stop();
+        }, 500);
       }, 4250);
     }
     // if (!isTabletOrMobile) {
@@ -298,7 +304,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[0].classList.add("active");
-        freezeGifReverse1.current.stop();
+        setTimeout(() => {
+          freezeGifReverse1.current.stop();
+        }, 500);
       }, 2520);
     }
     if (e.activeIndex === 1) {
@@ -330,7 +338,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[3].classList.add("active");
-        freezeGifReverse2.current.stop();
+        setTimeout(() => {
+          freezeGifReverse2.current.stop();
+        }, 500);
       }, 2250);
     }
     if (e.activeIndex === 2) {
@@ -356,7 +366,9 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
           gifSlide.classList.remove("active");
         });
         gifSlide[4].classList.add("active");
-        freezeGifReverse3.current.stop();
+        setTimeout(() => {
+          freezeGifReverse3.current.stop();
+        }, 500);
       }, 4250);
     }
     // if (!isTabletOrMobile) {
