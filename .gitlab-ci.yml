@@ -39,6 +39,7 @@ deploy-stag:
     - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       DOMAIN=stag.qpoker.io
+      TRAEFIK_PUBLIC_NETWORK=traefik-public
       TRAEFIK_TAG=stag.qpoker.io
       STACK_NAME=stag-qpoker-io
       TAG=stag
@@ -59,6 +60,7 @@ deploy-prod:
     - echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
     - >
       DOMAIN=qpoker.io
+      TRAEFIK_PUBLIC_NETWORK=traefik-public
       TRAEFIK_TAG=qpoker.io
       STACK_NAME=qpoker-io
       TAG=prod
