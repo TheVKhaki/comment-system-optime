@@ -149,7 +149,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[1].classList.add("active");
         setTimeout(() => {
           freezeGif1.current.stop();
-        }, 500);
+        }, 2000);
       }, 2550);
     }
     if (e.activeIndex === 2) {
@@ -183,7 +183,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[2].classList.add("active");
         setTimeout(() => {
           freezeGif2.current.stop();
-        }, 500);
+        }, 2000);
       }, 2240);
     }
     if (e.activeIndex === 3) {
@@ -217,7 +217,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[5].classList.add("active");
         setTimeout(() => {
           freezeGif3.current.stop();
-        }, 500);
+        }, 2000);
       }, 4250);
     }
     // if (!isTabletOrMobile) {
@@ -306,7 +306,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[0].classList.add("active");
         setTimeout(() => {
           freezeGifReverse1.current.stop();
-        }, 500);
+        }, 2000);
       }, 2520);
     }
     if (e.activeIndex === 1) {
@@ -340,7 +340,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[3].classList.add("active");
         setTimeout(() => {
           freezeGifReverse2.current.stop();
-        }, 500);
+        }, 2000);
       }, 2250);
     }
     if (e.activeIndex === 2) {
@@ -368,7 +368,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         gifSlide[4].classList.add("active");
         setTimeout(() => {
           freezeGifReverse3.current.stop();
-        }, 500);
+        }, 2000);
       }, 4250);
     }
     // if (!isTabletOrMobile) {
