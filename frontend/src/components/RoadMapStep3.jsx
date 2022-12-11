@@ -597,36 +597,38 @@ const RoadMapStep3 = () => {
       },
     },
   };
-
+  const textFadeIn = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        delay: 0.2,
+      },
+    },
+  };
   return (
     <>
       <section className="roadmap-step3 roadmap" ref={element} id="roadmap-3">
         <div ref={roadMapStep3}>
           <Container>
             <div className="header-roadmap">
-              <h2>
-                <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="Vision of QPoker"
-                />
-              </h2>
-              <p>
-                {/* <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="Step3"
-                />
-                <br /> */}
-                <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="Trendsetter of iGaming"
-                />
-              </p>
+              <motion.h2
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                Vision of QPoker
+              </motion.h2>
+              <motion.p
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                Trendsetter of iGaming
+              </motion.p>
             </div>
             <Row className="content-slide-3">
               <Col

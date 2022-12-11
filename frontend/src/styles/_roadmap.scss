@@ -63,10 +63,8 @@
     left: 0;
     .video-slider {
       z-index: 1;
-      opacity: 0;
       &.active {
         z-index: 2 !important;
-        opacity: 1 !important;
       }
     }
     video {
@@ -147,7 +145,7 @@
     }
     .react-freezeframe {
       position: absolute;
-      bottom: 84px;
+      bottom: 0px;
       width: 300px;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -162,6 +160,7 @@
         top: 0;
         left: 0;
         transform: none;
+        position: static;
       }
     }
   }
@@ -882,7 +881,7 @@
     }
     &.roadmap-step-slider {
       min-height: 800px;
-      background: url(../images/1ST_BCK.webp) no-repeat;
+      background: url(../images/RodmapSliderMobile-V0010.jpg) no-repeat;
       background-position: center;
       background-size: cover;
       z-index: 2;
@@ -1145,7 +1144,7 @@
     }
     .slider-roadmap {
       .react-freezeframe {
-        bottom: 110px;
+        bottom: 30px;
       }
       img {
         top: 43%;

@@ -53,7 +53,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const [endCount, setEndCount] = useState(false);
   const calculateTimeLeft = () => {
-    let endEvent = new Date(process.env.REACT_APP_AIRDROP_START_DATE);
+    let endEvent = new Date("2022-12-22");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
