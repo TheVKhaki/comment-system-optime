@@ -1,4 +1,4 @@
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
@@ -32,9 +32,21 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const [elementView, inView] = useInView({ threshold: 0.2 });
   useEffect(() => {
     if (inView) {
-      // videoSlider.play();
+      controls.start("visible");
     }
   }, [controls, inView]);
+  const textFadeIn = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        delay: 0.2,
+      },
+    },
+  };
   const freezeGif1 = useRef();
   const freezeGif2 = useRef();
   const freezeGif3 = useRef();
@@ -42,7 +54,6 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const freezeGifReverse2 = useRef();
   const freezeGifReverse3 = useRef();
   const app = useRef();
-  const handleSlideChange = (e) => {};
   const handleTransitionStart = (e) => {
     if (isTabletOrMobile) {
       gsap.fromTo(
@@ -82,35 +93,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         }
       );
     }
-
-    // const h1Slide = document.querySelector(
-    //   ".swiper-slide.swiper-slide-active h1"
-    // );
-    // // const h1SlideNext = document.querySelector(
-    // //   ".swiper-slide.swiper-slide-next h1"
-    // // );
-    // // const h1SlidePrev = document.querySelector(
-    // //   ".swiper-slide.swiper-slide-prev h1"
-    // // );
-    // // h1SlideNext.style.transform = "translate(200px)";
-    // // h1SlidePrev.style.transform = "translate(-200px)";
-    // h1Slide.style.transform = "translate(200px)";
-    // h1Slide.style.opacity = "1";
   };
-  const handleTransitionEnd = () => {
-    console.log("first");
-  };
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     // Our animations can use selector text like ".box"
-  //     // this will only select '.box' elements that are children of the component
-  //     gsap.to(".swiper-slide-active ul li", {
-  //       opacity: 1,
-  //     });
-  //   }, app); // <- IMPORTANT! Scopes selector text
-
-  //   return () => ctx.revert(); // cleanup
-  // }, []);
   const videoSlider1 = useRef();
   const videoSlider2 = useRef();
   const videoSlider3 = useRef();
@@ -150,7 +133,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         setTimeout(() => {
           freezeGif1.current.stop();
         }, 2000);
-      }, 2550);
+      }, 2500);
     }
     if (e.activeIndex === 2) {
       e.disable();
@@ -218,7 +201,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         setTimeout(() => {
           freezeGif3.current.stop();
         }, 2000);
-      }, 4250);
+      }, 4240);
     }
     // if (!isTabletOrMobile) {
     //   prev = false;
@@ -341,7 +324,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         setTimeout(() => {
           freezeGifReverse2.current.stop();
         }, 2000);
-      }, 2250);
+      }, 2240);
     }
     if (e.activeIndex === 2) {
       e.disable();
@@ -369,7 +352,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
         setTimeout(() => {
           freezeGifReverse3.current.stop();
         }, 2000);
-      }, 4250);
+      }, 4240);
     }
     // if (!isTabletOrMobile) {
     //   prev = true;
@@ -408,29 +391,12 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
     <section className="roadmap roadmap-step-slider" ref={elementView}>
       <Container>
         <div className="header-roadmap">
-          <h2>
-            <RandomReveal
-              isPlaying={inView}
-              duration={0.5}
-              revealDuration={0.5}
-              characters="RoadMap"
-            />
-          </h2>
-          <p>
-            {/* <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="Step2"
-                /> */}
-            {/* <br /> */}
-            <RandomReveal
-              isPlaying={inView}
-              duration={0.5}
-              revealDuration={0.5}
-              characters="Invention, development and introduction of QPoker"
-            />
-          </p>
+          <motion.h2 variants={textFadeIn} initial="hidden" animate={controls}>
+            RoadMap
+          </motion.h2>
+          <motion.p variants={textFadeIn} initial="hidden" animate={controls}>
+            Invention, development and introduction of QPoker
+          </motion.p>
         </div>
         <div className="slider-roadmap">
           <div ref={app}>
@@ -505,9 +471,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 slidesPerView={1}
                 navigation
                 allowTouchMove={false}
-                onSlideChange={(e) => handleSlideChange(e)}
                 onTransitionStart={(e) => handleTransitionStart(e)}
-                onTransitionEnd={handleTransitionEnd}
                 onSlideNextTransitionStart={handleTransitionStartNext}
                 onSlidePrevTransitionStart={handleTransitionStartEnd}
               >

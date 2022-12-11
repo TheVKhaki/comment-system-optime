@@ -167,6 +167,18 @@ const OurTeam = () => {
   }, [showLoad]);
 
   const player = useRef();
+  const textFadeIn = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        delay: 0.2,
+      },
+    },
+  };
   return (
     <>
       <section className="ourteam" ref={element} id="our-team">
@@ -181,15 +193,16 @@ const OurTeam = () => {
         ></Player>
         <Container>
           <div className="ourteam-header">
-            <h2>
-              <RandomReveal
-                isPlaying={inView}
-                duration={0.5}
-                revealDuration={0.5}
-                characters="Our Key Members"
-              />
-            </h2>
-            <p>Click on the photos to see the details</p>
+            <motion.h2
+              variants={textFadeIn}
+              initial="hidden"
+              animate={controls}
+            >
+              Our Key Members
+            </motion.h2>
+            <motion.p variants={textFadeIn} initial="hidden" animate={controls}>
+              Click on the photos to see the details
+            </motion.p>
           </div>
 
           <motion.div

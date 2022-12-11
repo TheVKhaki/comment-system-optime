@@ -874,6 +874,18 @@ const RoadMapStep2 = () => {
       },
     },
   };
+  const textFadeIn = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        delay: 0.2,
+      },
+    },
+  };
   useEffect(() => {
     if (!isTabletOrMobile) {
       const imagePerspective = document.querySelector(".content-slide-2-1 img");
@@ -892,29 +904,20 @@ const RoadMapStep2 = () => {
         <div ref={roadMapStep2}>
           <Container>
             <div className="header-roadmap">
-              <h2>
-                <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="RoadMap"
-                />
-              </h2>
-              <p>
-                {/* <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="Step2"
-                /> */}
-                {/* <br /> */}
-                <RandomReveal
-                  isPlaying={inView}
-                  duration={0.5}
-                  revealDuration={0.5}
-                  characters="AirDrops and Bounty Campaigns"
-                />
-              </p>
+              <motion.h2
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                RoadMap
+              </motion.h2>
+              <motion.p
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                AirDrops and Bounty Campaigns
+              </motion.p>
             </div>
             <Row className="content-slide-2-1">
               <Col lg={{ span: 4, order: 2 }} xs={{ span: 12, order: 2 }}>

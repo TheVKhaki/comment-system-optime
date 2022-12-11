@@ -148,18 +148,6 @@ const SocialSection = (_props) => {
       },
     },
   };
-  const textFadeIn = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: arrayTimeAnimtion[5],
-      },
-    },
-  };
   const textFadeIn1 = {
     hidden: {
       opacity: 0,
