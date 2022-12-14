@@ -476,46 +476,48 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 onSlidePrevTransitionStart={handleTransitionStartEnd}
               >
                 <SwiperSlide>
-                  <h1>1Nov-30Jan</h1>
+                  <h1>Apr2020 - Dec2021</h1>
                   <ul>
-                    <li>Updating Qpoker Game</li>
-                    <li>Updating NFT Market Place</li>
-                    <li>Beta version of iGaming-Platform</li>
-                    <li>Releasing Governance ERC-20 Token</li>
-                    <li>Releasing Qpoker Treasury</li>
+                    <li>Feasibility Study of idea (Completed)</li>
+                    <li>Initial Prototype (Completed)</li>
+                    <li>Game Role book (Completed)</li>
+                    <li>Transition to Unity Engine (Completed)</li>
+                    <li>Creating the first version of Litepaper (Completed)</li>
+                    <li>First Cinematic Trailer (Completed)</li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>30Jan-1Apr</h1>
+                  <h1>Jan2022 - Feb2023</h1>
                   <ul>
-                    <li>Accounting API</li>
-                    <li>NFT Market Place</li>
-                    <li>Decentralized EXchange (DEX)</li>
-                    <li>Integrated User-Panel</li>
-                    <li>QPoker-Game Private Sale</li>
+                    <li>Development version of the Game (Completed)</li>
+                    <li>Participate Platform (Completed)</li>
+                    <li>NFT SmartContracts (Completed)</li>
+                    <li>ERC20 Token SmartContrac (Completed)</li>
+                    <li>Final version of Whitepaper (Completed)</li>
+                    <li>Investment platform (In progress)</li>
+                    <li>Private Browser release Beta (Upcoming)</li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>1Apr-30Jul</h1>
+                  <h1>Mar2023 - Dec2023</h1>
                   <ul>
-                    <li>QPoker-Game Public Sale</li>
-                    <li>Beta version of iGaming-Platform</li>
-                    <li>Decentralized EXchange (DEX)</li>
-                    <li>Releasing Governance ERV-20 Token</li>
-                    <li>Releasing Qpoker Treasury</li>
+                    <li>NFT Marketplace (TBA)</li>
+                    <li>Public Browser release Beta (TBA)</li>
+                    <li>Public Mobile release Beta (TBA)</li>
+                    <li>Public Desktop release Beta (TBA)</li>
+                    <li>Initial Metaverse Prototypes (TBA)</li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>4Apr-30Jul</h1>
+                  <h1>Sales</h1>
                   <ul>
-                    <li>QPoker-Game Public Sale</li>
-                    <li>Beta version of iGaming-Platform</li>
-                    <li>Decentralized EXchange (DEX)</li>
-                    <li>Releasing Governance ERC-20 Token</li>
-                    <li>Releasing Qpoker Treasury</li>
+                    <li>Pre Seed Mar 2020</li>
+                    <li>Initial Coin Offer Jan 2023 (Upcoming)</li>
+                    <li>Initial Game Offer (TBA)</li>
+                    <li>SushiSwap Liquidity Pool (TBA)</li>
                   </ul>
                 </SwiperSlide>
               </Swiper>
