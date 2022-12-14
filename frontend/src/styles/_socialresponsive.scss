@@ -117,6 +117,12 @@
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .social-responsive {
+    background: url(../images/Section02_Tablet01.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .social-responsive {
     .header-social {
@@ -202,5 +208,11 @@
         font-size: 1.7rem;
       }
     }
+  }
+}
+//desktop mode in mobile
+@media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .social-responsive {
+    background: none;
   }
 }

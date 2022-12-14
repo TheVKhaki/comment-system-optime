@@ -485,7 +485,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <h1>Apr2020 - Dec2021</h1>
                   <ul>
                     <li>
-                      Feasibility Study of idea{" "}
+                      Feasibility Study Of Idea{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -493,7 +493,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
@@ -505,11 +505,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
-                      Game Role book{" "}
+                      Game Role Book{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -517,11 +517,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
-                      Transition to Unity Engine{" "}
+                      Transition To Unity Engine{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -529,11 +529,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
-                      Creating the first version of Litepaper{" "}
+                      First Version Of Litepaper{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -541,7 +541,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
@@ -553,7 +553,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                   </ul>
@@ -563,7 +563,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <h1>Jan2022 - Feb2023</h1>
                   <ul>
                     <li>
-                      Development version of the Game{" "}
+                      Development Version Of The Game{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -571,7 +571,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
@@ -583,7 +583,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
@@ -595,7 +595,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
@@ -607,11 +607,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}
                     </li>
                     <li>
-                      Final version of Whitepaper{" "}
+                      Final Version Of Whitepaper{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -619,7 +619,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faCircleCheck}
                         />
                       ) : (
-                        "(Completed)"
+                        <span>(Completed)</span>
                       )}{" "}
                     </li>
                     <li>
@@ -631,11 +631,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faSpinner}
                         />
                       ) : (
-                        "(In progress)"
+                        <span>(In progress)</span>
                       )}{" "}
                     </li>
                     <li>
-                      Private Browser release Beta{" "}
+                      Private Browser Release Beta{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -643,7 +643,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faHourglass}
                         />
                       ) : (
-                        "(Upcoming)"
+                        <span>(Upcoming)</span>
                       )}
                     </li>
                   </ul>
@@ -661,11 +661,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                     <li>
-                      Public Browser release Beta{" "}
+                      Public Browser Release Beta{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -673,11 +673,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                     <li>
-                      Public Mobile release Beta{" "}
+                      Public Mobile Release Beta{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -685,11 +685,11 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                     <li>
-                      Public Desktop release Beta{" "}
+                      Public Desktop Release Beta{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -697,7 +697,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                     <li>
@@ -709,7 +709,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                   </ul>
@@ -718,9 +718,20 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   {" "}
                   <h1>Sales</h1>
                   <ul>
-                    <li>Pre Seed Mar 2020</li>
                     <li>
-                      Initial Coin Offer Jan 2023{" "}
+                      Pre Seed - Mar 2020{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        <span>(Completed)</span>
+                      )}
+                    </li>
+                    <li>
+                      Initial Coin Offer - Jan 2023{" "}
                       {isTabletOrMobile ? (
                         <FontAwesomeIcon
                           className="ms-2"
@@ -728,7 +739,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faHourglass}
                         />
                       ) : (
-                        "(Upcoming)"
+                        <span>(Upcoming)</span>
                       )}{" "}
                     </li>
                     <li>
@@ -740,7 +751,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                     <li>
@@ -752,7 +763,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                           icon={faBullhorn}
                         />
                       ) : (
-                        "(TBA)"
+                        <span title="To Be Announced">(TBA)</span>
                       )}
                     </li>
                   </ul>
