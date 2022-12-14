@@ -1459,6 +1459,13 @@ body.modal-open {
   right: 1px;
 }
 
+@media screen and (min-width: 768px) {
+  .social-responsive {
+    background: url(../images/Section02_Tablet01.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
 @media screen and (max-width: 767.98px) {
   .social-responsive .header-social {
     text-align: center;
@@ -1531,6 +1538,12 @@ body.modal-open {
   }
   .social-responsive .header-social p {
     font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
+  .social-responsive {
+    background: none;
   }
 }
 
@@ -1709,6 +1722,11 @@ body.modal-open {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.roadmap .slider-roadmap .swiper .swiper-slide ul li span {
+  font-family: "Rota", sans-serif;
+  color: #e28001;
 }
 
 .roadmap .slider-roadmap .swiper .swiper-slide h1,
