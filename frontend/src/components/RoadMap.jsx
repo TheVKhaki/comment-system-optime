@@ -1,8 +1,13 @@
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
-import { RandomReveal } from "react-random-reveal";
+import {
+  faSpinner,
+  faCircleCheck,
+  faHourglass,
+  faBullhorn,
+} from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 import sliderVideo1 from "../video/BkgV02_P01.mp4";
 import sliderVideo2 from "../video/BkgV02_P02.mp4";
@@ -24,6 +29,7 @@ import paginationGifReverseTwo from "../video/Reverse_Pageination02.gif";
 import paginationGifReverseThree from "../video/Reverse_Pageination03.gif";
 import ReactFreezeframe from "react-freezeframe";
 import Lazyload from "../HOC/Lazyload";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991.98px)" });
@@ -478,36 +484,234 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 <SwiperSlide>
                   <h1>Apr2020 - Dec2021</h1>
                   <ul>
-                    <li>Feasibility Study of idea (Completed)</li>
-                    <li>Initial Prototype (Completed)</li>
-                    <li>Game Role book (Completed)</li>
-                    <li>Transition to Unity Engine (Completed)</li>
-                    <li>Creating the first version of Litepaper (Completed)</li>
-                    <li>First Cinematic Trailer (Completed)</li>
+                    <li>
+                      Feasibility Study of idea{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Initial Prototype{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Game Role book{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Transition to Unity Engine{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Creating the first version of Litepaper{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      First Cinematic Trailer{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
                   <h1>Jan2022 - Feb2023</h1>
                   <ul>
-                    <li>Development version of the Game (Completed)</li>
-                    <li>Participate Platform (Completed)</li>
-                    <li>NFT SmartContracts (Completed)</li>
-                    <li>ERC20 Token SmartContrac (Completed)</li>
-                    <li>Final version of Whitepaper (Completed)</li>
-                    <li>Investment platform (In progress)</li>
-                    <li>Private Browser release Beta (Upcoming)</li>
+                    <li>
+                      Development version of the Game{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Participate Platform{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      NFT SmartContracts{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      ERC20 Token SmartContrac{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}
+                    </li>
+                    <li>
+                      Final version of Whitepaper{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faCircleCheck}
+                        />
+                      ) : (
+                        "(Completed)"
+                      )}{" "}
+                    </li>
+                    <li>
+                      Investment platform{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faSpinner}
+                        />
+                      ) : (
+                        "(In progress)"
+                      )}{" "}
+                    </li>
+                    <li>
+                      Private Browser release Beta{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faHourglass}
+                        />
+                      ) : (
+                        "(Upcoming)"
+                      )}
+                    </li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
                   <h1>Mar2023 - Dec2023</h1>
                   <ul>
-                    <li>NFT Marketplace (TBA)</li>
-                    <li>Public Browser release Beta (TBA)</li>
-                    <li>Public Mobile release Beta (TBA)</li>
-                    <li>Public Desktop release Beta (TBA)</li>
-                    <li>Initial Metaverse Prototypes (TBA)</li>
+                    <li>
+                      NFT Marketplace{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
+                    <li>
+                      Public Browser release Beta{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
+                    <li>
+                      Public Mobile release Beta{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
+                    <li>
+                      Public Desktop release Beta{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
+                    <li>
+                      Initial Metaverse Prototypes{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
                   </ul>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -515,9 +719,42 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <h1>Sales</h1>
                   <ul>
                     <li>Pre Seed Mar 2020</li>
-                    <li>Initial Coin Offer Jan 2023 (Upcoming)</li>
-                    <li>Initial Game Offer (TBA)</li>
-                    <li>SushiSwap Liquidity Pool (TBA)</li>
+                    <li>
+                      Initial Coin Offer Jan 2023{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faHourglass}
+                        />
+                      ) : (
+                        "(Upcoming)"
+                      )}{" "}
+                    </li>
+                    <li>
+                      Initial Game Offer{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
+                    <li>
+                      SushiSwap Liquidity Pool{" "}
+                      {isTabletOrMobile ? (
+                        <FontAwesomeIcon
+                          className="ms-2"
+                          color="#fd9605"
+                          icon={faBullhorn}
+                        />
+                      ) : (
+                        "(TBA)"
+                      )}
+                    </li>
                   </ul>
                 </SwiperSlide>
               </Swiper>

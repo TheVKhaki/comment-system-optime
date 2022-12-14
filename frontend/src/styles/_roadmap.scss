@@ -106,16 +106,22 @@
           transition: all 0.5s;
           font-weight: 500;
           font-size: 35px;
-          margin-bottom: 8rem;
+          position: absolute;
+          top: 33%;
         }
         ul {
           padding: 0;
+          position: absolute;
+          top: 47%;
           li {
             color: #fff;
             list-style: none;
             transition: all 0.5s;
             font-size: 25px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
         h1,
@@ -865,7 +871,19 @@
     }
   }
 }
-
+@media screen and (max-height: 800px) {
+  .roadmap {
+    .slider-roadmap {
+      .swiper {
+        .swiper-slide {
+          h1 {
+            top: 32%;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 991.98px) {
   .roadmap {
     &.roadmap-step1 {
@@ -891,6 +909,11 @@
       .swiper {
         height: 800px;
         width: auto;
+        .swiper-slide {
+          h1 {
+            top: 32%;
+          }
+        }
       }
     }
     &.roadmap-step2 {
@@ -1151,7 +1174,12 @@
       }
       .swiper {
         .swiper-slide {
+          h1 {
+            font-size: 30px;
+            top: 34%;
+          }
           ul {
+            top: 48%;
             li {
               font-size: 20px;
             }
@@ -1315,6 +1343,7 @@
 @media screen and (max-height: 2000px) and (min-height: 1500px) and (max-width: 990px) and (min-width: 950px) {
   .roadmap {
     min-height: auto;
+    padding-top: 7vh;
     &.roadmap-step-slider {
       min-height: 1000px;
     }
@@ -1332,6 +1361,7 @@
     }
     .header-roadmap {
       min-height: auto;
+      margin-bottom: 40px;
     }
   }
 }
