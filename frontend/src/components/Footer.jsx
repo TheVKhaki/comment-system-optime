@@ -132,25 +132,22 @@ const Footer = () => {
                   <ul>
                     <li>Links</li>
                     <li>
-                      <a href="https://blog.qpoker.io" target="_blank">
+                      <a href="/blog" target="_blank">
                         Blog
                       </a>{" "}
                     </li>
                     <li>
-                      <a href="https://blog.qpoker.io/faq" target="_blank">
+                      <a href="/faq" target="_blank">
                         FAQ
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://blog.qpoker.io/privacy-policy"
-                        target="_blank"
-                      >
+                      <a href="/privacy-policy" target="_blank">
                         Privacy Policy
                       </a>
                     </li>
                     <li>
-                      <a href="https://blog.qpoker.io/about-us" target="_blank">
+                      <a href="/about-us" target="_blank">
                         About Us
                       </a>
                     </li>
