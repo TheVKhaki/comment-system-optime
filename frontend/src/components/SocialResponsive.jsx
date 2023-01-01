@@ -4,18 +4,28 @@ import socialRes from "../images/social-responsive.svg";
 //icon
 import { IconContext } from "react-icons";
 import {
-  FaTelegramPlane,
+  FaTelegram,
   FaTwitter,
   FaYoutube,
   FaTrello,
+  FaParachuteBox,
 } from "react-icons/fa";
 import { gsap } from "gsap";
+import "@dotlottie/player-component";
+import lottie10 from "../lottie/10.2.lottie";
+import lottie90 from "../lottie/90.000.lottie";
+import USDT from "../images/USDT icon.svg";
+import QMatic from "../images/QP_Logo-23.svg";
+import telegramIcon from "../images/telegram-app.png";
+import youtubeIcon from "../images/youtube.png";
+import airdropIcon from "../images/airdropicon.svg";
 
 const SocialResponsive = (_props) => {
   const [dataSocial, setDataSocial] = useState({
     telegramChannel: "",
     twitterFollowers: "",
     youtubeSubscribers: "",
+    airdropUsers: "",
   });
   const props = _props;
   useEffect(() => {
@@ -31,6 +41,7 @@ const SocialResponsive = (_props) => {
               telegramChannel: "pending ...",
               twitterFollowers: "pending ...",
               youtubeSubscribers: "pending ...",
+              airdropUsers: "pending ...",
             });
             error_count++;
           } else {
@@ -38,6 +49,7 @@ const SocialResponsive = (_props) => {
               telegramChannel: " (Please refresh !) ",
               twitterFollowers: " (Please refresh !) ",
               youtubeSubscribers: " (Please refresh !) ",
+              airdropUsers: " (Please refresh !) ",
             });
             clearInterval(make_request);
           }
@@ -66,10 +78,29 @@ const SocialResponsive = (_props) => {
           dataSocial.youtube_subscribers.last_week) /
           dataSocial.youtube_subscribers.last_week) *
         100;
+      const airdropUser =
+        ((dataSocial.airdrop_users.now - dataSocial.airdrop_users.last_week) /
+          dataSocial.airdrop_users.last_week) *
+        100;
+      // setDataSocial({
+      //   telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
+      //   twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),
+      //   youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
+      //   airdropUsers: Math.abs(airdropUser.toFixed(1)),
+      // });
       setDataSocial({
-        telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
-        twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),
-        youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
+        telegramChannel: new Intl.NumberFormat().format(
+          dataSocial.telegram_channel.now
+        ),
+        twitterFollowers: new Intl.NumberFormat().format(
+          dataSocial.twitter_followers.now
+        ),
+        youtubeSubscribers: new Intl.NumberFormat().format(
+          dataSocial.youtube_subscribers.now
+        ),
+        airdropUsers: new Intl.NumberFormat().format(
+          dataSocial.airdrop_users.now
+        ),
       });
     }
   }, []);
@@ -112,6 +143,110 @@ const SocialResponsive = (_props) => {
     <>
       <section className="social-responsive" id="campaigns">
         <div className="header-social">
+          <h5>QPoker Airdrop</h5>
+          <p>01.01.2023 - 31.01.2023</p>
+        </div>
+        <div className="award-airdrop">
+          <div className="box box-1">
+            <dotlottie-player
+              src={lottie10}
+              autoplay
+              loop
+              style={{ height: "100%", width: "100%" }}
+            />
+            <div className="currency-logo">
+              <img src={USDT} alt="" />
+              <p>USD Tether</p>
+            </div>
+          </div>
+          <div className="sub-box sub-box-1">
+            <p>100 Winners</p>
+          </div>
+          <div className="box box-2">
+            <dotlottie-player
+              src={lottie90}
+              autoplay
+              loop
+              style={{ height: "100%", width: "100%" }}
+            />
+            <div className="currency-logo">
+              <img src={QMatic} alt="" />
+              <p>QMatic</p>
+            </div>
+          </div>
+          <div className="sub-box sub-box-2">
+            <p>900 Winners</p>
+          </div>
+          <div className="box box-3">
+            <span>$20 QMatic + QPoker Early Access</span>
+          </div>
+          <div className="sub-box sub-box-3">
+            <p>All participants</p>
+          </div>
+        </div>
+        <div className="wrapper-social-activity">
+          <div className="social-activity">
+            <div className="box box-1">
+              <a
+                href="https://T.me/qpoker_giveaways_bot"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={airdropIcon} alt="" />
+                <p>Airdrop</p>
+                <span>
+                  {dataSocial.airdropUsers} <br />
+                  <span>Participants</span>
+                </span>
+              </a>
+            </div>
+            <div className="box box-2">
+              <a
+                href="https://twitter.com/QPoker_io"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconContext.Provider
+                  value={{ color: "#0088cc", size: "4rem" }}
+                >
+                  <>
+                    <FaTwitter />
+                  </>
+                </IconContext.Provider>
+                <p>Twitter</p>
+                <span>
+                  {dataSocial.twitterFollowers} <br />
+                  <span>Followers</span>
+                </span>
+              </a>
+            </div>
+            <div className="box box-3">
+              <a href="https://t.me/qpoker_io" target="_blank" rel="noreferrer">
+                <img src={telegramIcon} alt="" />
+                <p>Telegram</p>
+                <span>
+                  {dataSocial.telegramChannel} <br />
+                  <span>Members</span>
+                </span>
+              </a>
+            </div>
+            <div className="box box-4">
+              <a
+                href="https://youtu.be/6O_6_K3tr5c"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={youtubeIcon} alt="" />
+                <p>Youtube</p>
+                <span>
+                  {dataSocial.youtubeSubscribers} <br />
+                  <span>Subscribes</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* <div className="header-social">
           <h2>NFT Giveaways Go Mammoth</h2>
           <p>Ride on to the Rewards</p>
         </div>
@@ -195,7 +330,7 @@ const SocialResponsive = (_props) => {
             <span>$200,000</span>
             <p>COMING SOON</p>
           </a>
-        </div>
+        </div> */}
       </section>
     </>
   );

@@ -328,7 +328,8 @@
     display: inline-block;
 
     h2 {
-      font-size: 8rem;
+      font-size: 6rem;
+      white-space: nowrap;
     }
 
     p {
@@ -398,17 +399,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    span {
-      font-size: 5.5rem;
-      color: $colorWhite;
-      font-family: "Maven Pro", sans-serif;
-      font-weight: bold;
-    }
-
+    margin-top: 2rem;
     p {
-      font-size: 20px;
+      font-size: 25px;
       letter-spacing: 0.5px;
+      font-weight: 700;
+      color: #fff;
     }
 
     .btn-coming-soon {
@@ -419,6 +415,7 @@
       align-items: center;
       border-radius: 10px;
       margin-top: 2rem;
+      cursor: pointer;
       &:hover {
         p {
           color: #000;
@@ -599,10 +596,24 @@
         display: flex;
         justify-content: center;
         a {
+          border: 3px solid #0d6efd;
           font-size: 20px;
           color: #0d6efd;
           font-weight: 600;
           margin-top: 1.5rem;
+          border-radius: 10px;
+          padding: 0 20px;
+          height: 55px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #0d6efd;
+          color: #fff;
+          transition: all 0.4s;
+          &:hover {
+            color: #0d6efd;
+            background-color: #fff;
+          }
         }
       }
     }
@@ -1164,6 +1175,11 @@
 
 @media screen and (max-width: 575.98px) {
   .roadmap {
+    .header-comingsoon {
+      h2 {
+        font-size: 5rem;
+      }
+    }
     &.roadmap-step-slider {
       .lottie-roadmap-slider-eth {
         top: 43%;
@@ -1269,17 +1285,13 @@
       width: 100%;
     }
 
-    .coming-soon-text {
-      span {
-        font-size: 45px;
-        margin: 1rem 0 1rem 0;
-        display: block;
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
+    // .coming-soon-text {
+    //   span {
+    //     font-size: 45px;
+    //     margin: 1rem 0 1rem 0;
+    //     display: block;
+    //   }
+    // }
 
     .content-slide-3 {
       img {
