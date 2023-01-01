@@ -24,7 +24,7 @@ services:
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.entrypoints=https
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.tls=true
         - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.tls.certresolver=le
-        - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.middlewares=common-security-headers,${STACK_NAME?Variable not set}-www-redirect${PROXY_EXTRA_MIDDLEWARES}
+        - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-https.middlewares=common-security-headers,${STACK_NAME?Variable not set}-www-redirect${PROXY_EXTRA_MIDDLEWARES?Variable not set}
         - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=8080
 
 networks:

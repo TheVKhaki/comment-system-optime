@@ -276,7 +276,7 @@ const Hero = () => {
               </TextHero>
               <Btnn>
                 <a
-                  href="/litepaper"
+                  href="/whitepaper"
                   target="_blank"
                   className="btn-hero btn-main"
                 >

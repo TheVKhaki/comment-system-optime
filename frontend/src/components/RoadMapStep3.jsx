@@ -677,7 +677,7 @@ const RoadMapStep3 = () => {
                       className="btn-slide btn-slide-3"
                     >
                       <a
-                        href="/litepaper"
+                        href="/whitepaper"
                         target="_blank"
                         className="btn-main"
                         title="QPoker-Trendsetter of iGaming Whitepaper"

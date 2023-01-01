@@ -80,7 +80,7 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="/litepaper" target="_blank">
+              <Nav.Link href="/whitepaper" target="_blank">
                 Whitepaper
               </Nav.Link>
               <Nav.Link href="#airdrops">Airdrop</Nav.Link>
@@ -108,7 +108,7 @@ const Header = () => {
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
-                  <Nav.Link href="/litepaper" target="_blank">
+                  <Nav.Link href="/whitepaper" target="_blank">
                     Whitepaper
                   </Nav.Link>
                   <Nav.Link href="#airdrop">Airdrop</Nav.Link>
