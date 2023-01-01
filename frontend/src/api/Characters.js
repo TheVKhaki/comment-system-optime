@@ -57,7 +57,7 @@ const Characters = () => {
       description:
         "Marvin is a gifted artist and motion graphics designer. Well-deserved reputation is built on team leading skills with diverse animation productions, both in commercials and short films. He is known for unique expression style and can adapt fluently to any target audience. Marvin has more than ten years of experience cooperating with various advertising companies and medias. Visual effects and CGI animations behind our provoking meme teaser video are completely his handprint.",
       email: "mailto:Marvin@qpoker.io",
-      telegram: "https://T.me/marvin_qpokerltd",
+      telegram: "",
       discord: "",
     },
     {
@@ -95,7 +95,7 @@ const Characters = () => {
       description:
         "Michael is an experienced IT entrepreneur and blockchain geek. He has extensive experience in software development, team management and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive towards excellence makes him a crucial player of our team. He is the one who’s never afraid of bringing up critical views on the table.",
       email: "mailto:Michael@qpoker.io",
-      telegram: "https://T.me/Michael_QPLtd",
+      telegram: "https://t.me/Michael_QPoker",
       discord: "",
     },
     {
@@ -114,7 +114,7 @@ const Characters = () => {
       description:
         "Johnnie is a professional data analyst and blockchain enthusiast. He has all-around understanding over systems security and multi-model databases. In recent years, Johnnie has been working as a senior analyst of data management in major finance and e-commerce businesses.",
       email: "mailto:Johnnie@qpoker.io",
-      telegram: "https://T.me/J_M_Martin",
+      telegram: "",
       discord: "",
     },
     {

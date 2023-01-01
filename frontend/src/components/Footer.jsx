@@ -7,10 +7,10 @@ import {
   FaTwitter,
   FaYoutube,
   FaArrowUp,
-  FaTrello,
+  FaParachuteBox,
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
-
+import airdropIcon from "../images/airdrop-14-14.svg";
 const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");
@@ -62,20 +62,19 @@ const Footer = () => {
             <Row className="flex-column flex-lg-row">
               <Col>
                 <div className="footer-left">
-                  <h4>Subscribe</h4>
+                  <h4>QPoker Community</h4>
                   <p>
-                    Airdrops, Bounties & Giveaways... <br />
-                    Be first in line to hear about our magnificent welcoming
-                    benefits.
+                    Welcome to our vibrant community. Take part in the chat and
+                    be among the first to hear about QPoker's expansion
                   </p>
                   {/* <input type="text" placeholder="Email Address" /> */}
                   <a
-                    href="https://twitter.com/QPoker_io"
+                    href="https://t.me/qpokergroup"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-main"
                   >
-                    Join our Twitter
+                    Join our Telegram
                     <span aria-hidden="true"></span>
                   </a>
                 </div>
@@ -84,25 +83,14 @@ const Footer = () => {
                 <div className="footer-logo">
                   <div className="footer-social-media">
                     <IconContext.Provider
-                      value={{ color: "white", size: "2.3rem" }}
+                      value={{ color: "white", size: "2.9rem" }}
                     >
                       <a
-                        href="https://trello.com/b/RsomwpDG"
+                        href="https://T.me/qpoker_giveaways_bot"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <FaTrello />
-                      </a>
-                    </IconContext.Provider>
-                    <IconContext.Provider
-                      value={{ color: "white", size: "2.3rem" }}
-                    >
-                      <a
-                        href="https://twitter.com/QPoker_io"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FaTwitter />
+                        <FaParachuteBox />
                       </a>
                     </IconContext.Provider>
                     <IconContext.Provider
@@ -114,6 +102,17 @@ const Footer = () => {
                         rel="noreferrer"
                       >
                         <FaYoutube />
+                      </a>
+                    </IconContext.Provider>
+                    <IconContext.Provider
+                      value={{ color: "white", size: "2.3rem" }}
+                    >
+                      <a
+                        href="https://twitter.com/QPoker_io"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FaTwitter />
                       </a>
                     </IconContext.Provider>
                   </div>
@@ -161,7 +160,7 @@ const Footer = () => {
             </Row>
             <Col>
               <div className="footer-copy-right">
-                <p>©2022 QPoker Ltd. All Rights Reserved</p>
+                <p>©2023 QPoker Ltd. All Rights Reserved.</p>
               </div>
             </Col>
           </Container>

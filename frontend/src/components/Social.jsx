@@ -3,7 +3,7 @@ import {
   FaTelegramPlane,
   FaTwitter,
   FaYoutube,
-  FaTrello,
+  FaParachuteBox,
 } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -23,6 +23,7 @@ const SocialSection = (_props) => {
     telegramChannel: "",
     twitterFollowers: "",
     youtubeSubscribers: "",
+    airdropUsers: "",
   });
   const sections2 = useRef(null);
   const sections2Fade = useRef(null);
@@ -220,38 +221,38 @@ const SocialSection = (_props) => {
         drawSVG: "100%",
       }
     );
-    gsap.to(
-      document.querySelector(
-        ".social-section .circle-socials .right-circle-social .socials-in-circle span"
-      ),
-      {
-        keyframes: {
-          "0%": { color: "#fff" },
-          "10%": { color: "#1da1f2" },
-          "89%": { color: "#1da1f2" },
-          "90%": { color: "#fff" },
-        },
-        duration: 1.5,
-        repeatDelay: 1.5,
-        repeat: -1,
-      }
-    );
-    gsap.to(
-      document.querySelector(
-        ".social-section .circle-socials .right-circle-social .socials-in-circle svg"
-      ),
-      {
-        keyframes: {
-          "0%": { color: "#fff" },
-          "10%": { color: "#1da1f2" },
-          "89%": { color: "#1da1f2" },
-          "90%": { color: "#fff" },
-        },
-        duration: 1.5,
-        repeatDelay: 1.5,
-        repeat: -1,
-      }
-    );
+    // gsap.to(
+    //   document.querySelector(
+    //     ".social-section .circle-socials .right-circle-social .socials-in-circle span"
+    //   ),
+    //   {
+    //     keyframes: {
+    //       "0%": { color: "#fff" },
+    //       "10%": { color: "#1da1f2" },
+    //       "89%": { color: "#1da1f2" },
+    //       "90%": { color: "#fff" },
+    //     },
+    //     duration: 1.5,
+    //     repeatDelay: 1.5,
+    //     repeat: -1,
+    //   }
+    // );
+    // gsap.to(
+    //   document.querySelector(
+    //     ".social-section .circle-socials .right-circle-social .socials-in-circle svg"
+    //   ),
+    //   {
+    //     keyframes: {
+    //       "0%": { color: "#fff" },
+    //       "10%": { color: "#1da1f2" },
+    //       "89%": { color: "#1da1f2" },
+    //       "90%": { color: "#fff" },
+    //     },
+    //     duration: 1.5,
+    //     repeatDelay: 1.5,
+    //     repeat: -1,
+    //   }
+    // );
   }, []);
   useEffect(() => {
     let error_count = 0;
@@ -266,6 +267,7 @@ const SocialSection = (_props) => {
               telegramChannel: "pending ...",
               twitterFollowers: "pending ...",
               youtubeSubscribers: "pending ...",
+              airdropUsers: "pending ...",
             });
             error_count++;
           } else {
@@ -273,6 +275,7 @@ const SocialSection = (_props) => {
               telegramChannel: " (Please refresh !) ",
               twitterFollowers: " (Please refresh !) ",
               youtubeSubscribers: " (Please refresh !) ",
+              airdropUsers: " (Please refresh !) ",
             });
             clearInterval(make_request);
           }
@@ -301,9 +304,18 @@ const SocialSection = (_props) => {
           dataSocial.youtube_subscribers.last_week) *
         100;
       setDataSocial({
-        telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
-        twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),
-        youtubeSubscribers: Math.abs(youtubeGrowth.toFixed(1)),
+        telegramChannel: new Intl.NumberFormat().format(
+          dataSocial.telegram_channel.now
+        ),
+        twitterFollowers: new Intl.NumberFormat().format(
+          dataSocial.twitter_followers.now
+        ),
+        youtubeSubscribers: new Intl.NumberFormat().format(
+          dataSocial.youtube_subscribers.now
+        ),
+        airdropUsers: new Intl.NumberFormat().format(
+          dataSocial.airdrop_users.now
+        ),
       });
     }
   }, []);
@@ -323,8 +335,8 @@ const SocialSection = (_props) => {
               animate={controls}
               className="header-social"
             >
-              <h2>NFT Giveaways Go Mammoth</h2>
-              <p>Ride on to the Rewards</p>
+              <h2>Airdrop for New Year 2023</h2>
+              <p>1st January - 31st January</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
@@ -643,7 +655,7 @@ const SocialSection = (_props) => {
               <div className="right-circle-social">
                 <div className="telegram-social socials-in-circle">
                   <a
-                    href="https://twitter.com/QPoker_io"
+                    href="https://T.me/qpoker_giveaways_bot"
                     className="link-social-in-circle"
                     target="_blank"
                     rel="noreferrer"
@@ -657,7 +669,7 @@ const SocialSection = (_props) => {
                           initial="hidden"
                           animate={controls}
                         >
-                          <FaTwitter />
+                          <FaParachuteBox />
                         </motion.div>
                       </IconContext.Provider>
                     </div>
@@ -667,7 +679,7 @@ const SocialSection = (_props) => {
                       animate={controls}
                     >
                       <span>
-                        Twitter
+                        Airdrop
                         {/* <RandomReveal
                           isPlaying={inView}
                           duration={4.6}
@@ -677,9 +689,8 @@ const SocialSection = (_props) => {
                       </span>
                       <div className="wrapper-detail">
                         <p>
-                          {"+" +
-                            dataSocial.twitterFollowers.toString() +
-                            "% (7d %)"}
+                          {dataSocial.airdropUsers}
+                          <span>Participants</span>
                           {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
@@ -697,6 +708,61 @@ const SocialSection = (_props) => {
                   </a>
                 </div>
                 <div className="twitter-social socials-in-circle">
+                  <a
+                    href="https://twitter.com/QPoker_io"
+                    className="link-social-in-circle"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="circle-icon-social">
+                      <IconContext.Provider
+                        value={{ color: "white", size: "2.5rem" }}
+                      >
+                        <motion.div
+                          variants={iconFadeIn}
+                          initial="hidden"
+                          animate={controls}
+                        >
+                          <FaTwitter />
+                        </motion.div>
+                      </IconContext.Provider>
+                    </div>
+                    <motion.div
+                      variants={textFadeIn2}
+                      initial="hidden"
+                      animate={controls}
+                    >
+                      <span>
+                        Twitter
+                        {/* {" "}
+                        <RandomReveal
+                          isPlaying={inView}
+                          duration={4.6}
+                          revealDuration={0.5}
+                          characters="Telegram"
+                        /> */}
+                      </span>
+                      <div className="wrapper-detail">
+                        <p>
+                          {dataSocial.twitterFollowers}
+                          <span>Followers</span>
+                          {/* {" "}
+                          <RandomReveal
+                            isPlaying={inView}
+                            duration={4.6}
+                            revealDuration={0.5}
+                            characters={
+                              "+" +
+                              dataSocial.telegramChannel.toString() +
+                              "% (7d %)"
+                            }
+                          />*/}
+                        </p>
+                      </div>
+                    </motion.div>
+                  </a>
+                </div>
+                <div className="youtube-social socials-in-circle">
                   <a
                     href="https://t.me/qpoker_io"
                     className="link-social-in-circle"
@@ -717,7 +783,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn2}
+                      variants={textFadeIn3}
                       initial="hidden"
                       animate={controls}
                     >
@@ -728,14 +794,13 @@ const SocialSection = (_props) => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Telegram"
+                          characters="Youtube"
                         /> */}
                       </span>
                       <div className="wrapper-detail">
                         <p>
-                          {"+" +
-                            dataSocial.telegramChannel.toString() +
-                            "% (7d %)"}
+                          {dataSocial.telegramChannel}
+                          <span>Members</span>
                           {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
@@ -743,16 +808,16 @@ const SocialSection = (_props) => {
                             revealDuration={0.5}
                             characters={
                               "+" +
-                              dataSocial.telegramChannel.toString() +
+                              dataSocial.youtubeSubscribers.toString() +
                               "% (7d %)"
                             }
-                          />*/}
+                          /> */}
                         </p>
                       </div>
                     </motion.div>
                   </a>
                 </div>
-                <div className="youtube-social socials-in-circle">
+                <div className="airdrop-social socials-in-circle">
                   <a
                     href="https://youtu.be/6O_6_K3tr5c"
                     className="link-social-in-circle"
@@ -773,7 +838,7 @@ const SocialSection = (_props) => {
                       </IconContext.Provider>
                     </div>
                     <motion.div
-                      variants={textFadeIn3}
+                      variants={textFadeIn4}
                       initial="hidden"
                       animate={controls}
                     >
@@ -784,68 +849,13 @@ const SocialSection = (_props) => {
                           isPlaying={inView}
                           duration={4.6}
                           revealDuration={0.5}
-                          characters="Youtube"
-                        /> */}
-                      </span>
-                      <div className="wrapper-detail">
-                        <p>
-                          {"+" +
-                            dataSocial.youtubeSubscribers.toString() +
-                            "% (7d %)"}
-                          {/* {" "}
-                          <RandomReveal
-                            isPlaying={inView}
-                            duration={4.6}
-                            revealDuration={0.5}
-                            characters={
-                              "+" +
-                              dataSocial.youtubeSubscribers.toString() +
-                              "% (7d %)"
-                            }
-                          /> */}
-                        </p>
-                      </div>
-                    </motion.div>
-                  </a>
-                </div>
-                <div className="trello-social socials-in-circle">
-                  <a
-                    href="https://trello.com/b/RsomwpDG"
-                    className="link-social-in-circle"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="circle-icon-social">
-                      <IconContext.Provider
-                        value={{ color: "white", size: "2.5rem" }}
-                      >
-                        <motion.div
-                          variants={iconFadeIn}
-                          initial="hidden"
-                          animate={controls}
-                        >
-                          <FaTrello />
-                        </motion.div>
-                      </IconContext.Provider>
-                    </div>
-                    <motion.div
-                      variants={textFadeIn4}
-                      initial="hidden"
-                      animate={controls}
-                    >
-                      <span>
-                        Trello
-                        {/* {" "}
-                        <RandomReveal
-                          isPlaying={inView}
-                          duration={4.6}
-                          revealDuration={0.5}
                           characters="Trello"
                         /> */}
                       </span>
                       <div className="wrapper-detail">
-                        <p style={{ color: "white" }}>
-                          Executive Board
+                        <p>
+                          {dataSocial.youtubeSubscribers}
+                          <span>Subscribers</span>
                           {/* {" "}
                           <RandomReveal
                             isPlaying={inView}
@@ -867,7 +877,7 @@ const SocialSection = (_props) => {
                   className="team-info-1 team-info-circle"
                 >
                   <span>
-                    $50,000
+                    $90,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -876,7 +886,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    Getting Started 🔥
+                    QMatic
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -892,7 +902,7 @@ const SocialSection = (_props) => {
                   className="team-info-2 team-info-circle"
                 >
                   <span>
-                    $75,000
+                    $10,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -901,7 +911,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    COMING SOON
+                    USD Tether
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -917,7 +927,7 @@ const SocialSection = (_props) => {
                   className="team-info-3 team-info-circle"
                 >
                   <span>
-                    $125,000
+                    $20,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -926,7 +936,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    COMING SOON
+                    All Participants
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -942,7 +952,7 @@ const SocialSection = (_props) => {
                   className="team-info-4 team-info-circle"
                 >
                   <span>
-                    $200,000
+                    Early Access
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -951,7 +961,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    COMING SOON
+                    All Participants
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}

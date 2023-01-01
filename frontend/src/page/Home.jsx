@@ -135,8 +135,8 @@ const Home = () => {
         bullets.forEach((bulletColor) => {
           bulletColor.style.backgroundColor = "white";
         });
-        bullets[3].style.backgroundColor = "#e28001";
-        spinValue = 3;
+        bullets[5].style.backgroundColor = "#e28001";
+        spinValue = 5;
         scrollContent(spinValue);
         // setTimeout(() => {
         //   navigate("/");
@@ -208,8 +208,8 @@ const Home = () => {
             // }, 100);
             break;
           case "#airdrops":
-            bullets[3].style.backgroundColor = "#e28001";
-            spinValue = 3;
+            bullets[5].style.backgroundColor = "#e28001";
+            spinValue = 5;
             scrollContent(spinValue);
             // setTimeout(() => {
             //   navigate("/");

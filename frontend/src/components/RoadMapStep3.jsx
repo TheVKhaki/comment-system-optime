@@ -658,21 +658,15 @@ const RoadMapStep3 = () => {
                   animate={controls}
                   className="hidden-hr"
                 >
-                  All immaterial rights of QPoker’s rulebook and structure are
-                  owned by QPoker Ltd. It means none of the world’s other
-                  gambling providers are allowed to start offering QPoker
-                  without our authorization and annual license fees (millions of
-                  dollars per year). We own the same waterproof copyrights as
-                  Monopoly and Trivial Pursuit possess to their games. <hr />
-                  Our only, realistic, and achievable goal is to become a
-                  sovereign leader of global iGaming markets. We will break
-                  Pandora’s box by starting to offer skill-based social games as
-                  real money versions, all run by a P2P decentralized platform.
-                  Up to this date, all casinos have been ruthlessly exploiting
-                  players by offering only luck-based brainless products which
-                  do provide neither social amusement nor a chance of winning.
-                  Fortunately, this will change irreversibly as QPoker launches
-                  the new Web3 era of fair and inspirational iGaming.
+                  Evolution of real money skill games has leaped forward. QPoker
+                  is the first decentralized iGaming platform run by
+                  proof-of-stake smart contracts. Take control over your funds,
+                  in every stage. <hr />
+                  Our goal is to become a sovereign leader of global iGaming
+                  markets. We will break Pandora’s box by starting to offer
+                  skill-based social games as cryptocurrency versions. QPoker,
+                  our crown jewel, will truly be the world's first social game
+                  on a P2P decentralized platform.
                 </motion.p>
                 <Row>
                   <Col className="d-flex justify-content-center">
@@ -686,9 +680,9 @@ const RoadMapStep3 = () => {
                         href="/litepaper"
                         target="_blank"
                         className="btn-main"
-                        title="QPoker-Trendsetter of iGaming Litepaper"
+                        title="QPoker-Trendsetter of iGaming Whitepaper"
                       >
-                        Litepaper
+                        Whitepaper
                         <span aria-hidden="true"></span>
                       </a>
                     </motion.div>

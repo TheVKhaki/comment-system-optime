@@ -134,6 +134,12 @@
           color: #16c784;
           white-space: nowrap;
           transition: all 0.3s;
+          font-weight: bold;
+          span {
+            font-size: 16px;
+            margin-left: 0.4rem;
+            color: #fff !important;
+          }
         }
       }
       .circle-icon-social {
@@ -151,9 +157,11 @@
 
         .link-social-in-circle {
           &:hover {
-            svg,
+            svg {
+              color: #118c4f !important;
+            }
             span {
-              color: #1da1f2 !important;
+              color: #118c4f;
             }
           }
 
@@ -188,9 +196,11 @@
         left: 315px;
         .link-social-in-circle {
           &:hover {
-            svg,
+            svg {
+              color: #1da1f2 !important;
+            }
             span {
-              color: #0088cc !important;
+              color: #1da1f2;
             }
           }
         }
@@ -202,23 +212,27 @@
 
         .link-social-in-circle {
           &:hover {
-            svg,
+            svg {
+              color: #0088cc !important;
+            }
             span {
-              color: #ff0000 !important;
+              color: #0088cc;
             }
           }
         }
       }
-      .trello-social {
+      .airdrop-social {
         bottom: 334px;
         position: relative;
         left: 286px;
 
         .link-social-in-circle {
           &:hover {
-            svg,
+            svg {
+              color: #ff0000 !important;
+            }
             span {
-              color: #0079bf !important;
+              color: #ff0000;
             }
           }
         }
@@ -273,28 +287,16 @@
         bottom: 711px;
         position: relative;
         right: 305px;
-        p,
-        span {
-          color: #404040;
-        }
       }
       .team-info-3 {
         bottom: 607px;
         position: relative;
         right: 314px;
-        p,
-        span {
-          color: #404040;
-        }
       }
       .team-info-4 {
         bottom: 550px;
         position: relative;
         right: 283px;
-        p,
-        span {
-          color: #404040;
-        }
       }
     }
     img {

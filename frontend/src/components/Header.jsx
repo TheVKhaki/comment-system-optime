@@ -81,9 +81,9 @@ const Header = () => {
                 />
               </Nav.Link>
               <Nav.Link href="/litepaper" target="_blank">
-                Litepaper
+                Whitepaper
               </Nav.Link>
-              <Nav.Link href="#airdrops">Participate</Nav.Link>
+              <Nav.Link href="#airdrops">Airdrop</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
             </Nav>
             {/* <div className="btn-header">
@@ -109,9 +109,9 @@ const Header = () => {
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
                   <Nav.Link href="#roadmap">RoadMap</Nav.Link>
                   <Nav.Link href="/litepaper" target="_blank">
-                    Litepaper
+                    Whitepaper
                   </Nav.Link>
-                  <Nav.Link href="#roadmap-2">Participate</Nav.Link>
+                  <Nav.Link href="#airdrop">Airdrop</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>

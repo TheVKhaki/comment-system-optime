@@ -280,7 +280,7 @@ const Hero = () => {
                   target="_blank"
                   className="btn-hero btn-main"
                 >
-                  Litepaper
+                  Whitepaper
                   <span aria-hidden="true"></span>
                 </a>
                 <a href="#" className="btn-watch" onClick={clickYoutube}>

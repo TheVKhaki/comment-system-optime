@@ -175,30 +175,29 @@
           }
 
           &:nth-child(1) {
+            img {
+              height: 35px;
+            }
             &:hover {
               svg {
-                color: #0079bf !important;
+                color: #118c4f !important;
               }
             }
           }
-
           &:nth-child(2) {
             left: 112px;
             bottom: -21px;
-
-            &:hover {
-              svg {
-                color: #1da1f2 !important;
-              }
-            }
-          }
-
-          &:nth-child(3) {
-            left: 220px;
-
             &:hover {
               svg {
                 color: #ff0000 !important;
+              }
+            }
+          }
+          &:nth-child(3) {
+            left: 220px;
+            &:hover {
+              svg {
+                color: #1da1f2 !important;
               }
             }
           }
