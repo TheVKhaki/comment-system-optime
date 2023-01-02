@@ -2465,7 +2465,7 @@ body.modal-open {
 }
 
 .roadmap2-modal .roadmap-participate .box-youtube {
-  top: 989px;
+  top: 1048px;
   right: 31px;
 }
 
@@ -2824,23 +2824,23 @@ body.modal-open {
     display: none;
   }
   .roadmap2-modal .roadmap-participate .box-twitter {
-    top: 75px;
+    top: 103px;
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-twitter-1 {
-    top: 375px;
+    top: 370px;
     left: auto;
   }
   .roadmap2-modal .roadmap-participate .box-telegram {
-    top: 701px;
+    top: 646px;
     right: auto;
   }
   .roadmap2-modal .roadmap-participate .box-qpoker {
-    top: 1076px;
+    top: 863px;
     left: auto;
   }
   .roadmap2-modal .roadmap-participate .box-youtube {
-    top: 1448px;
+    top: 1128px;
     right: auto;
   }
 }

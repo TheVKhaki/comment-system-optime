@@ -244,7 +244,7 @@ const SocialResponsive = (_props) => {
                 <p>Youtube</p>
                 <span>
                   {dataSocial.youtubeSubscribers} <br />
-                  <span>Subscribes</span>
+                  <span>Subscribers</span>
                 </span>
               </a>
             </div>
