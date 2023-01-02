@@ -175,7 +175,7 @@ const Hero = () => {
       });
       gsap.to(document.querySelector(".hero .youtube-video"), {
         opacity: 1,
-        zIndex: 2,
+        zIndex: 12,
         delay: 1,
       });
     }
@@ -187,7 +187,7 @@ const Hero = () => {
       });
       gsap.to(document.querySelector(".hero .youtube-video"), {
         opacity: 1,
-        zIndex: 2,
+        zIndex: 12,
         delay: 1,
       });
     }
