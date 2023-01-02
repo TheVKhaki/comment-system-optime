@@ -65,7 +65,7 @@ const Footer = () => {
                   <h4>QPoker Community</h4>
                   <p>
                     Welcome to our vibrant community. Take part in the chat and
-                    be among the first to hear about QPoker's expansion
+                    be among the first to hear about QPoker's expansion.
                   </p>
                   {/* <input type="text" placeholder="Email Address" /> */}
                   <a
