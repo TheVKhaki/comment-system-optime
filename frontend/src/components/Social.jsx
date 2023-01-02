@@ -817,7 +817,7 @@ const SocialSection = (_props) => {
                 </div>
                 <div className="airdrop-social socials-in-circle">
                   <a
-                    href="https://youtu.be/6O_6_K3tr5c"
+                    href="https://youtube.com/@qpoker"
                     className="link-social-in-circle"
                     target="_blank"
                     rel="noreferrer"

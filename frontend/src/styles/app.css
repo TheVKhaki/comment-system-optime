@@ -1263,7 +1263,7 @@ body.modal-open {
 }
 
 .social-section .circle-socials .left-circle-social .team-info-circle p {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   white-space: nowrap;
   letter-spacing: 1px;
@@ -1994,6 +1994,10 @@ body.modal-open {
   width: auto;
 }
 
+.roadmap .content-slide-2-1 p br {
+  margin-bottom: 2rem;
+}
+
 .roadmap .content-slide-2-2 {
   margin-top: 2rem;
 }
@@ -2006,7 +2010,7 @@ body.modal-open {
 }
 
 .roadmap .content-slide-3 p hr {
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
   height: 0px;
   margin-top: 0;
   background-color: transparent;
