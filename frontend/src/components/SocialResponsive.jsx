@@ -221,7 +221,11 @@ const SocialResponsive = (_props) => {
               </a>
             </div>
             <div className="box box-3">
-              <a href="https://t.me/qpoker_io" target="_blank" rel="noreferrer">
+              <a
+                href="https://t.me/qpokergroup"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={telegramIcon} alt="" />
                 <p>Telegram</p>
                 <span>
@@ -232,7 +236,7 @@ const SocialResponsive = (_props) => {
             </div>
             <div className="box box-4">
               <a
-                href="https://youtu.be/6O_6_K3tr5c"
+                href="https://youtube.com/@qpoker"
                 target="_blank"
                 rel="noreferrer"
               >
