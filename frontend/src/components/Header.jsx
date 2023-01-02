@@ -70,7 +70,7 @@ const Header = () => {
             <Nav className="justify-content-center flex-grow-1 align-items-center">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#campaigns">Campaigns</Nav.Link>
-              <Nav.Link href="#roadmapp">RoadMap</Nav.Link>
+              <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
               <Nav.Link className="logo ">
                 <motion.img
                   initial={{ scale: 0 }}
@@ -107,7 +107,7 @@ const Header = () => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#hero">Home</Nav.Link>
                   <Nav.Link href="#campaigns">Campaigns</Nav.Link>
-                  <Nav.Link href="#roadmap">RoadMap</Nav.Link>
+                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
                   <Nav.Link href="/whitepaper" target="_blank">
                     Whitepaper
                   </Nav.Link>

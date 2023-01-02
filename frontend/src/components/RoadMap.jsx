@@ -394,14 +394,18 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   };
 
   return (
-    <section className="roadmap roadmap-step-slider" ref={elementView}>
+    <section
+      className="roadmap roadmap-step-slider"
+      id="roadmap"
+      ref={elementView}
+    >
       <Container>
         <div className="header-roadmap">
           <motion.h2 variants={textFadeIn} initial="hidden" animate={controls}>
-            RoadMap
+            Roadmap
           </motion.h2>
           <motion.p variants={textFadeIn} initial="hidden" animate={controls}>
-            Invention, development and introduction of QPoker
+            Invention and development of QPoker
           </motion.p>
         </div>
         <div className="slider-roadmap">
@@ -486,63 +490,43 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <ul>
                     <li>
                       Innovation of Rulebook{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Rulebook Optimization{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Feasibility Study{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Pre-Seed Investment{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Initial Prototype{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                   </ul>
                 </SwiperSlide>
@@ -552,63 +536,43 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <ul>
                     <li>
                       Transition to Unity Engine{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       First Version Of Litepaper{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Software Optimization{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       30 Player Test Runs{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       ERC20 Smart Contract{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}{" "}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                   </ul>
                 </SwiperSlide>
@@ -618,63 +582,43 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <ul>
                     <li>
                       QPoker Alpha Version{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Promotion Videos{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Final Version of Whitepaper{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Airdrop Panel{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Investment Platform{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                   </ul>
                 </SwiperSlide>
@@ -684,87 +628,59 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                   <ul>
                     <li>
                       Airdrop Launching{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       Pre-sales{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faCircleCheck}
-                        />
-                      ) : (
-                        <span>(done)</span>
-                      )}{" "}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faCircleCheck}
+                      />
                     </li>
                     <li>
                       IEO{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faSpinner}
-                        />
-                      ) : (
-                        <span>(on process)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faSpinner}
+                      />
                     </li>
                     <li>
                       Game Release (Mobile & Browser){" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faSpinner}
-                        />
-                      ) : (
-                        <span>(on process)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faSpinner}
+                      />
                     </li>
                     <li>
                       Game Release (Desktop){" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faSpinner}
-                        />
-                      ) : (
-                        <span>(on process)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faSpinner}
+                      />
                     </li>
                     <li>
                       NFT Marketplace{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faSpinner}
-                        />
-                      ) : (
-                        <span>(on process)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faSpinner}
+                      />
                     </li>
                     <li>
                       Metaverse Development{" "}
-                      {isTabletOrMobile ? (
-                        <FontAwesomeIcon
-                          className="ms-2"
-                          color="#fd9605"
-                          icon={faSpinner}
-                        />
-                      ) : (
-                        <span>(on process)</span>
-                      )}
+                      <FontAwesomeIcon
+                        className="ms-2"
+                        color="#fd9605"
+                        icon={faSpinner}
+                      />
                     </li>
                   </ul>
                 </SwiperSlide>
