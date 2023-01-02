@@ -300,12 +300,11 @@ const Hero = () => {
                 <iframe
                   width="660"
                   height="400"
-                  loading="lazy"
-                  title="YouTube video player"
-                  src="https://www.youtube.com/embed/6O_6_K3tr5c"
+                  src="https://www.youtube.com/embed/pjXx_THSyZk"
+                  title="A Doge Birth An Elephant Baby, Best Crypto Meme In 2023: The Definitive Guide"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  frameBorder="0"
-                  allowFullScreen
+                  allowfullscreen
                 ></iframe>
               )}
             </div>

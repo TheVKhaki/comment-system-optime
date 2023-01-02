@@ -374,7 +374,7 @@ const SocialSection = (_props) => {
                     animate={controls}
                     stroke="#e28001"
                     strokeMiterlimit="10"
-                    strokeWidth="3"
+                    strokeWidth="1.5"
                     d="M27.31 41.54L63.13 41.54 63.13 80.67 27.31 80.67"
                   ></motion.path>
                   <motion.path
@@ -408,11 +408,10 @@ const SocialSection = (_props) => {
                     variants={line}
                     initial="hidden"
                     animate={controls}
-                    stroke="#e28001"
+                    stroke="#fff"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M204.35 100.09L243.85 60.49 271.47 60.49"
-                    strokeWidth="3"
                   ></motion.path>
                   <motion.path
                     variants={line}
@@ -445,11 +444,10 @@ const SocialSection = (_props) => {
                     variants={line}
                     initial="hidden"
                     animate={controls}
-                    stroke="#e28001"
+                    stroke="#fff"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M130.58 100.09L91.08 60.49 63.47 60.49"
-                    strokeWidth="3"
                   ></motion.path>
                   <motion.path
                     variants={line}
@@ -470,7 +468,7 @@ const SocialSection = (_props) => {
                     stroke="#e28001"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="3"
+                    strokeWidth="1.5"
                   ></motion.circle>
                   <motion.circle
                     variants={circle}

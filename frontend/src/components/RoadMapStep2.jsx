@@ -13,8 +13,34 @@ import { motion, useAnimation } from "framer-motion";
 //react responsive
 import { useMediaQuery } from "react-responsive";
 
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="modal-demo-game"
+    >
+      <Modal.Header closeButton closeVariant="white"></Modal.Header>
+      <Modal.Body>
+        <iframe
+          width="1264"
+          height="711"
+          src="https://www.youtube.com/embed/hf9fCwwnefo"
+          title="QPoker-Trendsetter of GameFI 2.0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </Modal.Body>
+    </Modal>
+  );
+}
+
 const RoadMapStep2 = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
+  const [modalShow, setModalShow] = useState(false);
   const roadMapStep2 = useRef(null);
   const controls = useAnimation();
   const [element, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -140,7 +166,7 @@ const RoadMapStep2 = () => {
                   animate={controls}
                   className="btn-slide"
                 >
-                  <a className="btn-main">
+                  <a className="btn-main" onClick={() => setModalShow(true)}>
                     Watch Game Demo
                     <span aria-hidden="true"></span>
                   </a>
@@ -152,6 +178,10 @@ const RoadMapStep2 = () => {
             </Row> */}
           </Container>
         </div>
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
       </section>
     </>
   );
