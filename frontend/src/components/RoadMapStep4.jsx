@@ -838,7 +838,7 @@ const RoadMapStep4 = () => {
               <h2>
                 <span style={{ color: "#e28001" }}>Q</span>Poker Airdrop
               </h2>
-              <p>01.01.2023-31.01.2023</p>
+              <p>01.01.2023 - 01.02.2023</p>
             </motion.div>
             {!endCount && (
               <motion.div className="countdown">
