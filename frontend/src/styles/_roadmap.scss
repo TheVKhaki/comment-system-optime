@@ -520,13 +520,17 @@
     flex-direction: column;
     margin-top: 7rem;
     position: relative;
-
+    .link-gif-to-telegram {
+      position: absolute;
+      top: 1322.5px;
+      width: 120px;
+      z-index: 4;
+      border-radius: 50%;
+    }
     video {
       border-radius: 50%;
-      position: absolute;
-      top: 1321px;
       width: 126px;
-      z-index: 0;
+      pointer-events: none;
     }
 
     .line-modal-1 {
@@ -618,7 +622,7 @@
     }
 
     .box-roadmap-2 {
-      background-color: #090a18;
+      background-color: transparent;
       color: #000;
       border-radius: 11px;
       padding: 10px 5px 20px 11px;
@@ -640,9 +644,9 @@
         display: flex;
         justify-content: center;
         a {
-          border: 3px solid #0d6efd;
+          border: 3px solid #e28001;
           font-size: 20px;
-          color: #0d6efd;
+          color: #e28001;
           font-weight: 600;
           margin-top: 1.5rem;
           border-radius: 10px;
@@ -651,12 +655,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #0d6efd;
-          color: #fff;
+          background-color: transparent;
+          color: #e28001;
           transition: all 0.4s;
+          font-weight: bolder;
           &:hover {
-            color: #0d6efd;
-            background-color: #fff;
+            color: #000;
+            background-color: #e28001;
           }
         }
       }

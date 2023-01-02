@@ -42,12 +42,12 @@ function MyVerticallyCenteredModal(props) {
         {
           opacity: 1,
           y: 0,
-          duration: 2,
+          duration: 1.5,
           scrollTrigger: {
             scroller: ".modal",
             trigger: boxModal1.current,
-            start: "-100px center",
-            end: "50px center",
+            start: "-230px center",
+            end: "-180px center",
             scrub: true,
           },
         }
@@ -61,12 +61,12 @@ function MyVerticallyCenteredModal(props) {
         {
           opacity: 1,
           y: 0,
-          duration: 2,
+          duration: 1.5,
           scrollTrigger: {
             scroller: ".modal",
             trigger: boxModal2.current,
-            start: "-100px center",
-            end: "50px center",
+            start: "-250px center",
+            end: "-150px center",
             scrub: true,
           },
         }
@@ -84,8 +84,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: boxModal3.current,
-            start: "-100px center",
-            end: "50px center",
+            start: "-350px center",
+            end: "-250px center",
             scrub: true,
           },
         }
@@ -103,8 +103,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: boxModal4.current,
-            start: "-150px center",
-            end: "0 center",
+            start: "-350px center",
+            end: "-250px center",
             scrub: true,
           },
         }
@@ -122,8 +122,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: boxModal5.current,
-            start: "-200px center",
-            end: "0 center",
+            start: "-350px center",
+            end: "-250px center",
             scrub: true,
           },
         }
@@ -143,8 +143,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "20px center",
-            end: "250px center",
+            start: "-50px center",
+            end: "120px center",
             scrub: true,
           },
         }
@@ -164,8 +164,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "280px center",
-            end: "500px center",
+            start: "130px center",
+            end: "230px center",
             scrub: true,
           },
         }
@@ -185,8 +185,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "580px center",
-            end: "800px center",
+            start: "320px center",
+            end: "500px center",
             scrub: true,
           },
         }
@@ -206,8 +206,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "840px center",
-            end: "1050px center",
+            start: "560px center",
+            end: "750px center",
             scrub: true,
           },
         }
@@ -227,8 +227,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "1100px center",
-            end: "1200px center",
+            start: "800px center",
+            end: "1050px center",
             scrub: true,
           },
         }
@@ -244,8 +244,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "20px center",
-            end: "60px center",
+            start: "-150px center",
+            end: "-100px center",
             scrub: true,
           },
         }
@@ -281,8 +281,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "270px center",
-            end: "310px center",
+            start: "100px center",
+            end: "140px center",
             scrub: true,
           },
         }
@@ -316,8 +316,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "550px center",
-            end: "590px center",
+            start: "230px center",
+            end: "270px center",
             scrub: true,
           },
         }
@@ -351,8 +351,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "780px center",
-            end: "830px center",
+            start: "500px center",
+            end: "540px center",
             scrub: true,
           },
         }
@@ -386,8 +386,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "1050px center",
-            end: "1090px center",
+            start: "750px center",
+            end: "790px center",
             scrub: true,
           },
         }
@@ -420,8 +420,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "1170px center",
-            end: "1190px center",
+            start: "1050px center",
+            end: "1080px center",
             scrub: true,
           },
         }
@@ -441,8 +441,8 @@ function MyVerticallyCenteredModal(props) {
           scrollTrigger: {
             scroller: ".modal",
             trigger: document.querySelector(".roadmap-participate"),
-            start: "1180px center",
-            end: "1190px center",
+            start: "1070px center",
+            end: "1080px center",
             scrub: true,
             onEnter: myEnterFunc,
             onEnterBack: myLeaveFunc,
@@ -701,9 +701,15 @@ function MyVerticallyCenteredModal(props) {
               </a>
             </div>
           </div>
-          <video muted loop ref={rocketAnimRef}>
-            <source src={rocketgif} type="video/mp4" />
-          </video>
+          <a
+            href="https://t.me/qpoker_giveaways_bot"
+            className="link-gif-to-telegram"
+            target="_blank"
+          >
+            <video muted loop ref={rocketAnimRef}>
+              <source src={rocketgif} type="video/mp4" />
+            </video>
+          </a>
         </div>
       </Modal.Body>
     </Modal>
