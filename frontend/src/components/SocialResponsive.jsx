@@ -144,7 +144,7 @@ const SocialResponsive = (_props) => {
       <section className="social-responsive" id="campaigns">
         <div className="header-social">
           <h5>QPoker Airdrop</h5>
-          <p>01.01.2023 - 31.01.2023</p>
+          <p>01.01.2023 - 01.02.2023</p>
         </div>
         <div className="award-airdrop">
           <div className="box box-1">
@@ -244,7 +244,7 @@ const SocialResponsive = (_props) => {
                 <p>Youtube</p>
                 <span>
                   {dataSocial.youtubeSubscribers} <br />
-                  <span>Subscribes</span>
+                  <span>Subscribers</span>
                 </span>
               </a>
             </div>

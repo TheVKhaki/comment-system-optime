@@ -336,7 +336,7 @@ const SocialSection = (_props) => {
               className="header-social"
             >
               <h2>Airdrop for New Year 2023</h2>
-              <p>1st January - 31st January</p>
+              <p>1st January - 1st February</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
