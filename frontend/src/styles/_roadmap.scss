@@ -287,6 +287,11 @@
       transform: translate(8px, 16px);
       width: auto;
     }
+    p {
+      br {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   .content-slide-2-2 {
@@ -298,7 +303,7 @@
     margin-top: 2rem;
     p {
       hr {
-        margin-bottom: 0.8rem;
+        margin-bottom: 2rem;
         height: 0px;
         margin-top: 0;
         background-color: transparent;
