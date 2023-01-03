@@ -305,7 +305,7 @@ const SocialSection = (_props) => {
         100;
       setDataSocial({
         telegramChannel: new Intl.NumberFormat().format(
-          dataSocial.telegram_channel.now
+          dataSocial.telegram_group.now
         ),
         twitterFollowers: new Intl.NumberFormat().format(
           dataSocial.twitter_followers.now

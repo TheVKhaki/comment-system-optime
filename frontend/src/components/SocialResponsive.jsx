@@ -90,7 +90,7 @@ const SocialResponsive = (_props) => {
       // });
       setDataSocial({
         telegramChannel: new Intl.NumberFormat().format(
-          dataSocial.telegram_channel.now
+          dataSocial.telegram_group.now
         ),
         twitterFollowers: new Intl.NumberFormat().format(
           dataSocial.twitter_followers.now
