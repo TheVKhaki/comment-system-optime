@@ -32,11 +32,9 @@
     justify-content: center;
     position: relative;
     top: 6vh;
-
     h2 {
       font-size: 40px;
     }
-
     p {
       font-size: 18px;
       letter-spacing: 0.3px;
@@ -44,6 +42,7 @@
       background-color: #e28001;
       padding: 0 0.5rem;
       border-radius: 5px;
+      font-weight: bold;
     }
   }
   .social-media-our-team {

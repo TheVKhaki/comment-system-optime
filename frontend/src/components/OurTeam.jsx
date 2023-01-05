@@ -31,7 +31,9 @@ import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Html } from "@react-three/drei";
 import Model3d from "./Model3d";
+import { useMediaQuery } from "react-responsive";
 const OurTeam = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991.98px)" });
   //state characters
   const [characters, setCharacters] = useState(Characters);
   const [charactersMobile, setCharactersMobile] = useState(Characters);
@@ -54,6 +56,7 @@ const OurTeam = () => {
   const model3dCharacters = document.querySelectorAll(".model3d-characters");
   const handleClickNFT = (event) => {
     document.querySelector(".lottie-our-team").classList.add("d-none");
+    document.querySelector(".ourteam-header p").classList.add("d-none");
     const e = event.target;
     const result = characters.filter(
       (filterevent) => filterevent.className === e.offsetParent.className
@@ -71,6 +74,7 @@ const OurTeam = () => {
   const handleClickClose = () => {
     const ourteamCurrent = ourteam.current;
     ourteamCurrent.className = "ourteam-characters";
+    document.querySelector(".ourteam-header p").classList.remove("d-none");
     const hiddenModel3d = [...model3dCharacters].map(
       (addClass) =>
         (addClass.className = "model3d-characters d-none container-lg")
@@ -195,9 +199,23 @@ const OurTeam = () => {
             >
               Our Key Members
             </motion.h2>
-            <motion.p variants={textFadeIn} initial="hidden" animate={controls}>
-              Click on the photos to see the details
-            </motion.p>
+            {isTabletOrMobile ? (
+              <motion.p
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                Click on the photo to see the statue
+              </motion.p>
+            ) : (
+              <motion.p
+                variants={textFadeIn}
+                initial="hidden"
+                animate={controls}
+              >
+                Click on the photos to see the details
+              </motion.p>
+            )}
           </div>
 
           <motion.div

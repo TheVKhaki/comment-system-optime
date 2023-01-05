@@ -2494,6 +2494,7 @@ body.modal-open {
   background-color: #e28001;
   padding: 0 0.5rem;
   border-radius: 5px;
+  font-weight: bold;
 }
 .ourteam .social-media-our-team {
   position: absolute !important;
