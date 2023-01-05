@@ -290,6 +290,13 @@
           grid-template-rows: repeat(2, 100px);
           grid-template-columns: repeat(3, 1fr);
         }
+        .item-news-tricker {
+          &.logo1 {
+            img {
+              height: 74%;
+            }
+          }
+        }
       }
     }
 
