@@ -634,7 +634,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                       <FontAwesomeIcon
                         className="ms-2"
                         color="#fd9605"
-                        icon={faCircleCheck}
+                        icon={faSpinner}
                       />
                     </li>
                     <li>
