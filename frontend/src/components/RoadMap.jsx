@@ -2,12 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
-import {
-  faSpinner,
-  faCircleCheck,
-  faHourglass,
-  faBullhorn,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSpinner, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 import sliderVideo1 from "../video/BkgV02_P01.mp4";
 import sliderVideo2 from "../video/BkgV02_P02.mp4";

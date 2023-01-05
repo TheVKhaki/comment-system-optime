@@ -3,12 +3,11 @@ import { Button, OverlayTrigger, Popover } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { FaInfoCircle } from "react-icons/fa";
 export default function QuestionMark({ name, description }) {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   const [showPuls, setShowPuls] = useState(true);
   const target = useRef(null);
   const handleToggle = () => {
     if (showPuls === true) {
-      console.log("first");
       setShowPuls("object");
     }
     // setShow(true);

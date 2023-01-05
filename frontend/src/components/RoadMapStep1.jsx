@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 //Bootstrap
 import { Col, Container, Row } from "react-bootstrap";
 //framer motion

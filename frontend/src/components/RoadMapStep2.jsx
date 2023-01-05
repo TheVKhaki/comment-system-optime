@@ -3,8 +3,6 @@ import { useRef } from "react";
 import { Col, Container, Row, Modal } from "react-bootstrap";
 //Media
 import imageRoadMap2 from "../images/2ND_FRG.webp";
-//RandomReveal
-import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 //Framer motion

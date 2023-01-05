@@ -74,7 +74,7 @@ const Characters = () => {
       job: " & Co-Founder ",
       abbrPosition: "CMO",
       description:
-        "Hans is a visionaire with persistent entrepreneurial spirit. In 2011 he started his iGaming career with sports betting related affiliate marketing. Due to the burdensome gambling regulation, he ended up setting his company in Malta, which used to have Europe’s friendliest iGaming legislation at the time. Throughout the decade, Hans gained comperehensive expertise on iGaming industry, and eventually performed as a marketing strategist and director of product development in one of Malta’s leading iGaming companies.",
+        "Hans is a visionaire with persistent entrepreneurial spirit. In 2011 he started his iGaming career with sports betting related affiliate marketing. Due to the burdensome gambling regulation, he ended up setting his company in Malta, which used to have Europe’s friendliest iGaming legislation at the time. Throughout the decade, Hans gained comperehensive expertise on iGaming industry, and eventually performed as a marketing strategist and director of product development in one of Malta’s leading iGaming operators.",
       email: "mailto:Hans@qpoker.io",
       telegram: "https://T.me/Hans_QPoker",
       discord: "",

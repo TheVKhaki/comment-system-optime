@@ -3,14 +3,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import logoFooter from "../images/LogoBlack.png";
 import { IconContext } from "react-icons";
 import {
-  FaTelegramPlane,
   FaTwitter,
   FaYoutube,
   FaArrowUp,
   FaParachuteBox,
 } from "react-icons/fa";
 import OurPartner from "./OurPartner";
-import airdropIcon from "../images/airdrop-14-14.svg";
 const Footer = () => {
   useEffect(() => {
     const btnGoToTop = document.querySelector(".go-to-top");

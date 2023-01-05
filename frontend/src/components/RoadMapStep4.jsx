@@ -7,8 +7,6 @@ import logoModalRoadMap from "../images/Fly-Ele3_For-Website.png";
 import rocketgif from "../video/ON_2.mp4";
 //motion
 import { motion, useAnimation } from "framer-motion";
-//RandomReveal
-import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 //lazyload

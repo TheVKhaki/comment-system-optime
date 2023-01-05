@@ -5,16 +5,13 @@ import Rotation3d from "../images/Rotate360.png";
 import QuestionMark from "./QuestionMark";
 //Bootstrap
 import { Container } from "react-bootstrap";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Popover from "react-bootstrap/Popover";
-import Button from "react-bootstrap/Button";
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css/navigation";
 //icon
 import { IconContext } from "react-icons";
-import { FaTelegramPlane, FaDiscord, FaInfoCircle } from "react-icons/fa";
+import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
@@ -25,8 +22,6 @@ import clickGif from "../lottie/78149-click-or-tap-animation-v1.json";
 import { gsap } from "gsap";
 //lozyload
 import Lazyload from "../HOC/Lazyload";
-//RandomReveal
-import { RandomReveal } from "react-random-reveal";
 //observer
 import { useInView } from "react-intersection-observer";
 //Framermotion
@@ -34,7 +29,7 @@ import { motion, useAnimation } from "framer-motion";
 //Characters 3dmodel
 import Characters from "../api/Characters";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, Center, Html } from "@react-three/drei";
+import { Environment, OrbitControls, Html } from "@react-three/drei";
 import Model3d from "./Model3d";
 const OurTeam = () => {
   //state characters
