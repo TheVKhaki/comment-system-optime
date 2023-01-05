@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { RandomReveal } from "react-random-reveal";
 import { useInView } from "react-intersection-observer";
 //Gsap
 import { gsap } from "gsap";
@@ -288,21 +287,21 @@ const SocialSection = (_props) => {
         });
     }, 2000);
     function socialGrowth(dataSocial) {
-      const telegramGrowth =
-        ((dataSocial.telegram_channel.now -
-          dataSocial.telegram_channel.last_week) /
-          dataSocial.telegram_channel.last_week) *
-        100;
-      const twitterGrowth =
-        ((dataSocial.twitter_followers.now -
-          dataSocial.twitter_followers.last_week) /
-          dataSocial.twitter_followers.last_week) *
-        100;
-      const youtubeGrowth =
-        ((dataSocial.youtube_subscribers.now -
-          dataSocial.youtube_subscribers.last_week) /
-          dataSocial.youtube_subscribers.last_week) *
-        100;
+      // const telegramGrowth =
+      //   ((dataSocial.telegram_channel.now -
+      //     dataSocial.telegram_channel.last_week) /
+      //     dataSocial.telegram_channel.last_week) *
+      //   100;
+      // const twitterGrowth =
+      //   ((dataSocial.twitter_followers.now -
+      //     dataSocial.twitter_followers.last_week) /
+      //     dataSocial.twitter_followers.last_week) *
+      //   100;
+      // const youtubeGrowth =
+      //   ((dataSocial.youtube_subscribers.now -
+      //     dataSocial.youtube_subscribers.last_week) /
+      //     dataSocial.youtube_subscribers.last_week) *
+      //   100;
       setDataSocial({
         telegramChannel: new Intl.NumberFormat().format(
           dataSocial.telegram_group.now

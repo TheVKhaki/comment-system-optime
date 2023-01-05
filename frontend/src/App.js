@@ -7,8 +7,6 @@ import "swiper/css/effect-fade";
 import Home from "./page/Home";
 
 //Components
-import Header from "./components/Header";
-import SocialSection from "./components/Social";
 import { useEffect, useState } from "react";
 
 function App() {

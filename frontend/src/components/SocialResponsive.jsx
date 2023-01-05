@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
-//media
-import socialRes from "../images/social-responsive.svg";
 //icon
 import { IconContext } from "react-icons";
-import {
-  FaTelegram,
-  FaTwitter,
-  FaYoutube,
-  FaTrello,
-  FaParachuteBox,
-} from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import { gsap } from "gsap";
 import "@dotlottie/player-component";
 import lottie10 from "../lottie/10.2.lottie";
@@ -63,25 +55,25 @@ const SocialResponsive = (_props) => {
         });
     }, 2000);
     function socialGrowth(dataSocial) {
-      const telegramGrowth =
-        ((dataSocial.telegram_channel.now -
-          dataSocial.telegram_channel.last_week) /
-          dataSocial.telegram_channel.last_week) *
-        100;
-      const twitterGrowth =
-        ((dataSocial.twitter_followers.now -
-          dataSocial.twitter_followers.last_week) /
-          dataSocial.twitter_followers.last_week) *
-        100;
-      const youtubeGrowth =
-        ((dataSocial.youtube_subscribers.now -
-          dataSocial.youtube_subscribers.last_week) /
-          dataSocial.youtube_subscribers.last_week) *
-        100;
-      const airdropUser =
-        ((dataSocial.airdrop_users.now - dataSocial.airdrop_users.last_week) /
-          dataSocial.airdrop_users.last_week) *
-        100;
+      // const telegramGrowth =
+      //   ((dataSocial.telegram_channel.now -
+      //     dataSocial.telegram_channel.last_week) /
+      //     dataSocial.telegram_channel.last_week) *
+      //   100;
+      // const twitterGrowth =
+      //   ((dataSocial.twitter_followers.now -
+      //     dataSocial.twitter_followers.last_week) /
+      //     dataSocial.twitter_followers.last_week) *
+      //   100;
+      // const youtubeGrowth =
+      //   ((dataSocial.youtube_subscribers.now -
+      //     dataSocial.youtube_subscribers.last_week) /
+      //     dataSocial.youtube_subscribers.last_week) *
+      //   100;
+      // const airdropUser =
+      //   ((dataSocial.airdrop_users.now - dataSocial.airdrop_users.last_week) /
+      //     dataSocial.airdrop_users.last_week) *
+      //   100;
       // setDataSocial({
       //   telegramChannel: Math.abs(telegramGrowth.toFixed(1)),
       //   twitterFollowers: Math.abs(twitterGrowth.toFixed(1)),

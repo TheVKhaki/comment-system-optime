@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import SocialSection from "../components/Social";
 import RoadMap from "../components/RoadMap";
-import RoadMapStep1 from "../components/RoadMapStep1";
 import RoadMapStep2 from "../components/RoadMapStep2";
 import RoadMapStep3 from "../components/RoadMapStep3";
 import RoadMapStep4 from "../components/RoadMapStep4";
@@ -15,7 +14,7 @@ import useWindowSize from "../custom hook/ResizeEvent";
 import { ApiClient } from "../api/client/ApiClient";
 import Header from "../components/Header";
 const Home = () => {
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
   const height700 = useMediaQuery({ maxHeight: 700 });
   const height600 = useMediaQuery({ minHeight: 600 });
@@ -64,10 +63,8 @@ const Home = () => {
     const bullets = document.querySelectorAll(".bullet-section span");
     const root = document.querySelector("#root");
     const app = document.querySelector(".App");
-    const btnHero = document.querySelector(".btn-hero");
     const navLink = document.querySelectorAll(".navbar-nav .nav-link");
     const content = document.querySelector("main");
-    const all = document.querySelectorAll("*");
     const locationHash = window.location.hash;
     let spinValue = 0;
     let canScroll = true;
