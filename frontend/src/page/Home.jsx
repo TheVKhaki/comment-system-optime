@@ -217,7 +217,7 @@ const Home = () => {
         }
       });
     });
-    let animationDuration = 700;
+    let animationDuration = 1000;
     var lastTime = new Date().getTime();
 
     if (app.classList.contains("fullscreen")) {
