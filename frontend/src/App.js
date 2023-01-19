@@ -12,21 +12,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
 import { useEffect, useState } from "react";
 
+//TODO: PrivacyPolicy, FAQ and AboutUs route changes to {route path}-new and it must change after finilizing to previous route path and the nginx must edit also
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
   {
-    path: "privacypolicy",
+    path: "privacypolicy-new",
     element: <PrivacyPolicy />,
   },
   {
-    path: "faq",
+    path: "faq-new",
     element: <FAQ />,
   },
   {
-    path: "about-us",
+    path: "about-us-new",
     element: <AboutUs />,
   },
 ]);
