@@ -128,7 +128,7 @@ html {
 body {
   line-height: 1.5;
   background-color: $colorBlack !important;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -320,3 +320,12 @@ body {
 @import "./footer";
 //Page Login
 @import "./login";
+
+//page privacyPolicy
+@import "./privacypolicy";
+
+//page faq
+@import "./faq";
+
+//page about us
+@import "./aboutus";

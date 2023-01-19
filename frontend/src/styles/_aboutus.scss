@@ -1,0 +1,21 @@
+.about-us {
+  .header-about {
+    text-align: center;
+    padding-top: 5vh;
+    h1 {
+      font-size: 34px;
+    }
+  }
+  .detail-about-us {
+    .row {
+      margin-top: 75px;
+    }
+    img {
+      height: 300px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+}

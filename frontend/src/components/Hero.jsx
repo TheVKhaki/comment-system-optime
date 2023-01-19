@@ -269,9 +269,8 @@ const Hero = () => {
                 </h2>
                 <p>
                   Early 2000s Texas Hold’em boom was huge, QPoker will be
-                  bigger. A brand new cryptocurrency card game which blends
-                  together optimal amount of luck and skill. Compete with
-                  citizens all around the world.
+                  bigger. A brand new cryptocurrency card game quaking the
+                  earth.
                 </p>
               </TextHero>
               <Btnn>

@@ -107,7 +107,7 @@ html {
 body {
   line-height: 1.5;
   background-color: #000 !important;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -655,8 +655,10 @@ body.modal-open {
 }
 @media screen and (max-width: 991.98px) {
   .hero-bg {
-    background: url(../images/BKG.png) no-repeat;
+    background: url(../images/S01MobileView.webp) no-repeat;
     background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
   }
   .modal {
     padding-right: 0 !important;
@@ -681,6 +683,18 @@ body.modal-open {
   .hero .hero-text {
     width: 100%;
     text-align: center;
+    padding-top: 10vh;
+    justify-content: stretch;
+  }
+  .hero .hero-text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .hero .hero-text h2 span:last-child {
+    font-size: 3rem;
+  }
+  .hero .hero-text p {
+    font-size: 2.2rem;
   }
   .hero .btns-hero {
     justify-content: space-around;
@@ -690,11 +704,11 @@ body.modal-open {
   .hero .btns-hero .btn-watch {
     margin-left: 0;
   }
-  .hero .hero-text h2 span:last-child {
-    font-size: 3.5rem;
-  }
 }
 @media screen and (max-width: 575.98px) {
+  .hero .hero-text {
+    padding-top: 7vh;
+  }
   .hero .hero-text .box {
     margin-top: 3rem;
   }
@@ -3566,4 +3580,119 @@ body.modal-open {
   .footer-dashboard .menu-footer-login {
     margin-top: 1.5rem;
   }
+}
+.privacy-policy h2 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.privacy-policy p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
+  color: #fff;
+  line-height: 26px;
+}
+.privacy-policy ul {
+  all: revert;
+  color: #fff;
+  font-size: 16px;
+}
+.privacy-policy ol {
+  font-size: 16px;
+}
+.privacy-policy a {
+  color: #e28001;
+}
+.privacy-policy a:hover {
+  color: #e28001;
+}
+.privacy-policy strong {
+  font-weight: 800;
+}
+.privacy-policy span {
+  color: #fff;
+}
+.privacy-policy table td {
+  border: 1px solid #e28001 !important;
+  padding: 1rem 1rem;
+}
+
+.faq-page {
+  min-height: 100vh;
+}
+.faq-page .header-faq {
+  text-align: center;
+  padding-top: 5vh;
+}
+.faq-page .header-faq h1 {
+  font-size: 34px;
+}
+.faq-page .header-faq p {
+  font-size: 23px;
+}
+.faq-page .accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.faq-page .accordion .accordion-item {
+  width: 800px;
+  border: none;
+  margin-bottom: 2rem;
+}
+.faq-page .accordion .accordion-item .accordion-button {
+  background-color: #e28001;
+  border: none;
+  color: #fff;
+  font-size: 19px;
+}
+.faq-page .accordion .accordion-item .accordion-button:focus {
+  box-shadow: none;
+}
+.faq-page .accordion .accordion-item .accordion-button::after {
+  background-image: url(../images/plus-math-30.png);
+}
+.faq-page .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url(../images/minus-30.png);
+}
+.faq-page .accordion .accordion-item .accordion-body p {
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.faq-page .accordion .accordion-item .accordion-body a {
+  color: #e28001;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.faq-page .accordion .accordion-item .accordion-body ul {
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .faq-page .accordion .accordion-item {
+    width: 100%;
+  }
+}
+.about-us .header-about {
+  text-align: center;
+  padding-top: 5vh;
+}
+.about-us .header-about h1 {
+  font-size: 34px;
+}
+.about-us .detail-about-us .row {
+  margin-top: 75px;
+}
+.about-us .detail-about-us img {
+  height: 300px;
+  margin: 0 auto;
+}
+.about-us .detail-about-us p {
+  font-size: 25px;
 } /*# sourceMappingURL=app.css.map */

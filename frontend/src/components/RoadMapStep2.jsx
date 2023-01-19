@@ -156,7 +156,7 @@ const RoadMapStep2 = () => {
                   We own the same waterproof copyrights as Monopoly and Trivial
                   Pursuit possess to their games. This guarantees years lasting
                   growth momentum for $QMATIC price, as the player traffic
-                  increases while $QMATIC minting rate stays low.
+                  increases while $QMATIC minting rate stays minimal.
                 </motion.p>
                 <motion.div
                   variants={textRoadMap}
