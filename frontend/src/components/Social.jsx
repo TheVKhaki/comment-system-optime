@@ -924,7 +924,7 @@ const SocialSection = (_props) => {
                   className="team-info-3 team-info-circle"
                 >
                   <span>
-                    $20,000
+                    $20 Instant
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}

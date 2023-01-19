@@ -7,6 +7,7 @@ import "swiper/css/effect-fade";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
 import FAQ from "./page/FAQ";
+import AboutUs from "./page/AboutUs";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
 import { useEffect, useState } from "react";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "faq",
     element: <FAQ />,
+  },
+  {
+    path: "about-us",
+    element: <AboutUs />,
   },
 ]);
 function App() {

@@ -107,7 +107,7 @@ html {
 body {
   line-height: 1.5;
   background-color: #000 !important;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -3678,4 +3678,21 @@ body.modal-open {
   .faq-page .accordion .accordion-item {
     width: 100%;
   }
+}
+.about-us .header-about {
+  text-align: center;
+  padding-top: 5vh;
+}
+.about-us .header-about h1 {
+  font-size: 34px;
+}
+.about-us .detail-about-us .row {
+  margin-top: 75px;
+}
+.about-us .detail-about-us img {
+  height: 300px;
+  margin: 0 auto;
+}
+.about-us .detail-about-us p {
+  font-size: 25px;
 } /*# sourceMappingURL=app.css.map */

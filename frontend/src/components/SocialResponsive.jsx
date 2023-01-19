@@ -170,10 +170,10 @@ const SocialResponsive = (_props) => {
             <p>900 Winners</p>
           </div>
           <div className="box box-3">
-            <span>$20 QMatic + QPoker Early Access</span>
+            <span>$20 Instant + QPoker Early Access</span>
           </div>
           <div className="sub-box sub-box-3">
-            <p>All participants</p>
+            <p>All Participants</p>
           </div>
         </div>
         <div className="wrapper-social-activity">
