@@ -184,8 +184,10 @@
 
 @media screen and (max-width: 991.98px) {
   .hero-bg {
-    background: url(../images/BKG.png) no-repeat;
+    background: url(../images/S01MobileView.webp) no-repeat;
     background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
   }
 
   .modal {
@@ -218,6 +220,20 @@
     .hero-text {
       width: 100%;
       text-align: center;
+      padding-top: 10vh;
+      justify-content: stretch;
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        span {
+          &:last-child {
+            font-size: 3rem;
+          }
+        }
+      }
+      p {
+        font-size: 2.2rem;
+      }
     }
 
     .btns-hero {
@@ -234,21 +250,22 @@
       }
     }
 
-    .hero-text {
-      h2 {
-        span {
-          &:last-child {
-            font-size: 3.5rem;
-          }
-        }
-      }
-    }
+    // .hero-text {
+    //   h2 {
+    //     span {
+    //       &:last-child {
+    //         font-size: 3.5rem;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
 @media screen and (max-width: 575.98px) {
   .hero {
     .hero-text {
+      padding-top: 7vh;
       .box {
         margin-top: 3rem;
       }

@@ -5,10 +5,26 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 //Page
 import Home from "./page/Home";
-
+import PrivacyPolicy from "./page/PrivacyPolicy";
+import FAQ from "./page/FAQ";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
 import { useEffect, useState } from "react";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "privacypolicy",
+    element: <PrivacyPolicy />,
+  },
+  {
+    path: "faq",
+    element: <FAQ />,
+  },
+]);
 function App() {
   //animation btn-main
   useEffect(() => {
@@ -53,8 +69,8 @@ function App() {
     });
   }, []);
   return (
-    <div className="App fullscreen">
-      <Home />
+    <div className="App">
+      <RouterProvider router={router} />
     </div>
   );
 }

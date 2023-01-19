@@ -1,0 +1,40 @@
+.privacy-policy {
+  h2 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+    color: #fff;
+    line-height: 26px;
+  }
+  ul {
+    all: revert;
+    color: #fff;
+    font-size: 16px;
+  }
+  ol {
+    font-size: 16px;
+  }
+  a {
+    color: #e28001;
+    &:hover {
+      color: #e28001;
+    }
+  }
+  strong {
+    font-weight: 800;
+  }
+  span {
+    color: #fff;
+  }
+  table {
+    td {
+      border: 1px solid #e28001 !important;
+      padding: 1rem 1rem;
+    }
+  }
+}
