@@ -263,14 +263,13 @@ const Hero = () => {
             <div className="hero-text" ref={homeText}>
               <TextHero>
                 <h2>
-                  <span>Q</span>Poker GameFI 2.0
+                  <span>Q</span>Poker GameFi 2.0
                   <br />
                   <span>Social Gaming in Crypto</span>
                 </h2>
                 <p>
                   Early 2000s Texas Hold’em boom was huge, QPoker will be
-                  bigger. A brand new cryptocurrency card game quaking the
-                  earth.
+                  bigger. Brand new crypto card game rocking the planet.
                 </p>
               </TextHero>
               <Btnn>
