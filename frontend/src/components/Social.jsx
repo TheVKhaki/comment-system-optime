@@ -35,7 +35,7 @@ const SocialSection = (_props) => {
   }, [controls, inView]);
   const dimondsFade = useRef();
   const elephantP1 = useRef();
-  const arrayTimeAnimtion = [0, 0.5, 0.5, 1, 2.5, 3.5, 4];
+  const arrayTimeAnimtion = [0, 0.5, 0.5, 1, 1.5, 2.5, 4];
   // const shift = (arg) => {
   //   for (let index = 0; index < arrayTimeAnimtion.length; index++) {
   //     arrayTimeAnimtion[index] = arrayTimeAnimtion[index] + arg;
@@ -156,7 +156,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 3.5,
+        delay: arrayTimeAnimtion[5],
       },
     },
   };
@@ -168,7 +168,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 3.7,
+        delay: 2.7,
       },
     },
   };
@@ -180,7 +180,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 3.9,
+        delay: 2.9,
       },
     },
   };
@@ -192,7 +192,7 @@ const SocialSection = (_props) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 4.1,
+        delay: 3.1,
       },
     },
   };
