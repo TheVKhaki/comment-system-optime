@@ -658,7 +658,7 @@ const RoadMapStep3 = () => {
                   proof-of-stake smart contracts. Take control over your funds,
                   in every stage. <hr />
                   Our goal is to become a sovereign leader of global iGaming
-                  markets. We will break Pandora’s box by starting to offer
+                  markets. We will break the status quo by starting to offer
                   skill-based social games as cryptocurrency versions. QPoker,
                   our crown jewel, will truly be the world's first social game
                   on a P2P decentralized platform.

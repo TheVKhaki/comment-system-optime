@@ -295,7 +295,7 @@ const Home = () => {
     });
   }, [width]);
   return (
-    <div className="fullscreen">
+    <>
       <Header />
       <main>
         <Hero />
@@ -328,7 +328,7 @@ const Home = () => {
         <span data-section="#our-team" aria-hidden="true"></span>
         <span data-section="#footer" aria-hidden="true"></span>
       </div>
-    </div>
+    </>
   );
 };
 
