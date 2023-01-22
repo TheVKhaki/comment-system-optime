@@ -654,9 +654,9 @@ const RoadMapStep3 = () => {
                   className="hidden-hr"
                 >
                   Evolution of real money skill games has leaped forward. QPoker
-                  is the first decentralized iGaming platform run by
-                  proof-of-stake smart contracts. Take control over your funds,
-                  in every stage. <hr />
+                  is the first P2P decentralized iGaming platform run by smart
+                  contracts. Take control over your funds, in every stage.{" "}
+                  <hr />
                   Our goal is to become a sovereign leader of global iGaming
                   markets. We will break the status quo by starting to offer
                   skill-based social games as cryptocurrency versions. QPoker,
