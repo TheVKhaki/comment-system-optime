@@ -228,7 +228,7 @@ const SocialResponsive = (_props) => {
             </div>
             <div className="box box-4">
               <a
-                href="https://youtu.be/6MNHVE1vlTo"
+                href="https://youtube.com/@qpoker"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -95,7 +95,7 @@ const Footer = () => {
                       value={{ color: "white", size: "2.3rem" }}
                     >
                       <a
-                        href="https://youtu.be/6MNHVE1vlTo"
+                        href="https://youtube.com/@qpoker"
                         target="_blank"
                         rel="noreferrer"
                       >
