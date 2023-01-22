@@ -1577,6 +1577,8 @@ body.modal-open {
   height: 0px;
   margin-top: 0;
   background-color: transparent;
+  opacity: 0;
+  border: none;
 }
 .roadmap .content-slide-2-2 {
   margin-top: 2rem;
