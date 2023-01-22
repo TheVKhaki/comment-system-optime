@@ -25,7 +25,7 @@ function MyVerticallyCenteredModal(props) {
         <iframe
           width="1264"
           height="711"
-          src="https://www.youtube.com/embed/Od8SWQE9HrA"
+          src="https://www.youtube.com/embed/6MNHVE1vlTo"
           title="QPoker-Trendsetter of Card Games"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
