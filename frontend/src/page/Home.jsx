@@ -294,6 +294,14 @@ const Home = () => {
       });
     });
   }, [width]);
+
+  useEffect(() => {
+    const app = document.querySelector(".App");
+    if (!app.classList.contains("fullscreen")) {
+      app.classList.add("fullscreen");
+    }
+  }, []);
+
   return (
     <>
       <Header />

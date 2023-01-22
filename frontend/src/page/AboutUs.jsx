@@ -10,7 +10,7 @@ export default function AboutUs() {
         </div>
         <div className="detail-about-us">
           <Row>
-            <Col xs={6}>
+            <Col xs={12} lg={6}>
               <div>
                 <p>
                   QPoker Ltd, a privately owned company, was launched by two
@@ -24,19 +24,19 @@ export default function AboutUs() {
                 </p>
               </div>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} lg={6}>
               <div>
                 <img src={imgAbout1} alt="" />
               </div>
             </Col>
           </Row>
           <Row>
-            <Col xs={6}>
+            <Col xs={12} lg={6}>
               <div>
                 <img src={imgAbout1} alt="" />
               </div>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} lg={6}>
               <div>
                 <p>
                   In 2020, QPoker’s concept took off in ICE London iGaming

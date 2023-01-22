@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../components/Footer";
 import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    const app = document.querySelector(".App");
+    app.classList.remove("fullscreen");
+  }, []);
+
   return (
     <Container>
       <div className="privacy-policy">

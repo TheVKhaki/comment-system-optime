@@ -1572,8 +1572,11 @@ body.modal-open {
   transform: translate(8px, 16px);
   width: auto;
 }
-.roadmap .content-slide-2-1 p br {
+.roadmap .content-slide-2-1 p hr {
   margin-bottom: 2rem;
+  height: 0px;
+  margin-top: 0;
+  background-color: transparent;
 }
 .roadmap .content-slide-2-2 {
   margin-top: 2rem;

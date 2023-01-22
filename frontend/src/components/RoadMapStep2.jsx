@@ -152,7 +152,7 @@ const RoadMapStep2 = () => {
                   operators are allowed to start offering games based on
                   QPoker's rulebook or its features without our given
                   authorization to QPoker license.
-                  <br />
+                  <hr />
                   We own the same waterproof copyrights as Monopoly and Trivial
                   Pursuit possess to their games. This guarantees years lasting
                   growth momentum for $QMATIC price, as the player traffic

@@ -10,24 +10,30 @@ import FAQ from "./page/FAQ";
 import AboutUs from "./page/AboutUs";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+
+function RootBoundary() {
+  document.location.href = "/";
+  return null;
+}
 
 //TODO: PrivacyPolicy, FAQ and AboutUs route changes to {route path}-new and it must change after finilizing to previous route path and the nginx must edit also
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <RootBoundary />,
   },
   {
-    path: "privacypolicy-new",
+    path: "privacy-policy",
     element: <PrivacyPolicy />,
   },
   {
-    path: "faq-new",
+    path: "faq",
     element: <FAQ />,
   },
   {
-    path: "about-us-new",
+    path: "about-us",
     element: <AboutUs />,
   },
 ]);
