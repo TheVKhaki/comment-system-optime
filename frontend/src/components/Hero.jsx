@@ -55,8 +55,8 @@ function MyVerticallyCenteredModal(props) {
             <iframe
               width="660"
               height="400"
-              src="https://www.youtube.com/embed/pjXx_THSyZk"
-              title="A Doge Birth An Elephant Baby, Best Crypto Meme In 2023: The Definitive Guide"
+              src="https://www.youtube.com/embed/6MNHVE1vlTo"
+              title="How to play QPoker - New 2023 card game"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -298,8 +298,8 @@ const Hero = () => {
                 <iframe
                   width="660"
                   height="400"
-                  src="https://www.youtube.com/embed/pjXx_THSyZk"
-                  title="A Doge Birth An Elephant Baby, Best Crypto Meme In 2023: The Definitive Guide"
+                  src="https://www.youtube.com/embed/6MNHVE1vlTo"
+                  title="How to play QPoker - New 2023 card game"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
