@@ -3684,20 +3684,44 @@ body.modal-open {
     width: 100%;
   }
 }
+.about-us {
+  background: url(../images/AboutusDesktopView.webp) no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
 .about-us .header-about {
   text-align: center;
   padding-top: 5vh;
+  margin-bottom: 30px;
 }
 .about-us .header-about h1 {
   font-size: 34px;
 }
+.about-us .detail-about-us .img-team-member {
+  margin: 23px auto;
+  height: 300px;
+}
+.about-us .detail-about-us .img-logo-qpoker {
+  height: 130px;
+  margin: 10px auto 0 auto;
+}
 .about-us .detail-about-us .row {
   margin-top: 75px;
 }
-.about-us .detail-about-us img {
-  height: 300px;
-  margin: 0 auto;
-}
 .about-us .detail-about-us p {
-  font-size: 25px;
+  font-size: 23px;
+  text-align: center;
+}
+
+@media screen and (max-width: 575.98px) {
+  .about-us {
+    padding-bottom: 20px;
+  }
+  .about-us .detail-about-us p {
+    font-size: 19px;
+  }
+  .about-us .detail-about-us .img-team-member {
+    height: 100%;
+  }
 } /*# sourceMappingURL=app.css.map */
