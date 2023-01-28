@@ -3408,6 +3408,9 @@ body.modal-open {
   }
 }
 @media screen and (max-width: 575.98px) {
+  .footer-home footer .go-to-top {
+    bottom: 50px;
+  }
   .footer-home .comingsoon-ourpartner h3 {
     position: absolute;
     z-index: 2;
@@ -3716,9 +3719,6 @@ body.modal-open {
 }
 
 @media screen and (max-width: 575.98px) {
-  .about-us {
-    padding-bottom: 20px;
-  }
   .about-us .detail-about-us p {
     font-size: 19px;
   }

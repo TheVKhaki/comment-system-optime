@@ -18,11 +18,6 @@ const Footer = () => {
       } else {
         btnGoToTop.classList = "go-to-top opacity-0 invisible";
       }
-      if (window.scrollY > 7455) {
-        btnGoToTop.style.bottom = "66px";
-      } else {
-        btnGoToTop.style.bottom = "10px";
-      }
     });
 
     //   //change text in footer right to coming soon

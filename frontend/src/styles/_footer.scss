@@ -338,6 +338,11 @@
 
 @media screen and (max-width: 575.98px) {
   .footer-home {
+    footer {
+      .go-to-top {
+        bottom: 50px;
+      }
+    }
     .comingsoon-ourpartner {
       h3 {
         position: absolute;
