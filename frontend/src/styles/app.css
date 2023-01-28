@@ -3653,6 +3653,7 @@ body.modal-open {
   border: none;
   color: #fff;
   font-size: 19px;
+  font-weight: 600;
 }
 .faq-page .accordion .accordion-item .accordion-button:focus {
   box-shadow: none;
@@ -3704,7 +3705,7 @@ body.modal-open {
 }
 .about-us .detail-about-us .img-logo-qpoker {
   height: 130px;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 15px auto;
 }
 .about-us .detail-about-us .row {
   margin-top: 75px;

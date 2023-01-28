@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import imgAbout1 from "../images/Logo_Newcode Color-16.png";
 import teamMember from "../images/02Team.webp";
 import logoAboutQpoker from "../images/LOGO-04.png";
+import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
 export default function AboutUs() {
   useEffect(() => {
     const app = document.querySelector(".App");
@@ -47,6 +48,7 @@ export default function AboutUs() {
           </div>
         </div>
       </Container>
+      <FooterWithoutPoweredBy />
     </div>
   );
 }
