@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
 export default function FAQ() {
+  useEffect(() => {
+    const app = document.querySelector(".App");
+    app.classList.remove("fullscreen");
+  }, []);
+
   return (
     <div className="faq-page">
       <Container>
@@ -90,6 +96,7 @@ export default function FAQ() {
           </Accordion.Item>
         </Accordion>
       </Container>
+      <FooterWithoutPoweredBy />
     </div>
   );
 }

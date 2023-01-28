@@ -53,7 +53,7 @@ const FooterWithoutPoweredBy = () => {
         id="footer"
         style={{ minHeight: "auto" }}
       >
-        <footer>
+        <footer style={{ minHeight: "44vh" }}>
           <Container>
             <Row className="flex-column flex-lg-row">
               <Col>
