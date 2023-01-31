@@ -764,7 +764,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const [endCount, setEndCount] = useState(false);
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2023-02-01");
+    let endEvent = new Date("2023-02-02");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
