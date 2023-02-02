@@ -350,7 +350,7 @@
   }
 
   .coming-soon {
-    width: 400px;
+    width: 433px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -358,6 +358,7 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
+    right: 20px;
   }
 
   // .img-slide-roadmap-1 {
@@ -1041,6 +1042,7 @@
     }
 
     .coming-soon {
+      right: auto;
       margin: 54rem auto 0 auto;
     }
 

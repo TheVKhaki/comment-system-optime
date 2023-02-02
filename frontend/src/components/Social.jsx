@@ -335,7 +335,7 @@ const SocialSection = (_props) => {
               className="header-social"
             >
               <h2>Airdrop for New Year 2023</h2>
-              <p>1st January - 1st February</p>
+              <p>2st February - 2st March</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
@@ -874,7 +874,7 @@ const SocialSection = (_props) => {
                   className="team-info-1 team-info-circle"
                 >
                   <span>
-                    $90,000
+                    $120,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -883,7 +883,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    QMatic
+                    QMatic (NFT)
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -899,7 +899,7 @@ const SocialSection = (_props) => {
                   className="team-info-2 team-info-circle"
                 >
                   <span>
-                    $10,000
+                    $12,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -908,7 +908,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    USD Tether
+                    USDT + NFT
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -924,7 +924,7 @@ const SocialSection = (_props) => {
                   className="team-info-3 team-info-circle"
                 >
                   <span>
-                    $20 Instant
+                    $10 Instant
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}

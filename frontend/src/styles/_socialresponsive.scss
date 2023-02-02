@@ -50,6 +50,16 @@
       width: 420px;
       margin-top: 3rem;
       padding-right: 14px;
+      .currency-logo {
+        flex-direction: row;
+        img {
+          width: 40px;
+        }
+        span {
+          color: #fff;
+          font-size: 20px;
+        }
+      }
     }
     .box-2 {
       width: 350px;

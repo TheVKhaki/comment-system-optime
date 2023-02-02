@@ -1129,6 +1129,16 @@ body.modal-open {
   margin-top: 3rem;
   padding-right: 14px;
 }
+.social-responsive .award-airdrop .box-1 .currency-logo {
+  flex-direction: row;
+}
+.social-responsive .award-airdrop .box-1 .currency-logo img {
+  width: 40px;
+}
+.social-responsive .award-airdrop .box-1 .currency-logo span {
+  color: #fff;
+  font-size: 20px;
+}
 .social-responsive .award-airdrop .box-2 {
   width: 350px;
   margin-top: 3rem;
@@ -1620,7 +1630,7 @@ body.modal-open {
   left: 2px;
 }
 .roadmap .coming-soon {
-  width: 400px;
+  width: 433px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1628,6 +1638,7 @@ body.modal-open {
   flex-direction: column;
   position: relative;
   z-index: 2;
+  right: 20px;
 }
 .roadmap .countdown {
   display: flex;
@@ -2184,6 +2195,7 @@ body.modal-open {
     transform: translate(-30%, 15%);
   }
   .roadmap .coming-soon {
+    right: auto;
     margin: 54rem auto 0 auto;
   }
   .roadmap.roadmap-step4 {

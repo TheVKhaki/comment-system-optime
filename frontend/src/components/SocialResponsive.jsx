@@ -4,8 +4,8 @@ import { IconContext } from "react-icons";
 import { FaTwitter } from "react-icons/fa";
 import { gsap } from "gsap";
 import "@dotlottie/player-component";
-import lottie10 from "../lottie/10.2.lottie";
-import lottie90 from "../lottie/90.000.lottie";
+import lottie12 from "../lottie/12000.lottie";
+import lottie120 from "../lottie/120000.lottie";
 import USDT from "../images/USDT icon.svg";
 import QMatic from "../images/QP_Logo-23.svg";
 import telegramIcon from "../images/telegram-app.png";
@@ -136,19 +136,20 @@ const SocialResponsive = (_props) => {
       <section className="social-responsive" id="campaigns">
         <div className="header-social">
           <h5>QPoker Airdrop</h5>
-          <p>01.01.2023 - 01.02.2023</p>
+          <p>02.02.2023 - 02.03.2023</p>
         </div>
         <div className="award-airdrop">
           <div className="box box-1">
             <dotlottie-player
-              src={lottie10}
+              src={lottie12}
               autoplay
               loop
               style={{ height: "100%", width: "100%" }}
             />
-            <div className="currency-logo">
+            <div className="currency-logo d-flex">
               <img src={USDT} alt="" />
-              <p>USD Tether</p>
+              <span>+</span>
+              <img src={QMatic} alt="" />
             </div>
           </div>
           <div className="sub-box sub-box-1">
@@ -156,7 +157,7 @@ const SocialResponsive = (_props) => {
           </div>
           <div className="box box-2">
             <dotlottie-player
-              src={lottie90}
+              src={lottie120}
               autoplay
               loop
               style={{ height: "100%", width: "100%" }}
@@ -167,10 +168,10 @@ const SocialResponsive = (_props) => {
             </div>
           </div>
           <div className="sub-box sub-box-2">
-            <p>900 Winners</p>
+            <p>1800 Winners</p>
           </div>
           <div className="box box-3">
-            <span>$20 Instant + QPoker Early Access</span>
+            <span>$10 Instant + QPoker Early Access</span>
           </div>
           <div className="sub-box sub-box-3">
             <p>All Participants</p>
