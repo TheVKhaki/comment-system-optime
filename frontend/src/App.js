@@ -8,6 +8,7 @@ import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
 import FAQ from "./page/FAQ";
 import AboutUs from "./page/AboutUs";
+import PrivateSale from "./page/PrivateSale";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components
 import { useEffect } from "react";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "about-us",
     element: <AboutUs />,
+  },
+  {
+    path: "private-sale",
+    element: <PrivateSale />,
   },
 ]);
 function App() {
