@@ -466,13 +466,12 @@ function MyVerticallyCenteredModal(props) {
         </div>
         <div className="content-text">
           <p>
-            We are happy to announce that our Airdrop has been published on 2st
-            of February 2023. We are running three campaigns with glorious
-            rewards:
+            We are happy to announce that our Airdrop has been launched on 2nd
+            of February 2023.
           </p>
           <ul>
             <li>- $12,000 USDT + NFT</li>
-            <li>- $120,000 QMatic Lottery</li>
+            <li>- $120,000 NFT Lottery</li>
             <li>- 200-400 $QMATIC</li>
             <li>- Early Access to QPoker</li>
           </ul>
@@ -665,7 +664,7 @@ function MyVerticallyCenteredModal(props) {
             <h3>Telegram Bot</h3>
             <p>
               1️⃣ Join in our Airdrop channel <br />
-              <a href="https://t.me/qpoker_giveaways_bot">
+              <a href="https://t.me/qpoker_giveaways_bot" target="_blank">
                 https://t.me/qpoker_giveaways_bot
               </a>
             </p>
@@ -688,8 +687,8 @@ function MyVerticallyCenteredModal(props) {
           <div className="box-youtube box-roadmap" ref={boxModal5}>
             <h3>Refer-a-Friend</h3>
             <p>
-              Invite your friends to join our Airdrop and earn extra rewards:
-              💰 $120,000 QMatic(NFT) and $12,000 USDT + NFT campaigns
+              Invite your friends to join our Airdrop and earn extra rewards: 💰
+              $120,000 NFT Lottery and 12,000 USDT + NFT Leaderboard
             </p>
           </div>
           <div className="box-roadmap-2">
@@ -866,7 +865,7 @@ const RoadMapStep4 = () => {
             <motion.div className="coming-soon-text">
               <motion.p>400 $QMATIC + Early Access</motion.p>
               <motion.p>$12,000 (USDT + NFT) for 100 Winners</motion.p>
-              <motion.p>$120,000 NFT Lottery for 1800 Winners</motion.p>
+              <motion.p>$120,000 NFT Lottery for 2100 Winners</motion.p>
 
               <a
                 className="btn-coming-soon btn-main"
