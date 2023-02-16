@@ -334,8 +334,8 @@ const SocialSection = (_props) => {
               animate={controls}
               className="header-social"
             >
-              <h2>Airdrop for New Year 2023</h2>
-              <p>2st February - 2st March</p>
+              <h2>Airdrop for February 2023</h2>
+              <p>2nd February - 2nd March</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
@@ -883,7 +883,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    QMatic (NFT)
+                    QPoker NFT
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
