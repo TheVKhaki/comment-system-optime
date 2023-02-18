@@ -8,6 +8,7 @@ import lottie12 from "../lottie/12000.lottie";
 import lottie120 from "../lottie/120000.lottie";
 import USDT from "../images/USDT icon.svg";
 import QMatic from "../images/QP_Logo-23.svg";
+import gifNFT from "../images/NFT.gif";
 import telegramIcon from "../images/telegram-app.png";
 import youtubeIcon from "../images/youtube.png";
 import airdropIcon from "../images/airdropicon.svg";
@@ -163,8 +164,7 @@ const SocialResponsive = (_props) => {
               style={{ height: "100%", width: "100%" }}
             />
             <div className="currency-logo">
-              <img src={QMatic} alt="" />
-              <p>QMatic</p>
+              <img src={gifNFT} alt="" />
             </div>
           </div>
           <div className="sub-box sub-box-2">

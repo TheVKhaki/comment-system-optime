@@ -1111,6 +1111,9 @@ body.modal-open {
   margin-top: 3rem;
   padding-right: 14px;
 }
+.social-responsive .award-airdrop .box-2 .currency-logo img {
+  width: 90px;
+}
 .social-responsive .award-airdrop .box-3 {
   width: 420px;
   border-radius: 10px;
@@ -1237,6 +1240,9 @@ body.modal-open {
   }
   .social-responsive .award-airdrop .box-2 {
     width: 300px;
+  }
+  .social-responsive .award-airdrop .box-2 .currency-logo img {
+    width: 80px;
   }
   .social-responsive .award-airdrop .box-3 {
     width: 330px;
