@@ -168,7 +168,7 @@ const SocialResponsive = (_props) => {
             </div>
           </div>
           <div className="sub-box sub-box-2">
-            <p>1800 Winners</p>
+            <p>2100 Winners</p>
           </div>
           <div className="box box-3">
             <span>$10 Instant + QPoker Early Access</span>
