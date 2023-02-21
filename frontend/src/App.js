@@ -9,7 +9,12 @@ import PrivacyPolicy from "./page/PrivacyPolicy";
 import FAQ from "./page/FAQ";
 import AboutUs from "./page/AboutUs";
 import PrivateSale from "./page/PrivateSale";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 //Components
 import { useEffect } from "react";
 
@@ -19,29 +24,19 @@ function RootBoundary() {
 }
 
 //TODO: PrivacyPolicy, FAQ and AboutUs route changes to {route path}-new and it must change after finilizing to previous route path and the nginx must edit also
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: <RootBoundary />,
-  },
-  {
-    path: "privacy-policy",
-    element: <PrivacyPolicy />,
-  },
-  {
-    path: "faq",
-    element: <FAQ />,
-  },
-  {
-    path: "about-us",
-    element: <AboutUs />,
-  },
-  {
-    path: "private-sale",
-    element: <PrivateSale />,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Home />} errorElement={<RootBoundary />} />
+      <Route path="privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="faq" element={<FAQ />} />
+      <Route path="about-us" element={<AboutUs />} />
+      {process.env.REACT_APP_ENV !== "production" && (
+        <Route path="private-sale" element={<PrivateSale />} />
+      )}
+    </>
+  )
+);
 function App() {
   //animation btn-main
   useEffect(() => {
