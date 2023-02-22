@@ -1,4 +1,4 @@
-header {
+.header-main {
   min-height: 11vh;
   display: flex;
   justify-content: center;
@@ -187,7 +187,7 @@ body.modal-open {
 
 //responsive
 @media screen and (max-width: 1199.98px) {
-  header {
+  .header-main {
     .navbar {
       .navbar-nav {
         .nav-link {
@@ -203,7 +203,7 @@ body.modal-open {
       opacity: 1;
     }
   }
-  header {
+  .header-main {
     position: fixed;
     &::before {
       position: absolute;
@@ -243,7 +243,7 @@ body.modal-open {
   }
 }
 @media screen and (max-width: 575.98px) {
-  header {
+  .header-main {
     .navbar {
       .navbar-brand {
         .logo {
@@ -262,7 +262,7 @@ body.modal-open {
   }
 }
 @media screen and (min-width: 992px) {
-  header {
+  .header-main {
     .navbar {
       .navbar-brand {
         display: none;

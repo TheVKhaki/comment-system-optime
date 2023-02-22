@@ -23,7 +23,6 @@ function RootBoundary() {
   return null;
 }
 
-//TODO: PrivacyPolicy, FAQ and AboutUs route changes to {route path}-new and it must change after finilizing to previous route path and the nginx must edit also
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
