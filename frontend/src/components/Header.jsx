@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
   //go to top
   useEffect(() => {
-    const headerMobile = document.querySelector("header");
+    const headerMobile = document.querySelector(".header-main");
     window.addEventListener("scroll", function (e) {
       if (window.scrollY > 100) {
         headerMobile.classList.add("header-mobile");
@@ -58,7 +58,7 @@ const Header = () => {
   };
   return (
     <>
-      <header ref={header}>
+      <header ref={header} className="header-main">
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand href="#">

@@ -30,7 +30,7 @@ const Home = () => {
     BASE: process.env.REACT_APP_OWL_URL,
   });
   useEffect(() => {
-    const header = document.querySelector("header");
+    const header = document.querySelector(".header-main");
     if (height700 && height600 && width992) {
       if (finalSpinVAlue >= 1) {
         header.classList.remove("d-flex");
