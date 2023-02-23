@@ -1,9 +1,16 @@
 //react
-import { useEffect } from "react";
-import { Col, Container, Dropdown, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Col, Container, Dropdown, Offcanvas, Row } from "react-bootstrap";
 //media
 import logoImage from "../images/LOW_Logo-New-Color-C.png";
 import privateSale from "../images/PrivateSale.webp";
+import informationToken from "../images/Info.webp";
+import airdropIcon from "../images/airdropicon.svg";
+//icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { IconContext } from "react-icons";
+import { FaTelegramPlane, FaTwitter, FaYoutube } from "react-icons/fa";
 // function ModalBuyPackage(props) {
 //   return (
 //     <Modal
@@ -36,10 +43,15 @@ import privateSale from "../images/PrivateSale.webp";
 // }
 
 const PrivateSale = () => {
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     const app = document.querySelector(".App");
     app.classList.remove("fullscreen");
   }, []);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -60,6 +72,34 @@ const PrivateSale = () => {
               </ul>
             </nav>
             <button className="btn-connect-wallet">Connect Your Wallet</button>
+            <div className="toggle-menu-mobile">
+              <FontAwesomeIcon
+                icon={faBars}
+                color="#fff"
+                onClick={handleShow}
+                size={"3x"}
+              />
+            </div>
+
+            <Offcanvas
+              placement="end"
+              show={show}
+              onHide={handleClose}
+              className="private-sale-menu-mobile"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title></Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <ul>
+                  <li>Airdrop Panel</li>
+                  <li>QPoker.io</li>
+                  <li>Private sale</li>
+                  <li>Tokenomics</li>
+                  <li>Whitepaper</li>
+                </ul>
+              </Offcanvas.Body>
+            </Offcanvas>
           </div>
         </Container>
       </header>
@@ -89,75 +129,79 @@ const PrivateSale = () => {
             </div>
           </div>
         </div>
-        <div className="buy-token">
-          <div className="wrapper-card">
-            <div className="header-card">
-              <img src={logoImage} alt="" />
-              <h1>Buy QMatic</h1>
-            </div>
-            <div className="amount-price">
-              <Dropdown>
-                <Dropdown.Toggle
-                  id="dropdown-currency"
-                  className="dropdown-currency"
-                >
-                  USDT
-                </Dropdown.Toggle>
+        <Container>
+          <div className="buy-token">
+            <div className="wrapper-card">
+              <div className="header-card">
+                <img src={logoImage} alt="" />
+                <h1>Buy QMatic</h1>
+              </div>
+              <div className="amount-price">
+                <Dropdown>
+                  <Dropdown.Toggle
+                    id="dropdown-currency"
+                    className="dropdown-currency"
+                  >
+                    USDT
+                  </Dropdown.Toggle>
 
-                <Dropdown.Menu variant="dark">
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-              <div className="wrapper-input-amount">
-                <div className="top-input-amount">
-                  <span>Amount</span>
-                  <span>Balance:0</span>
+                  <Dropdown.Menu variant="dark">
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      Another action
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Something else
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <div className="wrapper-input-amount">
+                  <div className="top-input-amount">
+                    <span>Amount</span>
+                    <span>Balance:0</span>
+                  </div>
+                  <input type="text" placeholder="0" />
+                  <div className="bot-input-amount">
+                    <ul>
+                      <li>25%</li>
+                      <li>50%</li>
+                      <li>75%</li>
+                      <li>MAX</li>
+                    </ul>
+                  </div>
                 </div>
-                <input type="text" placeholder="0" />
-                <div className="bot-input-amount">
-                  <ul>
-                    <li>25%</li>
-                    <li>50%</li>
-                    <li>75%</li>
-                    <li>MAX</li>
-                  </ul>
+              </div>
+              <div className="information-amount-price">
+                <div className="info-price">
+                  <span>Est.QMatic</span>
+                  <p>0</p>
+                </div>
+                <div className="info-price">
+                  <span>Price</span>
+                  <p>0.006757 USDT per QMATIC</p>
                 </div>
               </div>
+              <button className="btn-connect-wallet">
+                Connect Your Wallet
+              </button>
             </div>
-            <div className="information-amount-price">
-              <div className="info-price">
-                <span>Est.QMatic</span>
-                <p>0</p>
+          </div>
+          <div className="private-sale-progress-bar">
+            <div className="top-progress">
+              <div>
+                <span>Total sale: </span>
+                <p>$120,000</p>
               </div>
-              <div className="info-price">
-                <span>Price</span>
-                <p>0.006757 USDT per QMATIC</p>
+              <div>
+                <span>Target: </span>
+                <p>$500,000</p>
               </div>
             </div>
-            <button className="btn-connect-wallet">Connect Your Wallet</button>
-          </div>
-        </div>
-        <div className="private-sale-progress-bar">
-          <div className="top-progress">
-            <div>
-              <span>Total sale: </span>
-              <p>$120,000</p>
-            </div>
-            <div>
-              <span>Target: </span>
-              <p>$500,000</p>
+            <div className="progress-bar-price">
+              <div className="fill-progress-bar"></div>
             </div>
           </div>
-          <div className="progress-bar-price">
-            <div className="fill-progress-bar"></div>
-          </div>
-        </div>
+        </Container>
         <Container>
           <div className="private-sale-details">
             <Row>
@@ -202,7 +246,60 @@ const PrivateSale = () => {
             </div>
           </div>
         </Container>
+        <div className="information-token">
+          <Container>
+            <div className="wrapper-information-token">
+              <Row className="w-100">
+                <Col xs={6} md={3} className="information-token-item">
+                  <p>Token Name</p>
+                  <h1>QMatic</h1>
+                </Col>
+                <Col xs={6} md={3} className="information-token-item">
+                  <p>Token Symbol</p>
+                  <h1>$QMatic</h1>
+                </Col>
+                <Col xs={6} md={3} className="information-token-item">
+                  <p>Standard</p>
+                  <h1>ERC-20 (Polygon)</h1>
+                </Col>
+                <Col xs={6} md={3} className="information-token-item">
+                  <p>Max Supply</p>
+                  <h1>4,600,000,000</h1>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </div>
+        <div className="information-token-img">
+          <img src={informationToken} alt="" />
+        </div>
       </main>
+      <footer className="footer-private-sale">
+        <div className="social-media">
+          <ul>
+            <li>
+              <img src={airdropIcon} alt="" />
+            </li>
+            <li>
+              <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                <FaTelegramPlane />
+              </IconContext.Provider>
+            </li>
+            <li>
+              <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                <FaYoutube />
+              </IconContext.Provider>
+            </li>
+            <li>
+              <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+                <FaTwitter />
+              </IconContext.Provider>
+            </li>
+          </ul>
+        </div>
+        <p>Find us an Social media</p>
+        <h2>QPoker.io</h2>
+      </footer>
     </>
   );
 };
