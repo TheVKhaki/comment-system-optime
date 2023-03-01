@@ -735,6 +735,28 @@ export default function PrivacyPolicy() {
           your personal information, and how you can set your privacy
           preferences on their sites and apps.
         </p>
+
+        <p>
+          We use Twitter to engage with our audience and share updates about our
+          products/services. By using Twitter, you agree to their privacy policy
+          and terms of service. Please refer to Twitter's privacy policy to
+          understand how they collect, use, and share your information.
+        </p>
+        <p>
+          We may collect information from your Twitter account if you interact
+          with us through this platform. This information may include your name,
+          profile picture, and any public information you have shared on your
+          account. We will only use this information to respond to your
+          inquiries and provide customer support.
+        </p>
+        <p>
+          Please note that if our bot, or our technical group detects any
+          referrals with fake or inactive Twitter accounts, Telegram account or
+          YouTube accounts, we reserve the right to suspend your account and
+          delete all your QPoints. We are committed to being honest and
+          transparent with our participants about referring real users and
+          maintaining the integrity of our platform.
+        </p>
         <h2 id="inforetain">7. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
         <p>
           <strong>
