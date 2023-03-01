@@ -467,12 +467,12 @@ function MyVerticallyCenteredModal(props) {
         <div className="content-text">
           <p>
             We are happy to announce that our Airdrop has been launched on 2nd
-            of February 2023.
+            of March 2023.
           </p>
           <ul>
-            <li>- $12,000 USDT + NFT</li>
-            <li>- $120,000 NFT Lottery</li>
-            <li>- 200-400 $QMATIC</li>
+            <li>- $10,000 USDT + NFT</li>
+            <li>- $40,000 NFT Lottery</li>
+            <li>- $10 QPoker NFT</li>
             <li>- Early Access to QPoker</li>
           </ul>
           <p>Join the Airdrop by following the steps</p>
@@ -681,14 +681,14 @@ function MyVerticallyCenteredModal(props) {
             <h3>Youtube</h3>
             <p>
               4️⃣ Subscribe our Youtube channel <br />
-              <span>🎉 Congratulations, you have earned 200 $QMATIC ($5)</span>
+              <span>🎉 Congratulations, you have earned $10 NFT instantly</span>
             </p>
           </div>
           <div className="box-youtube box-roadmap" ref={boxModal5}>
             <h3>Refer-a-Friend</h3>
             <p>
               Invite your friends to join our Airdrop and earn extra rewards: 💰
-              $120,000 NFT Lottery and 12,000 USDT + NFT Leaderboard
+              $40,000 NFT Lottery and $10,000 USDT + NFT Leaderboard
             </p>
           </div>
           <div className="box-roadmap-2">
@@ -763,7 +763,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const [endCount, setEndCount] = useState(false);
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2023-03-02");
+    let endEvent = new Date("2023-04-02");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
@@ -841,7 +841,7 @@ const RoadMapStep4 = () => {
               <h2>
                 <span style={{ color: "#e28001" }}>Q</span>Poker Airdrop
               </h2>
-              <p>02.02.2023 - 02.03.2023</p>
+              <p>02.03.2023 - 02.04.2023</p>
             </motion.div>
             {!endCount && (
               <motion.div className="countdown">
@@ -863,9 +863,9 @@ const RoadMapStep4 = () => {
             )}
 
             <motion.div className="coming-soon-text">
-              <motion.p>400 $QMATIC + Early Access</motion.p>
-              <motion.p>$12,000 (USDT + NFT) for 100 Winners</motion.p>
-              <motion.p>$120,000 NFT Lottery for 2100 Winners</motion.p>
+              <motion.p>$10 NFT + Early Access</motion.p>
+              <motion.p>$10,000 (USDT + NFT) for 100 Winners</motion.p>
+              <motion.p>$40,000 NFT Lottery for 700 Winners</motion.p>
 
               <a
                 className="btn-coming-soon btn-main"

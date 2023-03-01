@@ -60,6 +60,14 @@ const Footer = () => {
                     Welcome to our vibrant community. Take part in the chat and
                     be among the first to hear about QPoker's expansion.
                   </p>
+
+                  <a
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                    href="mailto:info@qpoker.io"
+                  >
+                    <p>Contact Us: Info@QPoker.io</p>
+                  </a>
+
                   {/* <input type="text" placeholder="Email Address" /> */}
                   <a
                     href="https://t.me/qpokergroup"

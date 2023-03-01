@@ -4,8 +4,8 @@ import { IconContext } from "react-icons";
 import { FaTwitter } from "react-icons/fa";
 import { gsap } from "gsap";
 import "@dotlottie/player-component";
-import lottie12 from "../lottie/12000.lottie";
-import lottie120 from "../lottie/120000.lottie";
+import lottie12 from "../lottie/3RD_A10.lottie";
+import lottie120 from "../lottie/3RD_A40.lottie";
 import USDT from "../images/USDT icon.svg";
 import QMatic from "../images/QP_Logo-23.svg";
 import gifNFT from "../images/NFT.gif";
@@ -137,7 +137,7 @@ const SocialResponsive = (_props) => {
       <section className="social-responsive" id="campaigns">
         <div className="header-social">
           <h5>QPoker Airdrop</h5>
-          <p>02.02.2023 - 02.03.2023</p>
+          <p>02.03.2023 - 02.04.2023</p>
         </div>
         <div className="award-airdrop">
           <div className="box box-1">
@@ -168,7 +168,7 @@ const SocialResponsive = (_props) => {
             </div>
           </div>
           <div className="sub-box sub-box-2">
-            <p>2100 Winners</p>
+            <p>700 Winners</p>
           </div>
           <div className="box box-3">
             <span>$10 Instant + QPoker Early Access</span>
