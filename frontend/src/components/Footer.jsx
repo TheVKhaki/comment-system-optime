@@ -65,7 +65,7 @@ const Footer = () => {
                     style={{ color: "rgba(255, 255, 255, 0.8)" }}
                     href="mailto:support@qpoker.io"
                   >
-                    <p>Contact Us: Support@qpoker.io</p>
+                    <p>Contact us: support@qpoker.io</p>
                   </a>
 
                   {/* <input type="text" placeholder="Email Address" /> */}
