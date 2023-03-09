@@ -334,8 +334,8 @@ const SocialSection = (_props) => {
               animate={controls}
               className="header-social"
             >
-              <h2>Airdrop for February 2023</h2>
-              <p>2nd February - 2nd March</p>
+              <h2>Airdrop for March 2023</h2>
+              <p>2nd March - 2nd April</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
@@ -874,7 +874,7 @@ const SocialSection = (_props) => {
                   className="team-info-1 team-info-circle"
                 >
                   <span>
-                    $120,000
+                    $40,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -899,7 +899,7 @@ const SocialSection = (_props) => {
                   className="team-info-2 team-info-circle"
                 >
                   <span>
-                    $12,000
+                    $10,000
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
