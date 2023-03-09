@@ -65,7 +65,7 @@ const FooterWithoutPoweredBy = () => {
                     rel="noreferrer"
                     className="btn-main"
                   >
-                    Join our Telegram
+                    Join our Community
                     <span aria-hidden="true"></span>
                   </a>
                 </div>

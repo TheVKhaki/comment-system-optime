@@ -63,9 +63,9 @@ const Footer = () => {
 
                   <a
                     style={{ color: "rgba(255, 255, 255, 0.8)" }}
-                    href="mailto:info@qpoker.io"
+                    href="mailto:support@qpoker.io"
                   >
-                    <p>Contact Us: Info@QPoker.io</p>
+                    <p>Contact Us: Support@qpoker.io</p>
                   </a>
 
                   {/* <input type="text" placeholder="Email Address" /> */}
@@ -75,7 +75,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className="btn-main"
                   >
-                    Join our Telegram
+                    Join our Community
                     <span aria-hidden="true"></span>
                   </a>
                 </div>
