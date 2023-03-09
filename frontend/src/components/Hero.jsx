@@ -269,15 +269,16 @@ const Hero = () => {
                 </h2>
                 <p>
                   Early 2000s Texas Hold’em boom was huge, QPoker will be
-                  bigger. Brand new crypto card game rocking the planet. <br />
-                  Smart Contract:{" "}
-                  <a
-                    className="link-hover"
-                    target="_blank"
-                    href="https://polygonscan.com/token/0xa9a2a92970c2430b88df6cabb01dc40be6ab710e"
-                  >
-                    0xa9....710a
-                  </a>
+                  bigger. Brand new crypto card game rocking the planet.
+                  <p>
+                    Smart Contract:{" "}
+                    <a
+                      target="_blank"
+                      href="https://polygonscan.com/token/0xa9a2a92970c2430b88df6cabb01dc40be6ab710e"
+                    >
+                      0xa9....710a
+                    </a>
+                  </p>
                 </p>
               </TextHero>
               <Btnn>
