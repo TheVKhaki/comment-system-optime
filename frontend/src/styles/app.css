@@ -541,6 +541,10 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.6px;
 }
+.hero .hero-text p a {
+  color: #3699ff;
+  text-decoration: underline;
+}
 .hero .btns-hero {
   display: flex;
   margin-top: 3rem;
