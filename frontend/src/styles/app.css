@@ -619,6 +619,9 @@ body.modal-open {
   }
 }
 @media screen and (min-width: 992px) {
+  .hero .hero-text p p {
+    text-align: left !important;
+  }
   .bullet-section {
     position: fixed;
     right: 30px;

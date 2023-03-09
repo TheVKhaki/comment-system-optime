@@ -269,7 +269,8 @@ const Hero = () => {
                 </h2>
                 <p>
                   Early 2000s Texas Hold’em boom was huge, QPoker will be
-                  bigger. Brand new crypto card game rocking the planet.
+                  bigger. Futuristic 9-player card game run on a P2P
+                  decentralized platform.
                   <p>
                     Smart Contract:{" "}
                     <a
