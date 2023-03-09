@@ -272,6 +272,7 @@ const Hero = () => {
                   bigger. Brand new crypto card game rocking the planet. <br />
                   Smart Contract:{" "}
                   <a
+                    className="link-hover"
                     target="_blank"
                     href="https://polygonscan.com/token/0xa9a2a92970c2430b88df6cabb01dc40be6ab710e"
                   >
