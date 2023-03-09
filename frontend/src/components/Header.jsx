@@ -71,7 +71,7 @@ const Header = () => {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#campaigns">Campaigns</Nav.Link>
               <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
-              <Nav.Link className="logo ">
+              <Nav.Link className="logo " href="#home">
                 <motion.img
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
