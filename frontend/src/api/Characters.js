@@ -39,7 +39,7 @@ const Characters = () => {
         "A blockchain virtuoso, Sam, has 12 years of experience managing complex projects, using both local and offshore development teams. He is an expert in developing products in diverse fields such as finance, health technology, gaming and security platforms. Sam has been leading CTO and R&D operations on several tech start-ups over the years.",
       email: "mailto:Sam@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 2,
@@ -58,7 +58,7 @@ const Characters = () => {
         "Marvin is a gifted artist and motion graphics designer. Well-deserved reputation is built on team leading skills with diverse animation productions, both in commercials and short films. He is known for unique expression style and can adapt fluently to any target audience. Marvin has more than ten years of experience cooperating with various advertising companies and medias. Visual effects and CGI animations behind our provoking meme teaser video are completely his handprint.",
       email: "mailto:Marvin@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 3,
@@ -76,8 +76,8 @@ const Characters = () => {
       description:
         "Hans is a visionaire with persistent entrepreneurial spirit. In 2011 he started his iGaming career with sports betting related affiliate marketing. Due to the burdensome gambling regulation, he ended up setting his company in Malta, which used to have Europe’s friendliest iGaming legislation at the time. Throughout the decade, Hans gained comperehensive expertise on iGaming industry, and eventually performed as a marketing strategist and director of product development in one of Malta’s leading iGaming operators.",
       email: "mailto:Hans@qpoker.io",
-      telegram: "https://T.me/Hans_QPoker",
-      discord: "",
+      telegram: "https://t.me/Hans_QPoker",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 4,
@@ -95,8 +95,8 @@ const Characters = () => {
       description:
         "Michael is an experienced IT entrepreneur and blockchain geek. He has extensive experience in software development, team management and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive towards excellence makes him a crucial player of our team. He is the one who’s never afraid of bringing up critical views on the table.",
       email: "mailto:Michael@qpoker.io",
-      telegram: "https://t.me/Michael_CPO",
-      discord: "",
+      telegram: "https://t.me/Michael_QPoker",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 5,
@@ -114,8 +114,8 @@ const Characters = () => {
       description:
         "Johnnie is a professional data analyst and blockchain enthusiast. He has all-around understanding over systems security and multi-model databases. In recent years, Johnnie has been working as a senior analyst of data management in major finance and e-commerce businesses.",
       email: "mailto:Johnnie@qpoker.io",
-      telegram: "",
-      discord: "",
+      telegram: "https://t.me/Johnnie_QPoker",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 6,
@@ -134,7 +134,7 @@ const Characters = () => {
         "Vanessa is a social media and digital strategist with agency and in-house background including over 9 years of digital and traditional PR and event marketing experience. Her expertise includes digital strategy, branded channel development, community management, integrated campaigns, social media relations, SEO, website management and online retail.",
       email: "mailto:Vanessa@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 7,
@@ -153,7 +153,7 @@ const Characters = () => {
         "Arne is a venture capitalist and iGaming veteran. He launched one of the first online poker rooms on iPoker Network back in the early 2000s. He sold his share of the business in 2006 and subsequently has been financing several ambitious iGaming start-ups.",
       email: "mailto:arne@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
 
     {
@@ -173,7 +173,7 @@ const Characters = () => {
         "Peter is an experienced IT entrepreneur and security expert. He has extensive experience in the field of software development, team leading and business management. In the iGaming field, Peter made a long career in management positions in Betsson, which is the largest multi-national gambling company in Europe, employing over 1,800 people from 55 nationalities.",
       email: "mailto:Peter@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 9,
@@ -192,7 +192,7 @@ const Characters = () => {
         "Eyvind has been a multifaceted designer from the high school years. He’s been working together with several crypto start-ups, creating fresh and engaging DApps. He believes that a felicitous design engages you with a good spirit. He fiercely emphasizes QPoker’s vision, to build a first-class user experience no other iGaming platform has ever reached out. Eyvind is one of the early members of our team and has been participating in QPoker’s brand designing from the very beginning.",
       email: "mailto:Eyvind@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
     {
       id: 10,
@@ -211,7 +211,7 @@ const Characters = () => {
         "Ashley is an eccentric creative genius. Her anarchist soul’s flow of life comes from breaking status quo. She doesn’t make compromises on her artistic visions. To put it briefly, it is her way or the highway. Most likely if you gonna find NSFW content from our marketing approaches, she’s the one to be blamed. As a sample, QPoker’s brutal meme teaser script is entirely written by Her Highness.",
       email: "mailto:Ashley@qpoker.io",
       telegram: "",
-      discord: "",
+      discord: "https://discord.gg/xZMRbGVZys",
     },
   ];
 };
