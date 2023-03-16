@@ -108,13 +108,19 @@ const Header = () => {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#hero">Home</Nav.Link>
-                  <Nav.Link href="#campaigns">Campaigns</Nav.Link>
-                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
                   <Nav.Link href="/whitepaper" target="_blank">
                     Whitepaper
                   </Nav.Link>
+                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
                   <Nav.Link href="#airdrop">Airdrop</Nav.Link>
                   <Nav.Link href="#our-team">Team</Nav.Link>
+                  <Nav.Link
+                    href="https://github.com/QPoker/QMatic"
+                    target="_blank"
+                  >
+                    $QMatic
+                  </Nav.Link>
+
                   {/* <div className="btn-header">
                     <a href="#">Connect To Wallet</a>
                   </div> */}
