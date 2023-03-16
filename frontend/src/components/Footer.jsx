@@ -73,7 +73,7 @@ const Footer = () => {
                         marginBottom: "0px",
                       }}
                     >
-                      Business inquiries: business@qpoker.io
+                      Business Inquiries: business@qpoker.io
                     </p>
                   </a>
                   <a
@@ -88,7 +88,7 @@ const Footer = () => {
                         marginTop: "0px",
                       }}
                     >
-                      Customer service: support@qpoker.io
+                      Customer Service: support@qpoker.io
                     </p>
                   </a>
 
