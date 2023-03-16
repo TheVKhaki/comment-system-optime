@@ -69,7 +69,7 @@ const Header = () => {
             </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 align-items-center">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#campaigns">Campaigns</Nav.Link>
+              <Nav.Link href="/whitepaper">Whitepaper</Nav.Link>
               <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
               <Nav.Link className="logo " href="#home">
                 <motion.img
@@ -80,11 +80,11 @@ const Header = () => {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="/whitepaper" target="_blank">
-                Whitepaper
-              </Nav.Link>
               <Nav.Link href="#airdrops">Airdrop</Nav.Link>
               <Nav.Link href="#our-teamm">Team</Nav.Link>
+              <Nav.Link href="https://github.com/QPoker/QMatic" target="_blank">
+                $QMatic
+              </Nav.Link>
             </Nav>
             {/* <div className="btn-header">
               <a href="#">Connect To Wallet</a>

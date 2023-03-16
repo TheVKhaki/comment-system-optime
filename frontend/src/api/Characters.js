@@ -89,13 +89,13 @@ const Characters = () => {
       model3d: model3dMichael,
       position: [0, -4, 0],
       env: "venice_sunset_1k_4.hdr",
-      name: "Michael",
+      name: "Michael P.",
       job: " & Co-Founder",
       abbrPosition: "CPO",
       description:
         "Michael is an experienced IT entrepreneur and blockchain geek. He has extensive experience in software development, team management and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive towards excellence makes him a crucial player of our team. He is the one who’s never afraid of bringing up critical views on the table.",
       email: "mailto:Michael@qpoker.io",
-      telegram: "https://t.me/Michael_QPoker",
+      telegram: "https://t.me/Michael_CPO",
       discord: "https://discord.gg/xZMRbGVZys",
     },
     {
