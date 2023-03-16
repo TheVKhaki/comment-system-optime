@@ -41,7 +41,7 @@ export default function AboutUs() {
             <p className="mt-5">
               Thanks to our godfather, QPoker got an efficient seed funding.
               With this money we managed to expand our team and eventually
-              developing the alpha version of QPoker’s P2P decentralized
+              developing the alpha version of the QPoker’s P2P decentralized
               software.
             </p>
             <img className="img-logo-qpoker" src={logoAboutQpoker} alt="" />

@@ -69,7 +69,9 @@ const Header = () => {
             </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 align-items-center">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="/whitepaper">Whitepaper</Nav.Link>
+              <Nav.Link href="/whitepaper" target="_blank">
+                Whitepaper
+              </Nav.Link>
               <Nav.Link href="#roadmapp">Roadmap</Nav.Link>
               <Nav.Link className="logo " href="#home">
                 <motion.img
