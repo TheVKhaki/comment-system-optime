@@ -62,10 +62,34 @@ const Footer = () => {
                   </p>
 
                   <a
-                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      marginBottom: "0px",
+                    }}
+                    href="mailto:business@qpoker.io"
+                  >
+                    <p
+                      style={{
+                        marginBottom: "0px",
+                      }}
+                    >
+                      Business inquiries: business@qpoker.io
+                    </p>
+                  </a>
+                  <a
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      marginTop: "0px",
+                    }}
                     href="mailto:support@qpoker.io"
                   >
-                    <p>Contact us: support@qpoker.io</p>
+                    <p
+                      style={{
+                        marginTop: "0px",
+                      }}
+                    >
+                      Customer service: support@qpoker.io
+                    </p>
                   </a>
 
                   {/* <input type="text" placeholder="Email Address" /> */}
