@@ -95,7 +95,7 @@ const Characters = () => {
       description:
         "Michael is an experienced IT entrepreneur and blockchain geek. He has extensive experience in software development, team management and business management. As an excellent strategist, Michael’s wide-ranging expertise and a strong drive towards excellence makes him a crucial player of our team. He is the one who’s never afraid of bringing up critical views on the table.",
       email: "mailto:Michael@qpoker.io",
-      telegram: "https://t.me/Michael_CPO",
+      telegram: "https://t.me/MP_QPoker",
       discord: "https://discord.gg/xZMRbGVZys",
     },
     {
