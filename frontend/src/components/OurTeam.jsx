@@ -316,7 +316,7 @@ const OurTeam = () => {
                                   <HiOutlineMail />
                                 </a>
                               </IconContext.Provider>
-                              <IconContext.Provider
+                              {/* <IconContext.Provider
                                 value={{
                                   color: "white",
                                   size: "2.4rem",
@@ -334,7 +334,7 @@ const OurTeam = () => {
                                 >
                                   <FaDiscord />
                                 </a>
-                              </IconContext.Provider>
+                              </IconContext.Provider> */}
                             </div>
                           </div>
                         </div>
@@ -467,7 +467,7 @@ const OurTeam = () => {
                           <HiOutlineMail />
                         </a>
                       </IconContext.Provider>
-                      <IconContext.Provider
+                      {/* <IconContext.Provider
                         value={{
                           color: "white",
                           size: "2.4rem",
@@ -482,7 +482,7 @@ const OurTeam = () => {
                         >
                           <FaDiscord />
                         </a>
-                      </IconContext.Provider>
+                      </IconContext.Provider> */}
                     </div>
                   </div>
                 </div>

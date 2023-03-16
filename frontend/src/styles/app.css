@@ -2514,7 +2514,7 @@ body.modal-open {
   left: 50%;
   transform: translateX(-50%);
   bottom: -60px;
-  width: 200px;
+  width: 120px;
   justify-content: space-evenly;
 }
 .ourteam .social-media-our-team .text-muted {
