@@ -103,8 +103,10 @@ const Hero = () => {
         "-=0.6"
       );
   }, []);
+  const isDesktop = useMediaQuery({ query: "(max-width: 991.98px)" });
   //video bg and video youtube
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 900px)" });
+
   const [videoShow, setVideoShow] = useState(false);
   const videoElephantRef = useRef();
   const videoElephantRef2 = useRef();
@@ -210,7 +212,11 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="hero hero-bg" id="hero" ref={sections}>
+      <section
+        className="hero hero-bg"
+        id={`${isDesktop ? "hero" : ""}`}
+        ref={sections}
+      >
         <Container fluid>
           <Lazyload>
             {!isTabletOrMobile && (

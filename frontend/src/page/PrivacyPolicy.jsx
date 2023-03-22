@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../components/Footer";
 import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
+import HeaderOther from "../components/HeaderOther";
 export default function PrivacyPolicy() {
   useEffect(() => {
     const app = document.querySelector(".App");
@@ -10,6 +11,7 @@ export default function PrivacyPolicy() {
 
   return (
     <Container>
+      <HeaderOther />
       <div className="privacy-policy">
         <h2 className="zn_text_box-title zn_text_box-title--style1 text-custom">
           Privacy Policy

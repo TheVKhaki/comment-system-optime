@@ -391,7 +391,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
   return (
     <section
       className="roadmap roadmap-step-slider"
-      id="roadmap"
+      id={`${isTabletOrMobile ? "roadmap" : ""}`}
       ref={elementView}
     >
       <Container>
@@ -481,7 +481,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 onSlidePrevTransitionStart={handleTransitionStartEnd}
               >
                 <SwiperSlide>
-                  <h1>Jan 2020 - Nov 2020</h1>
+                  <h2>Jan 2020 - Nov 2020</h2>
                   <ul>
                     <li>
                       Innovation of Rulebook{" "}
@@ -527,7 +527,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>Dec 2020 - October 2021</h1>
+                  <h2>Dec 2020 - October 2021</h2>
                   <ul>
                     <li>
                       Transition to Unity Engine{" "}
@@ -573,7 +573,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>Nov 2021 - Dec 2022</h1>
+                  <h2>Nov 2021 - Dec 2022</h2>
                   <ul>
                     <li>
                       QPoker Alpha Version{" "}
@@ -619,7 +619,7 @@ export default function RoadMap({ setRoadmapSlideLast, roadmapSlideLast }) {
                 </SwiperSlide>
                 <SwiperSlide>
                   {" "}
-                  <h1>Jan 2023 - Dec 2023</h1>
+                  <h2>Jan 2023 - Dec 2023</h2>
                   <ul>
                     <li>
                       Airdrop Launching{" "}

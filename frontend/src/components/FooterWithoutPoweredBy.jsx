@@ -48,7 +48,7 @@ const FooterWithoutPoweredBy = () => {
         id="footer"
         style={{ minHeight: "auto" }}
       >
-        <footer style={{ minHeight: "44vh" }}>
+        <footer style={{ minHeight: "54vh" }}>
           <Container>
             <Row className="flex-column flex-lg-row">
               <Col>
@@ -59,6 +59,39 @@ const FooterWithoutPoweredBy = () => {
                     be among the first to hear about QPoker's expansion.
                   </p>
                   {/* <input type="text" placeholder="Email Address" /> */}
+                  <a
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      marginBottom: "0px",
+                      whiteSpace: "nowrap",
+                    }}
+                    href="mailto:business@qpoker.io"
+                  >
+                    <p
+                      style={{
+                        marginBottom: "0px",
+                      }}
+                    >
+                      Business Inquiries: business@qpoker.io
+                    </p>
+                  </a>
+                  <a
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      marginTop: "0px",
+                      whiteSpace: "nowrap",
+                    }}
+                    href="mailto:support@qpoker.io"
+                  >
+                    <p
+                      style={{
+                        marginTop: "0px",
+                      }}
+                    >
+                      Customer Service: support@qpoker.io
+                    </p>
+                  </a>
+
                   <a
                     href="https://t.me/qpokergroup"
                     target="_blank"

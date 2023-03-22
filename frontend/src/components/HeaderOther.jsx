@@ -8,8 +8,9 @@ import logoImage from "../images/LOW_Logo-New-Color-C.png";
 import { gsap } from "gsap";
 //framer motion
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const HeaderOther = () => {
   const header = useRef();
 
   useEffect(() => {
@@ -58,7 +59,11 @@ const Header = () => {
   };
   return (
     <>
-      <header ref={header} className="header-main">
+      <header
+        ref={header}
+        className="header-main"
+        style={{ position: "static" }}
+      >
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand href="#">
@@ -68,12 +73,16 @@ const Header = () => {
               </div>
             </Navbar.Brand>
             <Nav className="justify-content-center flex-grow-1 align-items-center">
-              <Nav.Link href="#hero">Home</Nav.Link>
+              <Link to="/#hero" className="nav-link">
+                Home
+              </Link>
               <Nav.Link href="/whitepaper" target="_blank">
                 Whitepaper
               </Nav.Link>
-              <Nav.Link href="#roadmap">Roadmap</Nav.Link>
-              <Nav.Link className="logo " href="#hero">
+              <Link to="/#roadmap" className="nav-link">
+                Roadmap
+              </Link>
+              <Link className="logo nav-link" to="/#hero">
                 <motion.img
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -81,9 +90,13 @@ const Header = () => {
                   src={logoImage}
                   alt=""
                 />
-              </Nav.Link>
-              <Nav.Link href="#airdrop">Airdrop</Nav.Link>
-              <Nav.Link href="#our-team">Team</Nav.Link>
+              </Link>
+              <Link to="/#airdrop" className="nav-link">
+                Airdrop
+              </Link>
+              <Link to="/#our-team" className="nav-link">
+                Team
+              </Link>
               <Nav.Link href="https://github.com/QPoker/QMatic" target="_blank">
                 $QMatic
               </Nav.Link>
@@ -107,13 +120,13 @@ const Header = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#hero">Home</Nav.Link>
+                  <Nav.Link href="/#hero">Home</Nav.Link>
                   <Nav.Link href="/whitepaper" target="_blank">
                     Whitepaper
                   </Nav.Link>
-                  <Nav.Link href="#roadmap">Roadmap</Nav.Link>
-                  <Nav.Link href="#airdrop">Airdrop</Nav.Link>
-                  <Nav.Link href="#our-team">Team</Nav.Link>
+                  <Nav.Link href="/#roadmap">Roadmap</Nav.Link>
+                  <Nav.Link href="/#airdrop">Airdrop</Nav.Link>
+                  <Nav.Link href="/#our-team">Team</Nav.Link>
                   <Nav.Link
                     href="https://github.com/QPoker/QMatic"
                     target="_blank"
@@ -134,4 +147,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderOther;

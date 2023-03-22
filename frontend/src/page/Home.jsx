@@ -45,11 +45,11 @@ const Home = () => {
     }
   }, [finalSpinVAlue, width992, height600, height700]);
 
-  window.addEventListener("load", function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50);
-  });
+  // window.addEventListener("load", function () {
+  //   setTimeout(() => {
+  //     window.scrollTo(0, 0);
+  //   }, 50);
+  // });
   // useEffect(() => {
   //   const sectionHero = document.querySelector(".hero");
   //   sectionHero.scrollIntoView();
@@ -73,7 +73,7 @@ const Home = () => {
       content.setAttribute("style", `transform:translateY(-${count * 100}vh)`);
     };
     switch (locationHash) {
-      case "#home":
+      case "#hero":
         bullets.forEach((bulletColor) => {
           bulletColor.style.backgroundColor = "white";
         });
@@ -95,7 +95,7 @@ const Home = () => {
         //   navigate("/");
         // }, 100);
         break;
-      case "#roadmapp":
+      case "#roadmap":
         bullets.forEach((bulletColor) => {
           bulletColor.style.backgroundColor = "white";
         });
@@ -117,7 +117,7 @@ const Home = () => {
         //   navigate("/");
         // }, 100);
         break;
-      case "#our-teamm":
+      case "#our-team":
         bullets.forEach((bulletColor) => {
           bulletColor.style.backgroundColor = "white";
         });
@@ -128,7 +128,7 @@ const Home = () => {
         //   navigate("/");
         // }, 100);
         break;
-      case "#airdrops":
+      case "#airdrop":
         bullets.forEach((bulletColor) => {
           bulletColor.style.backgroundColor = "white";
         });
@@ -164,7 +164,7 @@ const Home = () => {
           bulletColor.style.backgroundColor = "white";
         });
         switch (e.target.hash) {
-          case "#home":
+          case "#hero":
             bullets[0].style.backgroundColor = "#e28001";
             spinValue = 0;
             scrollContent(spinValue);
@@ -180,7 +180,7 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
-          case "#roadmapp":
+          case "#roadmap":
             bullets[2].style.backgroundColor = "#e28001";
             spinValue = 2;
             scrollContent(spinValue);
@@ -196,7 +196,7 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
-          case "#our-teamm":
+          case "#our-team":
             bullets[6].style.backgroundColor = "#e28001";
             spinValue = 6;
             scrollContent(spinValue);
@@ -204,7 +204,7 @@ const Home = () => {
             //   navigate("/");
             // }, 100);
             break;
-          case "#airdrops":
+          case "#airdrop":
             bullets[5].style.backgroundColor = "#e28001";
             spinValue = 5;
             scrollContent(spinValue);

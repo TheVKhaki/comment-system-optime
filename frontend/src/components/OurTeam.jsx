@@ -180,7 +180,11 @@ const OurTeam = () => {
   };
   return (
     <>
-      <section className="ourteam" ref={element} id="our-team">
+      <section
+        className="ourteam"
+        ref={element}
+        id={`${isTabletOrMobile ? "our-team" : ""}`}
+      >
         <Player
           ref={player}
           autoplay={true}

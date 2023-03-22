@@ -14,7 +14,8 @@ import Lazyload from "../HOC/Lazyload";
 //gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+//responsive
+import { useMediaQuery } from "react-responsive";
 function MyVerticallyCenteredModal(props) {
   gsap.registerPlugin(ScrollTrigger);
   const lineModal1 = useRef();
@@ -713,6 +714,7 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 const RoadMapStep4 = () => {
+  const isDesktop = useMediaQuery({ query: "(max-width: 991.98px)" });
   const [modalShow, setModalShow] = useState(false);
   useEffect(() => {
     if (modalShow) {
@@ -823,7 +825,11 @@ const RoadMapStep4 = () => {
 
   return (
     <>
-      <section className="roadmap-step4 roadmap" ref={element} id="airdrop">
+      <section
+        className="roadmap-step4 roadmap"
+        ref={element}
+        id={`${isDesktop ? "airdrop" : ""}`}
+      >
         <Container>
           <div className="img-elephant-comingsoon">
             <Lazyload>

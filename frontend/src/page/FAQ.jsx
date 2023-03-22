@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
+import HeaderOther from "../components/HeaderOther";
 export default function FAQ() {
   useEffect(() => {
     const app = document.querySelector(".App");
@@ -10,6 +11,7 @@ export default function FAQ() {
 
   return (
     <div className="faq-page">
+      <HeaderOther />
       <Container>
         <div className="header-faq">
           <h1>FAQ</h1>

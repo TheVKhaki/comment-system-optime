@@ -4,6 +4,7 @@ import imgAbout1 from "../images/Logo_Newcode Color-16.png";
 import teamMember from "../images/02Team.webp";
 import logoAboutQpoker from "../images/LOGO-04.png";
 import FooterWithoutPoweredBy from "../components/FooterWithoutPoweredBy";
+import HeaderOther from "../components/HeaderOther";
 export default function AboutUs() {
   useEffect(() => {
     const app = document.querySelector(".App");
@@ -12,6 +13,7 @@ export default function AboutUs() {
 
   return (
     <div className="about-us">
+      <HeaderOther />
       <Container>
         <div className="header-about">
           <h1>About Us</h1>
