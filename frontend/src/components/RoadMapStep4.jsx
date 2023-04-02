@@ -468,7 +468,7 @@ function MyVerticallyCenteredModal(props) {
         <div className="content-text">
           <p>
             We are happy to announce that our Airdrop has been launched on 2nd
-            of March 2023.
+            of April 2023.
           </p>
           <ul>
             <li>- $2550 USD Tether</li>
