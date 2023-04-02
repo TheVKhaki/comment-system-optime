@@ -1106,11 +1106,18 @@ body.modal-open {
   margin-top: 3rem;
   padding-right: 14px;
 }
+.social-responsive .award-airdrop .box-1 img {
+  width: 172px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
 .social-responsive .award-airdrop .box-1 .currency-logo {
   flex-direction: row;
 }
 .social-responsive .award-airdrop .box-1 .currency-logo img {
   width: 40px;
+  position: static;
 }
 .social-responsive .award-airdrop .box-1 .currency-logo span {
   color: #fff;
@@ -1119,7 +1126,6 @@ body.modal-open {
 .social-responsive .award-airdrop .box-2 {
   width: 350px;
   margin-top: 3rem;
-  padding-right: 14px;
 }
 .social-responsive .award-airdrop .box-2 .currency-logo img {
   width: 90px;

@@ -12,6 +12,8 @@ import gifNFT from "../images/NFT.gif";
 import telegramIcon from "../images/telegram-app.png";
 import youtubeIcon from "../images/youtube.png";
 import airdropIcon from "../images/airdropicon.svg";
+import img2550 from "../images/33.png";
+import img300 from "../images/1010.png";
 
 const SocialResponsive = (_props) => {
   const [dataSocial, setDataSocial] = useState({
@@ -137,38 +139,23 @@ const SocialResponsive = (_props) => {
       <section className="social-responsive" id="campaigns">
         <div className="header-social">
           <h5>QPoker Airdrop</h5>
-          <p>02.03.2023 - 02.04.2023</p>
+          <p>02.04.2023 - 02.05.2023</p>
         </div>
         <div className="award-airdrop">
           <div className="box box-1">
-            <dotlottie-player
-              src={lottie12}
-              autoplay
-              loop
-              style={{ height: "100%", width: "100%" }}
-            />
+            <img src={img2550} alt="" />
             <div className="currency-logo d-flex">
               <img src={USDT} alt="" />
-              <span>+</span>
-              <img src={QMatic} alt="" />
             </div>
           </div>
           <div className="sub-box sub-box-1">
             <p>100 Winners</p>
           </div>
           <div className="box box-2">
-            <dotlottie-player
-              src={lottie120}
-              autoplay
-              loop
-              style={{ height: "100%", width: "100%" }}
-            />
-            <div className="currency-logo">
-              <img src={gifNFT} alt="" />
-            </div>
+            <img src={img300} alt="" />
           </div>
           <div className="sub-box sub-box-2">
-            <p>700 Winners</p>
+            <p>300 Winners</p>
           </div>
           <div className="box box-3">
             <span>$10 Instant + QPoker Early Access</span>

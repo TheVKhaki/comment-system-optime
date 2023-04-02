@@ -471,8 +471,8 @@ function MyVerticallyCenteredModal(props) {
             of March 2023.
           </p>
           <ul>
-            <li>- $10,000 USDT + NFT</li>
-            <li>- $40,000 NFT Lottery</li>
+            <li>- $2550 USD Tether</li>
+            <li>- 300 Mystery Boxes</li>
             <li>- $10 QPoker NFT</li>
             <li>- Early Access to QPoker</li>
           </ul>
@@ -689,7 +689,7 @@ function MyVerticallyCenteredModal(props) {
             <h3>Refer-a-Friend</h3>
             <p>
               Invite your friends to join our Airdrop and earn extra rewards: 💰
-              $40,000 NFT Lottery and $10,000 USDT + NFT Leaderboard
+              300 Mystery Boxes Lottery and $2550 USDT Leaderboard
             </p>
           </div>
           <div className="box-roadmap-2">
@@ -765,7 +765,7 @@ const RoadMapStep4 = () => {
   //Countdown
   const [endCount, setEndCount] = useState(false);
   const calculateTimeLeft = () => {
-    let endEvent = new Date("2023-04-02");
+    let endEvent = new Date("2023-05-02");
     let nowDate = new Date();
     let monthData = endEvent.getUTCMonth();
     let dayData = endEvent.getUTCDate();
@@ -847,7 +847,7 @@ const RoadMapStep4 = () => {
               <h2>
                 <span style={{ color: "#e28001" }}>Q</span>Poker Airdrop
               </h2>
-              <p>02.03.2023 - 02.04.2023</p>
+              <p>02.04.2023 - 02.05.2023</p>
             </motion.div>
             {!endCount && (
               <motion.div className="countdown">
@@ -870,8 +870,8 @@ const RoadMapStep4 = () => {
 
             <motion.div className="coming-soon-text">
               <motion.p>$10 NFT + Early Access</motion.p>
-              <motion.p>$10,000 (USDT + NFT) for 100 Winners</motion.p>
-              <motion.p>$40,000 NFT Lottery for 700 Winners</motion.p>
+              <motion.p>$2550 USD Tether for Top 100 Winners</motion.p>
+              <motion.p>300 Mystery Boxes for 300 Winners</motion.p>
 
               <a
                 className="btn-coming-soon btn-main"

@@ -334,8 +334,8 @@ const SocialSection = (_props) => {
               animate={controls}
               className="header-social"
             >
-              <h2>Airdrop for March 2023</h2>
-              <p>2nd March - 2nd April</p>
+              <h2>Airdrop for April 2023</h2>
+              <p>2nd April - 2nd May</p>
             </motion.div>
             <div className="circle-socials">
               <motion.svg
@@ -874,7 +874,7 @@ const SocialSection = (_props) => {
                   className="team-info-1 team-info-circle"
                 >
                   <span>
-                    $40,000
+                    $2550
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -883,7 +883,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    QPoker NFT
+                    USD Tether
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -899,7 +899,7 @@ const SocialSection = (_props) => {
                   className="team-info-2 team-info-circle"
                 >
                   <span>
-                    $10,000
+                    300
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}
@@ -908,7 +908,7 @@ const SocialSection = (_props) => {
                     /> */}
                   </span>
                   <p>
-                    USDT + NFT
+                    Mystery Boxes
                     {/* <RandomReveal
                       isPlaying={inView}
                       duration={4.6}

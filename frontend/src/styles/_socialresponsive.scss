@@ -50,10 +50,17 @@
       width: 420px;
       margin-top: 3rem;
       padding-right: 14px;
+      img {
+        width: 172px;
+        position: relative;
+        top: 10px;
+        right: 10px;
+      }
       .currency-logo {
         flex-direction: row;
         img {
           width: 40px;
+          position: static;
         }
         span {
           color: #fff;
@@ -64,7 +71,6 @@
     .box-2 {
       width: 350px;
       margin-top: 3rem;
-      padding-right: 14px;
       .currency-logo {
         img {
           width: 90px;
