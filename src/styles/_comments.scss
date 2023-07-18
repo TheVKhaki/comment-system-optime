@@ -1,0 +1,86 @@
+.comment {
+  display: flex;
+  margin-bottom: 25px;
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #4dccf7;
+    border-radius: 100%;
+    margin-right: 25px;
+  }
+  .detail-comment {
+    width: 600px;
+    background-color: #efefef;
+    padding: 10px 20px;
+    border-radius: 10px;
+    .username-date {
+      display: flex;
+      align-items: center;
+      p {
+        font-weight: 600;
+      }
+      span {
+        font-size: 13px;
+        margin-left: 10px;
+      }
+      button {
+        margin-left: auto;
+        background-color: #ed5e68;
+        color: #fff;
+        border: none;
+        padding: 5px;
+        border-radius: 9px;
+      }
+    }
+    .description {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  .reply-btn {
+    background-color: #4dccf7;
+    color: #fff;
+    border: none;
+    padding: 3px 18px;
+    border-radius: 9px;
+    font-weight: 600;
+  }
+  .form-submit-reply {
+    display: flex;
+    input {
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      padding: 0 10px;
+    }
+    button {
+      &:first-of-type {
+        width: 60px;
+        flex-shrink: 0;
+        margin: 0 10px;
+        background-color: #4dccf7;
+        border: none;
+        color: #fff;
+        border-radius: 7px;
+        padding: 4px 0;
+        font-weight: 600;
+      }
+      &:last-of-type {
+        width: 60px;
+        flex-shrink: 0;
+        background-color: #ed5e68;
+        border: none;
+        color: #fff;
+        border-radius: 7px;
+        padding: 4px 0;
+        font-weight: 600;
+      }
+    }
+  }
+  .reply {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
